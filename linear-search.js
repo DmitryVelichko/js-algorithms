@@ -12,7 +12,7 @@ function linearSearch(array, item) {
     return null
 }
 
-console.log(linearSearch(array, 1))
+console.log(linearSearch(array, 11))
 console.log('count = ', count)
 
 
