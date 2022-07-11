@@ -7,4 +7,8 @@ function bubbleSort(array) {
             if (array[j + 1] < array[j]) {
                 let tmp = array[j]
                 array[j] = array[j+1]
-            
+                array[j+1] = tmp
+            }
+            count+=1
+        }
+    }
