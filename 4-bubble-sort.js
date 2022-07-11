@@ -12,3 +12,5 @@ function bubbleSort(array) {
             count+=1
         }
     }
+    return array
+}
