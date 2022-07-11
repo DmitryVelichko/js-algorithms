@@ -10,4 +10,7 @@ const factorial = (n) => {
 // Числа фибоначчи -  1,1,2,3,5,8,13,21
 
 const fibonachi = (n) => {
-   
+    if (n === 1 || n === 2) {
+        return 1
+    }
+    
