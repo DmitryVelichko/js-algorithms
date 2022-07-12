@@ -18,3 +18,9 @@ function quickSort(array) {
         } else {
             greater.push(array[i])
         }
+    }
+    return [...quickSort(less), pivot, ...quickSort(greater)]
+}
+
+console.log(quickSort(arr))
+console.log('count', count)
