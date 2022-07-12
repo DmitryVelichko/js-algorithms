@@ -9,3 +9,4 @@ function quickSort(array) {
     let pivot = array[pivotIndex]
     let less = []
     let greater = []
+    for (let i = 0; i < array.length; i++) {
