@@ -15,3 +15,6 @@ function quickSort(array) {
             continue
         if (array[i] < pivot) {
             less.push(array[i])
+        } else {
+            greater.push(array[i])
+        }
