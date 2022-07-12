@@ -10,3 +10,6 @@ function quickSort(array) {
     let less = []
     let greater = []
     for (let i = 0; i < array.length; i++) {
+        count += 1
+        if(i === pivotIndex)
+            continue
