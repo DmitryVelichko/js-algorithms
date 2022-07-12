@@ -5,3 +5,4 @@ function quickSort(array) {
     if (array.length <= 1) {
         return array
     }
+    let pivotIndex = Math.floor(array.length / 2);
