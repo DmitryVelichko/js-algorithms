@@ -65,3 +65,19 @@ function countDown(n) {
     })
   }
   
+  const tree = {
+    name: 'John',
+    children: [
+      {
+        name: 'Jim',
+        children: []
+      },
+      {
+        name: 'Zoe',
+        children: [
+          { name: 'Kyle', children: [] },
+          { name: 'Sophia', children: [] }
+        ]
+      }
+    ]
+  }
