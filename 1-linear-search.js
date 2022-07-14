@@ -44,3 +44,10 @@ export default class BloomFilter {
     mayContain(item) {
       const hashValues = this.getHashValues(item);
   
+      for (let hashIndex = 0; hashIndex < hashValues.length; hashIndex += 1) {
+        if (!this.storage.getValue(hashValues[hashIndex])) {
+          // We know that the item was definitely not inserted.
+          return false;
+        }
+      }
+  
