@@ -101,4 +101,49 @@ export default class BloomFilter {
       return hash % this.size;
     }
   
+    /**
+     * @param {string} item
+     * @return {number}
+     */
+    hash2(item) {
+      let hash = 5381;
   
+      for (let charIndex = 0; charIndex < item.length; charIndex += 1) {
+        const char = item.charCodeAt(charIndex);
+        hash = (hash << 5) + hash + char; /* hash * 33 + c */
+      }
+  
+      return Math.abs(hash % this.size);
+    }
+  
+    /**
+     * @param {string} item
+     * @return {number}
+     */
+    hash3(item) {
+      let hash = 0;
+  
+      for (let charIndex = 0; charIndex < item.length; charIndex += 1) {
+        const char = item.charCodeAt(charIndex);
+        hash = (hash << 5) - hash;
+        hash += char;
+        hash &= hash; // Convert to 32bit integer
+      }
+  
+      return Math.abs(hash % this.size);
+    }
+  
+    /**
+     * Runs all 3 hash functions on the input and returns an array of results.
+     *
+     * @param {string} item
+     * @return {number[]}
+     */
+    getHashValues(item) {
+      return [
+        this.hash1(item),
+        this.hash2(item),
+        this.hash3(item),
+      ];
+    }
+  }
