@@ -16,3 +16,8 @@ console.log(linearSearch(array, 11))
 console.log('count = ', count)
 
 
+export default class BloomFilter {
+    /**
+     * @param {number} size - the size of the storage.
+     */
+   
