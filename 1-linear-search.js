@@ -23,4 +23,11 @@ export default class BloomFilter {
     constructor(size = 100) {
       // Bloom filter size directly affects the likelihood of false positives.
       // The bigger the size the lower the likelihood of false positives.
+      this.size = size;
+      this.storage = this.createStore(size);
+    }
+  
+    /**
+     * @param {string} item
+     */
    
