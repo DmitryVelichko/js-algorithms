@@ -67,3 +67,9 @@ export default class BloomFilter {
     createStore(size) {
       const storage = [];
   
+      // Initialize all indexes to false
+      for (let storageCellIndex = 0; storageCellIndex < size; storageCellIndex += 1) {
+        storage.push(false);
+      }
+  
+  
