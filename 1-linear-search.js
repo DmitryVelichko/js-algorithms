@@ -37,3 +37,10 @@ export default class BloomFilter {
       hashValues.forEach((val) => this.storage.setValue(val));
     }
   
+    /**
+     * @param {string} item
+     * @return {boolean}
+     */
+    mayContain(item) {
+      const hashValues = this.getHashValues(item);
+  
