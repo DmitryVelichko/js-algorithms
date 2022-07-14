@@ -81,3 +81,13 @@ export default class BloomFilter {
         },
       };
   
+      return storageInterface;
+    }
+  
+    /**
+     * @param {string} item
+     * @return {number}
+     */
+    hash1(item) {
+      let hash = 0;
+  
