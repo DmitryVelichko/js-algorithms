@@ -51,3 +51,19 @@ export default class BloomFilter {
         }
       }
   
+      // The item may or may not have been inserted.
+      return true;
+    }
+  
+    /**
+     * Creates the data store for our filter.
+     * We use this method to generate the store in order to
+     * encapsulate the data itself and only provide access
+     * to the necessary methods.
+     *
+     * @param {number} size
+     * @return {Object}
+     */
+    createStore(size) {
+      const storage = [];
+  
