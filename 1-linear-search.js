@@ -90,3 +90,29 @@ export default class Heap {
   leftChild(parentIndex) {
     return this.heapContainer[this.getLeftChildIndex(parentIndex)];
   }
+
+  /**
+   * @param {number} parentIndex
+   * @return {*}
+   */
+  rightChild(parentIndex) {
+    return this.heapContainer[this.getRightChildIndex(parentIndex)];
+  }
+
+  /**
+   * @param {number} childIndex
+   * @return {*}
+   */
+  parent(childIndex) {
+    return this.heapContainer[this.getParentIndex(childIndex)];
+  }
+
+  /**
+   * @param {number} indexOne
+   * @param {number} indexTwo
+   */
+  swap(indexOne, indexTwo) {
+    const tmp = this.heapContainer[indexTwo];
+    this.heapContainer[indexTwo] = this.heapContainer[indexOne];
+    this.heapContainer[indexOne] = tmp;
+  }
