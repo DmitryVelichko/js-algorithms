@@ -203,3 +203,101 @@ export default class Heap {
     return this;
   }
 
+  /**
+   * @param {*} item
+   * @param {Comparator} [comparator]
+   * @return {Number[]}
+   */
+  find(item, comparator = this.compare) {
+    const foundItemIndices = [];
+
+    for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
+      if (comparator.equal(item, this.heapContainer[itemIndex])) {
+        foundItemIndices.push(itemIndex);
+      }
+    }
+
+    return foundItemIndices;
+  }
+
+  /**
+   * @return {boolean}
+   */
+  isEmpty() {
+    return !this.heapContainer.length;
+  }
+
+  /**
+   * @return {string}
+   */
+  toString() {
+    return this.heapContainer.toString();
+  }
+
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyUp(customStartIndex) {
+    // Take the last element (last in array or the bottom left in a tree)
+    // in the heap container and lift it up until it is in the correct
+    // order with respect to its parent element.
+    let currentIndex = customStartIndex || this.heapContainer.length - 1;
+
+    while (
+      this.hasParent(currentIndex)
+      && !this.pairIsInCorrectOrder(this.parent(currentIndex), this.heapContainer[currentIndex])
+    ) {
+      this.swap(currentIndex, this.getParentIndex(currentIndex));
+      currentIndex = this.getParentIndex(currentIndex);
+    }
+  }
+
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyDown(customStartIndex = 0) {
+    // Compare the parent element to its children and swap parent with the appropriate
+    // child (smallest child for MinHeap, largest child for MaxHeap).
+    // Do the same for next children after swap.
+    let currentIndex = customStartIndex;
+    let nextIndex = null;
+
+    while (this.hasLeftChild(currentIndex)) {
+      if (
+        this.hasRightChild(currentIndex)
+        && this.pairIsInCorrectOrder(this.rightChild(currentIndex), this.leftChild(currentIndex))
+      ) {
+        nextIndex = this.getRightChildIndex(currentIndex);
+      } else {
+        nextIndex = this.getLeftChildIndex(currentIndex);
+      }
+
+      if (this.pairIsInCorrectOrder(
+        this.heapContainer[currentIndex],
+        this.heapContainer[nextIndex],
+      )) {
+        break;
+      }
+
+      this.swap(currentIndex, nextIndex);
+      currentIndex = nextIndex;
+    }
+  }
+
+  /**
+   * Checks if pair of heap elements is in correct order.
+   * For MinHeap the first element must be always smaller or equal.
+   * For MaxHeap the first element must be always bigger or equal.
+   *
+   * @param {*} firstElement
+   * @param {*} secondElement
+   * @return {boolean}
+   */
+  /* istanbul ignore next */
+  pairIsInCorrectOrder(firstElement, secondElement) {
+    throw new Error(`
+      You have to implement heap pair comparision method
+      for ${firstElement} and ${secondElement} values.
+    `);
+  }
+}
