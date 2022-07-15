@@ -127,3 +127,24 @@ export default class Heap {
 
     return this.heapContainer[0];
   }
+
+  /**
+   * @return {*}
+   */
+  poll() {
+    if (this.heapContainer.length === 0) {
+      return null;
+    }
+
+    if (this.heapContainer.length === 1) {
+      return this.heapContainer.pop();
+    }
+
+    const item = this.heapContainer[0];
+
+    // Move the last element from the end to the head.
+    this.heapContainer[0] = this.heapContainer.pop();
+    this.heapifyDown();
+
+    return item;
+  }
