@@ -148,3 +148,19 @@ export default class Heap {
 
     return item;
   }
+
+  /**
+   * @param {*} item
+   * @return {Heap}
+   */
+  add(item) {
+    this.heapContainer.push(item);
+    this.heapifyUp();
+    return this;
+  }
+
+  /**
+   * @param {*} item
+   * @param {Comparator} [comparator]
+   * @return {Heap}
+   */
