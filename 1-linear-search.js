@@ -63,3 +63,15 @@ export default class Heap {
    * @param {number} childIndex
    * @return {boolean}
    */
+  hasParent(childIndex) {
+    return this.getParentIndex(childIndex) >= 0;
+  }
+
+  /**
+   * @param {number} parentIndex
+   * @return {boolean}
+   */
+  hasLeftChild(parentIndex) {
+    return this.getLeftChildIndex(parentIndex) < this.heapContainer.length;
+  }
+
