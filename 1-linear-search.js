@@ -50,3 +50,16 @@ export default class Heap {
   getRightChildIndex(parentIndex) {
     return (2 * parentIndex) + 2;
   }
+
+  /**
+   * @param {number} childIndex
+   * @return {number}
+   */
+  getParentIndex(childIndex) {
+    return Math.floor((childIndex - 1) / 2);
+  }
+
+  /**
+   * @param {number} childIndex
+   * @return {boolean}
+   */
