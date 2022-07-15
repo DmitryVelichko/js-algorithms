@@ -164,3 +164,14 @@ export default class Heap {
    * @param {Comparator} [comparator]
    * @return {Heap}
    */
+  remove(item, comparator = this.compare) {
+    // Find number of items to remove.
+    const numberOfItemsToRemove = this.find(item, comparator).length;
+
+    for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
+      // We need to find item index to remove each time after removal since
+      // indices are being changed after each heapify process.
+      const indexToRemove = this.find(item, comparator).pop();
+
+      // If we need to remove last child in the heap then just remove it.
+      // There is no need to heapify the heap afterwards.
