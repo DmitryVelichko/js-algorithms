@@ -28,3 +28,9 @@ console.log('count = ', count)
   if (!setA || !setB || !setA.length || !setB.length) {
     return null;
   }
+
+  // Init product set.
+  const product = [];
+
+  // Now, let's go through all elements of a first and second set and form all possible pairs.
+  for (let indexA = 0; indexA < setA.length; indexA += 1) {
