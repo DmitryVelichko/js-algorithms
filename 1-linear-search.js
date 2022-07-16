@@ -25,4 +25,6 @@ console.log('count = ', count)
  export default function cartesianProduct(setA, setB) {
   // Check if input sets are not empty.
   // Otherwise return null since we can't generate Cartesian Product out of them.
- 
+  if (!setA || !setB || !setA.length || !setB.length) {
+    return null;
+  }
