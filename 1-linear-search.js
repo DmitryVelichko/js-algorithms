@@ -39,3 +39,7 @@ console.log('count = ', count)
       product.push([setA[indexA], setB[indexB]]);
     }
   }
+
+  // Return cartesian product set.
+  return product;
+}
