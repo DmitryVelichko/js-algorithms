@@ -34,3 +34,8 @@ console.log('count = ', count)
 
   // Now, let's go through all elements of a first and second set and form all possible pairs.
   for (let indexA = 0; indexA < setA.length; indexA += 1) {
+    for (let indexB = 0; indexB < setB.length; indexB += 1) {
+      // Add current product pair to the product set.
+      product.push([setA[indexA], setB[indexB]]);
+    }
+  }
