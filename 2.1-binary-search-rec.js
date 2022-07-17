@@ -10,3 +10,13 @@ const binarySearchRec = (arr, value, start, end) => {
 
   let middle = Math.floor((start + end) / 2);
 
+  if (value === arr[middle]) return middle;
+
+  if (value < arr[middle]) {
+    return binarySearchRec(arr, value, start, middle - 1);
+  } else {
+    return binarySearchRec(arr, value, middle + 1, end);
+  }
+};
+
+console.log(binarySearchRec(arr, 10, start, end));
