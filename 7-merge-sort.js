@@ -11,4 +11,9 @@ function merge(left, right) {
         if (left[0] < right[0]) {
             arr.push(left.shift())  
         } else {
-   
+            arr.push(right.shift()) 
+        }
+    }
+    
+    // Concatenating the leftover elements
+ 
