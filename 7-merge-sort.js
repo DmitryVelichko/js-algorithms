@@ -13,3 +13,7 @@ function mergesort(arr) {
     while (leftArr.length && rightArr.length) {
       if (leftArr[0] <= rightArr[0]) {
         sortedArr.push(leftArr.shift())
+      } else {
+        sortedArr.push(rightArr.shift())
+      }
+    }
