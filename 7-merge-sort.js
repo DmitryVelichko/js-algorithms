@@ -17,3 +17,6 @@ function mergesort(arr) {
         sortedArr.push(rightArr.shift())
       }
     }
+    const resultArr = [...sortedArr, ...leftArr, ...rightArr]
+    return resultArr
+  }
