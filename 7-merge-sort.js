@@ -7,3 +7,6 @@ function mergesort(arr) {
     const rightArr = arr.slice(mid)
     return merge(mergesort(leftArr), mergesort(rightArr))
   }
+  
+  function merge(leftArr, rightArr) {
+    const sortedArr = []
