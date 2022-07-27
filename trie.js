@@ -23,3 +23,25 @@ export default class Trie {
 
     return this;
   }
+
+  /**
+   * @param {string} word
+   * @return {Trie}
+   */
+  deleteWord(word) {
+    const depthFirstDelete = (currentNode, charIndex = 0) => {
+      if (charIndex >= word.length) {
+        // Return if we're trying to delete the character that is out of word's scope.
+        return;
+      }
+
+      const character = word[charIndex];
+      const nextNode = currentNode.getChild(character);
+
+      if (nextNode == null) {
+        // Return if we're trying to delete a word that has not been added to the Trie.
+        return;
+      }
+
+      // Go deeper.
+      depthFirstDelete(nextNode, charIndex + 1);
