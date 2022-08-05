@@ -36,3 +36,7 @@ export default function jumpSearch(sortedArray, seekElement, comparatorCallback)
       return -1;
     }
   }
+
+  // Do linear search for seekElement in subarray starting from blockStart.
+  let currentIndex = blockStart;
+  while (currentIndex < Math.min(blockEnd, arraySize)) {
