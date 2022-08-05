@@ -17,3 +17,8 @@ export default function jumpSearch(sortedArray, seekElement, comparatorCallback)
     return -1;
   }
 
+  // Calculate optimal jump size.
+  // Total number of comparisons in the worst case will be ((arraySize/jumpSize) + jumpSize - 1).
+  // The value of the function ((arraySize/jumpSize) + jumpSize - 1) will be minimum
+  // when jumpSize = √array.length.
+  const jumpSize = Math.floor(Math.sqrt(arraySize));
