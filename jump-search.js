@@ -30,3 +30,9 @@ export default function jumpSearch(sortedArray, seekElement, comparatorCallback)
     // Jump to the next block.
     blockStart = blockEnd;
     blockEnd += jumpSize;
+
+    // If our next block is out of array then we couldn't found the element.
+    if (blockStart > arraySize) {
+      return -1;
+    }
+  }
