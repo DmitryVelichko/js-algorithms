@@ -22,3 +22,11 @@ export default function jumpSearch(sortedArray, seekElement, comparatorCallback)
   // The value of the function ((arraySize/jumpSize) + jumpSize - 1) will be minimum
   // when jumpSize = √array.length.
   const jumpSize = Math.floor(Math.sqrt(arraySize));
+
+  // Find the block where the seekElement belong to.
+  let blockStart = 0;
+  let blockEnd = jumpSize;
+  while (comparator.greaterThan(seekElement, sortedArray[Math.min(blockEnd, arraySize) - 1])) {
+    // Jump to the next block.
+    blockStart = blockEnd;
+    blockEnd += jumpSize;
