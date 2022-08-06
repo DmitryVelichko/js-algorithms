@@ -42,3 +42,11 @@
     if (sortedArray[middleIndex] < seekElement) {
       // Go to the right half of the array.
       leftIndex = middleIndex + 1;
+    } else {
+      // Go to the left half of the array.
+      rightIndex = middleIndex - 1;
+    }
+  }
+
+  return -1;
+}
