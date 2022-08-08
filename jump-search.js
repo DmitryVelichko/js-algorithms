@@ -17,4 +17,6 @@ function merge(leftArr, rightArr) {
       sortedArr.push(rightArr.shift())
     }
   }
- 
+  const resultArr = [...sortedArr, ...leftArr, ...rightArr]
+  return resultArr
+}
