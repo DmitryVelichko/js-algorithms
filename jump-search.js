@@ -7,3 +7,6 @@
 /**
  * @param {LinkedListNode} node
  * @param {traversalCallback} callback
+ */
+ function reverseTraversalRecursive(node, callback) {
+  if (node) {
