@@ -20,3 +20,14 @@ const getCipherMap = (alphabet, shift) => {
       if (encryptedCharIndex < 0) {
         encryptedCharIndex += alphabet.length;
       }
+      charsMapClone[currentChar] = alphabet[encryptedCharIndex];
+      return charsMapClone;
+    }, {});
+};
+
+/**
+ * @param {string} str
+ * @param {number} shift
+ * @param {string[]} alphabet
+ * @return {string}
+ */
