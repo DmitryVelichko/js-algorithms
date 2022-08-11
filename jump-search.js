@@ -1,24 +1,11 @@
-/**
- * Traversal callback function.
- * @callback traversalCallback
- * @param {*} nodeValue
- */
+// Create alphabet array: ['a', 'b', 'c', ..., 'z'].
+const englishAlphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 /**
- * @param {LinkedListNode} node
- * @param {traversalCallback} callback
+ * Generates a cipher map out of the alphabet.
+ * Example with a shift 3: {'a': 'd', 'b': 'e', 'c': 'f', ...}
+ *
+ * @param {string[]} alphabet - i.e. ['a', 'b', 'c', ... , 'z']
+ * @param {number} shift - i.e. 3
+ * @return {Object} - i.e. {'a': 'd', 'b': 'e', 'c': 'f', ..., 'z': 'c'}
  */
- function reverseTraversalRecursive(node, callback) {
-  if (node) {
-    reverseTraversalRecursive(node.next, callback);
-    callback(node.value);
-  }
-}
-
-/**
- * @param {LinkedList} linkedList
- * @param {traversalCallback} callback
- */
-export default function reverseTraversal(linkedList, callback) {
-  reverseTraversalRecursive(linkedList.head, callback);
-}
