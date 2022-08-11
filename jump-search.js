@@ -47,3 +47,12 @@ export const caesarCipherEncrypt = (str, shift, alphabet = englishAlphabet) => {
  * @param {string[]} alphabet
  * @return {string}
  */
+export const caesarCipherDecrypt = (str, shift, alphabet = englishAlphabet) => {
+  // Create a cipher map:
+  const cipherMap = getCipherMap(alphabet, -shift);
+  return str
+    .toLowerCase()
+    .split('')
+    .map((char) => cipherMap[char] || char)
+    .join('');
+};
