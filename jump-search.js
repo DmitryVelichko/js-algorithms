@@ -42,3 +42,34 @@ export default class Trie {
         // Return if we're trying to delete a word that has not been added to the Trie.
         return;
       }
+
+      // Go deeper.
+      depthFirstDelete(nextNode, charIndex + 1);
+
+      // Since we're going to delete a word let's un-mark its last character isCompleteWord flag.
+      if (charIndex === (word.length - 1)) {
+        nextNode.isCompleteWord = false;
+      }
+
+      // childNode is deleted only if:
+      // - childNode has NO children
+      // - childNode.isCompleteWord === false
+      currentNode.removeChild(character);
+    };
+
+    // Start depth-first deletion from the head node.
+    depthFirstDelete(this.head);
+
+    return this;
+  }
+
+  /**
+   * @param {string} word
+   * @return {string[]}
+   */
+  suggestNextCharacters(word) {
+    const lastCharacter = this.getLastCharacterNode(word);
+
+    if (!lastCharacter) {
+      return null;
+    }
