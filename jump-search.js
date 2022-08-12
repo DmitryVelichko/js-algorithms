@@ -88,3 +88,23 @@ export default class Trie {
 
     return !!lastCharacter && lastCharacter.isCompleteWord;
   }
+
+  /**
+   * @param {string} word
+   * @return {TrieNode}
+   */
+  getLastCharacterNode(word) {
+    const characters = Array.from(word);
+    let currentNode = this.head;
+
+    for (let charIndex = 0; charIndex < characters.length; charIndex += 1) {
+      if (!currentNode.hasChild(characters[charIndex])) {
+        return null;
+      }
+
+      currentNode = currentNode.getChild(characters[charIndex]);
+    }
+
+    return currentNode;
+  }
+}
