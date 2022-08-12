@@ -73,3 +73,18 @@ export default class Trie {
     if (!lastCharacter) {
       return null;
     }
+
+    return lastCharacter.suggestChildren();
+  }
+
+  /**
+   * Check if complete word exists in Trie.
+   *
+   * @param {string} word
+   * @return {boolean}
+   */
+  doesWordExist(word) {
+    const lastCharacter = this.getLastCharacterNode(word);
+
+    return !!lastCharacter && lastCharacter.isCompleteWord;
+  }
