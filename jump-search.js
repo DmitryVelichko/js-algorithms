@@ -16,3 +16,10 @@ export default class Trie {
     const characters = Array.from(word);
     let currentNode = this.head;
 
+    for (let charIndex = 0; charIndex < characters.length; charIndex += 1) {
+      const isComplete = charIndex === characters.length - 1;
+      currentNode = currentNode.addChild(characters[charIndex], isComplete);
+    }
+
+    return this;
+  }
