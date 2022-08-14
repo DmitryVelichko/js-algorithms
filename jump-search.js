@@ -20,3 +20,20 @@
     if (valueDelta < 0) {
       return -1;
     }
+
+    // If range delta is zero then subarray contains all the same numbers
+    // and thus there is nothing to search for unless this range is all
+    // consists of seek number.
+    if (!rangeDelta) {
+      // By doing this we're also avoiding division by zero while
+      // calculating the middleIndex later.
+      return sortedArray[leftIndex] === seekElement ? leftIndex : -1;
+    }
+
+    // Do interpolation of the middle index.
+    const middleIndex = leftIndex + Math.floor((valueDelta * indexDelta) / rangeDelta);
+
+    // If we've found the element just return its position.
+    if (sortedArray[middleIndex] === seekElement) {
+      return middleIndex;
+    }
