@@ -30,3 +30,11 @@ export default class GraphEdge {
 
     return this;
   }
+
+  /**
+   * @return {string}
+   */
+  toString() {
+    return this.getKey();
+  }
+}
