@@ -39,3 +39,26 @@ export default class HashTable {
       (hashAccumulator, keySymbol) => (hashAccumulator + keySymbol.charCodeAt(0)),
       0,
     );
+
+    // Reduce hash number so it would fit hash table size.
+    return hash % this.buckets.length;
+  }
+
+  /**
+   * @param {string} key
+   * @param {*} value
+   */
+  set(key, value) {
+    const keyHash = this.hash(key);
+    this.keys[key] = keyHash;
+    const bucketLinkedList = this.buckets[keyHash];
+    const node = bucketLinkedList.find({ callback: (nodeValue) => nodeValue.key === key });
+
+    if (!node) {
+      // Insert new node.
+      bucketLinkedList.append({ key, value });
+    } else {
+      // Update value of existing node.
+      node.value.value = value;
+    }
+  }
