@@ -88,3 +88,34 @@ export default class HashTable {
     const bucketLinkedList = this.buckets[this.hash(key)];
     const node = bucketLinkedList.find({ callback: (nodeValue) => nodeValue.key === key });
 
+    return node ? node.value.value : undefined;
+  }
+
+  /**
+   * @param {string} key
+   * @return {boolean}
+   */
+  has(key) {
+    return Object.hasOwnProperty.call(this.keys, key);
+  }
+
+  /**
+   * @return {string[]}
+   */
+  getKeys() {
+    return Object.keys(this.keys);
+  }
+
+  /**
+   * Gets the list of all the stored values in the hash table.
+   *
+   * @return {*[]}
+   */
+  getValues() {
+    return this.buckets.reduce((values, bucket) => {
+      const bucketValues = bucket.toArray()
+        .map((linkedListNode) => linkedListNode.value.value);
+      return values.concat(bucketValues);
+    }, []);
+  }
+}
