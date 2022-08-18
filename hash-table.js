@@ -30,3 +30,8 @@
   // Return all subsets of a set.
   return allSubsets;
 }
+
+/**
+ * Find power-set of a set using BACKTRACKING approach.
+ *
+ * @param {*[]} originalSet
