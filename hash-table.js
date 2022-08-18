@@ -35,3 +35,8 @@
  * Find power-set of a set using BACKTRACKING approach.
  *
  * @param {*[]} originalSet
+ * @return {*[][]}
+ */
+export default function btPowerSet(originalSet) {
+  return btPowerSetRecursive(originalSet);
+}
