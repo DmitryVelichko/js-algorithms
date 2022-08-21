@@ -15,3 +15,10 @@
       distanceMatrix[0][i] = i;
     }
   
+    // Fill the first column of the matrix.
+    // If this is first column then we're transforming empty string to b.
+    // In this case the number of transformations equals to size of b substring.
+    for (let j = 0; j <= b.length; j += 1) {
+      distanceMatrix[j][0] = j;
+    }
+  
