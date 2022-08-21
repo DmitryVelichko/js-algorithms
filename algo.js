@@ -26,4 +26,11 @@
       for (let i = 1; i <= a.length; i += 1) {
         const indicator = a[i - 1] === b[j - 1] ? 0 : 1;
         distanceMatrix[j][i] = Math.min(
+          distanceMatrix[j][i - 1] + 1, // deletion
+          distanceMatrix[j - 1][i] + 1, // insertion
+          distanceMatrix[j - 1][i - 1] + indicator, // substitution
+        );
+      }
+    }
   
+    return distanceMatrix[b.length][a.length];
