@@ -22,3 +22,8 @@
       distanceMatrix[j][0] = j;
     }
   
+    for (let j = 1; j <= b.length; j += 1) {
+      for (let i = 1; i <= a.length; i += 1) {
+        const indicator = a[i - 1] === b[j - 1] ? 0 : 1;
+        distanceMatrix[j][i] = Math.min(
+  
