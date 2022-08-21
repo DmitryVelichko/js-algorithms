@@ -5,11 +5,11 @@ function insertionSort(arr) {
     let current = arr[i];
     let j = i - 1;
 
-    while((j > -1) && (current < arr[j])) {
-      arr[j+1] = arr[j];
+    while (j >= 0 && arr[j] > current) {
+      arr[j + 1] = arr[j];
       j--;
     }
-    arr[j+1] = current
+    arr[j + 1] = current;
   }
   return arr;
 }
