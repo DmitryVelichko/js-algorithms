@@ -8,3 +8,10 @@ export default class Queue {
     // operations of Queue with append/deleteHead operations of LinkedList.
     this.linkedList = new LinkedList();
   }
+
+  /**
+   * @return {boolean}
+   */
+  isEmpty() {
+    return !this.linkedList.head;
+  }
