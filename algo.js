@@ -42,3 +42,12 @@ export default class Queue {
    * If the queue is empty, return null.
    * @return {*}
    */
+  dequeue() {
+    const removedHead = this.linkedList.deleteHead();
+    return removedHead ? removedHead.value : null;
+  }
+
+  /**
+   * @param [callback]
+   * @return {string}
+   */
