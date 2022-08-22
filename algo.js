@@ -51,3 +51,8 @@ export default class Queue {
    * @param [callback]
    * @return {string}
    */
+  toString(callback) {
+    // Return string representation of the queue's linked list.
+    return this.linkedList.toString(callback);
+  }
+}
