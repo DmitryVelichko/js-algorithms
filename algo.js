@@ -29,3 +29,11 @@
       // calculating the middleIndex later.
       return sortedArray[leftIndex] === seekElement ? leftIndex : -1;
     }
+
+    // Do interpolation of the middle index.
+    const middleIndex = leftIndex + Math.floor((valueDelta * indexDelta) / rangeDelta);
+
+    // If we've found the element just return its position.
+    if (sortedArray[middleIndex] === seekElement) {
+      return middleIndex;
+    }
