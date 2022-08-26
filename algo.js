@@ -21,3 +21,11 @@
       return -1;
     }
 
+    // If range delta is zero then subarray contains all the same numbers
+    // and thus there is nothing to search for unless this range is all
+    // consists of seek number.
+    if (!rangeDelta) {
+      // By doing this we're also avoiding division by zero while
+      // calculating the middleIndex later.
+      return sortedArray[leftIndex] === seekElement ? leftIndex : -1;
+    }
