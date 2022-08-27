@@ -38,3 +38,15 @@ export default class MergeSort extends Sort {
         minElement = leftArray[leftIndex];
         // Increment index pointer to the right
         leftIndex += 1;
+      } else {
+        minElement = rightArray[rightIndex];
+        // Increment index pointer to the right
+        rightIndex += 1;
+      }
+
+      // Add the minimum element to the sorted array.
+      sortedArray.push(minElement);
+
+      // Call visiting callback.
+      this.callbacks.visitingCallback(minElement);
+    }
