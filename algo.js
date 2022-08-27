@@ -50,3 +50,11 @@ export default class MergeSort extends Sort {
       // Call visiting callback.
       this.callbacks.visitingCallback(minElement);
     }
+
+    // There will be elements remaining from either the left OR the right
+    // Concatenate the remaining elements into the sorted array
+    return sortedArray
+      .concat(leftArray.slice(leftIndex))
+      .concat(rightArray.slice(rightIndex));
+  }
+}
