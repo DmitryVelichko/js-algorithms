@@ -53,3 +53,18 @@ export default class HashTable {
     this.keys[key] = keyHash;
     const bucketLinkedList = this.buckets[keyHash];
     const node = bucketLinkedList.find({ callback: (nodeValue) => nodeValue.key === key });
+
+    if (!node) {
+      // Insert new node.
+      bucketLinkedList.append({ key, value });
+    } else {
+      // Update value of existing node.
+      node.value.value = value;
+    }
+  }
+
+  /**
+   * @param {string} key
+   * @return {*}
+   */
+  delete(key) {
