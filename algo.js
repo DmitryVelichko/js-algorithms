@@ -36,3 +36,20 @@ export default class HashTable {
     // where charCodeAt(i) is the i-th character code of the key, n is the length of the key and
     // PRIME is just any prime number like 31.
     const hash = Array.from(key).reduce(
+      (hashAccumulator, keySymbol) => (hashAccumulator + keySymbol.charCodeAt(0)),
+      0,
+    );
+
+    // Reduce hash number so it would fit hash table size.
+    return hash % this.buckets.length;
+  }
+
+  /**
+   * @param {string} key
+   * @param {*} value
+   */
+  set(key, value) {
+    const keyHash = this.hash(key);
+    this.keys[key] = keyHash;
+    const bucketLinkedList = this.buckets[keyHash];
+    const node = bucketLinkedList.find({ callback: (nodeValue) => nodeValue.key === key });
