@@ -20,3 +20,14 @@
      throw new Error('Either dataSet or labels or toClassify were not set');
    }
  
+   // Calculate distance from toClassify to each point for all dimensions in dataSet.
+   // Store distance and point's label into distances list.
+   const distances = [];
+   for (let i = 0; i < dataSet.length; i += 1) {
+     distances.push({
+       dist: euclideanDistance([dataSet[i]], [toClassify]),
+       label: labels[i],
+     });
+   }
+ 
+ 
