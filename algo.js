@@ -8,4 +8,15 @@
  * @return {number} - the class of the point
  */
 
+ import euclideanDistance from '../../math/euclidean-distance/euclideanDistance';
+
+ export default function kNN(
+   dataSet,
+   labels,
+   toClassify,
+   k = 3,
+ ) {
+   if (!dataSet || !labels || !toClassify) {
+     throw new Error('Either dataSet or labels or toClassify were not set');
+   }
  
