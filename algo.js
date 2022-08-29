@@ -30,4 +30,13 @@
      });
    }
  
+   // Sort distances list (from closer point to further ones).
+   // Take initial k values, count with class index
+   const kNearest = distances.sort((a, b) => {
+     if (a.dist === b.dist) {
+       return 0;
+     }
+     return a.dist < b.dist ? -1 : 1;
+   }).slice(0, k);
+ 
  
