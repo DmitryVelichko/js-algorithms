@@ -47,3 +47,14 @@ export default function prim(graph) {
     } else if (!visitedVertices[currentMinEdge.endVertex.getKey()]) {
       nextMinVertex = currentMinEdge.endVertex;
     }
+
+    // If all vertices of current edge has been already visited then skip this round.
+    if (nextMinVertex) {
+      // Add current min edge to MST.
+      minimumSpanningTree.addEdge(currentMinEdge);
+
+      // Add vertex to the set of visited ones.
+      visitedVertices[nextMinVertex.getKey()] = nextMinVertex;
+
+     
+}
