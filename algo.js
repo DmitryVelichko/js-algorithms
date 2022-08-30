@@ -56,5 +56,18 @@ export default function prim(graph) {
       // Add vertex to the set of visited ones.
       visitedVertices[nextMinVertex.getKey()] = nextMinVertex;
 
-     
+      // Add all current vertex's edges to the queue.
+      nextMinVertex.getEdges().forEach((graphEdge) => {
+        // Add only vertices that link to unvisited nodes.
+        if (
+          !visitedVertices[graphEdge.startVertex.getKey()]
+          || !visitedVertices[graphEdge.endVertex.getKey()]
+        ) {
+          edgesQueue.add(graphEdge, graphEdge.weight);
+        }
+      });
+    }
+  }
+
+  return minimumSpanningTree;
 }
