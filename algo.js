@@ -25,3 +25,25 @@ export default function prim(graph) {
 
   // Vertex from which we will start graph traversal.
   const startVertex = graph.getAllVertices()[0];
+
+  // Add start vertex to the set of visited ones.
+  visitedVertices[startVertex.getKey()] = startVertex;
+
+  // Add all edges of start vertex to the queue.
+  startVertex.getEdges().forEach((graphEdge) => {
+    edgesQueue.add(graphEdge, graphEdge.weight);
+  });
+
+  // Now let's explore all queued edges.
+  while (!edgesQueue.isEmpty()) {
+    // Fetch next queued edge with minimal weight.
+    /** @var {GraphEdge} currentEdge */
+    const currentMinEdge = edgesQueue.poll();
+
+    // Find out the next unvisited minimal vertex to traverse.
+    let nextMinVertex = null;
+    if (!visitedVertices[currentMinEdge.startVertex.getKey()]) {
+      nextMinVertex = currentMinEdge.startVertex;
+    } else if (!visitedVertices[currentMinEdge.endVertex.getKey()]) {
+      nextMinVertex = currentMinEdge.endVertex;
+    }
