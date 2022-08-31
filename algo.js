@@ -25,3 +25,14 @@ export default class BubbleSort extends Sort {
           swapped = true;
         }
       }
+
+      // If there were no swaps then array is already sorted and there is
+      // no need to proceed.
+      if (!swapped) {
+        return array;
+      }
+    }
+
+    return array;
+  }
+}
