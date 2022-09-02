@@ -20,3 +20,21 @@ export default class CountingSort extends Sort {
         if (this.comparator.greaterThan(element, detectedBiggestElement)) {
           detectedBiggestElement = element;
         }
+
+        // Detect smallest element.
+        if (this.comparator.lessThan(element, detectedSmallestElement)) {
+          detectedSmallestElement = element;
+        }
+      });
+    }
+
+    // Init buckets array.
+    // This array will hold frequency of each number from originalArray.
+    const buckets = Array(detectedBiggestElement - detectedSmallestElement + 1).fill(0);
+
+    originalArray.forEach((element) => {
+      // Visit element.
+      this.callbacks.visitingCallback(element);
+
+      buckets[element - detectedSmallestElement] += 1;
+    });
