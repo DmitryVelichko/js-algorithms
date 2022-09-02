@@ -62,3 +62,17 @@ export default class CountingSort extends Sort {
       // Visit element.
       this.callbacks.visitingCallback(element);
 
+      // Get correct position of this element in sorted array.
+      const elementSortedPosition = buckets[element - detectedSmallestElement];
+
+      // Put element into correct position in sorted array.
+      sortedArray[elementSortedPosition] = element;
+
+      // Increase position of current element in the bucket for future correct placements.
+      buckets[element - detectedSmallestElement] += 1;
+    }
+
+    // Return sorted array.
+    return sortedArray;
+  }
+}
