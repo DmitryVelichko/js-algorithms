@@ -8,3 +8,14 @@ function removeDuplicates(nums: number[]): number {
     
     return nums.length
 };
+
+function removeDuplicates2(nums: number[]): number { 
+ 
+    let k: number = 1;
+    for(let i = 1; i < nums.length; i++) {
+       
+    }
+    return k;
+    
+};
+    
