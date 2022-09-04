@@ -15,4 +15,9 @@ var maxProfit = function(prices) {
     for (let i = 1; i < prices.length; i++) {
         if (prices[i] > buyingPrice) {
             profit += prices[i] - buyingPrice;
+            buyingPrice = prices[i]; // Re-buying 
+        } else if (prices[i] < buyingPrice) {
+            buyingPrice = prices[i]; // Better price
+        }
+    }
 
