@@ -20,4 +20,8 @@ var maxProfit = function(prices) {
             buyingPrice = prices[i]; // Better price
         }
     }
+    return profit;
+    // T.C: O(N)
+    // S.C: O(1)
+};
 
