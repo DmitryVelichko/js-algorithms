@@ -10,3 +10,8 @@
        let arr= [];
        sum = sum + nums[i]
        if (nums[i] === target) {
+            return nums[i];
+        }
+        return nums[i];
+    }  
+  };
