@@ -18,4 +18,7 @@ function twoSum(nums, target) {
 
 function twoSum2(nums, target) {
   let map = {}
+  for(let i = 0; i < nums.length; i++) {
+    let value = nums[i]
+    let complementPair = target - value;
 
