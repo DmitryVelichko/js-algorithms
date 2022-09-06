@@ -21,4 +21,6 @@ function twoSum2(nums, target) {
   for(let i = 0; i < nums.length; i++) {
     let value = nums[i]
     let complementPair = target - value;
+    if(map[complementPair] !== undefined) {
+      return [map[complementPair], i]
 
