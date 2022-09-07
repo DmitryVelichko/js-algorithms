@@ -13,3 +13,4 @@ let singleNumber = function(nums) {
         ht[num] = ht[num] + 1 || 1;
     }
       
+      for (const key in ht) {
