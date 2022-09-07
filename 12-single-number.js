@@ -14,3 +14,8 @@ let singleNumber = function(nums) {
     }
       
       for (const key in ht) {
+          if(ht[key] === 1) {
+              return key;
+          }
+      }
+  };
