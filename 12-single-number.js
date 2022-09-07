@@ -6,3 +6,6 @@
 
 // Input: nums = [2,2,1]
 // Output: 1
+
+let singleNumber = function(nums) {
+    let ht = {}
