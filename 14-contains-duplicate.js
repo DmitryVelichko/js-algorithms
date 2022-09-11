@@ -16,4 +16,8 @@ var containsDuplicate = function (nums) {
       }
     }
   }
+  return false;
+};
 
+console.log(containsDuplicate([2, 14, 18, 22, 22]) + ' TRUE');
+console.log(containsDuplicate([1, 2, 3, 4, 5]) + ' FALSE');
