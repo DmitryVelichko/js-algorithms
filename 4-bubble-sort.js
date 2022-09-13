@@ -1,7 +1,6 @@
 // Bubble Sort, O(n^2)
 
 const arr = [-5, 23, 7, 5, 3, -12, -29, 21, 54, 35, 0];
-let count = 0;
 
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
