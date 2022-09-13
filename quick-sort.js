@@ -13,3 +13,11 @@ export default class QuickSort extends Sort {
     if (array.length <= 1) {
       return array;
     }
+
+    // Init left and right arrays.
+    const leftArray = [];
+    const rightArray = [];
+
+    // Take the first element of array as a pivot.
+    const pivotElement = array.shift();
+    const centerArray = [pivotElement];
