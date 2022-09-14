@@ -84,3 +84,24 @@ export default class HashTable {
    * @param {string} key
    * @return {*}
    */
+  get(key) {
+    const bucketLinkedList = this.buckets[this.hash(key)];
+    const node = bucketLinkedList.find({ callback: (nodeValue) => nodeValue.key === key });
+
+    return node ? node.value.value : undefined;
+  }
+
+  /**
+   * @param {string} key
+   * @return {boolean}
+   */
+  has(key) {
+    return Object.hasOwnProperty.call(this.keys, key);
+  }
+
+  /**
+   * @return {string[]}
+   */
+  getKeys() {
+    return Object.keys(this.keys);
+  }
