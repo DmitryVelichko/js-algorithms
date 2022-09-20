@@ -17,3 +17,7 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort(arr)); // O(n*n)
 
+// Сортирует массив за лучшее время
+
+function bubbleSortBestTime(arr) {
+ 
