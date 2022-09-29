@@ -26,3 +26,10 @@ function bubbleSort(arr) {
     
         if (isSorted) return arr; // Если isSorted === true, значит наш массив отсортирован, и мы сразу же возвращаем его.
     
+      }
+    
+      return arr; 
+    
+    }
+
+    console.log(bubbleSort(arr))
