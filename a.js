@@ -1,35 +1,21 @@
-const arr = [-5, 23, 7, 5, 3, -12, -29, 21, 54, 35, 0];
+import LinkedListNode from './LinkedListNode';
+import Comparator from '../../utils/comparator/Comparator';
 
-function bubbleSort(arr) {
+export default class LinkedList {
+  /**
+   * @param {Function} [comparatorFunction]
+   */
+  constructor(comparatorFunction) {
+    /** @var LinkedListNode */
+    this.head = null;
 
-      let isSorted; // Добавим переменную, отвечающую на вопрос - отсортирован наш массив или нет.
-    
-      for (let i = 0; i < arr.length; i++) {
-    
-        isSorted = true; // Предположим, что наш массив отсортирован.
-    
-        for (let j = 0; j < arr.length - i; j++) { // так как при каждой итерации цикла наибольший элемент перемещается в конец массива, нам нет нужды выполнять проверку для уже отсортированных элементов.
-    
-          if (arr[j] > arr[j + 1]) {
-    
-            let tmp = arr[j];
-    
-            arr[j] = arr[j + 1];
-    
-            arr[j + 1] = tmp;
-    
-            isSorted = false; // Так как мы поменяли элементы местами, значит, наш массив не отсортирован. Устанавливаем значение false.
-    
-          }
-    
-        }
-    
-        if (isSorted) return arr; // Если isSorted === true, значит наш массив отсортирован, и мы сразу же возвращаем его.
-    
-      }
-    
-      return arr; 
-    
-    }
+    /** @var LinkedListNode */
+    this.tail = null;
 
-    console.log(bubbleSort(arr))
+    this.compare = new Comparator(comparatorFunction);
+  }
+
+  /**
+   * @param {*} value
+   * @return {LinkedList}
+   */
