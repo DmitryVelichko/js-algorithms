@@ -14,3 +14,8 @@ function reverseTraversalRecursive(node, callback) {
     callback(node.value);
   }
 }
+
+/**
+ * @param {LinkedList} linkedList
+ * @param {traversalCallback} callback
+ */
