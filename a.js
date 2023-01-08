@@ -23,3 +23,16 @@ export default function jumpSearch(sortedArray, seekElement, comparatorCallback)
   // when jumpSize = √array.length.
   const jumpSize = Math.floor(Math.sqrt(arraySize));
 
+  // Find the block where the seekElement belong to.
+  let blockStart = 0;
+  let blockEnd = jumpSize;
+  while (comparator.greaterThan(seekElement, sortedArray[Math.min(blockEnd, arraySize) - 1])) {
+    // Jump to the next block.
+    blockStart = blockEnd;
+    blockEnd += jumpSize;
+
+    // If our next block is out of array then we couldn't found the element.
+    if (blockStart > arraySize) {
+      return -1;
+    }
+  }
