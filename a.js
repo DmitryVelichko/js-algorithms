@@ -1,24 +1,10 @@
-/**
- * Traversal callback function.
- * @callback traversalCallback
- * @param {*} nodeValue
- */
+
 
 /**
- * @param {LinkedListNode} node
- * @param {traversalCallback} callback
+ * Jump (block) search implementation.
+ *
+ * @param {*[]} sortedArray
+ * @param {*} seekElement
+ * @param {function(a, b)} [comparatorCallback]
+ * @return {number}
  */
-function reverseTraversalRecursive(node, callback) {
-  if (node) {
-    reverseTraversalRecursive(node.next, callback);
-    callback(node.value);
-  }
-}
-
-/**
- * @param {LinkedList} linkedList
- * @param {traversalCallback} callback
- */
-export default function reverseTraversal(linkedList, callback) {
-  reverseTraversalRecursive(linkedList.head, callback);
-}
