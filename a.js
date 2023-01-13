@@ -30,4 +30,16 @@ export default function bellmanFord(graph, startVertex) {
         // then in previous one.
         const distanceToVertex = distances[vertex.getKey()];
         const distanceToNeighbor = distanceToVertex + edge.weight;
-    
+        if (distanceToNeighbor < distances[neighbor.getKey()]) {
+          distances[neighbor.getKey()] = distanceToNeighbor;
+          previousVertices[neighbor.getKey()] = vertex;
+        }
+      });
+    });
+  }
+
+  return {
+    distances,
+    previousVertices,
+  };
+}
