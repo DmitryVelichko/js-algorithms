@@ -11,3 +11,8 @@ export default function bellmanFord(graph, startVertex) {
   // any of the vertices except start one.
   distances[startVertex.getKey()] = 0;
   graph.getAllVertices().forEach((vertex) => {
+    previousVertices[vertex.getKey()] = null;
+    if (vertex.getKey() !== startVertex.getKey()) {
+      distances[vertex.getKey()] = Infinity;
+    }
+  });
