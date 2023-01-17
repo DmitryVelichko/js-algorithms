@@ -7,3 +7,21 @@ export default class Queue {
     this.linkedList = new LinkedList();
   }
 
+  /**
+   * @return {boolean}
+   */
+  isEmpty() {
+    return !this.linkedList.head;
+  }
+
+  /**
+   * Read the element at the front of the queue without removing it.
+   * @return {*}
+   */
+  peek() {
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this.linkedList.head.value;
+  }
