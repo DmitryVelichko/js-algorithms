@@ -44,3 +44,13 @@ export default class Queue {
     const removedHead = this.linkedList.deleteHead();
     return removedHead ? removedHead.value : null;
   }
+
+  /**
+   * @param [callback]
+   * @return {string}
+   */
+  toString(callback) {
+    // Return string representation of the queue's linked list.
+    return this.linkedList.toString(callback);
+  }
+}
