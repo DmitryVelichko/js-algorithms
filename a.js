@@ -4,3 +4,7 @@
  * @param {*} nodeValue
  */
 
+/**
+ * @param {LinkedList} linkedList
+ * @param {traversalCallback} callback
+ */
