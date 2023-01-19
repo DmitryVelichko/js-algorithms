@@ -15,3 +15,4 @@ export default function traversal(linkedList, callback) {
     callback(currentNode.value);
     currentNode = currentNode.next;
   }
+}
