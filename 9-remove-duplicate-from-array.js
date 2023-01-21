@@ -9,7 +9,11 @@ let removeDuplicates0 = function(nums) {
            nums[k] = nums[i + 1]
             k++;
         }
+    }
+    return k;
+};
 
+console.log(removeDuplicates0(nums))
 
 
 
