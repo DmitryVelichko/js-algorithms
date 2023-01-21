@@ -1,4 +1,13 @@
-function removeDuplicates(nums: number[]): number {
+/*eslint-disable*/
+
+let nums = [1,1,2,2,2,3,3,4,4]
+
+let removeDuplicates0 = function(nums) {
+
+
+
+
+function removeDuplicates(nums) {
     let i = 0;
     
     while(i < nums.length) {
@@ -9,9 +18,9 @@ function removeDuplicates(nums: number[]): number {
     return nums.length
 };
 
-function removeDuplicates2(nums: number[]): number { 
+function removeDuplicates2(nums) { 
  
-    let k: number = 1;
+    let k = 1;
     for(let i = 1; i < nums.length; i++) {
         if(nums[i] !== nums[i-1]) {
            
@@ -22,4 +31,3 @@ function removeDuplicates2(nums: number[]): number {
     return k;
     
 };
-    
