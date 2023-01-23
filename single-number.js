@@ -7,3 +7,11 @@ let singleNumber = function (nums) {
     ht[num] = ht[num] + 1 || 1;
   }
 
+  for (i in ht) {
+    if (ht[i] === 1) {
+      return i;
+    }
+  }
+};
+
+console.log(singleNumber(nums));
