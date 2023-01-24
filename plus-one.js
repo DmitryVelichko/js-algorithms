@@ -7,3 +7,8 @@ let plusOne = function (digits) {
       digits[i] = 0;
     }
   }
+  digits.unshift(1);
+  return digits;
+};
+
+console.log(plusOne([9, 9]));
