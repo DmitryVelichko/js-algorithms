@@ -1,0 +1,7 @@
+// time complexity: O(n^2)
+// space complexity: O(1)
+
+function twoSum(nums, target) {
+
+  for (let i = 0; i<nums.length; i++) {
+       for (let j = i + 1; j<nums.length; j++) {
