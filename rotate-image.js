@@ -4,4 +4,7 @@ let rotate = function(matrix) {
             [matrix[r][c], matrix[c][r]] = [matrix[c][r], matrix[r][c]]
         }
     }
- 
+    for(let row of matrix) {
+        row.reverse()
+    }
+};
