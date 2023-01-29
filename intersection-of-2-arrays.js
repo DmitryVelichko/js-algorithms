@@ -15,3 +15,11 @@ let intersect = function (nums1, nums2) {
   // loop through the second array of nums and see
   // if the hashmap has a count of the value
 
+  for (let i of nums2) {
+    if (obj[i] > 0) {
+      result.push(i);
+      obj[i]--;
+    }
+  }
+
+
