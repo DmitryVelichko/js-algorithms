@@ -12,3 +12,6 @@ let intersect = function (nums1, nums2) {
     }
   }
 
+  // loop through the second array of nums and see
+  // if the hashmap has a count of the value
+
