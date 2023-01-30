@@ -3,3 +3,5 @@ let moveZeroes = function (nums) {
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] !== 0) {
+      let temp = nums[prevIndex];
+      nums[prevIndex] = nums[i];
