@@ -5,3 +5,10 @@ let moveZeroes = function (nums) {
     if (nums[i] !== 0) {
       let temp = nums[prevIndex];
       nums[prevIndex] = nums[i];
+      nums[i] = temp;
+      prevIndex++;
+    }
+  }
+};
+
+console.log(moveZeroes([0, 0, 1]));
