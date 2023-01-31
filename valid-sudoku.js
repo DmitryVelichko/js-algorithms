@@ -10,3 +10,15 @@ const board = [
   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
 ];
 
+let isValidSudoku = function (board) {
+  for (let i = 0; i < board.length; i++) {
+    const set = new Set();
+    for (let j = 0; j < board[i].length; j++) {
+      const cell = board[i][j];
+      if (cell === '.') continue;
+      if (set.has(cell)) return false;
+      set.add(cell);
+    }
+  }
+
+ 
