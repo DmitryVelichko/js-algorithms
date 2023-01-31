@@ -35,3 +35,17 @@ let isValidSudoku = function (board) {
     for (let j = 0; j < 3; j++) {
       const set = new Set();
 
+      for (let k = 0; k < 3; k++) {
+        for (let l = 0; l < 3; l++) {
+          const cell = board[3 * i + k][3 * j + l];
+          if (cell === '.') continue;
+          if (set.has(cell)) return false;
+          set.add(cell);
+        }
+      }
+    }
+  }
+  return true;
+};
+
+console.log(isValidSudoku(board));
