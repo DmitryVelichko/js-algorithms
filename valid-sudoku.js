@@ -21,4 +21,17 @@ let isValidSudoku = function (board) {
     }
   }
 
- 
+  for (let i = 0; i < board.length; i++) {
+    const set = new Set();
+    for (let j = 0; j < board[i].length; j++) {
+      const cell = board[j][i];
+      if (cell === '.') continue;
+      if (set.has(cell)) return false;
+      set.add(cell);
+    }
+  }
+
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      const set = new Set();
+
