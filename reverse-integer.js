@@ -7,7 +7,15 @@ let reverse = function (x) {
 
   let result = '';
 
+  for (let i of x) {
+    result = i + result;
+  }
 
+  result = parseInt(result);
+  return result > limit ? 0 : result * negativeTest;
+};
+
+console.log(reverse(x));
 
 // let temp = x;
 //   if (x < 0) {
