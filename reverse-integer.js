@@ -17,7 +17,7 @@ let reverse = function (x) {
 
 console.log(reverse(x));
 
-let temp = x;
+// let temp = x;
 //   if (x < 0) {
 //     temp = Math.abs(x);
 //   }
