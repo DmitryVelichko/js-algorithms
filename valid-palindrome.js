@@ -15,3 +15,26 @@ let isPalindrome = function (s) {
 
 console.log(isPalindrome('racecar'));
 
+// let isPalindrome = function (s) {
+//   s = s
+//     .split(' ')
+//     .filter((e) => e.trim().length)
+//     .join('');
+//   s = s.replace(/,/g, '');
+//   s = s.toLowerCase();
+//   s = s.replace(/:/g, '');
+
+//   s = s.replace('.', "")
+//   s = s.replace(/[^a-zA-Z0-9 ]/g, "")
+//   console.log(s);
+//   let result = '';
+//   for (let i of s) {
+//     result = i + result;
+//   }
+
+//   if (s === result || s === '') {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
