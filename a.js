@@ -13,3 +13,22 @@
 
 // Input: s = "()"
 // Output: true
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+
+//https://www.youtube.com/watch?v=OxbxP5_-Tcs&ab_channel=PheezxCoding
+
+var isValid = function(s) {
+
+    const hashMap = {'(': ')', '{': '}', '[': ']'}
+    
+    const stack = []
+    
+    for(let ch of s) {
+        if(hashMap[ch]) {
+            //ch is an opening bracket
+            stack.push(hashMap[ch])
+    
