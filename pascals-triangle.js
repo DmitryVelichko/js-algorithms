@@ -20,3 +20,23 @@
 // 1 <= numRows <= 30
 
 /**
+2
+ * @param {number} numRows
+3
+ * @return {number[][]}
+4
+ */
+
+/**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+var generate = function(numRows) {
+    let pascalsTriangle = new Array(numRows);
+    
+    for(let i=0; i<numRows; i++) {
+        let row = new Array(i+1)
+        row[0] = 1
+        row[row.length - 1] = 1
+        
+  
