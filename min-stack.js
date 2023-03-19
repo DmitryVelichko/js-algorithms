@@ -32,3 +32,19 @@ MinStack.prototype.push = function(val) {
     
     this.stack.push(val)
 };
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    this.stack.pop()
+    this.min.pop()
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    return this.stack[this.stack.length - 1]
+};
+
