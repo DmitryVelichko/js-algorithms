@@ -12,3 +12,23 @@
 // You must implement a solution with O(1) time complexity for each function
 
 
+var MinStack = function() {
+   
+    this.stack = []
+    this.min = []
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function(val) {
+    if(this.stack.length === 0) {
+        this.min.push(val)
+    } else {
+        let minimum = Math.min(val, this.min[this.min.length - 1])
+        this.min.push(minimum)
+    }
+    
+    this.stack.push(val)
+};
