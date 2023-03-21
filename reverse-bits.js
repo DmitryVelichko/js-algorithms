@@ -21,3 +21,11 @@ var reverseBits = function(n) {
         let revBit = lastBit << (31-i)
         
         result = result | revBit
+        
+        n = n >>> 1
+    }
+    
+    return result >>> 0
+};
+
+reverseBits(00001100110011110011110000110011)
