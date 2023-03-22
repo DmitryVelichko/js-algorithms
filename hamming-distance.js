@@ -28,3 +28,13 @@
 
 var hammingDistance = function(x, y) {
     
+    let count = 0;
+    
+    let res = x^y;
+    
+    while(res !== 0) {
+        if(res & 1 == 1) count++
+        res = res >> 1
+    }
+    return count
+};
