@@ -22,3 +22,9 @@
 // Output: 1
  
 
+// Constraints:
+
+// 0 <= x, y <= 231 - 1
+
+var hammingDistance = function(x, y) {
+    
