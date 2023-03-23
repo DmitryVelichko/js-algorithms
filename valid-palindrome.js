@@ -9,3 +9,11 @@ let isPalindrome1 = function (s) {
 
   return(s.toString() === reversed)  
 };
+
+let isPalindrome = function (x) {
+  let reversedStr = ''
+  let xStr = x.toString()
+
+  for(let i of xStr) {
+
+    reversedStr =  i + reversedStr
