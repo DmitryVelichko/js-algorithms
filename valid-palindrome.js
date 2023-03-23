@@ -17,3 +17,10 @@ let isPalindrome = function (x) {
   for(let i of xStr) {
 
     reversedStr =  i + reversedStr
+
+  }
+return reversedStr === xStr
+  
+};
+
+console.log(isPalindrome(121))
