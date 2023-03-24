@@ -14,3 +14,11 @@
 // Output: 5
 // Explanation: The last word is "World" with length 5.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    let str = s.trim().split(' ')
+    return (str[str.length-1].length)
+};
