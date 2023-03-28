@@ -4,8 +4,6 @@
 
 // The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
- 
-
 // Example 1:
 
 // Input: nums = [3,2,3]
@@ -25,3 +23,8 @@ var majorityElement = function(nums) {
     for(const num of nums) {
         ht[num] = ht[num] + 1 || 1
     }
+
+    for (const key in ht) {
+        if (ht[key] > Math.floor(nums.length / 2)) return key
+    }
+};
