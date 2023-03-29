@@ -21,3 +21,13 @@ var mySolution = function(nums1, nums2) {
     let ht = {}
     let set = new Set()
     let arr = []
+
+    for(const num of nums1) {
+        ht[num] = ht[num] || num;
+    }
+
+    for(const num of nums2) {
+        if(num === ht[num]){
+            set.add(num)
+        }
+    }
