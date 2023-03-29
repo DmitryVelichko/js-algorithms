@@ -31,3 +31,12 @@ var mySolution = function(nums1, nums2) {
             set.add(num)
         }
     }
+    
+    arr = Array.from(set)
+    return arr
+};
+
+var intersection = function(nums1, nums2) {
+    const unique = new Set(nums1)
+    return [...unique].filter((item) => nums2.indexOf(item) !== -1)
+};
