@@ -10,3 +10,10 @@
 
 // Input: nums = [1,1]
 // Output: [2]
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var findDisappearedNumbers = function(nums) {
+    const arr = [];
