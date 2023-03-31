@@ -14,3 +14,19 @@
 var MyHashSet = function() {
     this.hash = []
 };
+
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashSet.prototype.add = function(key) {
+    this.hash[key] = true
+};
+
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashSet.prototype.remove = function(key) {
+    delete this.hash[key]
+};
