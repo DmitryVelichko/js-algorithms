@@ -12,7 +12,7 @@
 // void remove(key) Removes the value key in the HashSet. If key does not exist in the HashSet, do nothing.
 
 var MyHashSet = function() {
-    this.hash = []
+    this.hash = {}
 };
 
 /** 
