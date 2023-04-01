@@ -27,3 +27,12 @@ var search = function(nums, target) {
         if(nums[middle] > target) {
             end = middle-1
         }
+        else if(nums[middle] < target) {
+            start = middle + 1
+        }
+    }
+    return -1
+    
+};
+
+console.log(search([1,2,3,4,5,6,7], 7))
