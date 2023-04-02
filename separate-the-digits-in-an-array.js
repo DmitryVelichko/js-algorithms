@@ -18,3 +18,19 @@
 // answer = [1,3,2,5,8,3,7,7]. Note that answer contains the separations in the same order.
 // Example 2:
 
+// Input: nums = [7,1,3,9]
+// Output: [7,1,3,9]
+// Explanation: The separation of each integer in nums is itself.
+// answer = [7,1,3,9].
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 1000
+// 1 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
