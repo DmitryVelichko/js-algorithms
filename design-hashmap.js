@@ -9,3 +9,12 @@
 // int get(int key) returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key.
 // void remove(key) removes the key and its corresponding value if the map contains the mapping for the key.
 
+var MyHashMap = function() {
+    this.hashMap = new Array(1000001)
+};
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
