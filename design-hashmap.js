@@ -18,3 +18,16 @@ var MyHashMap = function() {
  * @param {number} value
  * @return {void}
  */
+MyHashMap.prototype.put = function(key, value) {
+    this.hashMap[key] = value
+};
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+MyHashMap.prototype.get = function(key) {
+   let value = this.hashMap[key]
+   return value !== undefined ? value : -1
+};
+
