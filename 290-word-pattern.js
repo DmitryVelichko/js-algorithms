@@ -26,3 +26,15 @@
 // s does not contain any leading or trailing spaces.
 // All the words in s are separated by a single space.
 
+/**
+ * @param {string} pattern
+ * @param {string} s
+ * @return {boolean}
+ */
+var wordPattern = function(pattern, str) {
+    const mapCharToWord = {};
+    const mapWordToChar = {};
+
+    pattern = pattern.split('');
+    str = str.split(' ');
+    
