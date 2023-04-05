@@ -38,3 +38,18 @@ var wordPattern = function(pattern, str) {
     pattern = pattern.split('');
     str = str.split(' ');
     
+    if(pattern.length !== str.length) return false;
+    
+    for(let i = 0; i < str.length; i++) {
+        let curWord = str[i];
+        let curLetter = pattern[i];
+
+        if(mapCharToWord[curLetter] !== undefined && mapCharToWord[curLetter] !== curWord) return false;
+
+        if(mapWordToChar[curWord] !== undefined && mapWordToChar[curWord] !== curLetter) return false;
+        
+        mapWordToChar[curWord] = curLetter;
+        mapCharToWord[curLetter] = curWord;
+    }
+    return true
+};
