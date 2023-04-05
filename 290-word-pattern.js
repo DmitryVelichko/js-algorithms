@@ -31,25 +31,40 @@
  * @param {string} s
  * @return {boolean}
  */
-var wordPattern = function(pattern, str) {
-    const mapCharToWord = {};
-    const mapWordToChar = {};
+// var wordPattern = function(pattern, str) {
+//     const mapCharToWord = {};
+//     const mapWordToChar = {};
 
-    pattern = pattern.split('');
-    str = str.split(' ');
+//     pattern = pattern.split('');
+//     str = str.split(' ');
     
-    if(pattern.length !== str.length) return false;
+//     if(pattern.length !== str.length) return false;
     
-    for(let i = 0; i < str.length; i++) {
-        let curWord = str[i];
-        let curLetter = pattern[i];
+//     for(let i = 0; i < str.length; i++) {
+//         let curWord = str[i];
+//         let curLetter = pattern[i];
 
-        if(mapCharToWord[curLetter] !== undefined && mapCharToWord[curLetter] !== curWord) return false;
+//         if(mapCharToWord[curLetter] !== undefined && mapCharToWord[curLetter] !== curWord) return false;
 
-        if(mapWordToChar[curWord] !== undefined && mapWordToChar[curWord] !== curLetter) return false;
+//         if(mapWordToChar[curWord] !== undefined && mapWordToChar[curWord] !== curLetter) return false;
         
-        mapWordToChar[curWord] = curLetter;
-        mapCharToWord[curLetter] = curWord;
+//         mapWordToChar[curWord] = curLetter;
+//         mapCharToWord[curLetter] = curWord;
+//     }
+//     return true
+// };
+
+var wordPattern = function(pattern, str) {
+    const words = str.split(/\s+/);
+    const map = new Map();
+    
+    if(words.length !== pattern.length) return false;
+    if(new Set(words).size !== new Set(pattern).size) return false;
+    
+    for(let i = 0; i < pattern.length; i++) {
+        if(map.has(pattern[i]) && 
+           map.get(pattern[i]) !== words[i]) return false;
+        map.set(pattern[i], words[i]);
     }
-    return true
+    return true;
 };
