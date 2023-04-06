@@ -26,3 +26,14 @@ var findDuplicates = function (nums) {
     for (let i = 0; i < nums.length; i++) {
         let value = Math.abs(nums[i])
         let index = value - 1;
+        if (nums[index] < 0) {
+            result.push(value)
+        } else {
+            nums[index] *= -1;
+        }
+    }
+    return result
+
+};
+
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1]))
