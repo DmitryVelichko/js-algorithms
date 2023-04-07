@@ -21,3 +21,14 @@
 // Output: 5
 // Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
 
+
+// Constraints:
+
+// 1 <= nums.length <= 1000
+// -231 <= nums[i] <= 231 - 1
+// nums[i] != nums[i + 1] for all valid i.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
