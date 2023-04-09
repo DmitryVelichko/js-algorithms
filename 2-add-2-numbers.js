@@ -29,3 +29,20 @@
  * }
  */
 /**
+ 
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+
+var addTwoNumbers = function (l1, l2) {
+    let carry = 0;
+    let previousNode = new ListNode();
+    const headNode = previousNode;
+    while (l1 || l2 || carry) {
+        let val1 = 0;
+        let val2 = 0;
+        if (l1) {
+            val1 = l1.val;
+            l1 = l1.next
+        }
