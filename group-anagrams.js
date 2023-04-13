@@ -25,3 +25,24 @@
 // 0 <= strs[i].length <= 100
 // strs[i] consists of lowercase English letters.
 
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function (strs) {
+    let obj = {}
+    for(let str of strs) {
+        let sortedStr = str.split('').sort().join('')
+        
+        if(!obj[sortedStr]) {
+            obj[sortedStr] = [str]
+        } else {
+            obj[sortedStr].push(str)
+        }
+    }
+    return Object.values(obj)
+    
+};
+
+groupAnagrams(["eat","tea","tan","ate","nat","bat"])
