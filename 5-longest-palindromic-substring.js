@@ -25,3 +25,13 @@
 const longestPalindrome = function (str) {
     if (str.length < 1 || str === null) return '';
     let longest = ''
+
+    const expandFromCenter = (str, left, right) => {
+        let i = 0;
+        while (str[left - i] && str[left - i] === str[right + i]) {
+            i++
+        }
+        i--
+
+        return str.slice(left - i, right + i + 1)
+    }
