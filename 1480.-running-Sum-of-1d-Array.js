@@ -20,3 +20,18 @@
 // Input: nums = [3,1,2,10,1]
 // Output: [3,4,6,16,17]
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function (nums) {
+    let total = 0
+    const result = []
+    for (let i = 0; i < nums.length; i++) {
+        total = total + nums[i]
+        result.push(total)
+        console.log(result)
+    }
+    return result
+};
+
