@@ -15,3 +15,28 @@
 // Input: s = "a"
 // Output: 1
 // Explanation: The longest palindrome that can be built is "a", whose length is 1.
+
+// Constraints:
+
+// 1 <= s.length <= 2000
+// s consists of lowercase and/or uppercase English letters only.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var longestPalindrome = function(s) {
+    let result = 0;
+    const set = new Set()
+
+    for(const c of s) {
+        if(!set.has(c)){
+            set.add(c)
+        } else {
+            result +=2;
+            set.delete(c)
+        }
+    }
+
+    return result + (!!set.size ? 1:0)
+};
