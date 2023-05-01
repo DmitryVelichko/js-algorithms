@@ -5,7 +5,7 @@
 
 // Return the average salary of employees excluding the minimum and maximum salary. Answers within 10-5 of the actual answer will be accepted.
 
- 
+
 
 // Example 1:
 
@@ -19,7 +19,7 @@
 // Output: 2000.00000
 // Explanation: Minimum salary and maximum salary are 1000 and 3000 respectively.
 // Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
- 
+
 
 // Constraints:
 
@@ -31,14 +31,14 @@
  * @param {number[]} salary
  * @return {number}
  */
-var average = function(salary) {
+var average = function (salary) {
     let minVal = salary[0]
     let maxVal = salary[0]
     let sum = salary[0]
 
-    for(let i = 1; i<salary.length; i++) {
-        if(minVal > salary[i]) minVal = salary[i]
-        if(maxVal < salary[i]) maxVal = salary[i]
+    for (let i = 1; i < salary.length; i++) {
+        if (minVal > salary[i]) minVal = salary[i]
+        if (maxVal < salary[i]) maxVal = salary[i]
         sum += salary[i]
 
     }
@@ -46,4 +46,4 @@ var average = function(salary) {
     return sum / (salary.length - 2)
 }
 
-console.log(average([4000,3000,1000,2000]))
+console.log(average([4000, 3000, 1000, 2000]))
