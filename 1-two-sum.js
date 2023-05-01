@@ -7,7 +7,7 @@
 
 // You can return the answer in any order.
 
- 
+
 
 // Example 1:
 
@@ -22,7 +22,7 @@
 
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
- 
+
 
 // Constraints:
 
@@ -30,7 +30,7 @@
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 // Only one valid answer exists.
- 
+
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
@@ -45,6 +45,7 @@ var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i ++) {
         if(map.has(target - nums[i])) {
             return [map.get(target - nums[i]), i];
+        
         } else {
             map.set(nums[i], i);
         }
