@@ -47,3 +47,13 @@ var decodeString = function (s) {
             multiply.push(tempMult)
             tempMult = ''
 
+            repeatStr.push(solution)
+            solution = ''
+        } else if (char === ']') {
+            solution = repeatStr.pop() + solution.repeat(multiply.pop())
+        } else {
+            solution += char
+        }
+    }
+    return solution
+};
