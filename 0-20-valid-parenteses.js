@@ -14,3 +14,27 @@
 // Input: s = "()"
 // Output: true
 
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+
+//Time: O(n), Space: O(n), if the string is '(((((((', the stack
+// will end up having the size equal to the string.
+
+var isValid = function (s) {
+    const stack = []
+
+    for (let char of s) {
+        if (char === '(') {
+            stack.push(')')
+        } else if (char === '[') {
+            stack.push(']')
+        } else if (char === '{') {
+            stack.push('}')
+        } else if (char !== stack.pop()) {
+            return false
+        }
+    }
+    return stack.length === 0
+};
