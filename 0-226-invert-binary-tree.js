@@ -25,3 +25,22 @@
  */
 
 // Recursive Approach:
+
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+
+    function reverseNode(node) {
+        if (node === null) return
+        reverseNode(node.left)
+        reverseNode(node.right)
+
+        let hold = node.left
+        node.left = node.right
+        node.right = hold
+    }
+    reverseNode(root)
+    return root
+};
