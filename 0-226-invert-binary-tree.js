@@ -25,6 +25,7 @@
  */
 
 // Iterative Approach:
+// Time O(n), Space O(n)
 
 /**
  * @param {TreeNode} root
@@ -50,6 +51,7 @@ var invertTree = function (root) {
 
 
 // Recursive Approach:
+// Time O(n), Space O(h), h-height of the tree, n - number of nodes 
 
 /**
  * @param {TreeNode} root
