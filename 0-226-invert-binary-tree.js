@@ -24,6 +24,31 @@
  * }
  */
 
+// Iterative Approach:
+
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+
+    const stack = [root]
+    while (stack.length > 0) {
+        let node = stack.pop()
+        if (node !== null) {
+
+            let hold = node.left
+            node.left = node.right
+            node.right = hold
+
+            stack.push(node.left)
+            stack.push(node.right)
+        }
+    }
+    return root
+};
+
+
 // Recursive Approach:
 
 /**
