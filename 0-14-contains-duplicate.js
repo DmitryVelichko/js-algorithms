@@ -3,22 +3,22 @@
 // Solution
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
+// Time - O(n), space - O(n)
 /**
  * @param {number[]} nums
  * @return {boolean}
  */
-
-// Time - O(n), space - O(n)
-var containsDuplicate = function (nums) {
-  let memory = {};
+let containsDuplicate = function(nums) {
+  let map={}
+  
   for (let i = 0; i < nums.length; i++) {
-    if (memory[nums[i]] === undefined) {
-      memory[nums[i]] = true;
-    } else {
-      return true;
-    }
+      if(nums[i] in map) {
+          return true
+      } else {
+          map[nums[i]] = 1
+      }
   }
-  return false;
+  return false
 };
 
 // var containsDuplicate = function (nums) {
