@@ -34,3 +34,9 @@ var maxProfit = function (prices) {
     let minValue = Infinity
     let maxProfit = 0;
 
+    for (let i = 0; i < prices.length; i++) {
+        minValue = Math.min(minValue, prices[i])
+        maxProfit = Math.max(maxProfit, prices[i] - minValue)
+    }
+    return maxProfit
+};
