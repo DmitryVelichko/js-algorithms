@@ -13,7 +13,7 @@
 
 // Input: s = "rat", t = "car"
 // Output: false
- 
+
 // Constraints:
 
 // 1 <= s.length, t.length <= 5 * 104
@@ -28,3 +28,21 @@
 
 // Time O(n), Space O(1) так как 26 lower case letters в алфавите
 // https://www.youtube.com/watch?v=YW-yS-iIPNk&t=4s&ab_channel=PheezxCoding
+
+var isAnagram = function (s, t) {
+    if (s.length !== t.length) return false
+    const map = {}
+    for (let i = 0; i < s.length; i++) {
+        if (!map[s[i]]) map[s[i]] = 0
+        if (!map[t[i]]) map[t[i]] = 0
+
+        map[s[i]]++
+        map[t[i]]--
+    }
+
+    for (let char in map) {
+        if (map[char] !== 0) return false
+    }
+
+    return true
+}
