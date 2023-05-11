@@ -11,3 +11,20 @@
 // Output: true
 // Example 2:
 
+// Input: s = "rat", t = "car"
+// Output: false
+ 
+// Constraints:
+
+// 1 <= s.length, t.length <= 5 * 104
+// s and t consist of lowercase English letters.
+
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+
+// Time O(n), Space O(1) так как 26 lower case letters в алфавите
+// https://www.youtube.com/watch?v=YW-yS-iIPNk&t=4s&ab_channel=PheezxCoding
