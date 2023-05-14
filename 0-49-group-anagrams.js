@@ -17,7 +17,7 @@
 
 // Input: strs = ["a"]
 // Output: [["a"]]
- 
+
 
 // Constraints:
 
@@ -29,17 +29,41 @@
  * @param {string[]} strs
  * @return {string[][]}
  */
+// Time O(N * K) | Space O(N * K)
+// Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
 
 
 var groupAnagrams = function (strs) {
-    let map = {}
-    for(let str of strs) {
-        let sortedStr = str.split('').sort().join('')
-        if(!map[sortedStr]) {
-            map[sortedStr] = [str]
-        } else {
-            map[sortedStr].push(str)
-        }
+    let map = {};
+    for (let str of strs) {
+        let arr = new Array(26).fill(0);
+        for (let char of str) arr[char.charCodeAt() - 'a'.charCodeAt()]++;
+
+        let key = arr.join(' '); //избежать corner case ["bddddddddd","bbbbbbbbc"]\
+        // мапим 1000100100... к массиву слов
+        map[key] ? map[key].push(str) : map[key] = [str];
+        console.log(map)
+
     }
-    return Object.values(map)
-}
+    return Object.values(map);
+};
+
+
+
+
+
+
+
+
+// var groupAnagrams = function (strs) {
+//     let map = {}
+//     for(let str of strs) {
+//         let sortedStr = str.split('').sort().join('')
+//         if(!map[sortedStr]) {
+//             map[sortedStr] = [str]
+//         } else {
+//             map[sortedStr].push(str)
+//         }
+//     }
+//     return Object.values(map)
+// }
