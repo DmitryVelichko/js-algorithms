@@ -24,3 +24,17 @@
 
 
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+var topKFrequent = function (nums, k) {
+    let map = {}
+    for (let num of nums) {
+        if (!map[num]) map[num] = 0
+        map[num]++
+    }
+    return [...Object.keys(map).sort((a, b) => map[b] - map[a]).slice(0, k)]
+};
