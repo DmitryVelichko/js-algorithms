@@ -36,4 +36,14 @@ var productExceptSelf = function(nums) {
     let rightProduct = []
     let solution = []
 
+    // Populate leftProduct
+    for(let i=0; i<nums.length; i++) {
+        if(leftProduct.length === 0) {
+            leftProduct.push(1)
+        } else {
+            leftProduct.push(leftProduct[i-1] * nums[i-1])
+        }
+    }
+
+
 };
