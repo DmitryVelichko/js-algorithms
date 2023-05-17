@@ -45,5 +45,19 @@ var productExceptSelf = function(nums) {
         }
     }
 
+     // Populate rightProduct
+    for(let i=nums.length-1; i>-1; i--) {
+        if(rightProduct.length === 0) {
+            rightProduct.push(1)
+        } else {
+            rightProduct.unshift((rightProduct[0] * nums[i+1]))
+        }
+    }
 
+     // Populate solution
+    for(let i=0; i<leftProduct.length; i++) {
+        solution.push(leftProduct[i] * rightProduct[i])
+    }
+
+    return solution
 };
