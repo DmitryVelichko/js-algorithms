@@ -27,3 +27,12 @@
 
 // 1 <= s.length <= 2 * 105
 // s consists only of printable ASCII characters.
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function (s) {
+    s = s.replace(/[^a-z0-9]/gi, '')
+    let leftPointer = 0
+    let rightPointer = s.length - 1
