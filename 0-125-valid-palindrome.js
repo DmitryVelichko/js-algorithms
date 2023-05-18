@@ -36,3 +36,11 @@ var isPalindrome = function (s) {
     s = s.replace(/[^a-z0-9]/gi, '')
     let leftPointer = 0
     let rightPointer = s.length - 1
+
+    while (leftPointer < rightPointer) {
+        if (s[leftPointer].toLowerCase() !== s[rightPointer].toLowerCase()) return false
+        leftPointer++
+        rightPointer--
+    }
+    return true
+};
