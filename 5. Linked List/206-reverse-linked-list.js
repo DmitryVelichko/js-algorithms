@@ -39,6 +39,12 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+// 1. создать 3 ноды: prev, curr, next
+// 2. while(curr) инициализируем next, рвем связь с next, делаем связь с prev,
+// свдигаем prev и curr вперед
+// 3. Возвращаем prev
+
  // T: O(n), S: O(1)
  var reverseList = function(head) {
     let previous = null

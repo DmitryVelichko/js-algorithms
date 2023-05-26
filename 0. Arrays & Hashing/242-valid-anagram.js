@@ -26,15 +26,21 @@
  * @return {boolean}
  */
 
-// Time O(n), Space O(1) так как 26 lower case letters в алфавите
-// https://www.youtube.com/watch?v=YW-yS-iIPNk&t=4s&ab_channel=PheezxCoding
+// 0. Задача на map(Arrays and Hashing)
+// 1. Сравнить длину s и t
+// 2. Создать мапу
+// 3. инициализировать нулем, прибавлять и вычитать
+// 4. во втором цикле for in проверить, map[key] !== 0
 
-var isAnagram = function (s, t) {
+
+// Time O(n), Space O(1) так как 26 lower case letters в алфавите
+
+var isAnagram2 = function (s, t) {
     if (s.length !== t.length) return false
     const map = {}
     for (let i = 0; i < s.length; i++) {
-        if (!map[s[i]]) map[s[i]] = 0
-        if (!map[t[i]]) map[t[i]] = 0
+        if (map[s[i]] === undefined) map[s[i]] = 0
+        if (map[t[i]] === undefined) map[t[i]] = 0
 
         map[s[i]]++
         map[t[i]]--

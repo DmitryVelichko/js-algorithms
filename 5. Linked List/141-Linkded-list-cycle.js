@@ -50,6 +50,11 @@
  * @param {ListNode} head
  * @return {boolean}
  */
+// Задача на slow и fast
+// 1. Инициализируем slow и fast
+// 2. while(fast && fast.next): slow+, fast++
+// 3. если slow === fast, возвращаем true
+
 // T: O(n), S: O(1)
 var hasCycle2 = function(head) {
     let slow = head
