@@ -38,6 +38,11 @@
  * @return {number[]}
  */
 
+// 1. Задача на Arrays and hashing
+// 2. Создаем мапу
+// 3. Если map[target - nums[i]] есть, возвращаем массив индексов [map[target - nums[i]], i]
+// Иначе - кладем в мапу индекс
+// 4. Возвращаем пустой массив, если false
 // Time: O(n), Space: O(n)
 var twoSum = function(nums, target) {
     let map = {}

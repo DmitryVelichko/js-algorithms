@@ -10,6 +10,11 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+// Задача на рекурсию - inorder traversal Это left, root, right, вывод по порядку 1,2,3
+// 1. Базовый случай - если root === null вернуть пустой массив
+// 2. вернуть массив, туда расспредить рекурсивно функцию с root.left, значение root.val функцию с root.right
+
+
 var inorderTraversal = function(root) {
     
     if(root === null) return []
