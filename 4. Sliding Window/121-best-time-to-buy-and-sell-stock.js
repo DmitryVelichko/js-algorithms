@@ -29,6 +29,11 @@
  * @param {number[]} prices
  * @return {number}
  */
+// Задача на sliding window
+// 1 Создаем minValue=Infinity и maxProfit=0
+// 2 В цикле обновляем minValue, вычисляя ее минимальное значение при сравнении с числом в массиве
+// 3 В цикле обновляем maxProfit, вычисляя его максимальное значение при сравнении с числом в массиве минус minValue
+// 4 Возвращаем maxProfit
 // Time: O(n), space: O(1)
 var maxProfit = function (prices) {
     let minValue = Infinity
