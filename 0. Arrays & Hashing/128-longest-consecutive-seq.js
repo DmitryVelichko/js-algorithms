@@ -22,3 +22,16 @@
 // 0 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// Задача на arrays & hashing.
+// Создаем set
+// С помощью цилка for of ищем в сете минимальный элемент num-1
+// во вложенном цикле while пока в сете есть num+1 обновляем currMax и currNum
+// Вычисляем максимальный элемент (max, currMax) и возвращаем его
+var longestConsecutive = function (nums) {
+    if (nums.length === 0 || nums === null) return 0
+    let max = 0
+    const set = new Set(nums)
