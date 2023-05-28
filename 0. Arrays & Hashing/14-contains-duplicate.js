@@ -8,6 +8,10 @@
  * @param {number[]} nums
  * @return {boolean}
  */
+// Задача на map
+// 1 создать мапу
+// 2 если мапа пустая, map[num] = 1
+// 3 если нет вернуть true
 let containsDuplicate = function (nums) {
     let map = {}
     for (let num of nums) {
