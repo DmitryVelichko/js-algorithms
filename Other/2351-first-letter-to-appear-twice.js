@@ -27,3 +27,15 @@
 // Output: "d"
 // Explanation:
 // The only letter that appears twice is 'd' so we return 'd'.
+
+
+// Constraints:
+
+// 2 <= s.length <= 100
+// s consists of lowercase English letters.
+// s has at least one repeated letter.
+
+/**
+ * @param {string} s
+ * @return {character}
+ */
