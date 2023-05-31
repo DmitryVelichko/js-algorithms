@@ -39,3 +39,12 @@
  * @param {string} s
  * @return {character}
  */
+var repeatedCharacter = function (s) {
+    let map = {}
+
+    for (let char of s) {
+        if (map[char] === undefined) map[char] = char
+        else return map[char]
+    }
+    return -1
+};
