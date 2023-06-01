@@ -42,3 +42,11 @@ var productExceptSelf2 = function (nums) {
     for (let i = 0; i < nums.length; i++) {
         res.push(start)
         start = start * nums[i]
+    }
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] = start2 * res[i]
+        start2 = start2 * nums[i]
+    }
+
+    return res;
+};
