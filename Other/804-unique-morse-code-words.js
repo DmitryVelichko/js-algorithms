@@ -49,3 +49,8 @@
 // Build the word with the morse letter
 // Once we finished building the word, add it to our set if it isn't already in there
 // Return the number of unique morse representations.
+var uniqueMorseRepresentations = function (words) {
+    const alphabet = {
+        a: '.-', b: '-...', c: '-.-.', d: '-..', e: '.', f: '..-.', g: '--.', h: '....', i: '..', j: '.---', k: '-.-', l: '.-..', m: '--',
+        n: '-.', o: '---', p: '.--.', q: '--.-', r: '.-.', s: '...', t: '-', u: '..-', v: '...-', w: '.--', x: '-..-', y: '-.--', z: '--..'
+    }
