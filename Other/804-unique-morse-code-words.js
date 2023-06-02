@@ -27,3 +27,25 @@
 // "msg" -> "--...--."
 // There are 2 different transformations: "--...-." and "--...--.".
 // Example 2:
+
+// Input: words = ["a"]
+// Output: 1
+
+
+// Constraints:
+
+// 1 <= words.length <= 100
+// 1 <= words[i].length <= 12
+// words[i] consists of lowercase English letters.
+
+/**
+ * @param {string[]} words
+ * @return {number}
+ */
+
+//  Look at each word in words.
+// For each word, look at each letter.
+// Get the morse representation of each letter
+// Build the word with the morse letter
+// Once we finished building the word, add it to our set if it isn't already in there
+// Return the number of unique morse representations.
