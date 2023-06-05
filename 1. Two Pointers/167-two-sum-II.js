@@ -33,3 +33,18 @@
 // numbers is sorted in non-decreasing order.
 // -1000 <= target <= 1000
 // The tests are generated such that there is exactly one solution.
+
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+
+// Задача на two pointers
+// Case 1 : sum < target - Eliminate first element
+// Case 2 : sum > target - Eliminate last element
+// Case 3 : sum == target - return [pointer1 + 1, pointer2 + 1]
+
+var twoSum2 = function (numbers, target) {
+    let lower = 0;
+    let upper = numbers.length - 1;
