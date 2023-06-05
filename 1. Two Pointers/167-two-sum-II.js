@@ -45,6 +45,7 @@
 // Case 2 : sum > target - Eliminate last element
 // Case 3 : sum == target - return [pointer1 + 1, pointer2 + 1]
 
+// T: O(n), S: O(1)
 var twoSum2 = function (numbers, target) {
     let lower = 0;
     let upper = numbers.length - 1;

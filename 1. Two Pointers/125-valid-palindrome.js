@@ -39,6 +39,7 @@
 // 3. В цикле while сравнить буквы, вернуть false если не равны
 // 4. l++, r--, вернуть true
 
+
 var isPalindrome = function (s) {
     s = s.replace(/[^a-z0-9]/gi, '')
     let leftPointer = 0
