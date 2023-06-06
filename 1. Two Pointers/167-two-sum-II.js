@@ -41,8 +41,8 @@
  */
 
 // Задача на two pointers
-// Case 1 : sum < target - Eliminate first element
-// Case 2 : sum > target - Eliminate last element
+// Case 1 : sum < target - Eliminate first element. Если сумма меньше, удаляем самый маленький элемент слева
+// Case 2 : sum > target - Eliminate last element Если сумма больше, удаляем самый большой элемент справа
 // Case 3 : sum == target - return [pointer1 + 1, pointer2 + 1]
 
 // T: O(n), S: O(1)
