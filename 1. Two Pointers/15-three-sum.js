@@ -25,8 +25,3 @@
 // Output: []
 // Explanation: The only possible triplet does not sum up to 0.
 // Example 3:
-
-
-    return results
-
-};
