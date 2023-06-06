@@ -42,11 +42,14 @@
  */
 
 // T: O(n^2), S: O(1)
-var threeSum = function (nums) {
+var threeSum2 = function (nums) {
     nums.sort((a, b) => a - b)
     const results = []
     for (let i = 0; i < nums.length; i++) {
+        // Убираем дубликаты
         if (i > 0 && nums[i] === nums[i - 1]) continue
+        // nums[i] + nums[j] + nums[k] = 0
+        // nums[j] + nums[k] = 0 - nums[i]
         const target = 0 - nums[i]
         let left = i + 1;
         let right = nums.length - 1
@@ -54,18 +57,14 @@ var threeSum = function (nums) {
             const sum = nums[left] + nums[right]
             if (sum > target) right--
             else if (sum < target) left++
-            else {
-                results.push([nums[i], nums[left], nums[right]])
-
+            else {results.push([nums[i], nums[left], nums[right]])
+                //  Skip duplicates in array [-1,0, 0, 0, 1,2,-1,-4]
                 while (nums[left] === nums[left + 1]) left++
                 while (nums[right] === nums[right - 1]) right--
-                
                 left++
                 right--
             }
         }
     }
-
     return results
-
 };
