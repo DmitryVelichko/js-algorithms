@@ -50,29 +50,19 @@ function generateParenthesis(n) {
   }
   
   
-  // var generateParenthesis = function(n) {
-  //   const stack = [];
-  //   const res = [];
-  
-  //   function backtrack(openN, closedN) {
-  //     if (openN === closedN && closedN === n) {
-  //       res.push(stack.join(''));
-  //       return;
-  //     }
-  
-  //     if (openN < n) {
-  //       stack.push('(');
-  //       backtrack(openN + 1, closedN);
-  //       stack.pop();
-  //     }
-  //     if (closedN < openN) {
-  //       stack.push(')');
-  //       backtrack(openN, closedN + 1);
-  //       stack.pop();
-  //     }
-  //   }
-  
-  //   backtrack(0, 0);
-  //   return res;
-  // }
-  
+
+
+  // Time Complexity:
+
+// The code uses a backtracking algorithm to generate all possible valid combinations of parentheses.
+// The backtracking algorithm is called recursively, and the number of recursive calls depends on the value of n.
+// For each recursive call, there are two recursive branches: one for adding an open parenthesis and one for adding a closed parenthesis.
+// The number of recursive calls doubles with each level of recursion, resulting in a total of 2^n function calls.
+// Therefore, the time complexity of the code is O(2^n), where n is the input value.
+// Space Complexity:
+
+// The code uses a result array res to store the generated combinations of parentheses. The size of this array depends on the number of valid combinations, which is determined by n.
+// In the worst case, the number of valid combinations can be represented by the n-th Catalan number, which is given by the formula (2n)! / ((n+1)! * n!).
+// The space required to store all valid combinations is proportional to the number of valid combinations, resulting in a space complexity of O((2n)! / ((n+1)! * n!)).
+// However, if we consider only the space used by the result array res itself, the space complexity can be simplified to O(C_n), where C_n is the n-th Catalan number.
+// In summary, the time complexity of the code is O(2^n), and the space complexity is O(C_n) or O((2n)! / ((n+1)! * n!)).
