@@ -48,3 +48,16 @@ function generateParenthesis(n) {
     backtrack(0, 0, '');
     return res;
   }
+  
+  
+  // var generateParenthesis = function(n) {
+  //   const stack = [];
+  //   const res = [];
+  
+  //   function backtrack(openN, closedN) {
+  //     if (openN === closedN && closedN === n) {
+  //       res.push(stack.join(''));
+  //       return;
+  //     }
+  
+ 
