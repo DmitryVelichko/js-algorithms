@@ -1,10 +1,22 @@
-const arr = [1, 2, 3, 4, 5, 6];
+function makeRequestWithRetry(url, maxAttempts, interval) {
+    return new Promise((resolve, reject) => {
+        let attempts = 0
 
-Array.prototype.some = function (callback) {
-    for(let el of this) {
-        callback()
-    }
+        const makeRequest = () => {
+            attempts++
+        }
+
+        fetch(url).then(response => {
+            if (response.ok) {
+                resolve(response.json())
+            } else {
+                throw new Error('Request Failed')
+            }
+
+        }).catch(error => {
+            if(attempts<maxAttempts)
+        })
+    })
 }
 
-console.log(arr.some((el) => el === 5));
-console.log(arr.some((el) => el === 9));
+makeRequestWithRetry('https://', 5, 1000)
