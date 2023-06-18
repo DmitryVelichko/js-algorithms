@@ -34,3 +34,12 @@
  * @param {number} target
  * @return {boolean}
  */
+var searchMatrix = function (matrix, target) {
+    let row = matrix.length
+    let cols = matrix[0].length
+    let left = 0
+    let right = row * cols - 1
+
+    while (left <= right) {
+        let mid = left + right
+        let midVal = matrix[Math.floor(right / cols)][right % cols]
