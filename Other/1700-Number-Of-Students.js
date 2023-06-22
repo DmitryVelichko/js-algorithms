@@ -47,3 +47,10 @@
  * @param {number[]} sandwiches
  * @return {number}
  */
+// T: O(n^2) т.к. indexOf() и shift(), S: O(1)
+var countStudents = function (students, sandwiches) {
+    // проверяет, есть ли первый элемент массива sandwiches в массиве students
+    while (students.length > 0 && students.indexOf(sandwiches[0]) != -1) {
+        if (students[0] === sandwiches[0]) {
+            students.shift()
+            sandwiches.shift()
