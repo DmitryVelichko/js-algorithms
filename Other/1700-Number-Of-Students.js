@@ -54,3 +54,9 @@ var countStudents = function (students, sandwiches) {
         if (students[0] === sandwiches[0]) {
             students.shift()
             sandwiches.shift()
+        } else {
+            students.push(students.shift())
+        }
+    }
+    return students.length
+};
