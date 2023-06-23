@@ -32,3 +32,15 @@ Solution.prototype.shuffle = function() {
         const j = Math.floor(Math.random() * (i + 1))
         const temp = shuffled[i]
         shuffled[i] = shuffled[j]
+        shuffled[j] = temp
+    }
+    
+    return shuffled
+};
+
+/** 
+ * Your Solution object will be instantiated and called as such:
+ * var obj = new Solution(nums)
+ * var param_1 = obj.reset()
+ * var param_2 = obj.shuffle()
+ */
