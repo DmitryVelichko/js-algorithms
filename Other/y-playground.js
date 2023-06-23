@@ -19,3 +19,9 @@
 // Solution(int[] nums) Initializes the object with the integer array nums.
 // int[] reset() Resets the array to its original configuration and returns it.
 // int[] shuffle() Returns a random shuffling of the array.
+
+/**
+ * @return {number[]}
+ */
+Solution.prototype.shuffle = function() {
+    // Implementing Fisher-Yates Algo
