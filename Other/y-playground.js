@@ -37,3 +37,14 @@
 // -105 <= nums[i] <= 105
 
 // T: O(n^2), S: O(1)
+var threeSum2 = function (nums) {
+    nums.sort((a, b) => a - b)
+    const results = []
+    for (let i = 0; i < nums.length; i++) {
+        // Убираем дубликаты
+        if (i > 0 && nums[i] === nums[i - 1]) continue
+        // nums[i] + nums[j] + nums[k] = 0
+        // nums[j] + nums[k] = 0 - nums[i]
+        const target = 0 - nums[i]
+        let left = i + 1;
+        let right = nums.length - 1
