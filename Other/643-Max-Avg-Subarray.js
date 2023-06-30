@@ -16,3 +16,16 @@
 
 // Input: nums = [5], k = 1
 // Output: 5.00000
+ 
+
+// Constraints:
+
+// n == nums.length
+// 1 <= k <= n <= 105
+// -104 <= nums[i] <= 104
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
