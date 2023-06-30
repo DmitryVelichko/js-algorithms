@@ -29,3 +29,11 @@
  * @param {number} k
  * @return {number}
  */
+ // T: O(n), S: O(1)
+ var findMaxAverage = function(nums, k) {
+    let max = -Infinity
+    let soFar = 0
+    let windowStart = 0
+
+    for(let windowEnd=0; windowEnd<nums.length; windowEnd++) {
+        soFar += nums[windowEnd]
