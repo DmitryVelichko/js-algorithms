@@ -37,3 +37,13 @@
 
     for(let windowEnd=0; windowEnd<nums.length; windowEnd++) {
         soFar += nums[windowEnd]
+
+        if(windowEnd - windowStart === k-1) {
+            let avg = soFar/k
+            max = Math.max(max, avg)
+            soFar -= nums[windowStart]
+            windowStart++
+        }
+    }
+    return max
+};
