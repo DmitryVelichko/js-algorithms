@@ -37,3 +37,20 @@ var checkInclusion = function(s1, s2) {
         if(!map.has(char)) map.set(char, 0)
         map.set(char, map.get(char) + 1)
     }
+
+    for(let i=0; i<= s2.length - s1.length; i++) {
+        let tmp = new Map(map)
+        let j = 0
+
+        for(j=i; j<i+s1.length; j++) {
+            let char = s2[j]
+            if(tmp.has(char) && tmp.get(char) > 0) {
+                tmp.set(char, tmp.get(char)-1)
+            }
+            else break
+        }
+        if(j == i+s1.length) return true
+
+}
+return false
+};
