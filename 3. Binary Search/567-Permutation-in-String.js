@@ -19,3 +19,21 @@
 // Input: s1 = "ab", s2 = "eidboaoo"
 // Output: false
  
+
+// Constraints:
+
+// 1 <= s1.length, s2.length <= 104
+// s1 and s2 consist of lowercase English letters.
+
+
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {boolean}
+ */
+var checkInclusion = function(s1, s2) {
+    let map = new Map()
+    for(let char of s1) {
+        if(!map.has(char)) map.set(char, 0)
+        map.set(char, map.get(char) + 1)
+    }
