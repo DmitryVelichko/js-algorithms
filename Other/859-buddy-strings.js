@@ -25,3 +25,19 @@
 // Input: s = "aa", goal = "aa"
 // Output: true
 // Explanation: You can swap s[0] = 'a' and s[1] = 'a' to get "aa", which is equal to goal.
+
+/**
+ * @param {string} s
+ * @param {string} goal
+ * @return {boolean}
+ */
+var buddyStrings = function(s, goal) {
+    if(s.length !== goal.length) return false
+
+    if(s === goal) {
+        let set = new Set()
+        for(let i=0; i<s.length; i++) {
+            set.add(s.charAt(i))
+        }
+        return set.size < s.length
+    }
