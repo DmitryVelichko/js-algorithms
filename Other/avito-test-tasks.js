@@ -31,3 +31,14 @@ const findTop100FrequentElements = (arr) => {
     // Создаем словарь для подсчета частоты встречаемости элементов
     const frequencyMap = {};
   
+    // Подсчитываем частоту встречаемости каждого элемента в массиве
+    for (let i = 0; i < arr.length; i++) {
+      const element = arr[i];
+      frequencyMap[element] = (frequencyMap[element] || 0) + 1;
+    }
+  
+    // Преобразуем словарь в массив пар [элемент, частота] и сортируем его по убыванию частоты
+    const sortedFrequencyArray = Object.entries(frequencyMap).sort((a, b) => b[1] - a[1]);
+  
+    // Получаем только элементы (ключи) из отсортированного массива
+    const top100Elements = sortedFrequencyArray.slice(0, 100).map(entry => entry[0]);
