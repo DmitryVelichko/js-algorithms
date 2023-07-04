@@ -42,3 +42,11 @@ const findTop100FrequentElements = (arr) => {
   
     // Получаем только элементы (ключи) из отсортированного массива
     const top100Elements = sortedFrequencyArray.slice(0, 100).map(entry => entry[0]);
+  
+    return top100Elements;
+  };
+  
+  // Пример использования:
+  const array = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple', 'pear', 'pear', 'pear', 'grape'];
+  const top100 = findTop100FrequentElements(array);
+  console.log(top100);
