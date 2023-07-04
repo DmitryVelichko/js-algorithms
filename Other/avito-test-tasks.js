@@ -5,3 +5,17 @@ const sortArr = (nums) => {
     
     let sortedArr = [];
     let oddIndex = 0;
+  
+    // Обходим исходный массив и вставляем четные числа на свои места, а нечетные числа заменяем отсортированными нечетными числами
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 === 0) {
+        sortedArr.push(nums[i]);
+      } else {
+        sortedArr.push(sortedOddNums[oddIndex]);
+        oddIndex++;
+      }
+    }
+    
+    return sortedArr;
+  };
+  
