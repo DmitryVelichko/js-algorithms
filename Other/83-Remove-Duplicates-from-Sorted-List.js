@@ -31,3 +31,11 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+
+var deleteDuplicates = function (head) {
+
+    let current = head;
+
+    while (current) {
+        if (current.next !== null && current.val == current.next.val) {
+            current.next = current.next.next;
