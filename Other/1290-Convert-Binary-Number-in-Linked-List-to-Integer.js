@@ -31,3 +31,17 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+/**
+ * @param {ListNode} head
+ * @return {number}
+ */
+var getDecimalValue = function(head) {
+    let curr = head
+    let acc = 0
+    while(curr) {
+        acc = acc * 2 + curr.val
+        curr = curr.next
+    }
+   
+    return acc
+};
