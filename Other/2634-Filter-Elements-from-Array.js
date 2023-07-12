@@ -34,3 +34,15 @@
 // Explanation:
 // Falsey values such as 0 should be filtered out
  
+
+// Constraints:
+
+// 0 <= arr.length <= 1000
+// -109 <= arr[i] <= 109
+
+
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
