@@ -23,3 +23,16 @@
 // gen.next().value; // 2
 // gen.next().value; // 3
 // Example 2:
+
+// Input: callCount = 0
+// Output: []
+// Explanation: gen.next() is never called so nothing is outputted
+ 
+
+// Constraints:
+
+// 0 <= callCount <= 50
+
+/**
+ * @return {Generator<number>}
+ */
