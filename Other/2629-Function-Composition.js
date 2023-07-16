@@ -40,3 +40,13 @@
 // The composition of zero functions is the identity function
 
 
+// Constraints:
+
+// -1000 <= x <= 1000
+// 0 <= functions.length <= 1000
+// all functions accept and return a single integer
+
+/**
+ * @param {Function[]} functions
+ * @return {Function}
+ */
