@@ -48,3 +48,12 @@ var createCounter = function(init) {
     function increment() {
       return ++counter
     }
+
+   function decrement() {
+        return --counter
+    }
+
+   function reset() {
+        
+        return counter = init
+    }
