@@ -8,7 +8,7 @@
 // increment() increases the current value by 1 and then returns it.
 // decrement() reduces the current value by 1 and then returns it.
 // reset() sets the current value to init and then returns it.
- 
+
 
 // Example 1:
 
@@ -30,7 +30,7 @@
 // counter.decrement(); // 1
 // counter.reset(); // 0
 // counter.reset(); // 0
- 
+
 
 // Constraints:
 
@@ -41,19 +41,29 @@
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
-var createCounter = function(init) {
+var createCounter = function (init) {
 
     let counter = init
-  
+
     function increment() {
-      return ++counter
+        return ++counter
     }
 
-   function decrement() {
+    function decrement() {
         return --counter
     }
 
-   function reset() {
-        
+    function reset() {
+
         return counter = init
     }
+
+    return { increment, decrement, reset }
+
+}
+/**
+* const counter = createCounter(5)
+* counter.increment(); // 6
+* counter.reset(); // 5
+* counter.decrement(); // 4
+*/
