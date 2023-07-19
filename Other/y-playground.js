@@ -26,3 +26,13 @@ MinStack.prototype.pop = function () {
     if (!this.stack.length) return null
     this.minStack.pop()
     this.stack.pop()
+
+};
+
+/**
+ * @return {number}
+ */
+// T: O(1)
+MinStack.prototype.top = function () {
+    return this.stack[this.stack.length - 1]
+};
