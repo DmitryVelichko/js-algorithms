@@ -36,3 +36,11 @@ MinStack.prototype.pop = function () {
 MinStack.prototype.top = function () {
     return this.stack[this.stack.length - 1]
 };
+
+/**
+ * @return {number}
+ */
+// T: O(1)
+MinStack.prototype.getMin = function () {
+    return this.minStack[this.minStack.length - 1]
+};
