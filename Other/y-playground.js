@@ -13,3 +13,10 @@
 
 // Input: numRows = 1
 // Output: [[1]]
+ 
+
+// Constraints:
+
+// 1 <= numRows <= 30
+
+/**
