@@ -1,55 +1,5 @@
-var MinStack = function () {
-    this.stack = []
-    this.minStack = []
-};
+// https://www.youtube.com/watch?v=y24nMGNkkPo&ab_channel=shirinsetayesh
 
-/** 
- * @param {number} val
- * @return {void}
- */
-// T: O(1)
-MinStack.prototype.push = function (val) {
-    if (this.stack.length === 0) {
-        this.minStack.push(val)
-        this.stack.push(val)
-    } else {
-        this.minStack.push(Math.min(val, this.minStack[this.minStack.length - 1]))
-        this.stack.push(val)
-    }
-};
+// Given an integer numRows, return the first numRows of Pascal's triangle.
 
-/**
- * @return {void}
- */
-// T: O(1)
-MinStack.prototype.pop = function () {
-    if (!this.stack.length) return null
-    this.minStack.pop()
-    this.stack.pop()
-
-};
-
-/**
- * @return {number}
- */
-// T: O(1)
-MinStack.prototype.top = function () {
-    return this.stack[this.stack.length - 1]
-};
-
-/**
- * @return {number}
- */
-// T: O(1)
-MinStack.prototype.getMin = function () {
-    return this.minStack[this.minStack.length - 1]
-};
-
-/** 
- * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
- * obj.push(val)
- * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
- */
+// In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
