@@ -20,3 +20,14 @@
 // Output: [1,3,5]
 // Explanation: The function increases each value by the index it resides in.
 // Example 3:
+
+// Input: arr = [10,20,30], fn = function constant() { return 42; }
+// Output: [42,42,42]
+// Explanation: The function always returns 42.
+ 
+
+// Constraints:
+
+// 0 <= arr.length <= 1000
+// -109 <= arr[i] <= 109
+// fn returns a number
