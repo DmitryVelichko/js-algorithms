@@ -25,3 +25,20 @@
 // Output: [[8,5,3,2,6]]
 // Explanation: Size is greater than arr.length thus all elements are in the first subarray.
 // Example 4:
+
+// Input: arr = [], size = 1
+// Output: []
+// Explanation: There are no elements to be chunked so an empty array is returned.
+ 
+
+// Constraints:
+
+// arr is a valid JSON array
+// 2 <= JSON.stringify(arr).length <= 105
+// 1 <= size <= arr.length + 1
+
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
