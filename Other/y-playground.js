@@ -18,4 +18,10 @@
         // Перемножваем между собой числа справо налево кроме первого и 
         // перемножваем с числами в массиве
 
-    for (let i = nums.length - 1; i >= 0; i--) 
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] = start2 * res[i]
+        start2 = start2 * nums[i]
+    }
+    
+    return res;
+};
