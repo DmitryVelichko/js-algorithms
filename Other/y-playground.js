@@ -1,27 +1,7 @@
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+// 2634. Filter Elements from Array
+// Easy
 
- // Задача на Arrays and Hashing
- // 
- // T: O(n), S:O(1) result array не считается по условиям задачи
- var productExceptSelf = function(nums) {
-    const res = [];
-    let start = 1;
-    let start2 = 1
-    // Перемножаем между собой числа слева направо кроме последнего и пушим в массив
-    for (let i = 0; i < nums.length; i++) {
-        res.push(start)
-        start = start * nums[i]
-    }
-        // Перемножваем между собой числа справо налево кроме первого и 
-        // перемножваем с числами в массиве
+// Given an integer array arr and a filtering function fn, return a filtered array filteredArr.
 
-    for (let i = nums.length - 1; i >= 0; i--) {
-        res[i] = start2 * res[i]
-        start2 = start2 * nums[i]
-    }
-    
-    return res;
-};
+// The fn function takes one or two arguments:
+
