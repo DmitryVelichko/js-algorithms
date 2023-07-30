@@ -29,3 +29,12 @@
 // Explanation: A date constructor cannot logically be an instance of itself.
 // Example 4:
 
+// Input: func = () => checkIfInstanceOf(5, Number)
+// Output: true
+// Explanation: 5 is a Number. Note that the "instanceof" keyword would return false. However, it is still considered an instance of Number because it accesses the Number methods. For example "toFixed()".
+
+/**
+ * @param {any} obj
+ * @param {any} classFunction
+ * @return {boolean}
+ */
