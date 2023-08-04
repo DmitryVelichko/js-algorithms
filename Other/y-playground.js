@@ -9,3 +9,19 @@
 // Explanation: "aba" is also a valid answer.
 // Example 2:
 
+// Input: s = "cbbd"
+// Output: "bb"
+
+
+// Constraints:
+
+// 1 <= s.length <= 1000
+// s consist of only digits and English letters.
+
+/**
+ * @param {string} s
+ * @return {string}
+*/
+const longestPalindrome = function (str) {
+  if (str.length < 1 || str === null) return '';
+  let longest = ''
