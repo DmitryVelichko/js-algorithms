@@ -23,3 +23,9 @@
 // Constraints:
 
 // promise1 and promise2 are promises that resolve with a number
+
+/**
+ * @param {Promise} promise1
+ * @param {Promise} promise2
+ * @return {Promise}
+ */
