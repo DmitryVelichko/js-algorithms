@@ -19,3 +19,16 @@
 // Output: true
 // Explanation: The object doesn't have any key-value pairs so it is empty.
 // Example 3:
+
+// Input: obj = [null, false, 0]
+// Output: false
+// Explanation: The array has 3 elements so it is not empty.
+ 
+
+// Constraints:
+
+//  2 <= JSON.stringify(obj).length <= 105
+ 
+
+// Can you solve it in O(1) time?
+
