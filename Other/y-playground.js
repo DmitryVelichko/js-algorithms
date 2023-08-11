@@ -1,48 +1,9 @@
-// 5 Longest Palindromic Substring
+// 2704. To Be Or Not To Be
+// Easy
+// 210
+// 26
+// Companies
+// Write a function expect that helps developers test their code. It should take in any value val and return an object with the following two functions.
 
-// Given a string s, return the longest palindromic substring in s.
-
-// Example 1:
-
-// Input: s = "babad"
-// Output: "bab"
-// Explanation: "aba" is also a valid answer.
-// Example 2:
-
-// Input: s = "cbbd"
-// Output: "bb"
-
-
-// Constraints:
-
-// 1 <= s.length <= 1000
-// s consist of only digits and English letters.
-
-/**
- * @param {string} s
- * @return {string}
-*/
-const longestPalindrome = function (str) {
-  if (str.length < 1 || str === null) return '';
-  let longest = ''
-
-  const expandFromCenter = (str, left, right) => {
-      let i = 0;
-      while (str[left - i] && str[left - i] === str[right + i]) {
-          i++
-      }
-      i--
-
-      return str.slice(left - i, right + i + 1)
-  }
-
-  for (let i = 0; i < str.length; i++) {
-      let oddPalindrome = expandFromCenter(str, i, i)
-      let evenPalindrome = expandFromCenter(str, i - 1, i)
-
-      if (oddPalindrome.length > longest.length) longest = oddPalindrome
-      if (evenPalindrome.length > longest.length) longest = evenPalindrome
-
-  }
-  return longest
-};
+// toBe(val) accepts another value and returns true if the two values === each other. If they are not equal, it should throw an error "Not Equal".
+// notToBe(val) accepts another value and returns true if the two values !== each other. If they are equal, it should throw an error "Equal".
