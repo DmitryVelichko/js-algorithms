@@ -12,3 +12,16 @@
 // You may assume each function in the array accepts one integer as input and returns one integer as output.
 
  
+
+// Example 1:
+
+// Input: functions = [x => x + 1, x => x * x, x => 2 * x], x = 4
+// Output: 65
+// Explanation:
+// Evaluating from right to left ...
+// Starting with x = 4.
+// 2 * (4) = 8
+// (8) * (8) = 64
+// (64) + 1 = 65
+// Example 2:
+
