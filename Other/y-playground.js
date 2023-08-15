@@ -1,53 +1,14 @@
-// 2648. Generate Fibonacci Sequence
+// Function Composition
 // Easy
-// 193
-// 16
+// 420
+// 22
 // Companies
-// Write a generator function that returns a generator object which yields the fibonacci sequence.
+// Given an array of functions [f1, f2, f3, ..., fn], return a new function fn that is the function composition of the array of functions.
 
-// The fibonacci sequence is defined by the relation Xn = Xn-1 + Xn-2.
+// The function composition of [f(x), g(x), h(x)] is fn(x) = f(g(h(x))).
 
-// The first few numbers of the series are 0, 1, 1, 2, 3, 5, 8, 13.
+// The function composition of an empty list of functions is the identity function f(x) = x.
+
+// You may assume each function in the array accepts one integer as input and returns one integer as output.
 
  
-
-// Example 1:
-
-// Input: callCount = 5
-// Output: [0,1,1,2,3]
-// Explanation:
-// const gen = fibGenerator();
-// gen.next().value; // 0
-// gen.next().value; // 1
-// gen.next().value; // 1
-// gen.next().value; // 2
-// gen.next().value; // 3
-// Example 2:
-
-// Input: callCount = 0
-// Output: []
-// Explanation: gen.next() is never called so nothing is outputted
- 
-
-// Constraints:
-
-// 0 <= callCount <= 50
-
-/**
- * @return {Generator<number>}
- */
-var fibGenerator = function*() {
-    let current = 0
-    let next = 1
-    
-    while(true) {
-        yield current;
-        [current, next] = [next, current + next]
-    }  
-};
-
-/**
- * const gen = fibGenerator();
- * gen.next().value; // 0
- * gen.next().value; // 1
- */
