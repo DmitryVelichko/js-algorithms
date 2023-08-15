@@ -25,3 +25,23 @@
 // (64) + 1 = 65
 // Example 2:
 
+// Input: functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1
+// Output: 1000
+// Explanation:
+// Evaluating from right to left ...
+// 10 * (1) = 10
+// 10 * (10) = 100
+// 10 * (100) = 1000
+// Example 3:
+
+// Input: functions = [], x = 42
+// Output: 42
+// Explanation:
+// The composition of zero functions is the identity function
+ 
+
+// Constraints:
+
+// -1000 <= x <= 1000
+// 0 <= functions.length <= 1000
+// all functions accept and return a single integer
