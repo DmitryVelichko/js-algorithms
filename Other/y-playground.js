@@ -40,3 +40,20 @@
  * }
  */
 /**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+
+// create dummy node
+var mergeTwoLists = function(l1, l2) {
+   
+}
+
+
+// create dummy node
+// T: O(n), S: O(1)
+var mergeTwoLists = function(l1, l2) {
+    let dummy = new ListNode(-Infinity)
+    let prev = dummy
+
