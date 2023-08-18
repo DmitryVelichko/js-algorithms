@@ -23,3 +23,11 @@
 // const obj = new ArrayWrapper([23,98,42,70]);
 // String(obj); // "[23,98,42,70]"
 // Example 3:
+
+// Input: nums = [[],[]], operation = "Add"
+// Output: 0
+// Explanation:
+// const obj1 = new ArrayWrapper([]);
+// const obj2 = new ArrayWrapper([]);
+// obj1 + obj2; // 0
+ 
