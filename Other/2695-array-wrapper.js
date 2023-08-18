@@ -31,3 +31,16 @@
 // const obj2 = new ArrayWrapper([]);
 // obj1 + obj2; // 0
  
+
+// Constraints:
+
+// 0 <= nums.length <= 1000
+// 0 <= nums[i] <= 1000
+// Note: nums is the array passed to the constructor
+
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums
+};
