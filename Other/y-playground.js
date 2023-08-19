@@ -1,36 +1,10 @@
-// 619. Array Prototype Last
-// Easy
-// 342
-// 14
-// Companies
-// Write code that enhances all arrays such that you can call the array.last() method on any array and it will return the last element. If there are no elements in the array, it should return -1.
+// 2637. Promise Time Limit
+// Medium
 
-// You may assume the array is the output of JSON.parse.
+// Given an asynchronous function fn and a time t in milliseconds, return a new time limited version of the input function. fn takes arguments provided to the time limited function.
 
+// The time limited function should follow these rules:
+
+// If the fn completes within the time limit of t milliseconds, the time limited function should resolve with the result.
+// If the execution of the fn exceeds the time limit, the time limited function should reject with the string "Time Limit Exceeded".
  
-
-// Example 1:
-
-// Input: nums = [null, {}, 3]
-// Output: 3
-// Explanation: Calling nums.last() should return the last element: 3.
-// Example 2:
-
-// Input: nums = []
-// Output: -1
-// Explanation: Because there are no elements, return -1.
- 
-
-// Constraints:
-
-// 0 <= arr.length <= 1000
-Array.prototype.last = function() {
-    if(this.length === 0) return -1
-    else return this[this.length-1]
-   
-};
-
-/**
- * const arr = [1, 2, 3];
- * arr.last(); // 3
- */
