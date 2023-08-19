@@ -67,3 +67,16 @@
 // Output: {"rejected":"Error","time":0}
 // Explanation:
 // The function immediately throws an error.
+ 
+
+// Constraints:
+
+// 0 <= inputs.length <= 10
+// 0 <= t <= 1000
+// fn returns a promise
+
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
