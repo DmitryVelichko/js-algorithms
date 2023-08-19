@@ -46,3 +46,24 @@
 // The function resolved 5 * 5 = 25 at t=100ms. The time limit is never reached.
 // Example 3:
 
+// Input: 
+// fn = async (a, b) => { 
+//   await new Promise(res => setTimeout(res, 120)); 
+//   return a + b; 
+// }
+// inputs = [5,10]
+// t = 150
+// Output: {"resolved":15,"time":120}
+// Explanation:
+// ​​​​The function resolved 5 + 10 = 15 at t=120ms. The time limit is never reached.
+// Example 4:
+
+// Input: 
+// fn = async () => { 
+//   throw "Error";
+// }
+// inputs = []
+// t = 1000
+// Output: {"rejected":"Error","time":0}
+// Explanation:
+// The function immediately throws an error.
