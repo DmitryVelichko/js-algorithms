@@ -36,3 +36,26 @@
 // setTimeout(cancel, 100);
 
 // The cancellation was scheduled to occur after a delay of cancelT (100ms), which happened after the execution of fn(2,4) at 30ms.
+ 
+
+// Constraints:
+
+// fn is a function
+// args is a valid JSON array
+// 1 <= args.length <= 10
+// 20 <= t <= 1000
+// 10 <= cancelT <= 1000
+
+/**
+ * @param {Function} fn
+ * @param {Array} args
+ * @param {number} t
+ * @return {Function}
+ */
+var cancellable = function(fn, args, t) {
+    let timeout1 = setTimeout(() => fn(...args), t)
+
+    let cancelFn = () => {clearTimeout(timeout1)}
+    
+    return cancelFn
+};
