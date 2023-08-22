@@ -30,3 +30,8 @@
 // fn is a function that returns a number
 // 1 <= arr.length <= 5 * 105
 
+/**
+ * @param {Array} arr
+ * @param {Function} fn
+ * @return {Array}
+ */
