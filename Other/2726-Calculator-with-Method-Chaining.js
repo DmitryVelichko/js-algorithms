@@ -70,3 +70,21 @@ class Calculator {
       this.result += value;
       return this;
     }
+  
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */
+    subtract(value){
+      this.result -= value;
+      return this;
+  
+    }
+  
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */  
+    multiply(value) {
+      this.result *= value;
+      return this;
