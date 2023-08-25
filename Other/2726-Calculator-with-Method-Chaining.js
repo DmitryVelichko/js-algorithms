@@ -43,3 +43,13 @@
 // The error should be thrown because we cannot divide by zero.
  
 
+// Constraints:
+
+// actions is a valid JSON array of strings
+// values is a valid JSON array of numbers
+// 2 <= actions.length <= 2 * 104
+// 1 <= values.length <= 2 * 104 - 1
+// actions[i] is one of "Calculator", "add", "subtract", "multiply", "divide", "power", and "getResult"
+// First action is always "Calculator"
+// Last action is always "getResult"
+
