@@ -12,3 +12,16 @@
 // power - This method raises the result to the power of the given number value and returns the updated Calculator.
 // getResult - This method returns the result.
 // Solutions within 10-5 of the actual result are considered correct.
+
+ 
+
+// Example 1:
+
+// Input: 
+// actions = ["Calculator", "add", "subtract", "getResult"], 
+// values = [10, 5, 7]
+// Output: 8
+// Explanation: 
+// new Calculator(10).add(5).subtract(7).getResult() // 10 + 5 - 7 = 8
+// Example 2:
+
