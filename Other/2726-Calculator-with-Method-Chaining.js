@@ -88,3 +88,28 @@ class Calculator {
     multiply(value) {
       this.result *= value;
       return this;
+  
+    }
+  
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */
+    divide(value) {
+      if (value === 0) {
+        throw new Error("Division by zero is not allowed");
+      }
+      this.result /= value;
+      return this;
+    }
+    
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */
+    power(value) {
+      this.result **= value;
+      return this;
+  
+    }
+      
