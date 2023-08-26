@@ -91,3 +91,9 @@
  * @param {number} t
  * @return {Function}
  */
+var cancellable = function(fn, args, t) {
+    fn(...args)
+    const intervalID = setInterval(() => fn(...args) , t)
+    return () => clearInterval(intervalID)
+};
+
