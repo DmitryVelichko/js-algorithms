@@ -32,3 +32,18 @@
 // 6th fn call is at 175ms. fn(4) returns 8.
 // Cancelled at 190ms
 // Example 2:
+
+// Input: fn = (x1, x2) => (x1 * x2), args = [2, 5], t = 30, cancelT = 165
+// Output: 
+// [
+//    {"time": 0, "returned": 10},
+//    {"time": 30, "returned": 10},
+//    {"time": 60, "returned": 10},
+//    {"time": 90, "returned": 10},
+//    {"time": 120, "returned": 10},
+//    {"time": 150, "returned": 10}
+// ]
+// Explanation: 
+// const cancel = cancellable((x1, x2) => (x1 * x2), [2, 5], 30); 
+// setTimeout(cancel, 165);
+
