@@ -12,3 +12,23 @@
 // The above diagram shows how debounce will transform events. Each rectangle represents 100ms and the debounce time is 400ms. Each color represents a different set of inputs.
 
 // Please solve it without using lodash's _.debounce() function.
+
+ 
+
+// Example 1:
+
+// Input: 
+// t = 50
+// calls = [
+//   {"t": 50, inputs: [1]},
+//   {"t": 75, inputs: [2]}
+// ]
+// Output: [{"t": 125, inputs: [2]}]
+// Explanation:
+// let start = Date.now();
+// function log(...inputs) { 
+//   console.log([Date.now() - start, inputs ])
+// }
+// const dlog = debounce(log, 50);
+// setTimeout(() => dlog(1), 50);
+// setTimeout(() => dlog(2), 75);
