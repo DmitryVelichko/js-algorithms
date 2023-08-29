@@ -69,3 +69,17 @@
 // 1 <= calls.length <= 10
 // 0 <= calls[i].t <= 1000
 // 0 <= calls[i].inputs.length <= 10
+
+/**
+ * @param {Function} fn
+ * @param {number} t milliseconds
+ * @return {Function}
+ */
+var debounce = function(fn, t) {
+    let timer
+    return function(...args) {
+       clearTimeout(timer)
+       timer = setTimeout(() => fn(...args), t)
+    }
+};
+
