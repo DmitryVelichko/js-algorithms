@@ -37,3 +37,19 @@
 // 0 <= nums.length <= 1000
 // 0 <= nums[i] <= 1000
 // Note: nums is the array passed to the constructor
+
+/**
+ * @param {number[]} nums
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums
+};
+
+ArrayWrapper.prototype.valueOf = function() {
+    return this.nums.reduce((sum, num) => sum + num, 0)
+}
+
+ArrayWrapper.prototype.toString = function() {
+    return `[${this.nums.join(',')}]`
+}
+
