@@ -22,3 +22,14 @@
 // Input: obj = [null, 0, 5, [0], [false, 16]]
 // Output: [5, [], [16]]
 // Explanation: obj[0], obj[1], obj[3][0], and obj[4][0] were falsy and removed.
+ 
+
+// Constraints:
+
+// obj is a valid JSON object
+// 2 <= JSON.stringify(obj).length <= 106
+
+/**
+ * @param {Object|Array} obj
+ * @return {Object|Array}
+ */
