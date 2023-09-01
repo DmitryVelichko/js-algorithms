@@ -55,3 +55,30 @@
 // First action is always "Calculator"
 // Last action is always "getResult"
 
+class Calculator {
+  
+    /** 
+     * @param {number} value
+     */
+    constructor(value) {
+        this.result = value;
+    }
+  
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */
+    add(value){
+      this.result += value;
+      return this;
+    }
+  
+    /** 
+     * @param {number} value
+     * @return {Calculator}
+     */
+    subtract(value){
+      this.result -= value;
+      return this;
+  
+    }
