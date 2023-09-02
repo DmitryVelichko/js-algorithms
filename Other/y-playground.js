@@ -49,3 +49,24 @@
 // The 2nd call is delayed until 120ms. The inputs were (2).
 // Example 3:
 
+// Input: 
+// t = 150
+// calls = [
+//   {"t": 50, inputs: [1, 2]},
+//   {"t": 300, inputs: [3, 4]},
+//   {"t": 300, inputs: [5, 6]}
+// ]
+// Output: [{"t": 200, inputs: [1,2]}, {"t": 450, inputs: [5, 6]}]
+// Explanation:
+// The 1st call is delayed by 150ms and ran at 200ms. The inputs were (1, 2).
+// The 2nd call is cancelled by the 3rd call
+// The 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).
+ 
+
+// Constraints:
+
+// 0 <= t <= 1000
+// 1 <= calls.length <= 10
+// 0 <= calls[i].t <= 1000
+// 0 <= calls[i].inputs.length <= 10
+
