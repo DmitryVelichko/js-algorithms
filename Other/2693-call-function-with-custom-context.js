@@ -17,3 +17,16 @@
 
  
 
+// Example 1:
+
+// Input:
+// fn = function add(b) {
+//   return this.a + b;
+// }
+// args = [{"a": 5}, 7]
+// Output: 12
+// Explanation:
+// fn.callPolyfill({"a": 5}, 7); // 12
+// callPolyfill sets the "this" context to {"a": 5}. 7 is passed as an argument.
+// Example 2:
+
