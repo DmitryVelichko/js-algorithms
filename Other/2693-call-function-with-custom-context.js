@@ -58,3 +58,14 @@ Function.prototype.callPolyfill = function(context, ...args) {
       enumerable: false
     });
   
+    const result = context.__fn__(...args);
+  
+    delete context.__fn__;
+  
+    return typeof result !== 'undefined' ? result : undefined;
+  };
+  
+  /**
+   * function increment() { this.count++; return this.count; }
+   * increment.callPolyfill({count: 1}); // 2
+   */
