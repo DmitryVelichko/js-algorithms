@@ -45,3 +45,16 @@
 // 1 <= args.length <= 100
 // 2 <= JSON.stringify(args[0]).length <= 105
 
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
+Function.prototype.callPolyfill = function(context, ...args) {
+    const fn = this;
+  
+    Object.defineProperty(context, '__fn__', {
+      value: fn,
+      enumerable: false
+    });
+  
