@@ -49,3 +49,17 @@
 // init = 25
 // Output: 25
 // Explanation: For empty arrays, the answer is always init.
+ 
+
+// Constraints:
+
+// 0 <= nums.length <= 1000
+// 0 <= nums[i] <= 1000
+// 0 <= init <= 1000
+
+/**
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
+ */
