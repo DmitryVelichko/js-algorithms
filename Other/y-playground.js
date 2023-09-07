@@ -28,3 +28,4 @@ var reverseBits = function(n) {
   return result >>> 0
 };
 
+reverseBits(00001100110011110011110000110011)
