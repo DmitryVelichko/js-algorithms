@@ -1,73 +1,10 @@
-// 626. Array Reduce Transformation
-// Easy
-// 400
-// 16
-// Companies
-// Given an integer array nums, a reducer function fn, and an initial value init, return a reduced array.
+// Reverse bits of a given 32 bits unsigned integer.
 
-// A reduced array is created by applying the following operation: val = fn(init, nums[0]), val = fn(val, nums[1]), val = fn(val, nums[2]), ... until every element in the array has been processed. The final value of val is returned.
+//https://www.youtube.com/watch?v=dbqqDHtv_Ms&ab_channel=AlgoJS
+// Note:
 
-// If the length of the array is 0, it should return init.
+// Note that in some languages, such as Java, there is no unsigned integer type. In this case, both input and output will be given as a signed integer type. They should not affect your implementation, as the integer's internal binary representation is the same, whether it is signed or unsigned.
+// In Java, the compiler represents the signed integers using 2's complement notation. Therefore, in Example 2 above, the input represents the signed integer -3 and the output represents the signed integer -1073741825.
 
-// Please solve it without using the built-in Array.reduce method.
-
- 
-
-// Example 1:
-
-// Input: 
-// nums = [1,2,3,4]
-// fn = function sum(accum, curr) { return accum + curr; }
-// init = 0
-// Output: 10
-// Explanation:
-// initially, the value is init=0.
-// (0) + nums[0] = 1
-// (1) + nums[1] = 3
-// (3) + nums[2] = 6
-// (6) + nums[3] = 10
-// The final answer is 10.
-// Example 2:
-
-// Input: 
-// nums = [1,2,3,4]
-// fn = function sum(accum, curr) { return accum + curr * curr; }
-// init = 100
-// Output: 130
-// Explanation:
-// initially, the value is init=100.
-// (100) + nums[0]^2 = 101
-// (101) + nums[1]^2 = 105
-// (105) + nums[2]^2 = 114
-// (114) + nums[3]^2 = 130
-// The final answer is 130.
-// Example 3:
-
-// Input: 
-// nums = []
-// fn = function sum(accum, curr) { return 0; }
-// init = 25
-// Output: 25
-// Explanation: For empty arrays, the answer is always init.
- 
-
-// Constraints:
-
-// 0 <= nums.length <= 1000
-// 0 <= nums[i] <= 1000
-// 0 <= init <= 1000
 
 /**
- * @param {number[]} nums
- * @param {Function} fn
- * @param {number} init
- * @return {number}
- */
-var reduce = function(nums, fn, init) {
-  if(nums.length === 0) return init
-  let val = init
-  for(let i = 0; i< nums.length; i++) {
-      val = fn(val, nums[i])
-  }
-  return val
-};
