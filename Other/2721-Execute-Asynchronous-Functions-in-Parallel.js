@@ -12,3 +12,15 @@
 // Please solve it without using the built-in Promise.all function.
 
  
+
+// Example 1:
+
+// Input: functions = [
+//   () => new Promise(resolve => setTimeout(() => resolve(5), 200))
+// ]
+// Output: {"t": 200, "resolved": [5]}
+// Explanation: 
+// promiseAll(functions).then(console.log); // [5]
+
+// The single function was resolved at 200ms with a value of 5.
+// Example 2:
