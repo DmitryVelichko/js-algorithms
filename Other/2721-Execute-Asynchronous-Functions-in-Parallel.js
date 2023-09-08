@@ -41,3 +41,18 @@
 // Output: {"t": 150, "resolved": [4, 10, 16]}
 // Explanation: All the promises resolved with a value. The returned promise resolved when the last promise resolved.
  
+
+// Constraints:
+
+// functions is an array of functions that returns promises
+// 1 <= functions.length <= 10
+
+/**
+ * @param {Array<Function>} functions
+ * @return {Promise<any>}
+ */
+var promiseAll = async function(functions) {
+  return new Promise((resolve, reject) => {
+      // We know the resulting array will be the same length as functions
+      const results = new Array(functions.length);
+      let count = 0;
