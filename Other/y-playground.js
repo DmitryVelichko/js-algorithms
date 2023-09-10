@@ -24,3 +24,12 @@
 // (8) * (8) = 64
 // (64) + 1 = 65
 // Example 2:
+
+// Input: functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1
+// Output: 1000
+// Explanation:
+// Evaluating from right to left ...
+// 10 * (1) = 10
+// 10 * (10) = 100
+// 10 * (100) = 1000
+// Example 3:
