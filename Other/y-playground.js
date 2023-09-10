@@ -46,3 +46,11 @@
 // 0 <= functions.length <= 1000
 // all functions accept and return a single integer
 
+/**
+ * @param {Function[]} functions
+ * @return {Function}
+ */
+var compose = function (functions) {
+  if (functions.length === 0) {
+      return function (x) { return x }
+  }
