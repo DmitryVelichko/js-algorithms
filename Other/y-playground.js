@@ -33,3 +33,13 @@
 // counter.reset(); // 0
 // counter.reset(); // 0
  
+
+// Constraints:
+
+// -1000 <= init <= 1000
+// total calls not to exceed 1000
+
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
