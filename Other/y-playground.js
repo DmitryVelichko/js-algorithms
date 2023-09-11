@@ -43,3 +43,14 @@
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
+var createCounter = function (init) {
+
+    let counter = init
+
+    function increment() {
+        return ++counter
+    }
+
+    function decrement() {
+        return --counter
+    }
