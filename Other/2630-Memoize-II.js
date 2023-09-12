@@ -53,3 +53,15 @@
 /**
  * @param {Function} fn
  */
+function memoize(fn) {
+    const globalCache = new Map();
+    const RES = Symbol();
+
+    return (...params) => {
+        let currentCache = globalCache;
+        for (const param of params) {
+            if (!currentCache.has(param)) {
+                currentCache.set(param, new Map());
+            }
+            currentCache = currentCache.get(param);
+        }
