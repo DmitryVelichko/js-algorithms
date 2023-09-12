@@ -65,3 +65,14 @@ function memoize(fn) {
             }
             currentCache = currentCache.get(param);
         }
+
+        if (currentCache.has(RES)) return currentCache.get(RES);
+
+        const result = fn(...params);
+
+        currentCache.set(RES, result);
+        return result;
+    }
+}
+
+
