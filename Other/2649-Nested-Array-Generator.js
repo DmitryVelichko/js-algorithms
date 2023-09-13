@@ -40,3 +40,18 @@
 // 10.3K
 // Acceptance Rate
 // 81.9%
+
+/**
+ * @param {Array} arr
+ * @return {Generator}
+ */
+var inorderTraversal = function*(arr) {
+    for (let element of arr) {
+        if (Array.isArray(element)) {
+            yield* inorderTraversal(element);
+        } else {
+            yield element;
+        }
+    }
+};
+
