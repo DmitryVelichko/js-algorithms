@@ -71,3 +71,23 @@
 // The selector function splits the array by whether each number is greater than 5.
  
 
+// Constraints:
+
+// 0 <= array.length <= 105
+// fn returns a string
+
+/**
+ * @param {Function} fn
+ * @return {Array}
+ */
+Array.prototype.groupBy = function(fn) {
+    // Reduce the array into a single object
+    return this.reduce((grouped, item) => {
+      // Apply the provided callback function to get the key
+      const key = fn(item);
+      
+      // If the key doesn't exist in the grouped object, create a new array for it
+      if (!grouped[key]) {
+        grouped[key] = [];
+      }
+      
