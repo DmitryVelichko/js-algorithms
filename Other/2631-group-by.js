@@ -55,3 +55,19 @@
 // {
 //   "1": [[1, 2, 3], [1, 3, 5], [1, 5, 9]]
 // }
+// Example 3:
+
+// Input: 
+// array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// fn = function (n) { 
+//   return String(n > 5);
+// }
+// Output:
+// {
+//   "true": [6, 7, 8, 9, 10],
+//   "false": [1, 2, 3, 4, 5]
+// }
+// Explanation:
+// The selector function splits the array by whether each number is greater than 5.
+ 
+
