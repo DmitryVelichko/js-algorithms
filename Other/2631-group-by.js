@@ -91,3 +91,11 @@ Array.prototype.groupBy = function(fn) {
         grouped[key] = [];
       }
       
+      // Push the current item to the array associated with the key
+      grouped[key].push(item);
+      
+      // Return the updated grouped object for the next iteration
+      return grouped;
+    }, {});
+  };
+  
