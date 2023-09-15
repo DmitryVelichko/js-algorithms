@@ -94,3 +94,21 @@ class EventEmitter {
         }
       };
     }
+  
+    emit(event, args = []) {
+      if (!this.events.has(event)) {
+        return [];
+      }
+  
+      const listeners = this.events.get(event);
+      const results = [];
+  
+      for (const listener of listeners) {
+        results.push(listener(...args));
+      }
+  
+      return results;
+    }
+  }
+  
+  
