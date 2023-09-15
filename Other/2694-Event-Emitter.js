@@ -72,3 +72,25 @@
 // The subscribe action takes 2 arguments, where the first one is the event name and the second is the callback function.
 // The unsubscribe action takes one argument, which is the 0-indexed order of the subscription made before.
 
+class EventEmitter {
+    constructor() {
+      this.events = new Map();
+    }
+  
+    subscribe(event, cb) {
+      if (!this.events.has(event)) {
+        this.events.set(event, []);
+      }
+  
+      const listeners = this.events.get(event);
+      listeners.push(cb);
+  
+      return {
+        unsubscribe: () => {
+          const index = listeners.indexOf(cb);
+          if (index !== -1) {
+            listeners.splice(index, 1);
+          }
+        }
+      };
+    }
