@@ -29,3 +29,21 @@
 // ]
 // Explanation: There are no duplicate ids so arr1 is simply concatenated with arr2.
 // Example 2:
+
+// Input: 
+// arr1 = [
+//     {"id": 1, "x": 2, "y": 3},
+//     {"id": 2, "x": 3, "y": 6}
+// ], 
+// arr2 = [
+//     {"id": 2, "x": 10, "y": 20},
+//     {"id": 3, "x": 0, "y": 0}
+// ]
+// Output: 
+// [
+//     {"id": 1, "x": 2, "y": 3},
+//     {"id": 2, "x": 10, "y": 20},
+//     {"id": 3, "x": 0, "y": 0}
+// ]
+// Explanation: The two objects with id=1 and id=3 are included in the result array without modifiction. The two objects with id=2 are merged together. The keys from arr2 override the values in arr1.
+// Example 3:
