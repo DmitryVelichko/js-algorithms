@@ -63,3 +63,20 @@
 
 // Constraints:
 
+// arr1 and arr2 are valid JSON arrays
+// Each object in arr1 and arr2 has a unique integer id key
+// 2 <= JSON.stringify(arr1).length <= 106
+// 2 <= JSON.stringify(arr2).length <= 106
+// Accepted
+// 6.8K
+// Submissions
+// 12.8K
+// Acceptance Rate
+// 53.2%
+
+/**
+ * @param {Array} arr1
+ * @param {Array} arr2
+ * @return {Array}
+ */
+var join = function(arr1, arr2) {
