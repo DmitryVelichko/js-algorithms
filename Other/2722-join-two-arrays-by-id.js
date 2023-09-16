@@ -13,3 +13,19 @@
 
 // Example 1:
 
+// Input: 
+// arr1 = [
+//     {"id": 1, "x": 1},
+//     {"id": 2, "x": 9}
+// ], 
+// arr2 = [
+//     {"id": 3, "x": 5}
+// ]
+// Output: 
+// [
+//     {"id": 1, "x": 1},
+//     {"id": 2, "x": 9},
+//     {"id": 3, "x": 5}
+// ]
+// Explanation: There are no duplicate ids so arr1 is simply concatenated with arr2.
+// Example 2:
