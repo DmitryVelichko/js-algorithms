@@ -19,3 +19,10 @@
 // Input: nums = []
 // Output: -1
 // Explanation: Because there are no elements, return -1.
+ 
+
+// Constraints:
+
+// arr is a valid JSON array
+// 0 <= arr.length <= 1000
+
