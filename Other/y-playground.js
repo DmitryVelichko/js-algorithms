@@ -23,3 +23,17 @@
 // Explanation: The arr has been split into subarrays with 3 elements. However, only two elements are left for the 2nd subarray.
 // Example 3:
 
+// Input: arr = [8,5,3,2,6], size = 6
+// Output: [[8,5,3,2,6]]
+// Explanation: Size is greater than arr.length thus all elements are in the first subarray.
+// Example 4:
+
+// Input: arr = [], size = 1
+// Output: []
+// Explanation: There are no elements to be chunked so an empty array is returned.
+ 
+
+// Constraints:
+
+// arr is a valid JSON array
+// 2 <= JSON.stringify(arr).length <= 105
