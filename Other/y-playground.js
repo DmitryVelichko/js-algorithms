@@ -75,3 +75,7 @@ var chunk = function(arr, size) {
     // Increment the index by the chunk size to move to the next chunk
     index += size;
   }
+
+  // Return the resulting chunked array
+  return chunkedArray;
+};
