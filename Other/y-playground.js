@@ -28,3 +28,19 @@
 // memoizedSum(1, 2); // "call" - returns 3. sum() was called as (1, 2) was not seen before.
 // // "getCallCount" - total call count: 2
 // Example 2:
+
+// Input:
+// fnName = "factorial"
+// actions = ["call","call","call","getCallCount","call","getCallCount"]
+// values = [[2],[3],[2],[],[3],[]]
+// Output: [2,6,2,2,6,2]
+// Explanation:
+// const factorial = (n) => (n <= 1) ? 1 : (n * factorial(n - 1));
+// const memoFactorial = memoize(factorial);
+// memoFactorial(2); // "call" - returns 2.
+// memoFactorial(3); // "call" - returns 6.
+// memoFactorial(2); // "call" - returns 2. However factorial was not called because 2 was seen before.
+// // "getCallCount" - total call count: 2
+// memoFactorial(3); // "call" - returns 6. However factorial was not called because 3 was seen before.
+// // "getCallCount" - total call count: 2
+// Example 3:
