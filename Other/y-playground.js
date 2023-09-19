@@ -1,81 +1,12 @@
-// 2677. Chunk Array
-// Easy
-// 252
-// 4
-// Companies
-// Given an array arr and a chunk size size, return a chunked array. A chunked array contains the original elements in arr, but consists of subarrays each of length size. The length of the last subarray may be less than size if arr.length is not evenly divisible by size.
+// 2623. Memoize
+// Medium
 
-// You may assume the array is the output of JSON.parse. In other words, it is valid JSON.
+// Given a function fn, return a memoized version of that function.
 
-// Please solve it without using lodash's _.chunk function.
+// A memoized function is a function that will never be called twice with the same inputs. Instead it will return a cached value.
 
- 
+// You can assume there are 3 possible input functions: sum, fib, and factorial.
 
-// Example 1:
-
-// Input: arr = [1,2,3,4,5], size = 1
-// Output: [[1],[2],[3],[4],[5]]
-// Explanation: The arr has been split into subarrays each with 1 element.
-// Example 2:
-
-// Input: arr = [1,9,6,3,2], size = 3
-// Output: [[1,9,6],[3,2]]
-// Explanation: The arr has been split into subarrays with 3 elements. However, only two elements are left for the 2nd subarray.
-// Example 3:
-
-// Input: arr = [8,5,3,2,6], size = 6
-// Output: [[8,5,3,2,6]]
-// Explanation: Size is greater than arr.length thus all elements are in the first subarray.
-// Example 4:
-
-// Input: arr = [], size = 1
-// Output: []
-// Explanation: There are no elements to be chunked so an empty array is returned.
- 
-
-// Constraints:
-
-// arr is a valid JSON array
-// 2 <= JSON.stringify(arr).length <= 105
-// 1 <= size <= arr.length + 1
-
-/**
- * @param {Array} arr
- * @param {number} size
- * @return {Array[]}
- */
-var chunk = function(arr, size) {
-    let res = []
-
-    while(arr.length) {
-        res.push(arr.splice(0, size))
-    }
-
-    return res
-};
-
-/**
- * @param {Array} arr
- * @param {number} size
- * @return {Array[]}
- */
-var chunk = function(arr, size) {
-  // Initialize an empty array to store the chunked subarrays
-  var chunkedArray = [];
-
-  // Initialize the starting index for slicing the array
-  var index = 0;
-
-  // Iterate over the array until the index reaches the end
-  while (index < arr.length) {
-    // Use the slice method to extract a subarray of length 'size' from the original array
-    // and push it into the chunkedArray
-    chunkedArray.push(arr.slice(index, index + size));
-
-    // Increment the index by the chunk size to move to the next chunk
-    index += size;
-  }
-
-  // Return the resulting chunked array
-  return chunkedArray;
-};
+// sum accepts two integers a and b and returns a + b.
+// fib accepts a single integer n and returns 1 if n <= 1 or fib(n - 1) + fib(n - 2) otherwise.
+// factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1) * n otherwise.
