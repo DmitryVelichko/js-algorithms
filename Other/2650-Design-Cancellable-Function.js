@@ -23,3 +23,20 @@
 
  
 
+// Example 1:
+
+// Input: 
+// generatorFunction = function*() { 
+//   return 42; 
+// }
+// cancelledAt = 100
+// Output: {"resolved": 42}
+// Explanation:
+// const generator = generatorFunction();
+// const [cancel, promise] = cancellable(generator);
+// setTimeout(cancel, 100);
+// promise.then(console.log); // resolves 42 at t=0ms
+
+// The generator immediately yields 42 and finishes. Because of that, the returned promise immediately resolves 42. Note that cancelling a finished generator does nothing.
+// Example 2:
+
