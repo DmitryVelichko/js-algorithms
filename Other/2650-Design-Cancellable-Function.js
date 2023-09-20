@@ -77,3 +77,36 @@
 // 4 promises are yielded. Two of those promises have their values added to the result. After 200ms, the generator finishes with a value of 2, and that value is resolved by the returned promise.
 // Example 5:
 
+// Input: 
+// generatorFunction = function*() { 
+//   let result = 0; 
+//   try { 
+//     yield new Promise(res => setTimeout(res, 100)); 
+//     result += yield new Promise(res => res(1)); 
+//     yield new Promise(res => setTimeout(res, 100)); 
+//     result += yield new Promise(res => res(1)); 
+//   } catch(e) { 
+//     return result; 
+//   } 
+//   return result; 
+// }
+// cancelledAt = 150
+// Output: {"resolved": 1}
+// Explanation:
+// The first two yielded promises resolve and cause the result to increment. However, at t=150ms, the generator is cancelled. The error sent to the generator is caught and the result is returned and finally resolved by the returned promise.
+// Example 6:
+
+// Input: 
+// generatorFunction = function*() { 
+//   try { 
+//     yield new Promise((resolve, reject) => reject("Promise Rejected")); 
+//   } catch(e) { 
+//     let a = yield new Promise(resolve => resolve(2));
+//     let b = yield new Promise(resolve => resolve(2)); 
+//     return a + b; 
+//   }; 
+// }
+// cancelledAt = null
+// Output: {"resolved": 4}
+// Explanation:
+// The first yielded promise immediately rejects. This error is caught. Because the generator hasn't been cancelled, execution continues as usual. It ends up resolving 2 + 2 = 4.
