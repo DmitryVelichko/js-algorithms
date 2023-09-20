@@ -110,3 +110,20 @@
 // Output: {"resolved": 4}
 // Explanation:
 // The first yielded promise immediately rejects. This error is caught. Because the generator hasn't been cancelled, execution continues as usual. It ends up resolving 2 + 2 = 4.
+ 
+
+// Constraints:
+
+// cancelledAt == null or 0 <= cancelledAt <= 1000
+// generatorFunction returns a generator object
+
+/**
+ * @param {Generator} generator
+ * @return {[Function, Promise]}
+ */
+var cancellable = function(generator) {
+    var cancel;
+    const cancelPromise = new Promise((_, reject) => { cancel = () => reject("Cancelled"); });
+    // Every Promise rejection has to be caught.
+    cancelPromise.catch(()=>{});
+
