@@ -61,3 +61,19 @@
 // Explanation:
 // While the function is waiting for the yielded promise to resolve, cancel() is called. This causes an error message to be sent back to the generator. Since this error is uncaught, the returned promise rejected with this error.
 // Example 4:
+
+// Input:
+// generatorFunction = function*() { 
+//   let result = 0; 
+//   yield new Promise(res => setTimeout(res, 100));
+//   result += yield new Promise(res => res(1)); 
+//   yield new Promise(res => setTimeout(res, 100)); 
+//   result += yield new Promise(res => res(1)); 
+//   return result;
+// }
+// cancelledAt = null
+// Output: {"resolved": 2}
+// Explanation:
+// 4 promises are yielded. Two of those promises have their values added to the result. After 200ms, the generator finishes with a value of 2, and that value is resolved by the returned promise.
+// Example 5:
+
