@@ -40,3 +40,17 @@
 // colsCount = 2
 // Output: []
 // Explanation: 2 multiplied by 2 is 4, and the original array [1,3] has a length of 2; therefore, the input is invalid.
+ 
+
+// Constraints:
+
+// 0 <= nums.length <= 250
+// 1 <= nums[i] <= 1000
+// 1 <= rowsCount <= 250
+// 1 <= colsCount <= 250
+
+/**
+ * @param {number} rowsCount
+ * @param {number} colsCount
+ * @return {Array<Array<number>>}
+ */
