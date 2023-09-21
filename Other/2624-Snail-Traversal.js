@@ -26,3 +26,17 @@
 //  [9,8,6,13]
 // ]
 // Example 2:
+
+// Input: 
+// nums = [1,2,3,4]
+// rowsCount = 1
+// colsCount = 4
+// Output: [[1, 2, 3, 4]]
+// Example 3:
+
+// Input: 
+// nums = [1,3]
+// rowsCount = 2
+// colsCount = 2
+// Output: []
+// Explanation: 2 multiplied by 2 is 4, and the original array [1,3] has a length of 2; therefore, the input is invalid.
