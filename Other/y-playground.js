@@ -21,3 +21,11 @@
 // Explanation: 5 !== null so this expression throw the error "Not Equal".
 // Example 3:
 
+// Input: func = () => expect(5).notToBe(null)
+// Output: {"value": true}
+// Explanation: 5 !== null so this expression returns true.
+
+/**
+ * @param {string} val
+ * @return {Object}
+ */
