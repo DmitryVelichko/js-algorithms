@@ -63,3 +63,17 @@
 // The 1st call is delayed by 150ms and ran at 200ms. The inputs were (1, 2).
 // The 2nd call is cancelled by the 3rd call
 // The 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).
+ 
+
+// Constraints:
+
+// 0 <= t <= 1000
+// 1 <= calls.length <= 10
+// 0 <= calls[i].t <= 1000
+// 0 <= calls[i].inputs.length <= 10
+
+/**
+ * @param {Function} fn
+ * @param {number} t milliseconds
+ * @return {Function}
+ */
