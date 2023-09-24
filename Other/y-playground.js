@@ -31,3 +31,19 @@
 // In this case, the function removes elements not at index 0
 // Example 3:
 
+// Input: arr = [-2,-1,0,1,2], fn = function plusOne(n) { return n + 1 }
+// Output: [-2,0,1,2]
+// Explanation:
+// Falsey values such as 0 should be filtered out
+ 
+
+// Constraints:
+
+// 0 <= arr.length <= 1000
+// -109 <= arr[i] <= 109
+
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
