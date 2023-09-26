@@ -36,3 +36,7 @@
 // columnTitle is in the range ["A", "FXSHRXW"].
 
 
+/**
+ * @param {string} columnTitle
+ * @return {number}
+ */
