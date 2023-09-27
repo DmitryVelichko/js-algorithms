@@ -62,3 +62,23 @@ MyStack.prototype.push = function(x) {
     }
 };
 
+/**
+ * @return {number}
+ */
+MyStack.prototype.pop = function() {
+    return this.q1.shift()
+};
+
+/**
+ * @return {number}
+ */
+MyStack.prototype.top = function() {
+    return this.q1[0]
+};
+
+/**
+ * @return {boolean}
+ */
+MyStack.prototype.empty = function() {
+    return this.q1.length === 0
+};
