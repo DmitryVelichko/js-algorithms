@@ -34,3 +34,20 @@
  
 
 // Constraints:
+
+// 0 <= nums.length <= 20
+// -231 <= nums[i] <= 231 - 1
+// All the values of nums are unique.
+// nums is sorted in ascending order.
+
+/**
+ * @param {number[]} nums
+ * @return {string[]}
+ */
+// Time Complexity : O(N)
+// Space Complexity : O(1)
+var summaryRanges = function(nums) {
+    // Create a list of string to store the output result...
+    const output = [];
+    // Start traversing the array from idx = 0 till idx < sizeofarray in a while loop.
+    let idx = 0;
