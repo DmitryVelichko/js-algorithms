@@ -29,3 +29,10 @@
 // Follow up: Could you solve it without loops/recursion?
 
 
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function(n) {
+    if (n == 0)
+        return 0;
