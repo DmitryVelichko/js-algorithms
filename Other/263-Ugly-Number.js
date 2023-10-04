@@ -27,3 +27,8 @@
 // Constraints:
 
 // -231 <= n <= 231 - 1
+
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
