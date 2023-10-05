@@ -46,3 +46,12 @@
  * var guess = function(num) {}
  */
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var guessNumber = function(n) {
+    let l = 0, r = n-1;
+    while(l  <= r ){
+        let mid = Math.floor((l+r)/2);
+        let res = guess(mid);
