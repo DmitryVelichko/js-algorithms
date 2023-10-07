@@ -15,3 +15,13 @@ function findContactsByPhone(book) {
 
     // Проходимся по книге контактов и заполняем phoneMap
     book.forEach(contact => {
+        contact.phones.forEach(phone => {
+            if (phoneMap[phone]) {
+                phoneMap[phone].push(contact.name);
+            } else {
+                phoneMap[phone] = [contact.name];
+            }
+        });
+    });
+
+    // Фильтруем результаты, оставляя только совпадающие номера телефонов
