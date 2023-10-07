@@ -25,3 +25,10 @@ function findContactsByPhone(book) {
     });
 
     // Фильтруем результаты, оставляя только совпадающие номера телефонов
+    const matchingContacts = Object.entries(phoneMap)
+        .filter(([phone, names]) => names.length > 1)
+        .map(([phone, names]) => `${names.join(', ')}: ${phone}`);
+
+    return matchingContacts;
+}
+
