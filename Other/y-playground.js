@@ -1,19 +1,10 @@
-/**
- * @param {Function} fn
- * @param {number} t milliseconds
- * @return {Function}
- */
-var debounce = function(fn, t) {
-    let timer
-    return function(...args) {
-       clearTimeout(timer)
-       timer = setTimeout(() => fn(...args), t)
+var countBits = function(n) {
+    const arr = []
+    for (let i = 0; i <= n; n++) {
+        console.log(i.toString(2))
+        
     }
+    
 };
 
-/**
- * const log = debounce(console.log, 100);
- * log('Hello'); // cancelled
- * log('Hello'); // cancelled
- * log('Hello'); // Logged at t=100ms
- */
+countBits(5)
