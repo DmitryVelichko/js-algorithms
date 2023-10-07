@@ -32,3 +32,6 @@ function findContactsByPhone(book) {
     return matchingContacts;
 }
 
+const matchingContacts = findContactsByPhone(book);
+console.log(matchingContacts);
+// Выведет: [ 'aaa, bbb: 222', 'aaa, ccc: 333' ]
