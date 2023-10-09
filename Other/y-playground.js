@@ -19,6 +19,15 @@
 // Output: ["h","a","n","n","a","H"]
  
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s[i] is a printable ascii character.
+
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
 
 
 
