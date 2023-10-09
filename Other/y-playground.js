@@ -1,10 +1,10 @@
-var countBits = function(n) {
-    const arr = []
-    for (let i = 0; i <= n; n++) {
-        console.log(i.toString(2))
-        
-    }
-    
-};
+// 344. Reverse String
+// Easy
+// 7.9K
+// 1.1K
+// Companies
+// Write a function that reverses a string. The input string is given as an array of characters s.
 
-countBits(5)
+
+
+
