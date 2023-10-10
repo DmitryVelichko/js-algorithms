@@ -41,3 +41,16 @@ var NumArray = function(nums) {
     }
 };
 
+/** 
+ * @param {number} left 
+ * @param {number} right
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function(left, right) {
+    let total = 0
+    for(let i=left; i<=right; i++) {
+        total = total + this.obj.nums[i]
+    }
+    return total
+};
+
