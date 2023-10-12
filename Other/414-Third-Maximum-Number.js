@@ -36,3 +36,10 @@
 // 1 <= nums.length <= 104
 // -231 <= nums[i] <= 231 - 1
  
+
+// Follow up: Can you find an O(n) solution?
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
