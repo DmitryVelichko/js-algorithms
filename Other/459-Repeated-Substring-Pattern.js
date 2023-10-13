@@ -19,3 +19,8 @@
 // Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
  
 
+// Constraints:
+
+// 1 <= s.length <= 104
+// s consists of lowercase English letters.
+
