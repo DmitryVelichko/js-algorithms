@@ -17,3 +17,15 @@
 // Output: "1a"
 // Example 2:
 
+// Input: num = -1
+// Output: "ffffffff"
+ 
+
+// Constraints:
+
+// -231 <= num <= 231 - 1
+
+/**
+ * @param {number} num
+ * @return {string}
+ */
