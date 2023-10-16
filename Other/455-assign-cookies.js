@@ -39,3 +39,8 @@ var findContentChildren = function(g, s) {
     s.sort((a,b) => a-b)
     let num = 0
 
+    for(let i=0; num<g.length && i<s.length;i++) {
+        if(g[num] <=s[i]) num++
+    }
+    return num
+};
