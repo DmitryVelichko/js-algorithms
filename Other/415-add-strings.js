@@ -21,3 +21,11 @@
 
 // Input: num1 = "0", num2 = "0"
 // Output: "0"
+ 
+
+// Constraints:
+
+// 1 <= num1.length, num2.length <= 104
+// num1 and num2 consist of only digits.
+// num1 and num2 don't have any leading zeros except for the zero itself.
+
