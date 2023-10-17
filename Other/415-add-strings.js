@@ -45,3 +45,12 @@ var addStrings = function(num1, num2) {
         const digit2 = j < 0 ? 0 : num2.charAt(j) - "0";
         const digitSum = digit1 + digit2 + carry;
         
+        sum = (digitSum >= 10 ? digitSum % 10 : digitSum) + sum;
+        carry = digitSum >= 10 ? 1 : 0;
+        
+        i--;
+        j--;
+    }
+    
+    return sum;
+};
