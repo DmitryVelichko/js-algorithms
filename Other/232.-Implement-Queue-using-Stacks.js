@@ -62,3 +62,17 @@ MyQueue.prototype.push = function(x) {
  * Removes the element from in front of queue and returns that element.
  * @return {number}
  */
+MyQueue.prototype.pop = function() {
+	while(this.stack1.length !== 0){
+		this.stack2.push(this.stack1.pop())
+	}
+
+	var pop = this.stack2.pop()
+
+	while(this.stack2.length !== 0){
+		this.stack1.push(this.stack2.pop())
+	}
+
+	return pop
+};
+
