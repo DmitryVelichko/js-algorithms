@@ -76,3 +76,20 @@ MyQueue.prototype.pop = function() {
 	return pop
 };
 
+/**
+ * Get the front element.
+ * @return {number}
+ */
+MyQueue.prototype.peek = function() {
+	while(this.stack1.length !== 0){
+		this.stack2.push(this.stack1.pop())
+	}
+
+	var pop = this.stack2.pop()
+	this.stack2.push(pop)
+	while(this.stack2.length !== 0){
+		this.stack1.push(this.stack2.pop())
+	}
+
+	return pop
+};
