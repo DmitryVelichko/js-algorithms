@@ -44,3 +44,21 @@
 /**
  * Initialize your data structure here.
  */
+var MyQueue = function() {
+	this.stack1 = []
+	this.stack2 = []
+};
+
+/**
+ * Push element x to the back of queue. 
+ * @param {number} x
+ * @return {void}
+ */
+MyQueue.prototype.push = function(x) {
+	this.stack1.push(x)
+};
+
+/**
+ * Removes the element from in front of queue and returns that element.
+ * @return {number}
+ */
