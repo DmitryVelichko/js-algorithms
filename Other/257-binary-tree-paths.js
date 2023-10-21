@@ -45,3 +45,7 @@ var binaryTreePaths = function(root) {
             paths.push(cur + root.val);
             return;
         }
+        dfsTraversal(root.left, cur + root.val + "->");
+        dfsTraversal(root.right, cur + root.val + "->");
+    }
+    
