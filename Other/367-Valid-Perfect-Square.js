@@ -30,3 +30,12 @@
  * @return {boolean}
  */
 // Binary search
+var isPerfectSquare = function(num) {
+    if(num < 1){
+        return false
+    }
+    if(num === 1){
+        return true
+    }
+    let left = 1;
+    let right = num;
