@@ -45,3 +45,9 @@ var isPerfectSquare = function(num) {
             return true;
         }else if(mid*mid > num){
             right = mid - 1;
+        }else if(mid*mid < num){
+            left = mid+1
+        }
+    }
+    return false
+};
