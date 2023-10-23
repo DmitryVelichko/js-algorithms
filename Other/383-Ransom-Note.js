@@ -24,3 +24,15 @@
 // 1 <= ransomNote.length, magazine.length <= 105
 // ransomNote and magazine consist of lowercase English letters.
 
+/**
+ * @param {string} ransomNote
+ * @param {string} magazine
+ * @return {boolean}
+ */
+var canConstruct = function(ransomNote, magazine) {
+    let hash = {}
+
+    for(let letter of magazine) {
+        if(hash[letter] === undefined) hash[letter] = 1
+        else(hash[letter]++)
+    }
