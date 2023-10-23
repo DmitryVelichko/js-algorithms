@@ -36,3 +36,9 @@ var canConstruct = function(ransomNote, magazine) {
         if(hash[letter] === undefined) hash[letter] = 1
         else(hash[letter]++)
     }
+    for(let letter of ransomNote) {
+        if(letter in hash && hash[letter] !== 0) hash[letter] -= 1
+        else return false
+    }
+    return true
+};
