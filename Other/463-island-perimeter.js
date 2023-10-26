@@ -32,3 +32,14 @@
 // 1 <= row, col <= 100
 // grid[i][j] is 0 or 1.
 // There is exactly one island in grid.
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var islandPerimeter = function(grid) {
+    const rows = grid.length;
+    const cols = grid[0].length;
+    
+    var perimeter = 0;
+    
