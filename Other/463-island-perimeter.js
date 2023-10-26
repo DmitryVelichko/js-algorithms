@@ -49,3 +49,6 @@ var islandPerimeter = function(grid) {
             
             perimeter += 4;
             
+            // abstract the number of adjacent island
+            if (row > 0 && grid[row - 1][col]) perimeter--;
+            if (col > 0 && grid[row][col - 1]) perimeter--;
