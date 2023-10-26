@@ -43,3 +43,9 @@ var islandPerimeter = function(grid) {
     
     var perimeter = 0;
     
+    for (var row = 0; row < rows; row++) {
+        for (var col = 0; col < cols; col++) {
+            if (!grid[row][col]) continue;
+            
+            perimeter += 4;
+            
