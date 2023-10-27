@@ -28,3 +28,10 @@
  * @param {number} num
  * @return {number}
  */
+var findComplement = function(num) {
+    let convertedNum = num.toString(2)
+    let flippedNumArr = []
+    for(let char of convertedNum) {
+        if(char === '1') flippedNumArr.push(0)
+        else if(char === '0') flippedNumArr.push(1)
+    }
