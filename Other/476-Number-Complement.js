@@ -35,3 +35,8 @@ var findComplement = function(num) {
         if(char === '1') flippedNumArr.push(0)
         else if(char === '0') flippedNumArr.push(1)
     }
+    let flippedNum = flippedNumArr.join('')
+
+    let complementNum = parseInt(flippedNum, 2)
+    return complementNum
+};
