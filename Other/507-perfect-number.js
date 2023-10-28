@@ -29,3 +29,10 @@
 // Acceptance Rate
 // 38.6%
 
+var checkPerfectNumber = function(num) {
+    if (num <= 1) {
+        return false; // 1 не является совершенным числом
+    }
+
+    let sum = 1; // 1 всегда является делителем
+
