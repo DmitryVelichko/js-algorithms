@@ -19,3 +19,13 @@
 // Output: false
  
 
+// Constraints:
+
+// 1 <= num <= 108
+// Accepted
+// 156.9K
+// Submissions
+// 406.5K
+// Acceptance Rate
+// 38.6%
+
