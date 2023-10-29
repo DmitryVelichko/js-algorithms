@@ -21,3 +21,10 @@
 // Output: "2-5G-3J"
 // Explanation: The string s has been split into three parts, each part has 2 characters except the first part as it could be shorter as mentioned above.
 
+
+// Constraints:
+
+// 1 <= s.length <= 105
+// s consists of English letters, digits, and dashes '-'.
+// 1 <= k <= 104
+
