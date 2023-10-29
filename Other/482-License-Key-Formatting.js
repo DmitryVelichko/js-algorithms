@@ -28,3 +28,10 @@
 // s consists of English letters, digits, and dashes '-'.
 // 1 <= k <= 104
 
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var licenseKeyFormatting = function (s, k) {
+
