@@ -18,3 +18,20 @@
     // But according to requirement 2, [1,4] is illegal; according to requirement 3,  [4,1] is not optimal compared to [2,2]. So the length L is 2, and the width W is 2.
     // Example 2:
 
+    // Input: area = 37
+    // Output: [37,1]
+    // Example 3:
+
+    // Input: area = 122122
+    // Output: [427,286]
+    
+
+    // Constraints:
+
+    // 1 <= area <= 107
+
+/**
+ * @param {number} area
+ * @return {number[]}
+ */
+
