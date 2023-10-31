@@ -33,3 +33,8 @@
 // 0 <= timeSeries[i], duration <= 107
 // timeSeries is sorted in non-decreasing order.
 
+/**
+ * @param {number[]} timeSeries
+ * @param {number} duration
+ * @return {number}
+ */
