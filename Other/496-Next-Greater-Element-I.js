@@ -26,3 +26,18 @@
 // - 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1.
  
 
+// Constraints:
+
+// 1 <= nums1.length <= nums2.length <= 1000
+// 0 <= nums1[i], nums2[i] <= 104
+// All integers in nums1 and nums2 are unique.
+// All the integers of nums1 also appear in nums2.
+ 
+
+// Follow up: Could you find an O(nums1.length + nums2.length) solution?
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
