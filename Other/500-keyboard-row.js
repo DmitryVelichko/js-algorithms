@@ -47,3 +47,11 @@ var findWords = function (words) {
         return true
     }
 
+    let res = []
+    for (let word of words) {
+        if (helper(word, row1) || helper(word, row2) || helper(word, row3)) {
+            res.push(word)
+        }
+    }
+    return res
+}
