@@ -30,3 +30,13 @@
 // 1 <= words.length <= 20
 // 1 <= words[i].length <= 100
 // words[i] consists of English letters (both lowercase and uppercase).
+
+/**
+ * @param {string[]} words
+ * @return {string[]}
+ */
+var findWords = function (words) {
+    let row1 = new Set('qwertyuiop')
+    let row2 = new Set('asdfghjkl')
+    let row3 = new Set('zxcvbnm')
+
