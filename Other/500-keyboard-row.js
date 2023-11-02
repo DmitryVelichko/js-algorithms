@@ -40,3 +40,10 @@ var findWords = function (words) {
     let row2 = new Set('asdfghjkl')
     let row3 = new Set('zxcvbnm')
 
+    function helper(word, row) {
+        for (let char of word) {
+            if (!row.has(char.toLowerCase())) return false
+        }
+        return true
+    }
+
