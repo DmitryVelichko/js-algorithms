@@ -11,3 +11,12 @@
 
 
 
+// Example 1:
+
+// Input: words = ["Hello","Alaska","Dad","Peace"]
+// Output: ["Alaska","Dad"]
+// Example 2:
+
+// Input: words = ["omk"]
+// Output: []
+// Example 3:
