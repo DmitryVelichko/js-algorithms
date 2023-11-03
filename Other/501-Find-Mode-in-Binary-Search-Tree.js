@@ -50,3 +50,13 @@ var findMode = function (root) {
 
     function traverse(node) {
         if (!node) return;
+
+        hash[node.val] = (hash[node.val] || 0) + 1;
+        maxCount = Math.max(maxCount, hash[node.val]);
+
+        traverse(node.left);
+        traverse(node.right);
+    }
+
+    traverse(root);
+
