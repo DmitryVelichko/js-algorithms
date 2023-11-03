@@ -39,3 +39,14 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var findMode = function (root) {
+    let hash = {};
+    let maxCount = 0;
+    let result = [];
+
+    function traverse(node) {
+        if (!node) return;
