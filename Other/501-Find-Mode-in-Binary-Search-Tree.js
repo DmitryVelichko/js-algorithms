@@ -60,3 +60,11 @@ var findMode = function (root) {
 
     traverse(root);
 
+    for (let key in hash) {
+        if (hash[key] === maxCount) {
+            result.push(parseInt(key));
+        }
+    }
+
+    return result;
+};
