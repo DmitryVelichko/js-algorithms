@@ -13,3 +13,11 @@
 // Output: "-10"
  
 
+// Constraints:
+
+// -107 <= num <= 107
+
+/**
+ * @param {number} num
+ * @return {string}
+ */
