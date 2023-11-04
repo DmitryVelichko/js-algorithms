@@ -21,3 +21,9 @@
  * @param {number} num
  * @return {string}
  */
+var convertToBase7 = function(num) {
+    if(num === 0) return '0';
+    
+    let temp = Math.abs(num);
+    let res = '';
+    
