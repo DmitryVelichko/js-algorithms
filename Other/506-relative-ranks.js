@@ -37,3 +37,11 @@
  * @param {number[]} score
  * @return {string[]}
  */
+var findRelativeRanks = function(nums) {
+    // create ranks array in descending order
+    let ranks = nums.slice(0).sort((a, b) => b - a);
+    
+    // map places in ranks if no medal
+    return nums.map((num) => {
+       if (num === ranks[0]) return 'Gold Medal';
+       else if (num === ranks[1]) return 'Silver Medal';
