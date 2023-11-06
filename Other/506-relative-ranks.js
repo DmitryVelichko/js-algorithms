@@ -23,3 +23,17 @@
 // Input: score = [10,3,8,9,4]
 // Output: ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
 // Explanation: The placements are [1st, 5th, 3rd, 2nd, 4th].
+
+ 
+
+// Constraints:
+
+// n == score.length
+// 1 <= n <= 104
+// 0 <= score[i] <= 106
+// All the values in score are unique.
+
+/**
+ * @param {number[]} score
+ * @return {string[]}
+ */
