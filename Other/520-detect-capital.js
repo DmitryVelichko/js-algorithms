@@ -31,3 +31,13 @@ var detectCapitalUse = function(word) {
     let upper = word.toUpperCase();
     let lower = word.toLowerCase();
 
+    if (word === upper || word === lower) {
+        return true;
+    }
+
+    if (word[0] === upper[0] && word.slice(1) === lower.slice(1)) {
+        return true;
+    }
+
+    return false;
+};
