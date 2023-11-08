@@ -30,3 +30,13 @@
 // Explanation: Every subsequence of string a is also a subsequence of string b. Similarly, every subsequence of string b is also a subsequence of string a.
  
 
+// Constraints:
+
+// 1 <= a.length, b.length <= 100
+// a and b consist of lower-case English letters.
+
+/**
+ * @param {string} a
+ * @param {string} b
+ * @return {number}
+ */
