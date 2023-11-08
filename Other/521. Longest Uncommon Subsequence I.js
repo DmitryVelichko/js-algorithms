@@ -9,3 +9,13 @@
 
 // A subsequence of a string s is a string that can be obtained after deleting any number of characters from s.
 
+// For example, "abc" is a subsequence of "aebdc" because you can delete the underlined characters in "aebdc" to get "abc". Other subsequences of "aebdc" include "aebdc", "aeb", and "" (empty string).
+ 
+
+// Example 1:
+
+// Input: a = "aba", b = "cdc"
+// Output: 3
+// Explanation: One longest uncommon subsequence is "aba" because "aba" is a subsequence of "aba" but not "cdc".
+// Note that "cdc" is also a longest uncommon subsequence.
+// Example 2:
