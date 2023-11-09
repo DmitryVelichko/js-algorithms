@@ -19,3 +19,11 @@
 // Output: 1
  
 
+// Constraints:
+
+// The number of nodes in the tree is in the range [2, 100].
+// 0 <= Node.val <= 105
+ 
+
+// Note: This question is the same as 530: https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+
