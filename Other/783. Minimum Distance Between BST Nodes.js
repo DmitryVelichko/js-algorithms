@@ -39,3 +39,15 @@
  * @param {TreeNode} root
  * @return {number}
  */
+var minDiffInBST = function(root) {
+    let minVal = Infinity
+    let prev = null
+
+    function traversal(node) {
+        if(!node) return
+        traversal(node.left)
+        
+        if(prev !== null) {
+            minVal = Math.min(minVal, node.val-prev)
+        }
+        prev = node.val
