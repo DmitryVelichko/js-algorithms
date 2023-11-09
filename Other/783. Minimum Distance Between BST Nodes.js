@@ -51,3 +51,12 @@ var minDiffInBST = function(root) {
             minVal = Math.min(minVal, node.val-prev)
         }
         prev = node.val
+
+        traversal(node.right)
+
+    }
+
+    traversal(root)
+    return minVal
+    
+};
