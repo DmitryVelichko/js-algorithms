@@ -14,3 +14,13 @@
 // Output: "bacdfeg"
 // Example 2:
 
+// Input: s = "abcd", k = 2
+// Output: "bacd"
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 104
+// s consists of only lowercase English letters.
+// 1 <= k <= 104
+
