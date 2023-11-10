@@ -24,3 +24,13 @@
 // s consists of only lowercase English letters.
 // 1 <= k <= 104
 
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var reverseStr = function(s, k) {
+       
+    const split = s.split('');
+    
+    // reverse the segment and put it back
