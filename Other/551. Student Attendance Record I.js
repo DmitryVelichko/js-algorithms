@@ -41,3 +41,20 @@ var checkRecord = function(s) {
     let absentCount = 0;
     let lateCount = 0;
 
+    for (let char of s) {
+        if (char === 'A') {
+            absentCount++;
+            lateCount = 0;
+        } else if (char === 'L') {
+            lateCount++;
+        } else {
+            lateCount = 0;
+        }
+
+        if (absentCount > 1 || lateCount > 2) {
+            return false;
+        }
+    }
+
+    return true;
+};
