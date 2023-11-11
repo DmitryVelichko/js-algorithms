@@ -23,3 +23,21 @@
 // Explanation: The student has fewer than 2 absences and was never late 3 or more consecutive days.
 // Example 2:
 
+// Input: s = "PPALLL"
+// Output: false
+// Explanation: The student was late 3 consecutive days in the last 3 days, so is not eligible for the award.
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 1000
+// s[i] is either 'A', 'L', or 'P'.
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var checkRecord = function(s) {
+    let absentCount = 0;
+    let lateCount = 0;
+
