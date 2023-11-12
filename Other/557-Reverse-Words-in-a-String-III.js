@@ -32,3 +32,11 @@
 var reverseWords = function(s) {
     let res = []
     let arr = s.split(' ')
+    for(let word of arr) {
+        res.push(word.split('').reverse().join(''))
+    }
+    return res.join(' ')
+    
+};
+
+console.log(reverseWords("Let's take LeetCode contest"))
