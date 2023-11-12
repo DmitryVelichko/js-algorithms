@@ -25,3 +25,10 @@
 // There is at least one word in s.
 // All the words in s are separated by a single space.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    let res = []
+    let arr = s.split(' ')
