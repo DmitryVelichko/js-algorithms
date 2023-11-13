@@ -31,3 +31,23 @@
 // The depth of the n-ary tree is less than or equal to 1000.
 
 
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node|null} root
+ * @return {number}
+ */
+var maxDepth = function(root) {
+    if (!root) {
+        return 0; // If the root is null, the depth is 0.
+    }
+
+    let maxChildDepth = 0;
+
+    // Iterate over each child and find the maximum depth.
