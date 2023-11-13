@@ -51,3 +51,11 @@ var maxDepth = function(root) {
     let maxChildDepth = 0;
 
     // Iterate over each child and find the maximum depth.
+    for (let child of root.children) {
+        maxChildDepth = Math.max(maxChildDepth, maxDepth(child));
+       
+    }
+
+    // The depth of the current node is the maximum child depth + 1.
+    return maxChildDepth + 1;
+};
