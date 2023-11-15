@@ -35,3 +35,20 @@
 // Example 3:
 
 
+// Input: root = [21,7,14,1,1,2,2,3,3]
+// Output: 9
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 104].
+// -1000 <= Node.val <= 1000
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
