@@ -52,3 +52,12 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var findTilt = function(root) {
+    let tilt = {val: 0}
+    dfs(root, tilt)
+    return tilt.val
+
