@@ -40,3 +40,13 @@
  * @return {number[][]}
  */
 
+    // Time Complexity : O(r*c)
+// Space Complexity : O(r*c)
+var matrixReshape = function(mat, r, c) {
+    // If transformation doesn't occur, return mat...
+    if (mat.length * mat[0].length != r * c) {
+        return mat;
+    }
+    // Otherwise create a output matrix and fill the cells...
+    const output = new Array(r).fill(0).map(() => new Array(c).fill(0));
+    // Traverse the matrix through the loop... 
