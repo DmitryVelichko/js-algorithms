@@ -49,3 +49,10 @@
  * @param {TreeNode} subRoot
  * @return {boolean}
  */
+const isSubtree = (root, subRoot) => {
+    const areEqual = (node1, node2) => {
+      if (!node1 || !node2) return !node1 && !node2;
+      if (node1.val !== node2.val) return false;
+      return areEqual(node1.left, node2.left) && areEqual(node1.right, node2.right);
+    }
+    const queue = [root];
