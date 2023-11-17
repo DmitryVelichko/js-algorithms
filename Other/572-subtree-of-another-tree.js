@@ -21,3 +21,19 @@
 // Output: false
  
 
+// Constraints:
+
+// The number of nodes in the root tree is in the range [1, 2000].
+// The number of nodes in the subRoot tree is in the range [1, 1000].
+// -104 <= root.val <= 104
+// -104 <= subRoot.val <= 104
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
