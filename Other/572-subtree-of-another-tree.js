@@ -50,17 +50,17 @@
  * @return {boolean}
  */
 const isSubtree = (root, subRoot) => {
-    const areEqual = (node1, node2) => {
-      if (!node1 || !node2) return !node1 && !node2;
-      if (node1.val !== node2.val) return false;
-      return areEqual(node1.left, node2.left) && areEqual(node1.right, node2.right);
-    }
-    const queue = [root];
-    while (queue.length) {
-      const node = queue.pop();
-      if (!node) continue;
-      if (areEqual(node, subRoot)) return true;
-      queue.push(node.right, node.left);
-    }
-    return false;
-  };
+  function isSame (root, subRoot)  {
+     if(root === null && subRoot === null) return true
+     if(root === null || subRoot === null) return false
+     if(root.val !== subRoot.val) return false
+     return isSame(root.left, subRoot.left) && isSame(root.right, subRoot.right)
+     
+   }
+ 
+     if(!root) return false
+     if(isSame(root, subRoot)) return true
+     return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot) 
+ 
+ 
+ }
