@@ -56,3 +56,11 @@ const isSubtree = (root, subRoot) => {
       return areEqual(node1.left, node2.left) && areEqual(node1.right, node2.right);
     }
     const queue = [root];
+    while (queue.length) {
+      const node = queue.pop();
+      if (!node) continue;
+      if (areEqual(node, subRoot)) return true;
+      queue.push(node.right, node.left);
+    }
+    return false;
+  };
