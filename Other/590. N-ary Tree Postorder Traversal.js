@@ -27,3 +27,11 @@
 // 0 <= Node.val <= 104
 // The height of the n-ary tree is less than or equal to 1000.
 
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */ 
+
