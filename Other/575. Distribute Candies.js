@@ -30,3 +30,16 @@
 
 // Constraints:
 
+// n == candyType.length
+// 2 <= n <= 104
+// n is even.
+// -105 <= candyType[i] <= 105
+
+/**
+ * @param {number[]} candyType
+ * @return {number}
+ */
+var distributeCandies = function(candyType) {
+   
+    return Math.min(new Set(candyType).size, candyType.length / 2)
+};
