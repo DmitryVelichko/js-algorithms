@@ -23,3 +23,10 @@
 // Explanation: Alice can only eat 4 / 2 = 2 candies. Whether she eats types [1,2], [1,3], or [2,3], she still can only eat 2 different types.
 // Example 3:
 
+// Input: candyType = [6,6,6,6]
+// Output: 1
+// Explanation: Alice can only eat 4 / 2 = 2 candies. Even though she can eat 2 candies, she only has 1 type.
+ 
+
+// Constraints:
+
