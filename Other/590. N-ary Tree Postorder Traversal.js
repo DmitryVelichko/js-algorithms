@@ -35,3 +35,12 @@
  * };
  */ 
 
+/**
+ * @param {Node|null} root
+ * @return {number[]}
+ */
+var postorder = function(root) {
+    const res = [];
+    traverse(root);
+    return res;
+    
