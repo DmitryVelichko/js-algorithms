@@ -31,3 +31,15 @@
 // 1 <= nums.length <= 2 * 104
 // -109 <= nums[i] <= 109
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findLHS = function(nums) {
+    let hashMap = {}
+    let maxCount = 0
+
+    for(let number of nums) {
+        hashMap[number] = (hashMap[number] || 0) + 1 
+    }
+
