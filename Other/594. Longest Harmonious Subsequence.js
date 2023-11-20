@@ -43,3 +43,11 @@ var findLHS = function(nums) {
         hashMap[number] = (hashMap[number] || 0) + 1 
     }
 
+    for(let key in hashMap) {
+        let keyNum = parseInt(key)
+        if(hashMap.hasOwnProperty(keyNum + 1)) {
+            maxCount = Math.max(maxCount, hashMap[keyNum] + hashMap[keyNum + 1])
+        }
+    }
+    return maxCount
+}
