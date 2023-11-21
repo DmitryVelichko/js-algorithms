@@ -27,3 +27,15 @@
 
 // Constraints:
 
+// 1 <= m, n <= 4 * 104
+// 0 <= ops.length <= 104
+// ops[i].length == 2
+// 1 <= ai <= m
+// 1 <= bi <= n
+
+/**
+ * @param {number} m
+ * @param {number} n
+ * @param {number[][]} ops
+ * @return {number}
+ */
