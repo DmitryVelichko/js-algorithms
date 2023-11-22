@@ -64,3 +64,11 @@ const findRestaurant = function (list1, list2) {
 				res = [list2[i]]
 				minSum = currentSum
 			}
+			else if (currentSum === minSum) {
+				res.push(list2[i])
+			}
+		}
+	}
+	// return the array of common interests
+	return res
+};
