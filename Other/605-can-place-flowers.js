@@ -28,8 +28,11 @@
 // There are no two adjacent flowers in flowerbed.
 // 0 <= n <= flowerbed.length
 
+
 /**
  * @param {number[]} flowerbed
  * @param {number} n
  * @return {boolean}
  */
+var canPlaceFlowers = function(flowerbed, n) {
+    for (let i = 0; i < flowerbed.length && n !== 0; i++) {
