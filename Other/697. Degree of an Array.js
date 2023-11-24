@@ -30,3 +30,12 @@
 // nums.length will be between 1 and 50,000.
 // nums[i] will be an integer between 0 and 49,999.
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+const findShortestSubArray = (nums) => {
+    const counts = {}
+    const firstIndexes = {}
+    const lastIndexes = {}
+    let max = 0
