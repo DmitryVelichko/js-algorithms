@@ -49,3 +49,10 @@ const findShortestSubArray = (nums) => {
         lastIndexes[k] = i
     }
     let res = nums.length
+    for (const k in counts) {
+        if (counts[k] === max) {
+            res = Math.min(res, lastIndexes[k] - firstIndexes[k] + 1)
+        }
+    }
+    return res
+};
