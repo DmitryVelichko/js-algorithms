@@ -18,3 +18,15 @@
 // The shortest length is 2. So return 2.
 // Example 2:
 
+// Input: nums = [1,2,2,3,1,4,2]
+// Output: 6
+// Explanation: 
+// The degree is 3 because the element 2 is repeated 3 times.
+// So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
+ 
+
+// Constraints:
+
+// nums.length will be between 1 and 50,000.
+// nums[i] will be an integer between 0 and 49,999.
+
