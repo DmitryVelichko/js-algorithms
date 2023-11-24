@@ -39,3 +39,13 @@ const findShortestSubArray = (nums) => {
     const firstIndexes = {}
     const lastIndexes = {}
     let max = 0
+    for (let i = 0; i < nums.length; i++) {
+        const k = nums[i]
+        counts[k] = (counts[k] || 0) + 1
+        max = Math.max(max, counts[k])
+        if (firstIndexes[k] === undefined) {
+            firstIndexes[k] = i
+        }
+        lastIndexes[k] = i
+    }
+    let res = nums.length
