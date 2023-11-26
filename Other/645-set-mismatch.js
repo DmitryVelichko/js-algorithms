@@ -24,3 +24,13 @@
 // 2 <= nums.length <= 104
 // 1 <= nums[i] <= 104
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
+var findErrorNums = function(nums) {
+    let dupe = 0
+    let originalSum = nums.length * (nums.length + 1) / 2
+    const seen = new Uint8Array(nums.length+1)
+
