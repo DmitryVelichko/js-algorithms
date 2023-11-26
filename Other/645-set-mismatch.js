@@ -34,3 +34,10 @@ var findErrorNums = function(nums) {
     let originalSum = nums.length * (nums.length + 1) / 2
     const seen = new Uint8Array(nums.length+1)
 
+    for (let i = 0; i < nums.length; i++) {
+        originalSum -= nums[i]
+        if (seen[nums[i]]) dupe = nums[i]
+        seen[nums[i]]++
+    }
+    return [dupe, originalSum + dupe]
+};
