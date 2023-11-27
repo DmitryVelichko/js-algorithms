@@ -37,3 +37,18 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
+ * @return {TreeNode}
+ */
+var mergeTrees = function(t1, t2) {
+    // goal is to merge t2 to t1
+    
+    // if one of the node missing, return the other
+    if (t1 === null) {
+        return t2;
+    }
+    if (t2 === null) {
+        return t1;
+    }
