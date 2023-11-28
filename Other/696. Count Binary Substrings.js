@@ -28,3 +28,7 @@
 // 1 <= s.length <= 105
 // s[i] is either '0' or '1'.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
