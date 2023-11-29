@@ -61,3 +61,15 @@ var countNodes = function(root) {
         const leftLen = leftDepth(node); // Глубина левого поддерева
         const rightLen = rightDepth(node); // Глубина правого поддерева
         
+        // Если глубины левого и правого поддеревьев совпадают, это полное бинарное дерево
+        if (leftLen === rightLen) return Math.pow(2, leftLen) - 1;
+        
+        // Иначе, рекурсивно обходим левое и правое поддеревья и суммируем их узлы
+        return traverse(node.left) + traverse(node.right) + 1;
+    }
+    
+    // Вызываем обход с корня дерева
+    return traverse(root);
+};
+
+
