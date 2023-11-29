@@ -50,3 +50,14 @@ var countNodes = function(root) {
         return leftDepth(node.left) + 1;
     }
     
+    // Функция для вычисления глубины правого поддерева
+    function rightDepth(node) {
+        if (!node) return 0;
+        return rightDepth(node.right) + 1;
+    }
+    
+    // Рекурсивная функция для обхода дерева и подсчета узлов
+    function traverse(node) {
+        const leftLen = leftDepth(node); // Глубина левого поддерева
+        const rightLen = rightDepth(node); // Глубина правого поддерева
+        
