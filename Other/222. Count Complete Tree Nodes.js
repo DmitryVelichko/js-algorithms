@@ -38,3 +38,15 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var countNodes = function(root) {
+    
+    // Функция для вычисления глубины левого поддерева
+    function leftDepth(node) {
+        if (!node) return 0;
+        return leftDepth(node.left) + 1;
+    }
+    
