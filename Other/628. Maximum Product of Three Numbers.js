@@ -23,3 +23,10 @@
 
 // 3 <= nums.length <= 104
 // -1000 <= nums[i] <= 1000
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maximumProduct = function(nums) {
+    nums = nums.sort((a,b) => b-a)
