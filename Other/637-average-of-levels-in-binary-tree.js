@@ -20,3 +20,16 @@
 // Output: [3.00000,14.50000,11.00000]
  
 
+// Constraints:
+
+// The number of nodes in the tree is in the range [1, 104].
+// -231 <= Node.val <= 231 - 1
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
