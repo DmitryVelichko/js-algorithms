@@ -33,3 +33,16 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var averageOfLevels = function(root) {
+    // Если корень дерева отсутствует, возвращаем пустой массив
+    if (!root) {
+        return [];
+    }
+
+    const result = []; // Массив для хранения средних значений узлов на каждом уровне
+    const queue = [root]; // Очередь для выполнения обхода в ширину (BFS)
+
