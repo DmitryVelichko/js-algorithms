@@ -65,3 +65,10 @@ var averageOfLevels = function(root) {
                 queue.push(node.right);
             }
         }
+
+        // Рассчитываем среднее значение для текущего уровня и добавляем в массив результатов
+        result.push(levelSum / levelSize);
+    }
+
+    return result; // Возвращаем массив средних значений узлов на каждом уровне
+};
