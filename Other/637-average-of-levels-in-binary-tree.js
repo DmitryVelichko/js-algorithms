@@ -46,3 +46,22 @@ var averageOfLevels = function(root) {
     const result = []; // Массив для хранения средних значений узлов на каждом уровне
     const queue = [root]; // Очередь для выполнения обхода в ширину (BFS)
 
+    while (queue.length > 0) {
+        const levelSize = queue.length; // Размер текущего уровня
+        let levelSum = 0; // Сумма значений узлов на текущем уровне
+
+        // Обход узлов на текущем уровне
+        for (let i = 0; i < levelSize; i++) {
+            const node = queue.shift(); // Извлекаем узел из начала очереди
+            levelSum += node.val; // Добавляем значение узла к сумме
+
+            // Если есть левый потомок, добавляем его в очередь
+            if (node.left) {
+                queue.push(node.left);
+            }
+
+            // Если есть правый потомок, добавляем его в очередь
+            if (node.right) {
+                queue.push(node.right);
+            }
+        }
