@@ -21,3 +21,16 @@
 
 // Constraints:
 
+// The number of nodes in the tree is in the range [1, 104].
+// -104 <= Node.val <= 104
+// root is guaranteed to be a valid binary search tree.
+// -105 <= k <= 105
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
