@@ -34,3 +34,12 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @param {number} k // set [5,3,7]
+ * @return {boolean} //stack []
+ */
+var findTarget = function (root, k) {
+    if (!root) return false;
+    const set = new Set();
+    const stack = [root];
