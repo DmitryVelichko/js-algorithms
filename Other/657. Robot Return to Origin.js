@@ -37,3 +37,11 @@
 var judgeCircle = function(moves) {
     let origin = [0,0]
     for(let char of moves) {
+        if(char === 'U') origin[0]++
+        else if(char === 'D') origin[0]--
+        else if(char === 'L') origin[1]++
+        else if(char === 'R') origin[1]--
+    }
+
+    return JSON.stringify(origin) === JSON.stringify([0,0])
+};
