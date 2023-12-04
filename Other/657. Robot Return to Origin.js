@@ -25,3 +25,15 @@
 // Explanation: The robot moves left twice. It ends up two "moves" to the left of the origin. We return false because it is not at the origin at the end of its moves.
  
 
+// Constraints:
+
+// 1 <= moves.length <= 2 * 104
+// moves only contains the characters 'U', 'D', 'L' and 'R'.
+
+/**
+ * @param {string} moves
+ * @return {boolean}
+ */
+var judgeCircle = function(moves) {
+    let origin = [0,0]
+    for(let char of moves) {
