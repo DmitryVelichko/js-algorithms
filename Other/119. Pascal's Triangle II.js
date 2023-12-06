@@ -23,3 +23,15 @@
 
 // Constraints:
 
+// 0 <= rowIndex <= 33
+ 
+
+// Follow up: Could you optimize your algorithm to use only O(rowIndex) extra space?
+
+/**
+ * @param {number} rowIndex
+ * @return {number[]}
+ */
+var getRow = function(rowIndex) {
+    let res = [1];
+    let prev = 1;
