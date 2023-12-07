@@ -48,3 +48,9 @@ var imageSmoother = function(M) {
     for(let r = 0; r < rows; ++r) {
         for(let c = 0; c < cols; ++c) {
             let count = 0
+            for(let x of [-1, 0, 1])
+                for(let y of [-1, 0, 1])
+                    if(isValid(r + x, c + y, rows, cols)) {
+                        count++
+                        ret[r][c] += M[r + x][c + y]
+                    }
