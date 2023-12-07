@@ -30,3 +30,21 @@
 // For the point (1,1): floor((50+200+200+200+200+100+100+100+100)/9) = floor(138.888889) = 138
  
 
+// Constraints:
+
+// m == img.length
+// n == img[i].length
+// 1 <= m, n <= 200
+// 0 <= img[i][j] <= 255
+
+
+/**
+ * @param {number[][]} img
+ * @return {number[][]}
+ */
+var imageSmoother = function(M) {
+    let rows = M.length, cols = M[0].length
+    let ret = new Array(rows).fill(0).map(_ => new Array(cols).fill(0))
+    for(let r = 0; r < rows; ++r) {
+        for(let c = 0; c < cols; ++c) {
+            let count = 0
