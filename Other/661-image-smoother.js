@@ -54,3 +54,12 @@ var imageSmoother = function(M) {
                         count++
                         ret[r][c] += M[r + x][c + y]
                     }
+            ret[r][c] = Math.floor(ret[r][c] / count)
+        }
+    }
+    return ret
+}
+
+
+const isValid = (r, c, rows, cols) =>
+    r < rows && r >= 0 && c < cols && c >= 0
