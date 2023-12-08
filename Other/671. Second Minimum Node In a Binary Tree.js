@@ -48,3 +48,13 @@ var findSecondMinimumValue = function (root) {
     let minVal2 = Infinity
     let stack = [root]
     while (stack.length > 0) {
+        const node = stack.pop()
+        if (minVal1 < node.val && node.val < minVal2) minVal2 = node.val
+        if (node.left) stack.push(node.left)
+        if (node.right) stack.push(node.right)
+    }
+
+    return minVal2 === Infinity ? -1 : minVal2
+
+
+}; 
