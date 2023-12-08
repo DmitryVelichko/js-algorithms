@@ -19,7 +19,7 @@
 
 // найти максимальный и минимальный элемент в массиве
 
-const array = [1,2,3,4,5,6,7,8,9,10]
+// const array = [1,2,3,4,5,6,7,8,9,10]
 
 // function findMin(arr) {
 //     arr.sort((a,b) => b-a)
@@ -47,13 +47,56 @@ const array = [1,2,3,4,5,6,7,8,9,10]
   
 // }
 
-function findMax(arr) {
-    return Math.max(...arr)
+// function findMax(arr) {
+//     return Math.max(...arr)
   
-}
+// }
 
+// console.log(findMax(array))
 
+// Необходимо обработать массив таким образом, чтобы распределить людей по группам городов
 
+// Данные на вход
+const people = [
+    {
+      name: 'Alex',
+      city: 'Moscow',
+    },
+    {
+      name: 'Ivan',
+      city: 'Moscow',
+    },
+    {
+      name: 'Joe',
+      city: 'New York'
+    },
+    {
+      name: 'Johan',
+      city: 'Berlin'
+    },
+  ]
+  
+  const groupByCity = (array) => {
+    let res = {}
+    
+    for(let obj of array) {
+        let {name, city} = obj
 
-console.log(findMax(array))
+        if(!res[city]) res[city] = name
+        else if(Array.isArray(res[city])) res[city].push(name)
+        else res[city] = [res[city], name]
+    }
+    return res
+  }
+  
+  // Данные на выход
+  /*
+  {
+    'Moscow': [ 'Alex', 'Ivan' ],
+    'New York': 'Joe',
+    'Berlin': 'Johan'
+  }
+  */
+
+console.log(groupByCity(people))  
 
