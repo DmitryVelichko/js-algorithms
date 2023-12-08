@@ -42,3 +42,9 @@
  * @param {TreeNode} root
  * @return {number}
  */
+var findSecondMinimumValue = function (root) {
+    if (!root) return -1
+    let minVal1 = root.val
+    let minVal2 = Infinity
+    let stack = [root]
+    while (stack.length > 0) {
