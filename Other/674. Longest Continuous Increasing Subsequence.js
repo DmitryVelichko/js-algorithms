@@ -29,3 +29,11 @@
 // 1 <= nums.length <= 104
 // -109 <= nums[i] <= 109
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findLengthOfLCIS = function(nums) {
+    let currLen = 1
+    let maxLen = 1
+
