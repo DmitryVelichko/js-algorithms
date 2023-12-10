@@ -20,3 +20,16 @@
 // Output: false
  
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s consists of lowercase English letters.
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var validPalindrome = function(s) {
+    let low = 0
+    let high = s.length - 1
+    while(low<high) {
