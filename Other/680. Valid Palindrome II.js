@@ -42,3 +42,11 @@ var validPalindrome = function(s) {
     return true
 };
 
+function isPalindrome(str, low, high) {
+    while(low<high) {
+        if(str[low] !== str[high]) return false
+        low++
+        high--
+    }
+    return true
+}
