@@ -24,3 +24,14 @@
 // Explanation: The binary representation of 11 is: 1011.
  
 
+// Constraints:
+
+// 1 <= n <= 231 - 1
+
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var hasAlternatingBits = function(n) {
+    let bin = n.toString(2)
+
