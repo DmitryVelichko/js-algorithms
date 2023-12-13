@@ -16,3 +16,12 @@
 // Input: s = "here"
 // Output: "here"
 // Example 3:
+
+// Input: s = "LOVELY"
+// Output: "lovely"
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 100
+// s consists of printable ASCII characters.
