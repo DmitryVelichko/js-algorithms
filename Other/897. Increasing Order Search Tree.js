@@ -59,3 +59,19 @@ var increasingBST = function(root) {
             // Move the newTree pointer to the right.
             newTree = newTree.right;
             
+            // Set the left pointer of the current node to null.
+            // This is because the new tree is constructed in such a way that
+            // it only contains right children.
+            node.left = null;
+        }
+
+        // Traverse the right subtree.
+        helper(node.right);
+    }
+
+    // Start the in-order traversal from the root.
+    helper(root);
+
+    // Return the newRoot of the modified tree.
+    return newRoot;
+};
