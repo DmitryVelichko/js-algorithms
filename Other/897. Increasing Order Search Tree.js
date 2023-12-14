@@ -46,3 +46,16 @@ var increasingBST = function(root) {
         // If the current node is null, return.
         if(!node) return;
 
+        // Traverse the left subtree first.
+        helper(node.left);
+
+        // If newRoot is not set, set it to the current node.
+        // Also, set newTree to the same node initially.
+        if(!newRoot) {
+            newRoot = newTree = node;
+        } else {
+            // If newRoot is already set, link the current node to the right of newTree.
+            newTree.right = node;
+            // Move the newTree pointer to the right.
+            newTree = newTree.right;
+            
