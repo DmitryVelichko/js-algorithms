@@ -56,47 +56,64 @@
 
 // Необходимо обработать массив таким образом, чтобы распределить людей по группам городов
 
-// Данные на вход
-const people = [
-    {
-      name: 'Alex',
-      city: 'Moscow',
-    },
-    {
-      name: 'Ivan',
-      city: 'Moscow',
-    },
-    {
-      name: 'Joe',
-      city: 'New York'
-    },
-    {
-      name: 'Johan',
-      city: 'Berlin'
-    },
-  ]
+// // Данные на вход
+// const people = [
+//     {
+//       name: 'Alex',
+//       city: 'Moscow',
+//     },
+//     {
+//       name: 'Ivan',
+//       city: 'Moscow',
+//     },
+//     {
+//       name: 'Joe',
+//       city: 'New York'
+//     },
+//     {
+//       name: 'Johan',
+//       city: 'Berlin'
+//     },
+//   ]
   
-  const groupByCity = (array) => {
-    let res = {}
+//   const groupByCity = (array) => {
+//     let res = {}
     
-    for(let obj of array) {
-        let {name, city} = obj
+//     for(let obj of array) {
+//         let {name, city} = obj
 
-        if(!res[city]) res[city] = name
-        else if(Array.isArray(res[city])) res[city].push(name)
-        else res[city] = [res[city], name]
-    }
-    return res
-  }
+//         if(!res[city]) res[city] = name
+//         else if(Array.isArray(res[city])) res[city].push(name)
+//         else res[city] = [res[city], name]
+//     }
+//     return res
+//   }
   
-  // Данные на выход
-  /*
-  {
-    'Moscow': [ 'Alex', 'Ivan' ],
-    'New York': 'Joe',
-    'Berlin': 'Johan'
-  }
-  */
+//   // Данные на выход
+//   /*
+//   {
+//     'Moscow': [ 'Alex', 'Ivan' ],
+//     'New York': 'Joe',
+//     'Berlin': 'Johan'
+//   }
+//   */
 
-console.log(groupByCity(people))  
+// console.log(groupByCity(people))  
+
+
+const anagram = (strA, strB) => {
+  let hash = {}
+  for(let i=0; i<strA.length;i++) {
+    hash[strA[i].toLowerCase()] = true
+  }
+
+  for(let i=0; i<strB.length;i++) {
+    if(hash[strB[i].toLowerCase()]) continue
+    else return false
+  }
+  return true
+}
+
+console.log(anagram('finder', 'Friend')) // true
+console.log(anagram('hello', 'bye')) // false
 
