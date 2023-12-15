@@ -30,3 +30,18 @@
  * @param {string} stones
  * @return {number}
  */
+var numJewelsInStones = function(jewels, stones) {
+    let hashmap = {}
+    let count = 0
+
+    for(let i=0; i<jewels.length; i++) {
+         hashmap[jewels[i]] = jewels[i]
+    }
+
+    for(let i=0; i<stones.length; i++) {
+        if(stones[i] in hashmap) {
+            count += 1
+        } else continue
+    }
+  return count
+};
