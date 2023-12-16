@@ -29,3 +29,21 @@
  
 
 // Constraints:
+
+// m == mat.length 
+// n == mat[i].length 
+// 1 <= m, n <= 100 
+// mat[i][j] is either 0 or 1.
+
+/**
+ * @param {number[][]} mat
+ * @return {number[]}
+ */
+var rowAndMaximumOnes = function(mat) {
+    let maxRow = 0
+    let row = 0
+    for(let i=0; i<mat.length; i++) {
+        let currMax = 0
+        for(let j=0; j<mat[i].length; j++) {
+            currMax += Math.max(mat[i][j])
+        }
