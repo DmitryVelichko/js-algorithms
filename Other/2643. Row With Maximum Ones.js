@@ -47,3 +47,10 @@ var rowAndMaximumOnes = function(mat) {
         for(let j=0; j<mat[i].length; j++) {
             currMax += Math.max(mat[i][j])
         }
+       if (maxRow < currMax) {
+           maxRow = currMax;
+           row = i
+       }
+    }
+    return [row, maxRow]
+};
