@@ -29,3 +29,19 @@
 // Kid 1 will always have the greatest number of candies, even if a different kid is given the extra candy.
 // Example 3:
 
+// Input: candies = [12,1,12], extraCandies = 10
+// Output: [true,false,true]
+ 
+
+// Constraints:
+
+// n == candies.length
+// 2 <= n <= 100
+// 1 <= candies[i] <= 100
+// 1 <= extraCandies <= 50
+
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
