@@ -45,3 +45,18 @@
  * @param {number} extraCandies
  * @return {boolean[]}
  */
+var kidsWithCandies = function(candies, extraCandies) {
+    const originalCandies = [...candies]
+    let sortedCandies = candies.sort((a,b) => a - b)
+    let res = []
+
+    for(let i=0; i<originalCandies.length; i++) {
+        if(originalCandies[i] + extraCandies >= sortedCandies[sortedCandies.length-1]) {
+            res.push(true)
+        } else {
+            res.push(false)
+        }
+    }
+
+    return res
+};
