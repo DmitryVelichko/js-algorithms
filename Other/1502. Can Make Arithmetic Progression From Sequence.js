@@ -25,3 +25,11 @@
 
 // 2 <= arr.length <= 1000
 // -106 <= arr[i] <= 106
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var canMakeArithmeticProgression = function(arr) {
+    arr.sort((a,b) => a - b)
+
