@@ -33,3 +33,9 @@
 var canMakeArithmeticProgression = function(arr) {
     arr.sort((a,b) => a - b)
 
+    for(let i = 1; i < arr.length; i++) {
+        const cnst = arr[1] - arr[0]
+        if(arr[i] - arr[i-1] !== cnst) return false 
+    }
+    return true
+};
