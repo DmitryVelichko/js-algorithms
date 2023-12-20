@@ -33,3 +33,8 @@
  * @param {number} n
  * @return {number[]}
  */
+var shuffle = function(nums, n) {
+    let res = []
+    let arr1 = nums.splice(0, n)
+    
+
