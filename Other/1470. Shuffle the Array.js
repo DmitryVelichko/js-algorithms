@@ -38,3 +38,11 @@ var shuffle = function(nums, n) {
     let arr1 = nums.splice(0, n)
     
 
+    for(let i=0; i<nums.length;i++) {
+        res.push(arr1[i])
+        res.push(nums[i])
+    }
+    return res
+};
+
+console.log((JSON.stringify(shuffle([2,5,1,3,4,7],3))) === JSON.stringify([2,3,5,4,1,7])) // [2,3,5,4,1,7]
