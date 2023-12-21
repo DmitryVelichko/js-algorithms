@@ -46,3 +46,14 @@ var busyStudent = function(startTime, endTime, queryTime) {
     for(let i=0; i<startTime.length; i++) {
         let start = startTime[i]
         let end = endTime[i]
+        while(start <= end) {
+            if (start === queryTime) {
+                res += 1  
+            } 
+            start++
+        }
+    }
+    return res
+};
+
+console.log((busyStudent([1,2,3], [3,2,7], 4)) === 1)
