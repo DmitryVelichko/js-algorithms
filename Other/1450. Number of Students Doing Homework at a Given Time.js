@@ -34,3 +34,15 @@
 // 1 <= startTime.length <= 100
 // 1 <= startTime[i] <= endTime[i] <= 1000
 // 1 <= queryTime <= 1000
+
+/**
+ * @param {number[]} startTime
+ * @param {number[]} endTime
+ * @param {number} queryTime
+ * @return {number}
+ */
+var busyStudent = function(startTime, endTime, queryTime) {
+    let res = 0
+    for(let i=0; i<startTime.length; i++) {
+        let start = startTime[i]
+        let end = endTime[i]
