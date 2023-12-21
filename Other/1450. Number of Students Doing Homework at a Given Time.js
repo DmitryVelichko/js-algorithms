@@ -23,3 +23,14 @@
 // The third student started doing homework at time 3 and finished at time 7 and was the only student doing homework at time 4.
 // Example 2:
 
+// Input: startTime = [4], endTime = [4], queryTime = 4
+// Output: 1
+// Explanation: The only student was doing their homework at the queryTime.
+ 
+
+// Constraints:
+
+// startTime.length == endTime.length
+// 1 <= startTime.length <= 100
+// 1 <= startTime[i] <= endTime[i] <= 1000
+// 1 <= queryTime <= 1000
