@@ -28,3 +28,23 @@
 
 // Input: paths = [["A","Z"]]
 // Output: "Z"
+ 
+
+// Constraints:
+
+// 1 <= paths.length <= 100
+// paths[i].length == 2
+// 1 <= cityAi.length, cityBi.length <= 10
+// cityAi != cityBi
+// All strings consist of lowercase and uppercase English letters and the space character.
+
+/**
+ * @param {string[][]} paths
+ * @return {string}
+ */
+var destCity = function(paths) {
+    let hash = {}
+ 
+    for(let i=0; i<paths.length; i++) {
+        if(hash[paths[i][0]] === undefined) hash[paths[i][0]] = true
+    }
