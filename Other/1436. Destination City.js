@@ -48,3 +48,10 @@ var destCity = function(paths) {
     for(let i=0; i<paths.length; i++) {
         if(hash[paths[i][0]] === undefined) hash[paths[i][0]] = true
     }
+
+       for(let i=0; i<paths.length; i++) {
+        if(!([paths[i][1]] in hash)) {
+            return paths[i][1]
+        }
+    }
+}
