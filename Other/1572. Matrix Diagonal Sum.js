@@ -31,3 +31,17 @@
 // Output: 5
 
 
+// Constraints:
+
+// n == mat.length == mat[i].length
+// 1 <= n <= 100
+// 1 <= mat[i][j] <= 100
+
+/**
+ * @param {number[][]} mat
+ * @return {number}
+ */
+const diagonalSum = (mat) => {
+    let sum = 0
+    let j = mat[0].length - 1
+
