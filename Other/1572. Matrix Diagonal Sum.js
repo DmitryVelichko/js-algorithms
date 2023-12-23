@@ -19,3 +19,15 @@
 // Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
 // Notice that element mat[1][1] = 5 is counted only once.
 // Example 2:
+
+// Input: mat = [[1,1,1,1],
+//               [1,1,1,1],
+//               [1,1,1,1],
+//               [1,1,1,1]]
+// Output: 8
+// Example 3:
+
+// Input: mat = [[5]]
+// Output: 5
+
+
