@@ -37,3 +37,11 @@
 // s consists of digits 0-9 and characters '+', '-', '*', '/', '(', and ')'.
 // It is guaranteed that parentheses expression s is a VPS.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxDepth = function(s) {
+    let maxCount = 0
+    let count = 0
+
