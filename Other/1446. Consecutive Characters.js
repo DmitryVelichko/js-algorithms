@@ -40,3 +40,9 @@ var maxPower = function(s) {
             power = Math.max(power, count)
         } else {
             count = 1
+        }
+    }
+    return power
+}
+
+console.log(maxPower("abbcccddddeeeeedcba")) // 5
