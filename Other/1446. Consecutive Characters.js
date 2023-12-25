@@ -26,3 +26,11 @@
 // 1 <= s.length <= 500
 // s consists of only lowercase English letters.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var maxPower = function(s) {
+    let power = 1
+    let count = 1
+
