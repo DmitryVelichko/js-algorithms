@@ -19,3 +19,10 @@
 // Input: s = "abbcccddddeeeeedcba"
 // Output: 5
 // Explanation: The substring "eeeee" is of length 5 with the character 'e' only.
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 500
+// s consists of only lowercase English letters.
+
