@@ -29,3 +29,13 @@
 
 // 1 <= nums.length <= 100
 // 1 <= nums[i] <= 100
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var numIdenticalPairs = function (nums) {
+    let hash = {}
+    let pairs = 0
+
+    for (let num of nums) {
