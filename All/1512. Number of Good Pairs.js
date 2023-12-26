@@ -39,3 +39,11 @@ var numIdenticalPairs = function (nums) {
     let pairs = 0
 
     for (let num of nums) {
+        pairs += hash[num] || 0
+        hash[num] = hash[num] + 1 || 1
+    }
+
+    return pairs
+};
+
+console.log(numIdenticalPairs([1,1,1,1])) // 6
