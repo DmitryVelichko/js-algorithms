@@ -62,3 +62,10 @@ var reformatDate = function (date) {
         Nov: "11",
         Dec: "12",
     };
+
+    const [day, month, year] = date.split(' ') //["6th', 'May', '1960"] //"1960-05-26"
+
+    return year + '-' + months[month] + '-' + (parseInt(day) < 10 ? '0' + parseInt(day)
+        : parseInt(day))
+
+};
