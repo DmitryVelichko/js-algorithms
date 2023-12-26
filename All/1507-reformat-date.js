@@ -29,3 +29,13 @@
 // Output: "1960-05-26"
 
 
+// Constraints:
+
+// The given dates are guaranteed to be valid, so no error handling is necessary.
+// Accepted
+// 65.1K
+// Submissions
+// 100.6K
+// Acceptance Rate
+// 64.7%
+
