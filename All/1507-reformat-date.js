@@ -15,3 +15,17 @@
 // DD denotes the 2 digit day.
 
 
+// Example 1:
+
+// Input: date = "20th Oct 2052"
+// Output: "2052-10-20"
+// Example 2:
+
+// Input: date = "6th Jun 1933"
+// Output: "1933-06-06"
+// Example 3:
+
+// Input: date = "26th May 1960"
+// Output: "1960-05-26"
+
+
