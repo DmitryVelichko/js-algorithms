@@ -35,3 +35,12 @@
 // Output: "s"
  
 
+// Constraints:
+
+// 1 <= s.length <= 100
+// s contains only lower and upper case English letters.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
