@@ -14,3 +14,13 @@
 // Return the string after making it good. The answer is guaranteed to be unique under the given constraints.
 
 // Notice that an empty string is also good.
+
+ 
+
+// Example 1:
+
+// Input: s = "leEeetcode"
+// Output: "leetcode"
+// Explanation: In the first step, either you choose i = 1 or i = 2, both will result "leEeetcode" to be reduced to "leetcode".
+// Example 2:
+
