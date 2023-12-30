@@ -55,4 +55,4 @@ var makeGood = function(s) {
     return stack.join('');
 };
   
-  console.log(makeGood("leEeetcode")) 
+  console.log(makeGood("abBAcC")) 
