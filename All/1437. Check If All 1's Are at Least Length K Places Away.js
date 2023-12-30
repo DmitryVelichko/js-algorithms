@@ -27,3 +27,12 @@
 // 0 <= k <= nums.length
 // nums[i] is 0 or 1
 
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ */
+var kLengthApart = function(nums, k) {
+    let cur = k;
+    for (const n of nums) {
+      if (n === 0) { ++cur; continue; }
