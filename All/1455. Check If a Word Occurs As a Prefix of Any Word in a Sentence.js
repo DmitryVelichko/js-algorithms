@@ -28,3 +28,15 @@
 // Explanation: "you" is not a prefix of any word in the sentence.
 
 
+// Constraints:
+
+// 1 <= sentence.length <= 100
+// 1 <= searchWord.length <= 10
+// sentence consists of lowercase English letters and spaces.
+// searchWord consists of lowercase English letters.
+
+/**
+ * @param {string} sentence
+ * @param {string} searchWord
+ * @return {number}
+ */
