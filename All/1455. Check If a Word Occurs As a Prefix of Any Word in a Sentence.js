@@ -40,3 +40,14 @@
  * @param {string} searchWord
  * @return {number}
  */
+var isPrefixOfWord = function(sentence, searchWord) {
+
+    function helper(word, prefix) {
+        for(let i=0; i<prefix.length; i++) {
+            if(word[i] !== prefix[i]) return false
+        }
+        return true
+    }
+
+    let words = sentence.split(' ')
+
