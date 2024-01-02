@@ -26,3 +26,17 @@
 // It can be shown that we cannot have less than 3 rows in a valid array.
 // Example 2:
 
+// Input: nums = [1,2,3,4]
+// Output: [[4,3,2,1]]
+// Explanation: All elements of the array are distinct, so we can keep all of them in the first row of the 2D array.
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 200
+// 1 <= nums[i] <= nums.length
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
