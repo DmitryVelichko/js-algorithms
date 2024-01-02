@@ -48,3 +48,10 @@ var findMatrix = function(nums) {
         if (freq[c] >= ans.length) {
             ans.push([]);
         }
+
+        ans[freq[c]].push(c);
+        freq[c]++;
+    }
+
+    return ans;
+};
