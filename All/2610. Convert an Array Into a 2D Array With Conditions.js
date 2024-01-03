@@ -41,17 +41,25 @@
  * @return {number[][]}
  */
 var findMatrix = function(nums) {
-    const freq = new Array(nums.length + 1).fill(0);
     const ans = [];
+    const countMap = new Map();
+    for (const num of nums) {
+        countMap.set(num, (countMap.get(num) || 0) + 1);
+    }
 
-    for (const c of nums) {
-        if (freq[c] >= ans.length) {
-            ans.push([]);
+    while (countMap.size > 0) {
+        const temp = [];
+        for (const [key, count] of countMap) {
+            temp.push(key);
+            countMap.set(key, count - 1);
+            if (countMap.get(key) === 0) {
+                countMap.delete(key);
+            }
         }
-
-        ans[freq[c]].push(c);
-        freq[c]++;
+        ans.push(temp);
     }
 
     return ans;
 };
+
+console.log(findMatrix([1,3,4,1,2,3,1])) // [[1,3,4,2],[1,3],[1]]
