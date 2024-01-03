@@ -42,18 +42,18 @@
  */
 var findMatrix = function(nums) {
     const ans = [];
-    const countMap = new Map();
+    const map = {}
     for (const num of nums) {
-        countMap.set(num, (countMap.get(num) || 0) + 1);
+       map[num] = (map[num] || 0) + 1;
     }
 
-    while (countMap.size > 0) {
+    while (Object.keys(map).length > 0) {
         const temp = [];
-        for (const [key, count] of countMap) {
+        for (const key in map) {
             temp.push(key);
-            countMap.set(key, count - 1);
-            if (countMap.get(key) === 0) {
-                countMap.delete(key);
+            map[key] = map[key] - 1;
+            if (map[key] === 0) {
+                delete map[key];
             }
         }
         ans.push(temp);
