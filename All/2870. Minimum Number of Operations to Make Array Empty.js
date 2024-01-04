@@ -25,3 +25,12 @@
 // It can be shown that we cannot make the array empty in less than 4 operations.
 // Example 2:
 
+// Input: nums = [2,1,2,2,3,3]
+// Output: -1
+// Explanation: It is impossible to empty the array.
+ 
+
+// Constraints:
+
+// 2 <= nums.length <= 105
+// 1 <= nums[i] <= 106
