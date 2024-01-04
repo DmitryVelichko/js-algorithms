@@ -46,3 +46,16 @@ var minOperations = function(nums) {
       for(let i=0; i<nums.length; i++) {
           hash[nums[i]] = (hash[nums[i]] || 0) + 1
       }
+
+     for(key in hash) {
+         if(hash[key] === 1) return -1
+         count+= Math.floor(hash[key]/3)
+         if(hash[key] % 3 !== 0) count++
+       
+     }
+
+     return count
+
+};
+
+console.log(minOperations([2,3,3,2,2,4,2,3,4])) // 4
