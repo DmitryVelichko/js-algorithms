@@ -23,3 +23,21 @@
 
 
 
+// Input: startTime = [1,2,3,4,6], endTime = [3,5,10,6,9], profit = [20,20,100,70,60]
+// Output: 150
+// Explanation: The subset chosen is the first, fourth and fifth job. 
+// Profit obtained 150 = 20 + 70 + 60.
+// Example 3:
+
+
+
+// Input: startTime = [1,1,1], endTime = [2,3,4], profit = [5,6,4]
+// Output: 6
+ 
+
+// Constraints:
+
+// 1 <= startTime.length == endTime.length == profit.length <= 5 * 104
+// 1 <= startTime[i] < endTime[i] <= 109
+// 1 <= profit[i] <= 104
+
