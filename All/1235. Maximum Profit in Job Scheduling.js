@@ -74,3 +74,15 @@ var jobScheduling = function(startTime, endTime, profit) {
 
     // Возвращаем максимальную прибыль, которую можно получить от выполнения работ
     return dp[numJobs];
+};
+
+/**
+ * @param {number[][]} jobs - Массив работ в формате [[время окончания, время начала, прибыль], ...]
+ * @param {number} endIndex - Индекс текущей работы
+ * @param {number} targetTime - Время начала текущей работы
+ * @return {number} - Индекс последней работы, завершившейся ранее, чем начинается текущая работа
+ */
+function upperBound(jobs, endIndex, targetTime) {
+    let low = 0;
+    let high = endIndex;
+
