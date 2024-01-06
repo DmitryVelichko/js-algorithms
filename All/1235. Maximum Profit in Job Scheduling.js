@@ -41,3 +41,21 @@
 // 1 <= startTime[i] < endTime[i] <= 109
 // 1 <= profit[i] <= 104
 
+/**
+ * @param {number[]} startTime - Массив, содержащий время начала каждой работы.
+ * @param {number[]} endTime - Массив, содержащий время окончания каждой работы.
+ * @param {number[]} profit - Массив, содержащий прибыль от каждой работы.
+ * @return {number} - Максимальная возможная прибыль от выполнения работ.
+ */
+var jobScheduling = function(startTime, endTime, profit) {
+    const numJobs = profit.length; // Количество работ
+    const jobs = new Array(numJobs);
+
+    // Создаем массив jobs, содержащий тройки [время окончания, время начала, прибыль] для каждой работы
+    for (let i = 0; i < numJobs; ++i) {
+        jobs[i] = [endTime[i], startTime[i], profit[i]];
+    }
+
+    // Сортируем работы по времени окончания в порядке возрастания
+    jobs.sort((a, b) => a[0] - b[0]);
+    const dp = new Array(numJobs + 1).fill(0);
