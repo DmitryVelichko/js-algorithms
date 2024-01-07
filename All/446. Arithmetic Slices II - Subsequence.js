@@ -30,3 +30,17 @@
 // [2,6,10]
 // Example 2:
 
+// Input: nums = [7,7,7,7,7]
+// Output: 16
+// Explanation: Any subsequence of this array is arithmetic.
+ 
+
+// Constraints:
+
+// 1  <= nums.length <= 1000
+// -231 <= nums[i] <= 231 - 1
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
