@@ -16,3 +16,17 @@
 
  
 
+// Example 1:
+
+// Input: nums = [2,4,6,8,10]
+// Output: 7
+// Explanation: All arithmetic subsequence slices are:
+// [2,4,6]
+// [4,6,8]
+// [6,8,10]
+// [2,4,6,8]
+// [4,6,8,10]
+// [2,4,6,8,10]
+// [2,6,10]
+// Example 2:
+
