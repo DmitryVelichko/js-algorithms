@@ -54,3 +54,13 @@ var rangeSumBST = function(root, low, high) {
 
     helper(root)
 
+    arr.sort((a,b) => a-b)
+    let l = arr.indexOf(low)
+    let h = arr.indexOf(high)
+    const sArr = arr.slice(l,h+1)
+    
+
+   sum = sArr.reduce((a,curr)=>a+curr,0)
+   
+return sum
+};
