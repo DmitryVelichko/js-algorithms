@@ -42,3 +42,15 @@
  * @param {number} high
  * @return {number}
  */
+var rangeSumBST = function(root, low, high) {
+    let arr = []
+    let sum = 0
+    function helper(node) {
+        if(node === null) return
+        arr.push(node.val)
+        helper(node.left)
+        helper(node.right)
+    }
+
+    helper(root)
+
