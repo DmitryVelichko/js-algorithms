@@ -49,5 +49,13 @@ var leafSimilar = function(root1, root2) {
     let r1 = []
     let r2 = []
  
+    const helper = (node, arr) => {
+        if(!node) return
+        if(!node.left && !node.right) arr.push(node.val)
+ 
+        helper(node.left, arr)
+        helper(node.right, arr)
+    }
+    
 
  
