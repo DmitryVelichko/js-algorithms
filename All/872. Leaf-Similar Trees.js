@@ -18,5 +18,16 @@
 // Example 1:
 
 
+// Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+// Output: true
+// Example 2:
+
+
+// Input: root1 = [1,2,3], root2 = [1,3,2]
+// Output: false
+ 
+
+// Constraints:
+
 
  
