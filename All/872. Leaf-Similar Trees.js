@@ -57,5 +57,9 @@ var leafSimilar = function(root1, root2) {
         helper(node.right, arr)
     }
     
-
+    helper(root1, r1)
+    helper(root2, r2)
+ 
+    return JSON.stringify(r1) === JSON.stringify(r2)
+ };
  
