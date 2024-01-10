@@ -66,3 +66,14 @@ const amountOfTime = (root, start) => {
         if (root.val === start) {
             amount = Math.max(left, right);
             return -1;
+        } else if (left >= 0 && right >= 0) {
+            return Math.max(left, right) + 1;
+        } else {
+            amount = Math.max(amount, Math.abs(left - right));
+            return Math.min(left, right) - 1;
+        }
+    }
+    traverse(root, start)
+    
+    return amount;
+}
