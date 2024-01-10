@@ -53,3 +53,16 @@
  * @param {number} start
  * @return {number}
  */
+const amountOfTime = (root, start) => {
+    let amount = 0;
+    const traverse = (root, start) => {
+        if (!root) {
+            return 0;
+        }
+
+        let left = traverse(root.left, start);
+        let right = traverse(root.right, start);
+
+        if (root.val === start) {
+            amount = Math.max(left, right);
+            return -1;
