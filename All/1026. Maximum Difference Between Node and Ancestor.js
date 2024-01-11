@@ -55,3 +55,10 @@ var maxAncestorDiff = function(root) {
     function helper(root, minVal, maxVal) {
         if (!root)
             return;
+        diff = Math.max(diff, Math.max(Math.abs(minVal - root.val), Math.abs(maxVal - root.val)));
+        minVal = Math.min(minVal, root.val);
+        maxVal = Math.max(maxVal, root.val);
+        helper(root.left, minVal, maxVal);
+        helper(root.right, minVal, maxVal);
+    }
+};
