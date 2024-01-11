@@ -22,3 +22,14 @@
 // |10 - 13| = 3
 // Among all possible differences, the maximum value of 7 is obtained by |8 - 1| = 7.
 // Example 2:
+
+
+// Input: root = [1,null,2,null,0,3]
+// Output: 3
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [2, 5000].
+// 0 <= Node.val <= 105
+
