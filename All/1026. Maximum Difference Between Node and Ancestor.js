@@ -45,3 +45,13 @@
  * @param {TreeNode} root
  * @return {number}
  */
+var maxAncestorDiff = function(root) {
+    if (!root)
+        return 0;
+    let diff = 0;
+    helper(root, root.val, root.val);
+    return diff;
+
+    function helper(root, minVal, maxVal) {
+        if (!root)
+            return;
