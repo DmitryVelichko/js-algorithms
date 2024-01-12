@@ -30,3 +30,16 @@
 // 2 <= s.length <= 1000
 // s.length is even.
 // s consists of uppercase and lowercase letters.
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var halvesAreAlike = function(s) {
+    
+    const a = s.substring(0, s.length/2)
+    const b = s.substring(s.length/2)
+    let countA = 0
+    let countB = 0
+
+    let hash = {'a':true,'e':true, 'i':true, 'o':true, 'u':true, 'A':true, 'E':true, 'I':true, 'O':true, 'U':true}
