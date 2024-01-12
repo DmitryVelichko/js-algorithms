@@ -43,3 +43,9 @@ var halvesAreAlike = function(s) {
     let countB = 0
 
     let hash = {'a':true,'e':true, 'i':true, 'o':true, 'u':true, 'A':true, 'E':true, 'I':true, 'O':true, 'U':true}
+
+    
+    for(let i=0; i<a.length; i++) {
+        if(a[i] in hash) countA++
+    }
+
