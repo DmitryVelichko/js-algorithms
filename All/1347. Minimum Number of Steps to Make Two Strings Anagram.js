@@ -58,3 +58,5 @@ var minSteps = function(s, t) {
     }
     return changes;
 };
+
+console.log(minSteps('leetcode', 'practice')) // 5
