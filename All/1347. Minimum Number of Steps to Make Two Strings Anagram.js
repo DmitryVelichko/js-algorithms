@@ -35,3 +35,20 @@
 // s.length == t.length
 // s and t consist of lowercase English letters only.
 
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {number}
+ */
+var minSteps = function(s, t) {
+    /*  create a hashMap for s iterate throgh t 
+        and check how many letters are missing
+		O(N) - time
+		O(1) - space, since there are only 26 letters in the alphabet
+    */
+    let hashMap = {};
+    for (let letter of s) {
+        if (hashMap[letter]) hashMap[letter] ++;
+        else hashMap[letter] = 1;
+    }
+    let changes = 0;
