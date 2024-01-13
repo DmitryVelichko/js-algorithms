@@ -24,3 +24,14 @@
 // Explanation: Replace 'p', 'r', 'a', 'i' and 'c' from t with proper characters to make t anagram of s.
 // Example 3:
 
+// Input: s = "anagram", t = "mangaar"
+// Output: 0
+// Explanation: "anagram" and "mangaar" are anagrams. 
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 5 * 104
+// s.length == t.length
+// s and t consist of lowercase English letters only.
+
