@@ -52,3 +52,9 @@ var minSteps = function(s, t) {
         else hashMap[letter] = 1;
     }
     let changes = 0;
+    for (let letter of t) {
+        if (hashMap[letter]) hashMap[letter] --;
+        else changes ++;
+    }
+    return changes;
+};
