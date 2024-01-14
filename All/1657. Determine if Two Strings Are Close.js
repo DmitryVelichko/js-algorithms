@@ -43,3 +43,17 @@
 // 1 <= word1.length, word2.length <= 105
 // word1 and word2 contain only lowercase English letters.
 
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {boolean}
+ */
+var closeStrings = function(word1, word2) {
+    // Function to get the frequency of characters in a word
+    const getFrequency = (word) => {
+        const frequency = {};
+        for (let char of word) {
+            frequency[char] = (frequency[char] || 0) + 1;
+        }
+        return frequency;
+    };
