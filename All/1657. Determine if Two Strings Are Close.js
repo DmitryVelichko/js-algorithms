@@ -57,3 +57,16 @@ var closeStrings = function(word1, word2) {
         }
         return frequency;
     };
+
+    // Get the frequency of characters for both words
+    const freq1 = getFrequency(word1);
+    const freq2 = getFrequency(word2);
+
+    // Check if both words have the same unique characters
+    const unique1 = new Set(word1);
+    const unique2 = new Set(word2);
+    if (unique1.size !== unique2.size) return false;
+
+    for (let char of unique1) {
+        if (!unique2.has(char)) return false;
+    }
