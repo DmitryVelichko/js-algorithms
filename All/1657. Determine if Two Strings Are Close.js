@@ -70,3 +70,14 @@ var closeStrings = function(word1, word2) {
     for (let char of unique1) {
         if (!unique2.has(char)) return false;
     }
+
+    // Check if the distribution of frequencies is the same
+    const values1 = Object.values(freq1).sort((a, b) => a - b);
+    const values2 = Object.values(freq2).sort((a, b) => a - b);
+
+    for (let i = 0; i < values1.length; i++) {
+        if (values1[i] !== values2[i]) return false;
+    }
+
+    return true;
+};
