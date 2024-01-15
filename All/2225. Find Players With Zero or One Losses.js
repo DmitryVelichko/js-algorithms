@@ -28,3 +28,11 @@
 // Players 3, 6, and 9 each have lost two matches.
 // Thus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].
 // Example 2:
+
+// Input: matches = [[2,3],[1,3],[5,4],[6,4]]
+// Output: [[1,2,5,6],[]]
+// Explanation:
+// Players 1, 2, 5, and 6 have not lost any matches.
+// Players 3 and 4 each have lost two matches.
+// Thus, answer[0] = [1,2,5,6] and answer[1] = [].
+ 
