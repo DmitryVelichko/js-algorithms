@@ -49,3 +49,16 @@
  * @param {number[][]} matches
  * @return {number[][]}
  */
+var findWinners = function(matches) {
+    let obj = {}
+
+   for(let match of matches){
+       if(!obj[match[0]]) obj[match[0]] = 0
+       if(!obj[match[1]]) obj[match[1]] = 0
+
+       ++obj[match[1]]
+   }
+
+
+   let ans = [[],[]]
+
