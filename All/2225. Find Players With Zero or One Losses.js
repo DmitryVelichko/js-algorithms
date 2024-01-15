@@ -62,3 +62,14 @@ var findWinners = function(matches) {
 
    let ans = [[],[]]
 
+   for(let [key,value] of Object.entries(obj)){
+       if(value === 0){
+           ans[0].push(key)
+       }
+       if(value === 1){
+           ans[1].push(key)
+       }
+   }
+
+   return ans
+};
