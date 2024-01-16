@@ -43,3 +43,15 @@ var RandomizedSet = function() {
     this.set = new Set()
 };
 
+/** 
+* @param {number} val
+* @return {boolean}
+*/
+RandomizedSet.prototype.insert = function(val) {
+   if(this.set.has(val)) {
+      return false
+   } else {
+       this.set.add(val)
+       return true
+   }
+};
