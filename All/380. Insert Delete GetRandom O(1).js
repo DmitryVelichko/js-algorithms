@@ -55,3 +55,16 @@ RandomizedSet.prototype.insert = function(val) {
        return true
    }
 };
+
+/** 
+* @param {number} val
+* @return {boolean}
+*/
+RandomizedSet.prototype.remove = function(val) {
+   if(this.set.has(val)) {
+       this.set.delete(val)
+       return true
+   }
+   return false
+};
+
