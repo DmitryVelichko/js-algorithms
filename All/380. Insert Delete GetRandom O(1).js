@@ -32,3 +32,14 @@
 // randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.
  
 
+// Constraints:
+
+// -231 <= val <= 231 - 1
+// At most 2 * 105 calls will be made to insert, remove, and getRandom.
+// There will be at least one element in the data structure when getRandom is called.
+
+
+var RandomizedSet = function() {
+    this.set = new Set()
+};
+
