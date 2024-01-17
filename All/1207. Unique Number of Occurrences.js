@@ -37,3 +37,9 @@ var uniqueOccurrences = function(arr) {
     for(let i=0; i<arr.length; i++) {
         hash[arr[i]] = (hash[arr[i]] || 0) + 1  
     }
+
+   let arrVal = [...Object.values(hash)]
+   let set = new Set(arrVal)
+
+   return arrVal.length === set.size
+};
