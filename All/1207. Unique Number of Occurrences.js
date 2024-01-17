@@ -28,3 +28,12 @@
 // 1 <= arr.length <= 1000
 // -1000 <= arr[i] <= 1000
 
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var uniqueOccurrences = function(arr) {
+    let hash = {}
+    for(let i=0; i<arr.length; i++) {
+        hash[arr[i]] = (hash[arr[i]] || 0) + 1  
+    }
