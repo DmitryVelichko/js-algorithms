@@ -27,3 +27,16 @@
 // 3. 2 steps + 1 step
 
 
+// Constraints:
+
+// 1 <= n <= 45
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function (n) {
+    // Если лестница состоит из одной или двух ступенек, ответ очевиден.
+    if (n <= 2) {
+        return n;
+    }
+
