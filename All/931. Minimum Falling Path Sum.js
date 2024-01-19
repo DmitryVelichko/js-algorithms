@@ -45,3 +45,12 @@ var minFallingPathSum = function(matrix) {
         for (let c = 0; c < N; c++) {
             const curr = matrix[r][c];
             const top = curr + prevRow[c];
+            const topL = curr + (prevRow[c - 1] || Infinity);
+            const topR = curr + (prevRow[c + 1] || Infinity);
+            currRow[c] = Math.min(top, topL, topR);
+        }
+        prevRow = currRow; // Update the previous row with the current row
+    }
+    
+    return Math.min(...prevRow);
+};
