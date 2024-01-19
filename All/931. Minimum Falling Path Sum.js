@@ -34,3 +34,11 @@
  * @return {number}
  */
 
+var minFallingPathSum = function(matrix) {
+    const M = matrix.length;
+    const N = matrix[0].length;
+    
+    let prevRow = matrix[0].slice(); // Initialize with the first row
+    
+    for (let r = 1; r < M; r++) {
+        const currRow = [];
