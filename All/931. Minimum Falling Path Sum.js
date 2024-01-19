@@ -23,3 +23,14 @@
 // Explanation: The falling path with a minimum sum is shown.
  
 
+// Constraints:
+
+// n == matrix.length == matrix[i].length
+// 1 <= n <= 100
+// -100 <= matrix[i][j] <= 100
+
+/**
+ * @param {number[][]} matrix
+ * @return {number}
+ */
+
