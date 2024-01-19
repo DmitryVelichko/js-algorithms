@@ -16,3 +16,10 @@
 // Output: 13
 // Explanation: There are two falling paths with a minimum sum as shown.
 // Example 2:
+
+
+// Input: matrix = [[-19,57],[-40,-5]]
+// Output: -59
+// Explanation: The falling path with a minimum sum is shown.
+ 
+
