@@ -42,3 +42,6 @@ var minFallingPathSum = function(matrix) {
     
     for (let r = 1; r < M; r++) {
         const currRow = [];
+        for (let c = 0; c < N; c++) {
+            const curr = matrix[r][c];
+            const top = curr + prevRow[c];
