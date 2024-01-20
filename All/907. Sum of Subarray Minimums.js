@@ -26,3 +26,12 @@
 // 1 <= arr.length <= 3 * 104
 // 1 <= arr[i] <= 3 * 104
 
+/**
+ * @param {number[]} arr
+ * @return {number}
+ */
+var sumSubarrayMins = function(arr) {
+    const MOD = 1000000007;
+    const stack = [];
+    let sumOfMinimums = 0;
+
