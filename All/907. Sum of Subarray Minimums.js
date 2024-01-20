@@ -42,3 +42,12 @@ var sumSubarrayMins = function(arr) {
             const rightBoundary = i;
 
             const count = (mid - leftBoundary) * (rightBoundary - mid) % MOD;
+
+            sumOfMinimums += (count * arr[mid]) % MOD;
+            sumOfMinimums %= MOD;
+        }
+        stack.push(i);
+    }
+
+    return sumOfMinimums;
+};
