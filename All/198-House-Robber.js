@@ -27,3 +27,13 @@
 
 // 1 <= nums.length <= 100
 // 0 <= nums[i] <= 400
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function(nums) {
+    if(nums.length === 0) return 0
+    if(nums.length === 1) return nums[0]
+    let dp = new Array(nums.length).fill(0)
+
