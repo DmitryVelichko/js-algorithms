@@ -46,3 +46,14 @@ var findErrorNums = function(nums) {
             dup = i;
         }
         // Check if the current number is missing
+        else if (!numFrequency.has(i)) {
+            missing = i;
+        }
+    }
+
+    // Return the result as an array
+    return [dup, missing];
+};
+
+
+console.log(findErrorNums([1,2,2,4])) // [2,3]
