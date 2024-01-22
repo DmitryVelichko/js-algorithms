@@ -43,3 +43,6 @@ var findErrorNums = function(nums) {
     for (let i = 1; i <= nums.length; i++) {
         // Check if the current number is a duplicate
         if (numFrequency.get(i) === 2) {
+            dup = i;
+        }
+        // Check if the current number is missing
