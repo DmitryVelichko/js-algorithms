@@ -23,3 +23,13 @@
 
 // Constraints:
 
+// 2 <= nums.length <= 104
+// 1 <= nums[i] <= 104
+
+
+var findErrorNums = function(nums) {
+    // Initialize variables to store duplicate and missing numbers
+    let dup = -1, missing = -1;
+
+    // Create a HashMap to store the frequency of each number
+    const numFrequency = new Map();
