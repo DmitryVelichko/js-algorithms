@@ -25,3 +25,12 @@
 // - "ique" ("iq" + "ue")
 // Maximum length is 4.
 // Example 2:
+
+// Input: arr = ["cha","r","act","ers"]
+// Output: 6
+// Explanation: Possible longest valid concatenations are "chaers" ("cha" + "ers") and "acters" ("act" + "ers").
+// Example 3:
+
+// Input: arr = ["abcdefghijklmnopqrstuvwxyz"]
+// Output: 26
+// Explanation: The only string in arr has all 26 characters.
