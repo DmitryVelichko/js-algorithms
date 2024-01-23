@@ -46,3 +46,14 @@
  * @param {string[]} arr
  * @return {number}
  */
+var maxLength = function (arr) {
+
+    const isUnique = (str) => {
+        return new Set(str).size === str.length
+    }
+
+    const backtrack = (start, path) => {
+
+        if (isUnique(path)) {
+            maxLen = Math.max(maxLen, path.length)
+        }
