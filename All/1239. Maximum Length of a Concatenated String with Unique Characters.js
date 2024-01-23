@@ -57,3 +57,16 @@ var maxLength = function (arr) {
         if (isUnique(path)) {
             maxLen = Math.max(maxLen, path.length)
         }
+
+        for (let i = start; i < arr.length; i++) {
+            backtrack(i + 1, path + arr[i])
+        }
+    }
+
+    let maxLen = 0
+
+    backtrack(0, '')
+
+    return maxLen
+
+};
