@@ -56,3 +56,10 @@ var pseudoPalindromicPaths = function(root) {
  * @param {number} mask
  * @return {number}
  */
+var dfs = function(root, mask) {
+    if (!root) {
+        return 0;
+    }
+
+    mask ^= 1 << root.val;
+
