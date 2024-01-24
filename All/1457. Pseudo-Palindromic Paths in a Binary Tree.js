@@ -1,73 +1,58 @@
-// 1457. Pseudo-Palindromic Paths in a Binary Tree
-// Solved
-// Medium
-// Topics
-// Companies
-// Hint
-// Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be pseudo-palindromic if at least one permutation of the node values in the path is a palindrome.
-
-// Return the number of pseudo-palindromic paths going from the root node to leaf nodes.
-
- 
-
-// Example 1:
-
-
-
-// Input: root = [2,3,1,3,1,null,1]
-// Output: 2 
-// Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).
-// Example 2:
-
-
-
-// Input: root = [2,1,1,1,3,null,null,null,null,null,1]
-// Output: 1 
-// Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).
-// Example 3:
-
-// Input: root = [9]
-// Output: 1
- 
-
-// Constraints:
-
-// The number of nodes in the tree is in the range [1, 105].
-// 1 <= Node.val <= 9
+class TreeNode {
+    constructor(val) {
+        this.val = val;
+        this.left = this.right = null;
+    }
+}
 
 /**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
+ * Counts the number of pseudo-palindromic paths in a binary tree.
+ * @param {TreeNode} root - The root of the binary tree.
+ * @returns {number} - The count of pseudo-palindromic paths.
  */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var pseudoPalindromicPaths = function(root) {
-    return dfs(root, 0);
+const pseudoPalindromicPaths = function(root) {
+    let count = 0;
+
+    /**
+     * Helper function to check if the given path is pseudo-palindromic.
+     * @param {number} path - The binary representation of the current path.
+     * @returns {boolean} - True if the path is pseudo-palindromic, false otherwise.
+     */
+    const isPseudoPalindromic = (path) => (path & (path - 1)) === 0;
+
+    /**
+     * DFS traversal to explore the binary tree and count pseudo-palindromic paths.
+     * @param {TreeNode} node - The current node in the traversal.
+     * @param {number} path - The binary representation of the current path.
+     */
+    const dfs = (node, path) => {
+        if (node !== null) {
+            path ^= 1 << node.val;
+
+            if (node.left === null && node.right === null) {
+                if (isPseudoPalindromic(path)) {
+                    count++;
+                }
+            } else {
+                dfs(node.left, path);
+                dfs(node.right, path);
+            }
+        }
+    };
+
+    // Start the DFS traversal from the root with an initial path of 0.
+    dfs(root, 0);
+
+    return count;
 };
 
-/**
- * @param {TreeNode} root
- * @param {number} mask
- * @return {number}
- */
-var dfs = function(root, mask) {
-    if (!root) {
-        return 0;
-    }
+// Example usage:
+const root = new TreeNode(2);
+root.left = new TreeNode(3);
+root.right = new TreeNode(1);
+root.left.left = new TreeNode(3);
+root.left.right = new TreeNode(1);
+root.right.right = new TreeNode(1);
 
-    mask ^= 1 << root.val;
-
-    if (!root.left && !root.right) {
-        // Check if the bitmask represents a pseudo-palindromic path
-        return (mask & (mask - 1)) === 0 ? 1 : 0;
-    }
-
-    // Recursively traverse left and right subtrees
-    return dfs(root.left, mask) + dfs(root.right, mask);
-};
+const result = pseudoPalindromicPaths(root);
+console.log(result);
