@@ -21,3 +21,12 @@
 
 
 
+// Input: root = [2,1,1,1,3,null,null,null,null,null,1]
+// Output: 1 
+// Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).
+// Example 3:
+
+// Input: root = [9]
+// Output: 1
+ 
+
