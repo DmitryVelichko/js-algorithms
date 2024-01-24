@@ -43,3 +43,16 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var pseudoPalindromicPaths = function(root) {
+    return dfs(root, 0);
+};
+
+/**
+ * @param {TreeNode} root
+ * @param {number} mask
+ * @return {number}
+ */
