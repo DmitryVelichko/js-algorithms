@@ -50,3 +50,19 @@ function longestCommonSubsequence(text1, text2) {
                 // If the characters match, extend the common subsequence
                 dp[i][j] = dp[i - 1][j - 1] + 1;
             } else {
+                // If characters don't match, take the maximum from the previous row or column
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+
+    // The last cell of the DP table contains the length of the longest common subsequence
+    return dp[m][n];
+}
+
+// Example usage:
+const text1 = "abcde";
+const text2 = "ace";
+const result = longestCommonSubsequence(text1, text2);
+console.log(result);  // Output: 3
+
