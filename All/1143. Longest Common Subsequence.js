@@ -35,3 +35,18 @@
 // 1 <= text1.length, text2.length <= 1000
 // text1 and text2 consist of only lowercase English characters.
 
+function longestCommonSubsequence(text1, text2) {
+    // Get the lengths of the input strings
+    const m = text1.length;
+    const n = text2.length;
+
+    // Create a 2D DP table to store the length of the common subsequence
+    const dp = Array.from(Array(m + 1), () => Array(n + 1).fill(0));
+
+    // Fill in the DP table using a bottom-up approach
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (text1[i - 1] === text2[j - 1]) {
+                // If the characters match, extend the common subsequence
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
