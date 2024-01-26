@@ -43,3 +43,13 @@ var findPaths = function(m, n, maxPath, i, j, memo = new Map()) {
     
     // рекурсивно вычисляем количество путей, перемещаясь вверх, вниз, вправо и влево
     // и сохраняем результат в кэше
+    memo.set(key, (
+          findPaths(m, n, maxPath - 1, i - 1, j, memo) // двигаемся вверх
+        + findPaths(m, n, maxPath - 1, i + 1, j, memo) // двигаемся вниз
+        + findPaths(m, n, maxPath - 1, i, j + 1, memo) // двигаемся вправо
+        + findPaths(m, n, maxPath - 1, i, j - 1, memo) // двигаемся влево
+    ) % 1000000007); // берем остаток от деления на 1000000007 для предотвращения переполнения числа
+    
+    // возвращаем результат из кэша
+    return memo.get(key);
+};
