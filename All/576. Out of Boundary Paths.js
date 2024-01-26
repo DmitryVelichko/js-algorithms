@@ -23,3 +23,15 @@
 
 // Constraints:
 
+// 1 <= m, n <= 50
+// 0 <= maxMove <= 50
+// 0 <= startRow < m
+// 0 <= startColumn < n
+
+var findPaths = function(m, n, maxPath, i, j, memo = new Map()) {
+    // ключ для хранения в кэше, основанный на текущих значениях maxPath, i и j
+    const key = maxPath + ',' + i + ',' + j;
+    
+    // проверяем, есть ли уже результат в кэше (memoization) для этого ключа
+    if (memo.has(key)) return memo.get(key);
+    
