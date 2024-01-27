@@ -39,3 +39,14 @@ var kInversePairs = function(n, k) {
     
     // Base case initialization
     dp[0][0] = 1;
+    
+    // Dynamic Programming calculation
+    for (let i = 1; i <= n; i++) {
+        let val = 0;
+        for (let j = 0; j <= k; j++) {
+            val += dp[i - 1][j];
+            
+            if (j >= i) {
+                val -= dp[i - 1][j - i];
+            }
+            
