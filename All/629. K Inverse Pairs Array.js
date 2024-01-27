@@ -31,3 +31,11 @@
  * @param {number} k
  * @return {number}
  */
+var kInversePairs = function(n, k) {
+    const mod = 1000000007;
+    
+    // Initialize a 2D array dp with dimensions (n + 1) x (k + 1)
+    const dp = new Array(n + 1).fill(0).map(() => new Array(k + 1).fill(0));
+    
+    // Base case initialization
+    dp[0][0] = 1;
