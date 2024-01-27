@@ -50,3 +50,15 @@ var kInversePairs = function(n, k) {
                 val -= dp[i - 1][j - i];
             }
             
+            if (val < 0) {
+                val += mod;
+            }
+            
+            val %= mod;
+            dp[i][j] = val;
+        }
+    }
+    
+    // Return the result
+    return dp[n][k];
+};
