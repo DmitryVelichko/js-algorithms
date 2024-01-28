@@ -34,3 +34,16 @@
 // 1 <= matrix[0].length <= 100
 // -1000 <= matrix[i] <= 1000
 // -10^8 <= target <= 10^8
+var numSubmatrixSumTarget = function(matrix, target) {
+    const rows = matrix.length;
+    const cols = matrix[0].length;
+
+    // Precompute the cumulative sum for each row
+    for (let row = 0; row < rows; row++) {
+        for (let col = 1; col < cols; col++) {
+            matrix[row][col] += matrix[row][col - 1];
+        }
+    }
+
+    let count = 0;
+
