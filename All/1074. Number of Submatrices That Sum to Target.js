@@ -58,3 +58,14 @@ var numSubmatrixSumTarget = function(matrix, target) {
             for (let row = 0; row < rows; row++) {
                 sum += matrix[row][c2] - (c1 > 0 ? matrix[row][c1 - 1] : 0);
 
+                // Check if there is a subarray with sum equal to target
+                count += map.get(sum - target) || 0;
+
+                // Update the frequency of the current sum
+                map.set(sum, (map.get(sum) || 0) + 1);
+            }
+        }
+    }
+
+    return count;
+};
