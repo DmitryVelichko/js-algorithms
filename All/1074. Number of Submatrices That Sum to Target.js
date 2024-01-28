@@ -24,3 +24,13 @@
 // Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, plus the 2x2 submatrix.
 // Example 3:
 
+// Input: matrix = [[904]], target = 0
+// Output: 0
+ 
+
+// Constraints:
+
+// 1 <= matrix.length <= 100
+// 1 <= matrix[0].length <= 100
+// -1000 <= matrix[i] <= 1000
+// -10^8 <= target <= 10^8
