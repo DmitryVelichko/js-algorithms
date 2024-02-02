@@ -39,12 +39,15 @@ function sequentialDigits(low, high) {
         while (num <= high && nextDigit <= 9) {
             num = num * 10 + nextDigit;
             if (low <= num && num <= high) {
-                a.push(num);
+                arr.push(num);
             }
             ++nextDigit;
         }
     }
 
-    a.sort((a, b) => a - b);
-    return a;
+    arr.sort((a, b) => a - b);
+    return arr;
 }
+
+
+console.log(sequentialDigits(100, 300)) // [123,234]
