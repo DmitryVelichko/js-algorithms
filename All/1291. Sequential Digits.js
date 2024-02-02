@@ -17,3 +17,15 @@
 
 // Input: low = 1000, high = 13000
 // Output: [1234,2345,3456,4567,5678,6789,12345]
+ 
+
+// Constraints:
+
+// 10 <= low <= high <= 10^9
+
+/**
+ * @param {number} low
+ * @param {number} high
+ * @return {number[]}
+ */
+
