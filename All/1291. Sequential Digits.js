@@ -29,3 +29,10 @@
  * @return {number[]}
  */
 
+function sequentialDigits(low, high) {
+    const arr = [];
+
+    for (let i = 1; i <= 9; ++i) {
+        let num = i;
+        let nextDigit = i + 1;
+
