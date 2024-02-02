@@ -36,3 +36,15 @@ function sequentialDigits(low, high) {
         let num = i;
         let nextDigit = i + 1;
 
+        while (num <= high && nextDigit <= 9) {
+            num = num * 10 + nextDigit;
+            if (low <= num && num <= high) {
+                a.push(num);
+            }
+            ++nextDigit;
+        }
+    }
+
+    a.sort((a, b) => a - b);
+    return a;
+}
