@@ -16,3 +16,14 @@
 // Output: 84
 // Explanation: arr becomes [15,15,15,9,10,10,10]
 // Example 2:
+
+// Input: arr = [1,4,1,5,7,3,6,1,9,9,3], k = 4
+// Output: 83
+// Example 3:
+
+// Input: arr = [1], k = 1
+// Output: 1
+ 
+
+// Constraints:
+
