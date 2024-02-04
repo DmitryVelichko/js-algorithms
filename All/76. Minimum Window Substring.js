@@ -67,3 +67,11 @@ var minWindow = function(s, t) {
    if (map[endChar] != null) map[endChar]--;
    end++;
 
+   // Когда все символы найдены, пытаемся сузить окно
+   while (counter === 0) {
+     // Обновляем минимальное окно
+     if (end - start < minLen) {
+       minStart = start;
+       minLen = end - start;
+     }
+
