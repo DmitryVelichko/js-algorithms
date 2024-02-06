@@ -25,3 +25,17 @@
 // 0 <= strs[i].length <= 100
 // strs[i] consists of lowercase English letters.
 
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+// Time O(N * K) | Space O(N * K)
+// Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
+
+
+var groupAnagrams = function (strs) {
+    let map = {};
+    for (let str of strs) {
+        let arr = new Array(26).fill(0);
+        for (let char of str) arr[char.charCodeAt() - 'a'.charCodeAt()]++;
+
