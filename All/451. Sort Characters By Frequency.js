@@ -29,3 +29,20 @@
 // Note that 'A' and 'a' are treated as two different characters.
  
 
+// Constraints:
+
+// 1 <= s.length <= 5 * 105
+// s consists of uppercase and lowercase English letters and digits.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var frequencySort = function(s) {
+    const map = new Map()
+    let res = ''
+    
+    for(const char of s) {
+        map.set(char, (map.get(char) || 0) + 1)
+    }
+
