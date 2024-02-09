@@ -32,3 +32,10 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+var largestDivisibleSubset = function(nums) {
+    nums.sort((a, b) => a - b); // 1. Сортируем массив
+     const n = nums.length;
+     const count = new Array(n).fill(1); // Количество элементов в подмножестве
+     const prev = new Array(n).fill(-1); // Предыдущий индекс для каждого элемента
+     let maxIndex = 0; // Индекс максимального элемента
+   
