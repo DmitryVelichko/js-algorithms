@@ -54,3 +54,12 @@ var largestDivisibleSubset = function(nums) {
        }
      }
    
+     // 3. Восстанавливаем подмножество
+     const result = [];
+     while (maxIndex >= 0) {
+       result.unshift(nums[maxIndex]);
+       maxIndex = prev[maxIndex];
+     }
+   
+     return result; // Возвращаем результат
+   };
