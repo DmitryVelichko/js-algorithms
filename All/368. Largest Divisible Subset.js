@@ -49,3 +49,8 @@ var largestDivisibleSubset = function(nums) {
          }
        }
        // Обновляем индекс максимального элемента, если нашли лучше
+       if (count[i] > count[maxIndex]) {
+         maxIndex = i;
+       }
+     }
+   
