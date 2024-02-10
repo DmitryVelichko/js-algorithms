@@ -28,3 +28,20 @@
 // 1 <= s.length <= 1000
 // s consists of lowercase English letters.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countSubstrings = function(s) {
+    let count = 0;
+       
+       function expandAroundCenter(left, right) {
+           let tempCount = 0;
+           while (left >= 0 && right < s.length && s[left] === s[right]) {
+               tempCount++;
+               left--;
+               right++;
+           }
+           return tempCount;
+       }
+   
