@@ -45,3 +45,14 @@ var countSubstrings = function(s) {
            return tempCount;
        }
    
+       for (let i = 0; i < s.length; i++) {
+           // Odd length palindromes
+           count += expandAroundCenter(i, i);
+           // Even length palindromes
+           count += expandAroundCenter(i, i + 1);
+       }
+       
+       return count;
+   };
+
+   console.log(countSubstrings('aaa')) // 6
