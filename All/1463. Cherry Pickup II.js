@@ -78,3 +78,22 @@ var cherryPickup = function(grid) {
                     dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - 1][k]);
                 }
                 // - Up-diagonal with robot 2 one step left/right
+                if (j - 1 >= 0 && k - 1 >= 0)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - 1][k - 1]);
+                if (j - 1 >= 0 && k + 1 < m)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - 1][k + 1]);
+                // Explore moves for robot 2:
+                // - Up-diagonal with robot 1 at same position
+                if (j + 1 < m) {
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j + 1][k]);
+                }
+                // - Up-diagonal with robot 1 one step left/right
+                if (j + 1 < m && k - 1 >= 0)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j + 1][k - 1]);
+                if (j + 1 < m && k + 1 < m)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j + 1][k + 1]);
+                // Explore horizontal moves for both robots:
+                // - Both robots move left
+                if (k - 1 >= 0)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j][k - 1]);
+                // - Both robots move right
