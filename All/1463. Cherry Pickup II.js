@@ -45,3 +45,22 @@
 // cols == grid[i].length
 // 2 <= rows, cols <= 70
 // 0 <= grid[i][j] <= 100
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var cherryPickup = function(grid) {
+    const n = grid.length;
+    const m = grid[0].length;
+
+    // Create 3D DP table with initial values of 0
+    const dp = new Array(n).fill(null).map(() => new Array(m).fill(null).map(() => new Array(m).fill(0)));
+
+    // Set the starting point value (top-left and top-right corner)
+    let cherries = 0;
+    dp[0][0][m - 1] = grid[0][0] + grid[0][m - 1]; // Add cherries from both robots
+    // Iterate through each row from second onwards
+    for (let i = 1; i < n; ++i) {
+        // Iterate through each column for robot 1
+        for (let j = 0; j < m; ++j) {
+            // Iterate through each column for robot 2
