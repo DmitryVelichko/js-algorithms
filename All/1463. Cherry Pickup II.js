@@ -97,3 +97,19 @@ var cherryPickup = function(grid) {
                 if (k - 1 >= 0)
                     dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j][k - 1]);
                 // - Both robots move right
+                if (k + 1 < m)
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j][k + 1]);
+                // Add cherries only if robots are in different positions
+                if (j != k) {
+                    dp[i][j][k] += grid[i][j] + grid[i][k];
+                } else {
+                    dp[i][j][k] += grid[i][j]; // Only one robot picks if they land in the same cell
+                }
+                // Update maximum cherries collected so far
+                cherries = Math.max(cherries, dp[i][j][k]);
+            }
+        }
+    }
+
+    return cherries;
+};
