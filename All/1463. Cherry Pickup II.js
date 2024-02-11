@@ -64,3 +64,17 @@ var cherryPickup = function(grid) {
         // Iterate through each column for robot 1
         for (let j = 0; j < m; ++j) {
             // Iterate through each column for robot 2
+            for (let k = 0; k < m; ++k) {
+                // Skip invalid states:
+                // - Both robots in the same row (j > i)
+                // - Robot 2 left of robot 1 (k < m - i - 1)
+                // - Robot 1 further right than robot 2 (j > k)
+                if (j > i || k < m - i - 1 || j > k) continue;
+                // Base case: no moves possible, use previous state
+                dp[i][j][k] = dp[i - 1][j][k];
+                // Explore moves for robot 1:
+                // - Up-diagonal with robot 2 at same position
+                if (j - 1 >= 0) {
+                    dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - 1][k]);
+                }
+                // - Up-diagonal with robot 2 one step left/right
