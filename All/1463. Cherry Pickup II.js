@@ -18,3 +18,16 @@
 // Both robots cannot move outside of the grid at any moment.
 // Both robots should reach the bottom row in grid.
  
+
+// Example 1:
+
+
+// Input: grid = [[3,1,1],[2,5,1],[1,5,5],[2,1,1]]
+// Output: 24
+// Explanation: Path of robot #1 and #2 are described in color green and blue respectively.
+// Cherries taken by Robot #1, (3 + 2 + 5 + 2) = 12.
+// Cherries taken by Robot #2, (1 + 5 + 5 + 1) = 12.
+// Total of cherries: 12 + 12 = 24.
+// Example 2:
+
+
