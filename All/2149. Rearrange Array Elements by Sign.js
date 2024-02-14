@@ -43,3 +43,19 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+var rearrangeArray = function(nums) {
+    const pos = []
+    const neg = []
+    const res = []
+    for(let i=0; i<nums.length; i++) {
+        if(nums[i] < 0) neg.push(nums[i])
+        else if(nums[i] > 0) pos.push(nums[i])
+    }
+
+    for(let i=0; i<pos.length || i<neg.length; i++) {
+        res.push(pos[i])
+        res.push(neg[i])
+    }
+
+    return res
+};
