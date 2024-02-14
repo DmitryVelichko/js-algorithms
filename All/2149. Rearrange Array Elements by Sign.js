@@ -31,3 +31,15 @@
 // 1 is the only positive integer and -1 the only negative integer in nums.
 // So nums is rearranged to [1,-1].
  
+
+// Constraints:
+
+// 2 <= nums.length <= 2 * 105
+// nums.length is even
+// 1 <= |nums[i]| <= 105
+// nums consists of equal number of positive and negative integers.
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
