@@ -33,3 +33,14 @@
 // Input: nums = [5,5,50]
 // Output: -1
 // Explanation: There is no possible way to form a polygon from nums, as a polygon has at least 3 sides and 50 > 5 + 5.
+ 
+
+// Constraints:
+
+// 3 <= n <= 105
+// 1 <= nums[i] <= 109
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
