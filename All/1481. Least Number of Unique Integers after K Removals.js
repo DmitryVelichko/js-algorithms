@@ -40,3 +40,13 @@ var findLeastNumOfUniqueInts = function(arr, k) {
 
    
 
+    for (let [num, freq] of sortedFreq) {
+        if (k >= freq) {
+            k -= freq;
+            freqMap.delete(num);
+        } else {
+            break;
+        }
+    }
+    return freqMap.size;
+};
