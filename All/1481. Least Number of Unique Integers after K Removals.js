@@ -19,3 +19,14 @@
 // Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
  
 
+// Constraints:
+
+// 1 <= arr.length <= 10^5
+// 1 <= arr[i] <= 10^9
+// 0 <= k <= arr.length
+
+/**
+ * @param {number[]} arr
+ * @param {number} k
+ * @return {number}
+ */
