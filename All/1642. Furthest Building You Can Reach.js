@@ -105,4 +105,24 @@ class MaxHeap {
         }
     }
     
+    heapifyDown() {
+        let current = 0;
+        while (true) {
+            let leftChild = 2 * current + 1;
+            let rightChild = 2 * current + 2;
+            let maxChild = leftChild;
+            
+            if (rightChild < this.heap.length && this.heap[rightChild] > this.heap[leftChild]) {
+                maxChild = rightChild;
+            }
+            
+            if (leftChild >= this.heap.length || this.heap[current] >= this.heap[maxChild]) {
+                break;
+            }
+            
+            [this.heap[current], this.heap[maxChild]] = [this.heap[maxChild], this.heap[current]];
+            current = maxChild;
+        }
+    }
+}
 
