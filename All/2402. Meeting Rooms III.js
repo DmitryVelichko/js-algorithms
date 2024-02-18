@@ -70,3 +70,19 @@ var mostBooked = function(n, meetings) {
     //Sort meeting by their start time
     meetings.sort(function(a,b){return a[0]-b[0]});
     
+    for(let i=0;i<meetings.length;i++){
+        let start =  meetings[i][0];
+        let end = meetings[i][1];
+        let earliestRoom=-1,earliestTime=Number.MAX_SAFE_INTEGER,freeRoomFound=false;
+        for(let i=0;i<n;i++){
+            if(roomsSchedule[i]<=start){//This is the room with the smallest index which is free on or before start time of the current meeting
+                roomsMeetingCount[i]++;
+                roomsSchedule[i]=end;//This room will be avialable at 'end' time of the current meeting.
+                freeRoomFound=true;
+                break;
+            }
+            if(roomsSchedule[i]<earliestTime){//Let's keep track of the "room with smallest index and being available at the earliest"
+                earliestTime = roomsSchedule[i];
+                earliestRoom = i;
+            }
+        }
