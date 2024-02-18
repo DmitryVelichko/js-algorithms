@@ -44,3 +44,29 @@
 // - At time 6, all three rooms are being used. The fifth meeting is delayed.
 // - At time 10, the meetings in rooms 1 and 2 finish. The fifth meeting starts in room 1 for the time period [10,12).
 // Room 0 held 1 meeting while rooms 1 and 2 each held 2 meetings, so we return 1. 
+ 
+
+// Constraints:
+
+// 1 <= n <= 100
+// 1 <= meetings.length <= 105
+// meetings[i].length == 2
+// 0 <= starti < endi <= 5 * 105
+// All the values of starti are unique.
+
+/**
+ * @param {number} n
+ * @param {number[][]} meetings
+ * @return {number}
+ */
+var mostBooked = function(n, meetings) {
+
+    let roomsMeetingCount=[], roomsSchedule=[];
+    //Intially all the rooms are available and meeting count for each room is set to 0
+    for(let i=0;i<n;i++){
+        roomsSchedule[i]=-1;
+        roomsMeetingCount[i]=0;
+    }
+    //Sort meeting by their start time
+    meetings.sort(function(a,b){return a[0]-b[0]});
+    
