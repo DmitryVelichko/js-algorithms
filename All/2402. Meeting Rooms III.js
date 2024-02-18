@@ -86,3 +86,18 @@ var mostBooked = function(n, meetings) {
                 earliestRoom = i;
             }
         }
+        if(freeRoomFound===false){//If we couldn't find any meeting room then we will wait for the "room with smallest index and being available at the earliest" 
+            roomsMeetingCount[earliestRoom]++;
+            roomsSchedule[earliestRoom]+=(end-start);//Time to vacant for the room will be increased by the duration of current meeting.
+        }
+    }
+    //Now we have count of meetings for each meeting. Can just need to find the room index with the maximum number of meetings.
+    let max=0,maxi=-1;
+    for(let i=0;i<n;i++){
+        if(roomsMeetingCount[i]>max){
+            max = roomsMeetingCount[i];
+            maxi=i;
+        }
+    }
+    return maxi;
+};
