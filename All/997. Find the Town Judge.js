@@ -50,3 +50,22 @@ var findJudge = function(n, trust) {
     const outgoingTrust = Array(n + 1).fill(0);
 
     // Итерируем по массиву trust и увеличиваем соответствующие счетчики
+    for (const [a, b] of trust) {
+        outgoingTrust[a]++;
+        incomingTrust[b]++;
+    }
+
+    // Ищем человека, который имеет входящие доверия от всех, кроме самого себя, и не имеет исходящих доверий
+    for (let i = 1; i <= n; i++) {
+        if (incomingTrust[i] === n - 1 && outgoingTrust[i] === 0) {
+            return i; // Мы нашли городского судью
+        }
+    }
+
+    return -1; // Городской судья не найден
+};
+
+// Примеры использования
+console.log(findJudge(2, [[1,2]])); // Вывод: 2
+console.log(findJudge(3, [[1,3],[2,3]])); // Вывод: 3
+console.log(findJudge(3, [[1,3],[2,3],[3,1]])); // Вывод: -1
