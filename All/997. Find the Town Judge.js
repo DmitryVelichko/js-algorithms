@@ -31,3 +31,22 @@
 
 // Constraints:
 
+// 1 <= n <= 1000
+// 0 <= trust.length <= 104
+// trust[i].length == 2
+// All the pairs of trust are unique.
+// ai != bi
+// 1 <= ai, bi <= n
+
+/**
+ * @param {number} n
+ * @param {number[][]} trust
+ * @return {number}
+ */
+var findJudge = function(n, trust) {
+    // Создаем массив для подсчета входящих и исходящих доверий для каждого человека
+    // Индексы массива представляют метки людей от 1 до n
+    const incomingTrust = Array(n + 1).fill(0);
+    const outgoingTrust = Array(n + 1).fill(0);
+
+    // Итерируем по массиву trust и увеличиваем соответствующие счетчики
