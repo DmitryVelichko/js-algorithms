@@ -38,3 +38,24 @@
 
 // Constraints:
 
+// 1 <= n <= 100
+// 0 <= flights.length <= (n * (n - 1) / 2)
+// flights[i].length == 3
+// 0 <= fromi, toi < n
+// fromi != toi
+// 1 <= pricei <= 104
+// There will not be any multiple flights between two cities.
+// 0 <= src, dst, k < n
+// src != dst
+
+/**
+ * @param {number} n
+ * @param {number[][]} flights
+ * @param {number} src
+ * @param {number} dst
+ * @param {number} k
+ * @return {number}
+ */
+var findCheapestPrice = function(n, flights, src, dst, K) {
+    const adjacencyList = new Map();
+    
