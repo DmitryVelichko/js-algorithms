@@ -77,3 +77,20 @@ var findAllPeople = function(n, meetings, firstPerson) {
         sortedMeetings[sortedMeetings.length - 1].push([meeting[0], meeting[1]]);
     }
 
+    for (let meetingGroup of sortedMeetings) {
+        let peopleKnowSecret = new Set();
+        let graph = {};
+        
+        for (let [p1, p2] of meetingGroup) {
+            if (!graph[p1]) graph[p1] = [];
+            if (!graph[p2]) graph[p2] = [];
+            
+            graph[p1].push(p2);
+            graph[p2].push(p1);
+            
+            if (knownSet.has(p1)) peopleKnowSecret.add(p1);
+            if (knownSet.has(p2)) peopleKnowSecret.add(p2);
+        }
+        
+        let queue = [...peopleKnowSecret];
+    
