@@ -94,3 +94,17 @@ var findAllPeople = function(n, meetings, firstPerson) {
         
         let queue = [...peopleKnowSecret];
     
+        while (queue.length > 0) {
+            let curr = queue.shift();
+            knownSet.add(curr);
+            for (let neigh of graph[curr]) {
+                if (!knownSet.has(neigh)) {
+                    knownSet.add(neigh);
+                    queue.push(neigh);
+                }
+            }
+        }
+    }
+
+    return [...knownSet];
+};
