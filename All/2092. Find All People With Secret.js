@@ -55,3 +55,25 @@
 // 1 <= timei <= 105
 // 1 <= firstPerson <= n - 1
 
+/**
+ * @param {number} n
+ * @param {number[][]} meetings
+ * @param {number} firstPerson
+ * @return {number[]}
+ */
+var findAllPeople = function(n, meetings, firstPerson) {
+    let knownSet = new Set([0, firstPerson]);
+    
+    let sortedMeetings = [];
+    meetings.sort((a, b) => a[2] - b[2]);
+
+    let seenTime = new Set();
+    
+    for (let meeting of meetings) {
+        if (!seenTime.has(meeting[2])) {
+            seenTime.add(meeting[2]);
+            sortedMeetings.push([]);
+        }
+        sortedMeetings[sortedMeetings.length - 1].push([meeting[0], meeting[1]]);
+    }
+
