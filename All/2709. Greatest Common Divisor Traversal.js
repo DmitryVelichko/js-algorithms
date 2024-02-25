@@ -40,3 +40,23 @@
  * @param {number[]} nums
  * @return {boolean}
  */
+var canTraverseAllPairs = function(nums) {
+    
+};/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var canTraverseAllPairs = function(nums) {
+    const numElements = nums.length;
+    if (numElements === 1) return true;
+    
+    const disjointSet = Array.from({ length: numElements }, (_, index) => index);
+    const setSize = Array(numElements).fill(1);
+    const factorFirstOccurrence = new Map();
+    
+    function findSetLeader(x) {
+        if (disjointSet[x] === x) return x;
+        disjointSet[x] = findSetLeader(disjointSet[x]);
+        return disjointSet[x];
+    }
+    
