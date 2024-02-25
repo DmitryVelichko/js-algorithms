@@ -60,3 +60,16 @@ var canTraverseAllPairs = function(nums) {
         return disjointSet[x];
     }
     
+    function unionSets(x, y) {
+        const xLeader = findSetLeader(x);
+        const yLeader = findSetLeader(y);
+        if (xLeader === yLeader) return;
+        if (setSize[xLeader] < setSize[yLeader]) {
+            disjointSet[xLeader] = yLeader;
+            setSize[yLeader] += setSize[xLeader];
+        } else {
+            disjointSet[yLeader] = xLeader;
+            setSize[xLeader] += setSize[yLeader];
+        }
+    }
+    
