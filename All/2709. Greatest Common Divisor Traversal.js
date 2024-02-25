@@ -26,3 +26,17 @@
 // Explanation: No sequence of traversals can take us from index 0 to index 2 in this example. So, we return false.
 // Example 3:
 
+// Input: nums = [4,3,12,8]
+// Output: true
+// Explanation: There are 6 possible pairs of indices to traverse between: (0, 1), (0, 2), (0, 3), (1, 2), (1, 3), and (2, 3). A valid sequence of traversals exists for each pair, so we return true.
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 105
+// 1 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
