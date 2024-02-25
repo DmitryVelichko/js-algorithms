@@ -73,3 +73,30 @@ var canTraverseAllPairs = function(nums) {
         }
     }
     
+    for (let i = 0; i < numElements; i++) {
+        let num = nums[i];
+        let divisor = 2;
+        while (divisor * divisor <= num) {
+            if (num % divisor === 0) {
+                if (factorFirstOccurrence.has(divisor)) {
+                    unionSets(i, factorFirstOccurrence.get(divisor));
+                } else {
+                    factorFirstOccurrence.set(divisor, i);
+                }
+                while (num % divisor === 0) {
+                    num /= divisor;
+                }
+            }
+            divisor++;
+        }
+        if (num > 1) {
+            if (factorFirstOccurrence.has(num)) {
+                unionSets(i, factorFirstOccurrence.get(num));
+            } else {
+                factorFirstOccurrence.set(num, i);
+            }
+        }
+    }
+    
+    return setSize[findSetLeader(0)] === numElements;
+};
