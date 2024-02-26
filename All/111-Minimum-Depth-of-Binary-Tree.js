@@ -1,33 +1,29 @@
-// 100. Same Tree
+// 11. Minimum Depth of Binary Tree
 // Easy
 
-// Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+// Given a binary tree, find its minimum depth.
 
-// Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+// The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+// Note: A leaf is a node with no children.
 
  
 
 // Example 1:
 
 
-// Input: p = [1,2,3], q = [1,2,3]
-// Output: true
+// Input: root = [3,9,20,null,null,15,7]
+// Output: 2
 // Example 2:
 
-
-// Input: p = [1,2], q = [1,null,2]
-// Output: false
-// Example 3:
-
-
-// Input: p = [1,2,1], q = [1,1,2]
-// Output: false
+// Input: root = [2,null,3,null,4,null,5,null,6]
+// Output: 5
  
 
 // Constraints:
 
-// The number of nodes in both trees is in the range [0, 100].
-// -104 <= Node.val <= 104
+// The number of nodes in the tree is in the range [0, 105].
+// -1000 <= Node.val <= 1000
 
 /**
  * Definition for a binary tree node.
@@ -38,13 +34,12 @@
  * }
  */
 /**
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {boolean}
+ * @param {TreeNode} root
+ * @return {number}
  */
-var isSameTree = function(p, q) {
-    if(!p && !q) return true
-    if(!p || !q || p.val !== q.val) return false
-
-    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+var minDepth = function(root) {
+    if (root === null) return 0;
+    if (root.left === null) return minDepth(root.right) + 1;
+    if (root.right === null) return minDepth(root.left) + 1;
+    return Math.min( minDepth(root.left), minDepth(root.right) ) + 1;
 };
