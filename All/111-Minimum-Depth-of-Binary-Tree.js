@@ -18,3 +18,23 @@
 // Input: p = [1,2], q = [1,null,2]
 // Output: false
 // Example 3:
+
+
+// Input: p = [1,2,1], q = [1,1,2]
+// Output: false
+ 
+
+// Constraints:
+
+// The number of nodes in both trees is in the range [0, 100].
+// -104 <= Node.val <= 104
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
