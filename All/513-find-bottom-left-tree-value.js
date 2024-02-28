@@ -53,3 +53,10 @@ class TreeNode {
     return leftmostValue;
 };
   
+  // Example usage:
+//   const tree1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+//   console.log(findBottomLeftValue(tree1)); // Output: 1
+  
+  const tree2 = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3, new TreeNode(5), new TreeNode(6, null, new TreeNode(7))));
+  console.log(findBottomLeftValue(tree2)); // Output: 7
+  
