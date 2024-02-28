@@ -32,3 +32,13 @@ class TreeNode {
     }
   }
   
+  var findBottomLeftValue = function(root) {
+
+    const queue = [root];
+    let leftmostValue;
+
+    while (queue.length > 0) {
+        const node = queue.shift();
+
+        leftmostValue = node.val;
+
