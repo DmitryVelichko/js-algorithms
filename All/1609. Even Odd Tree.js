@@ -37,3 +37,25 @@
 // Example 3:
 
 
+// Input: root = [5,9,1,3,5,7]
+// Output: false
+// Explanation: Node values in the level 1 should be even integers.
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [1, 105].
+// 1 <= Node.val <= 106
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
