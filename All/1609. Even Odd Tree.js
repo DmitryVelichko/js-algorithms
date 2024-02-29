@@ -82,3 +82,17 @@ var isEvenOddTree = function(root) {
 
             prevVal = node.val;
 
+            // Add children to the queue
+            if (node.left) {
+                queue.push(node.left);
+            }
+            if (node.right) {
+                queue.push(node.right);
+            }
+        }
+
+        level++;
+    }
+
+    return true;
+};
