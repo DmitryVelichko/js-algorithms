@@ -32,3 +32,10 @@
 // s consists only of '0' and '1'.
 // s contains at least one '1'.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var maximumOddBinaryNumber = function(s) {
+    let arr = s.split('').sort().reverse()
+
