@@ -55,3 +55,12 @@ var removeNthFromEnd = function(head, n) {
         first = first.next;
     }
 
+    while (first !== null) {
+        first = first.next;
+        second = second.next;
+    }
+
+    second.next = second.next.next;
+
+    return dummy.next;
+};
