@@ -70,3 +70,14 @@ var bagOfTokensScore = function(tokens, power) {
             score++;
             left++;
             maxScore = Math.max(maxScore, score);
+        } else if (score > 0) {
+            power += tokens[right];
+            score--;
+            right--;
+        } else {
+            break;
+        }
+    }
+    
+    return maxScore;
+};
