@@ -13,3 +13,17 @@
 
  
 
+// Example 1:
+
+// Input: tokens = [100], power = 50
+
+// Output: 0
+
+// Explanation: Since your score is 0 initially, you cannot play the token face-down. You also cannot play it face-up since your power (50) is less than tokens[0] (100).
+
+// Example 2:
+
+// Input: tokens = [200,100], power = 150
+
+// Output: 1
+
