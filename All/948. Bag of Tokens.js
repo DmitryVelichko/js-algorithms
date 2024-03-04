@@ -44,3 +44,29 @@
 // Play token1 (200) face-up, reducing power to 300 and increasing score to 1.
 // Play token2 (300) face-up, reducing power to 0 and increasing score to 2.
 // The maximum score achievable is 2.
+
+ 
+
+// Constraints:
+
+// 0 <= tokens.length <= 1000
+// 0 <= tokens[i], power < 104
+
+/**
+ * @param {number[]} tokens
+ * @param {number} power
+ * @return {number}
+ */
+var bagOfTokensScore = function(tokens, power) {
+    tokens.sort((a, b) => a - b);
+    let score = 0;
+    let maxScore = 0;
+    let left = 0;
+    let right = tokens.length - 1;
+    
+    while (left <= right) {
+        if (power >= tokens[left]) {
+            power -= tokens[left];
+            score++;
+            left++;
+            maxScore = Math.max(maxScore, score);
