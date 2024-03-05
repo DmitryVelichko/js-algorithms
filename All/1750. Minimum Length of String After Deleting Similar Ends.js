@@ -60,3 +60,12 @@ var minimumLength = function(s) {
             left++;
         }
         
+        // Move right pointer to the left until a different character is encountered
+        while (right >= left && s[right] === char) {
+            right--;
+        }
+    }
+
+    // Return the length of the remaining substring after trimming similar ends
+    return right - left + 1;
+};
