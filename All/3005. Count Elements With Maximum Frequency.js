@@ -35,3 +35,22 @@
  * @param {number[]} nums
  * @return {number}
  */
+var maxFrequencyElements = function(nums) {
+    let hash = {}
+    let res = 0
+
+    for(let i=0; i<nums.length; i++) {
+        hash[nums[i]] = (hash[nums[i]] || 0) + 1
+    }
+
+    const values = Object.values(hash)
+    values.sort((a,b) => b - a)
+
+    for(let val of values) {
+        if(val === values[0]) {
+            res += val
+        }
+    }
+
+    return res
+};
