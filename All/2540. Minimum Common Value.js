@@ -22,3 +22,18 @@
 // Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.
  
 
+// Constraints:
+
+// 1 <= nums1.length, nums2.length <= 105
+// 1 <= nums1[i], nums2[j] <= 109
+// Both nums1 and nums2 are sorted in non-decreasing order.
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+var getCommon = function(nums1, nums2) {
+    
+    let set = new Set()
+
