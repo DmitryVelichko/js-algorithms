@@ -45,3 +45,18 @@
  * @param {string} s
  * @return {string}
  */
+var customSortString = function (order, s) {
+    hash = {}
+    let res = ''
+
+    for (let char of s) {
+        hash[char] = (hash[char] || 0) + 1
+    }
+
+    for (let i = 0; i < order.length; i++) {
+        let letter = order.charAt(i)
+        while (hash[letter] > 0) {
+            res += letter
+            hash[letter]--
+        }
+    }
