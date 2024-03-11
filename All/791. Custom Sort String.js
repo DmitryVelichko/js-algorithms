@@ -33,3 +33,15 @@
 
 
 
+// Constraints:
+
+// 1 <= order.length <= 26
+// 1 <= s.length <= 200
+// order and s consist of lowercase English letters.
+// All the characters of order are unique.
+
+/**
+ * @param {string} order
+ * @param {string} s
+ * @return {string}
+ */
