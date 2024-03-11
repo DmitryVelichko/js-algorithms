@@ -60,3 +60,15 @@ var customSortString = function (order, s) {
             hash[letter]--
         }
     }
+
+    for (let [letter, count] of Object.entries(hash)) {
+        console.log(Object.entries(hash))
+        while (count > 0) {
+            res += letter
+            count--
+        }
+    }
+
+    return res
+
+};
