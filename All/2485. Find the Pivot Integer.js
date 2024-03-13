@@ -28,3 +28,20 @@
 // Explanation: It can be proved that no such integer exist.
  
 
+// Constraints:
+
+// 1 <= n <= 1000
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var pivotInteger = function(n) {
+    let leftValue = 1;
+    let rightValue = n;
+    let sumLeft = leftValue;
+    let sumRight = rightValue;
+
+    if (n === 1) return n;
+
+    // Iterate until the pointers meet
