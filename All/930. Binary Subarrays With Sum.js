@@ -30,3 +30,14 @@
 // nums[i] is either 0 or 1.
 // 0 <= goal <= nums.length
 
+/**
+ * @param {number[]} nums
+ * @param {number} goal
+ * @return {number}
+ */
+var numSubarraysWithSum = function(nums, goal) {
+    let count = new Map();
+    count.set(0, 1);
+    let currSum = 0;
+    let totalSubarrays = 0;
+
