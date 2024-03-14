@@ -20,3 +20,13 @@
 // [1,0,1,0,1]
 // Example 2:
 
+// Input: nums = [0,0,0,0,0], goal = 0
+// Output: 15
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 3 * 104
+// nums[i] is either 0 or 1.
+// 0 <= goal <= nums.length
+
