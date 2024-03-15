@@ -43,3 +43,17 @@
     let start = 1;
     let start2 = 1
     // Перемножаем между собой числа слева направо кроме последнего и пушим в массив
+    for (let i = 0; i < nums.length; i++) {
+        res.push(start)
+        start = start * nums[i]
+    }
+        // Перемножваем между собой числа справо налево кроме первого и 
+        // перемножваем с числами в массиве
+
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] = start2 * res[i]
+        start2 = start2 * nums[i]
+    }
+    
+    return res;
+};
