@@ -30,3 +30,16 @@
 
 // Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
+ // Задача на Arrays and Hashing
+ // 
+ // T: O(n), S:O(1) result array не считается по условиям задачи
+ var productExceptSelf = function(nums) {
+    const res = [];
+    let start = 1;
+    let start2 = 1
+    // Перемножаем между собой числа слева направо кроме последнего и пушим в массив
