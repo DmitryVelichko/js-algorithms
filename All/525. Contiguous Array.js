@@ -46,3 +46,13 @@ const findMaxLength = (nums) => {
           // if the count is equal to o then we have a contiguous subarray of length equal to i+1
         max_length = i + 1;
       }
+      if (count in hash) {
+      
+        max_length = Math.max(max_length, i - hash[count]); // update our max length
+      } else {
+        hash[count] = i;
+      }
+  
+    }
+    return max_length;
+  };
