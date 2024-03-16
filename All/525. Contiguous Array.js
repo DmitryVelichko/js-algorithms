@@ -37,3 +37,12 @@ const findMaxLength = (nums) => {
       if (current === 0) {
           // if the current element is 0, then we decrement the count
         count--;
+      } else if (current === 1) {
+          // if the current element is 1, then we increment the count
+        count++;
+      }
+  
+      if (count === 0) {
+          // if the count is equal to o then we have a contiguous subarray of length equal to i+1
+        max_length = i + 1;
+      }
