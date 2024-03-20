@@ -12,3 +12,21 @@
 // factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1) * n otherwise.
 
 
+// Example 1:
+
+// Input
+// "sum"
+// ["call","call","getCallCount","call","getCallCount"]
+// [[2,2],[2,2],[],[1,2],[]]
+// Output
+// [4,4,1,3,2]
+
+// Explanation
+// const sum = (a, b) => a + b;
+// const memoizedSum = memoize(sum);
+// memoizedSum(2, 2); // Returns 4. sum() was called as (2, 2) was not seen before.
+// memoizedSum(2, 2); // Returns 4. However sum() was not called because the same inputs were seen before.
+// // Total call count: 1
+// memoizedSum(1, 2); // Returns 3. sum() was called as (1, 2) was not seen before.
+// // Total call count: 2
+// Example 2:
