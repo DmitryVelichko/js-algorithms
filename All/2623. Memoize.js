@@ -30,3 +30,28 @@
 // memoizedSum(1, 2); // Returns 3. sum() was called as (1, 2) was not seen before.
 // // Total call count: 2
 // Example 2:
+
+// Input
+// "factorial"
+// ["call","call","call","getCallCount","call","getCallCount"]
+// [[2],[3],[2],[],[3],[]]
+// Output
+// [2,6,2,2,6,2]
+
+// Explanation
+// const factorial = (n) => (n <= 1) ? 1 : (n * factorial(n - 1));
+// const memoFactorial = memoize(factorial);
+// memoFactorial(2); // Returns 2.
+// memoFactorial(3); // Returns 6.
+// memoFactorial(2); // Returns 2. However factorial was not called because 2 was seen before.
+// // Total call count: 2
+// memoFactorial(3); // Returns 6. However factorial was not called because 3 was seen before.
+// // Total call count: 2
+// Example 3:
+
+// Input
+// "fib"
+// ["call","getCallCount"]
+// [[5],[]]
+// Output
+// [8,1]
