@@ -55,3 +55,34 @@
 // [[5],[]]
 // Output
 // [8,1]
+
+// Explanation
+// fib(5) = 8
+// // Total call count: 1
+
+
+
+// Constraints:
+
+// 0 <= a, b <= 105
+// 1 <= n <= 10
+// at most 105 function calls
+// at most 105 attempts to access callCount
+// input function is sum, fib, or factorial
+
+/**
+ * @param {Function} fn
+ */
+function memoize(fn) {
+    const cache = {}
+
+    return function (...args) {
+        const key = JSON.stringify(args)
+
+        if (key in cache) return cache[key]
+
+        const result = fn(...args)
+        cache[key] = result
+
+        return result
+    }
