@@ -45,3 +45,33 @@
 // The maximum depth of any subarray is 1. Thus, all of them are flattened.
  
 
+// Constraints:
+
+// 0 <= count of numbers in arr <= 105
+// 0 <= count of subarrays in arr <= 105
+// maxDepth <= 1000
+// -1000 <= each number <= 1000
+// 0 <= n <= 1000
+
+/**
+ * @param {any[]} arr
+ * @param {number} depth
+ * @return {any[]}
+ */
+var flat = function (arr, depth) {
+    const stack = [...arr.map(item => [item, depth])]
+    const result = []
+    
+    while(stack.length > 0) {
+        const [item, depth] = stack.pop()
+
+        if(Array.isArray(item) && depth > 0 ) {
+            stack.push(...item.map(subItem => [subItem, depth - 1]))
+        } else {
+            result.push(item)
+        }
+    }
+   
+    return result.reverse()
+};
+
