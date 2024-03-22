@@ -28,3 +28,7 @@
 // Constraints:
 
 //  2 <= JSON.stringify(obj).length <= 105
+ 
+
+// Can you solve it in O(1) time?
+
