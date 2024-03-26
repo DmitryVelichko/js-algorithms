@@ -32,3 +32,15 @@
 // counter.decrement(); // 1
 // counter.reset(); // 0
 // counter.reset(); // 0
+ 
+
+// Constraints:
+
+// -1000 <= init <= 1000
+// 0 <= calls.length <= 1000
+// calls[i] is one of "increment", "decrement" and "reset"
+
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
