@@ -15,3 +15,8 @@
 // Explanation: 5 === 5 so this expression returns true.
 // Example 2:
 
+// Input: func = () => expect(5).toBe(null)
+// Output: {"error": "Not Equal"}
+// Explanation: 5 !== null so this expression throw the error "Not Equal".
+// Example 3:
+
