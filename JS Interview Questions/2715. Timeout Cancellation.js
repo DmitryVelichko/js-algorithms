@@ -35,3 +35,21 @@
 // The cancellation was scheduled to occur after a delay of cancelTimeMs (50ms), which happened before the execution of fn(2) at 100ms, resulting in fn(2) never being called.
 // Example 3:
 
+// Input: fn = (x1, x2) => x1 * x2, args = [2,4], t = 30
+// Output: [{"time": 30, "returned": 8}]
+// Explanation: 
+// const cancelTimeMs = 100;
+// const cancelFn = cancellable((x1, x2) => x1 * x2, [2,4], 30);
+// setTimeout(cancelFn, cancelTimeMs);
+
+// The cancellation was scheduled to occur after a delay of cancelTimeMs (100ms), which happened after the execution of fn(2,4) at 30ms.
+ 
+
+// Constraints:
+
+// fn is a function
+// args is a valid JSON array
+// 1 <= args.length <= 10
+// 20 <= t <= 1000
+// 10 <= cancelTimeMs <= 1000
+
