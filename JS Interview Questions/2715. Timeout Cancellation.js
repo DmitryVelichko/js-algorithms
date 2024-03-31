@@ -53,3 +53,17 @@
 // 20 <= t <= 1000
 // 10 <= cancelTimeMs <= 1000
 
+/**
+ * @param {Function} fn
+ * @param {Array} args
+ * @param {number} t
+ * @return {Function}
+ */
+var cancellable = function(fn, args, t) {
+    let timeout1 = setTimeout(() => fn(...args), t)
+
+    let cancelFn = () => {clearTimeout(timeout1)}
+    
+    return cancelFn
+};
+
