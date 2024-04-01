@@ -66,3 +66,20 @@
 // actions[i] is one of "call" and "getCallCount"
 // fnName is one of "sum", "factorial" and "fib"
 
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+function memoize(fn) {
+    const cache = {}
+    return function(...args) {
+        const key = JSON.stringify(args)
+        
+        if(key in cache) return cache[key]
+        const result = fn(...args)
+        cache[key] = result
+        return result
+    }
+}
+
+
