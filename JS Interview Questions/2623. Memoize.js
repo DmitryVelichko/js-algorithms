@@ -47,3 +47,22 @@
 // // "getCallCount" - total call count: 2
 // Example 3:
 
+// Input:
+// fnName = "fib"
+// actions = ["call","getCallCount"]
+// values = [[5],[]]
+// Output: [8,1]
+// Explanation:
+// fib(5) = 8 // "call"
+// // "getCallCount" - total call count: 1
+ 
+
+// Constraints:
+
+// 0 <= a, b <= 105
+// 1 <= n <= 10
+// 0 <= actions.length <= 105
+// actions.length === values.length
+// actions[i] is one of "call" and "getCallCount"
+// fnName is one of "sum", "factorial" and "fib"
+
