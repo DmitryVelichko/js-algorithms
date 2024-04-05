@@ -27,3 +27,14 @@
 // onceFn(4, 6, 8); // undefined, fn was not called
  
 
+// Constraints:
+
+// calls is a valid JSON array
+// 1 <= calls.length <= 10
+// 1 <= calls[i].length <= 100
+// 2 <= JSON.stringify(calls).length <= 1000
+
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
