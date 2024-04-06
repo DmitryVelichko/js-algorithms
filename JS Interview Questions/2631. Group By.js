@@ -59,3 +59,26 @@
 // }
 // Example 3:
 
+// Input: 
+// array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// fn = function (n) { 
+//   return String(n > 5);
+// }
+// Output:
+// {
+//   "true": [6, 7, 8, 9, 10],
+//   "false": [1, 2, 3, 4, 5]
+// }
+// Explanation:
+// The selector function splits the array by whether each number is greater than 5.
+ 
+
+// Constraints:
+
+// 0 <= array.length <= 105
+// fn returns a string
+
+/**
+ * @param {Function} fn
+ * @return {Object}
+ */
