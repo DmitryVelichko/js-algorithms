@@ -27,3 +27,11 @@
 // Explanation: The array has 3 elements so it is not empty.
  
 
+// Constraints:
+
+// obj is a valid JSON object or array
+// 2 <= JSON.stringify(obj).length <= 105
+ 
+
+// Can you solve it in O(1) time?
+
