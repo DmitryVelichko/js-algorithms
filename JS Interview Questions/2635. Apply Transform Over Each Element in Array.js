@@ -30,3 +30,14 @@
 // Explanation: The function always returns 42.
  
 
+// Constraints:
+
+// 0 <= arr.length <= 1000
+// -109 <= arr[i] <= 109
+// fn returns a number
+
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
