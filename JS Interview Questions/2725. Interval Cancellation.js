@@ -86,3 +86,23 @@
 // Cancelled at 180ms
  
 
+// Constraints:
+
+// fn is a function
+// args is a valid JSON array
+// 1 <= args.length <= 10
+// 30 <= t <= 100
+// 10 <= cancelTimeMs <= 500
+
+/**
+ * @param {Function} fn
+ * @param {Array} args
+ * @param {number} t
+ * @return {Function}
+ */
+var cancellable = function(fn, args, t) {
+    fn(...args)
+    const intervalID = setInterval(() => fn(...args),t)
+    return () => clearInterval(intervalID)
+};
+
