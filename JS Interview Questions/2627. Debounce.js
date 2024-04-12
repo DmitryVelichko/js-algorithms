@@ -35,3 +35,19 @@
 // setTimeout(() => dlog(1), 50);
 // setTimeout(() => dlog(2), 75);
 
+// The 1st call is cancelled by the 2nd call because the 2nd call occurred before 100ms
+// The 2nd call is delayed by 50ms and executed at 125ms. The inputs were (2).
+// Example 2:
+
+// Input: 
+// t = 20
+// calls = [
+//   {"t": 50, inputs: [1]},
+//   {"t": 100, inputs: [2]}
+// ]
+// Output: [{"t": 70, inputs: [1]}, {"t": 120, inputs: [2]}]
+// Explanation:
+// The 1st call is delayed until 70ms. The inputs were (1).
+// The 2nd call is delayed until 120ms. The inputs were (2).
+// Example 3:
+
