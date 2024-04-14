@@ -39,3 +39,20 @@
 // 0 <= nums[i] <= 1000
 // Note: nums is the array passed to the constructor
 
+/**
+ * @param {number[]} nums
+ * @return {void}
+ */
+var ArrayWrapper = function(nums) {
+    this.nums = nums
+};
+
+/**
+ * @return {number}
+ */
+ArrayWrapper.prototype.valueOf = function() {
+    
+    const res = this.nums.reduce((acc, curr) => acc + curr, 0)
+    return res
+}
+
