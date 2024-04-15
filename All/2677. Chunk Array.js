@@ -33,3 +33,12 @@
 
 // Constraints:
 
+// arr is a valid JSON array
+// 2 <= JSON.stringify(arr).length <= 105
+// 1 <= size <= arr.length + 1
+
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array[]}
+ */
