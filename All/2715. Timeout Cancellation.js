@@ -16,3 +16,13 @@
 
 // The cancellation was scheduled to occur after a delay of cancelT (50ms), which happened after the execution of fn(2) at 20ms.
 // Example 2:
+
+// Input: fn = (x) => x**2, args = [2], t = 100, cancelT = 50 
+// Output: []
+// Explanation: 
+// const cancel = cancellable((x) => x**2, [2], 100); // fn(2) not called
+// setTimeout(cancel, 50);
+
+// The cancellation was scheduled to occur after a delay of cancelT (50ms), which happened before the execution of fn(2) at 100ms, resulting in fn(2) never being called.
+// Example 3:
+
