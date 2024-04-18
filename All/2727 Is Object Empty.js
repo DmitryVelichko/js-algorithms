@@ -25,3 +25,18 @@
 // Explanation: The array has 3 elements so it is not empty.
  
 
+// Constraints:
+
+//  2 <= JSON.stringify(obj).length <= 105
+ 
+
+// Can you solve it in O(1) time?
+
+/**
+ * @param {Object | Array} obj
+ * @return {boolean}
+ */
+var isEmpty = function(obj) {
+    for(const _ in obj) return false
+    return true
+};
