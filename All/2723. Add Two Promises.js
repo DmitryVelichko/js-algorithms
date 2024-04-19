@@ -20,3 +20,12 @@
 // Explanation: The two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2.
  
 
+// Constraints:
+
+// promise1 and promise2 are promises that resolve with a number
+
+/**
+ * @param {Promise} promise1
+ * @param {Promise} promise2
+ * @return {Promise}
+ */
