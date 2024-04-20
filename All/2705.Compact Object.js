@@ -55,3 +55,18 @@ var compactObject = function(obj) {
             return newArr;
         }
   
+        const newObj = {};
+  
+        for (const key in obj) {
+            const subRes = dfs(obj[key])
+            if (subRes) {
+                newObj[key] = subRes;
+            }
+        }
+  
+        return newObj;
+    }  
+  
+    return dfs(obj);
+  };
+  
