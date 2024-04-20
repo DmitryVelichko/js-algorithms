@@ -40,7 +40,7 @@ var compactObject = function(obj) {
     function dfs(obj) {
         if (!obj) return false;
         if (typeof obj !== 'object') return obj;
-  
+  //{"a": null, "b": [false, 1]}
         if (Array.isArray(obj)) {
             const newArr = [];
             for(let i = 0; i < obj.length; i++) {
@@ -70,3 +70,4 @@ var compactObject = function(obj) {
     return dfs(obj);
   };
   
+  console.log(compactObject({"a": null, "b": [false, 1]})) //{"b": [1]}
