@@ -61,3 +61,41 @@
 // ​​​​The function resolved 5 + 10 = 15 at t=120ms. The time limit is never reached.
 // Example 4:
 
+// Input: 
+// fn = async () => { 
+//   throw "Error";
+// }
+// inputs = []
+// t = 1000
+// Output: {"rejected":"Error","time":0}
+// Explanation:
+// The function immediately throws an error.
+ 
+
+// Constraints:
+
+// 0 <= inputs.length <= 10
+// 0 <= t <= 1000
+// fn returns a promise
+
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
+var timeLimit = function(fn, t) {
+    
+    return async function(...args) {
+        let outer = fn(...args)
+        let inner = new Promise((_, reject) => {
+            setTimeout(() => reject('Time Limit Exceeded'), t)
+        }) 
+
+        return Promise.race([outer, inner])
+    }
+};
+
+/**
+ * const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
+ * limited(150).catch(console.log) // "Time Limit Exceeded" at t=100ms
+ */
