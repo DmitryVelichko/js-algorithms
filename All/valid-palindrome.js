@@ -27,3 +27,13 @@ let isPalindrome1 = function (s) {
     let reversedStr = ''
     let xStr = x.toString()
   
+    for(let i of xStr) {
+  
+      reversedStr =  i + reversedStr
+  
+    }
+  return reversedStr === xStr
+    
+  };
+  
+  console.log(isPalindrome(121))
