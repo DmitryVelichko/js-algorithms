@@ -12,3 +12,11 @@ function selectionSort(arr) {
                 indexMin = j
             }
         }
+        let tmp = arr[i]
+        arr[i] = arr[indexMin]
+        arr[indexMin] = tmp
+    }
+    return arr
+}
+
+console.log(selectionSort(arr))
