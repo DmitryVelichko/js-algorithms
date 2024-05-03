@@ -10,3 +10,14 @@ let firstUniqChar = function (s) {
         map[s[i]] = false
     }
   }
+
+  for (let i = 0; i < s.length; i++) {
+    if(map[s[i]]) {
+        return i
+    }
+  }
+
+  return -1
+};
+
+console.log(firstUniqChar(s));
