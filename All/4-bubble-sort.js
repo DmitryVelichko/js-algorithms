@@ -36,3 +36,9 @@ function bubbleSortBestTime(arr) {
         isSorted = false; // Так как мы поменяли элементы местами, значит, наш массив не отсортирован. Устанавливаем значение false.
       }
     }
+    if (isSorted) return arr; // Если isSorted === true, значит наш массив отсортирован, и мы сразу же возвращаем его.
+  }
+  return arr; 
+}
+
+console.log(bubbleSortBestTime(arr)); // O(n*n)
