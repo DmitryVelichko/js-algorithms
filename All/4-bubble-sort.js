@@ -17,3 +17,13 @@ function bubbleSort(arr) {
   return arr;
 }
 
+console.log(bubbleSort(arr)); // O(n*n)
+
+// Сортирует массив за лучшее время
+
+function bubbleSortBestTime(arr) {
+  let isSorted; // Добавим переменную, отвечающую на вопрос - отсортирован наш массив или нет.
+
+  for (let i = 0; i < arr.length; i++) {
+    isSorted = true; // Предположим, что наш массив отсортирован.
+
