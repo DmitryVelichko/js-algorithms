@@ -14,3 +14,8 @@ var reverseVowels = function(s) {
         vowels[char] = true
     }
 
+    const characters = s.split('');
+
+    let left = 0;
+    let right = s.length - 1
+
