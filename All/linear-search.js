@@ -22,3 +22,14 @@ console.log('count = ', count)
  * @param {*[]} setB
  * @return {*[]}
  */
+ export default function cartesianProduct(setA, setB) {
+  // Check if input sets are not empty.
+  // Otherwise return null since we can't generate Cartesian Product out of them.
+  if (!setA || !setB || !setA.length || !setB.length) {
+    return null;
+  }
+
+  // Init product set.
+  const product = [];
+
+  // Now, let's go through all elements of a first and second set and form all possible pairs.
