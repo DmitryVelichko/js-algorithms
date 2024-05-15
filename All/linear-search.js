@@ -12,3 +12,13 @@ function linearSearch(array, item) {
     return null
 }
 
+console.log(linearSearch(array, 11))
+console.log('count = ', count)
+
+
+/**
+ * Generates Cartesian Product of two sets.
+ * @param {*[]} setA
+ * @param {*[]} setB
+ * @return {*[]}
+ */
