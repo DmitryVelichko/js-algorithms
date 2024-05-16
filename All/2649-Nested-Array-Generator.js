@@ -26,3 +26,18 @@
 // Explanation: There are no integers so the generator doesn't yield anything.
  
 
+// Constraints:
+
+// 0 <= arr.flat().length <= 105
+// 0 <= arr.flat()[i] <= 105
+// maxNestingDepth <= 105
+ 
+
+// Can you solve this without creating a new flattened version of the array?
+// Accepted
+// 8.5K
+// Submissions
+// 10.3K
+// Acceptance Rate
+// 81.9%
+
