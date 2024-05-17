@@ -36,3 +36,7 @@ var mySolution = function(nums1, nums2) {
     return arr
 };
 
+var intersection = function(nums1, nums2) {
+    const unique = new Set(nums1)
+    return [...unique].filter((item) => nums2.indexOf(item) !== -1)
+};
