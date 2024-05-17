@@ -12,3 +12,13 @@
 // Output: [9,4]
 // Explanation: [4,9] is also accepted.
 
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var mySolution = function(nums1, nums2) {
+    let ht = {}
+    let set = new Set()
+    let arr = []
+
