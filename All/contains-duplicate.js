@@ -14,3 +14,6 @@ let containsDuplicate = function(nums) {
 
 console.log(containsDuplicate([1,2,3,4,1]))
 
+// let containsDuplicate2 = function(nums) {
+//     nums.sort()
+//     for(let i = 0; i < nums.length; i++) {
