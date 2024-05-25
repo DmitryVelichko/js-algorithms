@@ -39,3 +39,12 @@
 var maximumOddBinaryNumber = function(s) {
     let arr = s.split('').sort().reverse()
 
+    for(let i=arr.length-1; i>=0; i--) {
+        if(arr[i] === '1') {
+            [arr[i], arr[arr.length-1]] = [arr[arr.length-1], arr[i]]
+            break
+        } 
+        
+    }
+    return arr.join('')
+};
