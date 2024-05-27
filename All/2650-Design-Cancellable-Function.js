@@ -50,3 +50,29 @@
 // Explanation:
 // A promise is yielded. The function handles this by waiting for it to resolve and then passes the resolved value back to the generator. Then an error is thrown which has the effect of causing the promise to reject with the same thrown error.
 // Example 3:
+
+// Input: 
+// generatorFunction = function*() { 
+//   yield new Promise(res => setTimeout(res, 200)); 
+//   return "Success"; 
+// }
+// cancelledAt = 100
+// Output: {"rejected": "Cancelled"}
+// Explanation:
+// While the function is waiting for the yielded promise to resolve, cancel() is called. This causes an error message to be sent back to the generator. Since this error is uncaught, the returned promise rejected with this error.
+// Example 4:
+
+// Input:
+// generatorFunction = function*() { 
+//   let result = 0; 
+//   yield new Promise(res => setTimeout(res, 100));
+//   result += yield new Promise(res => res(1)); 
+//   yield new Promise(res => setTimeout(res, 100)); 
+//   result += yield new Promise(res => res(1)); 
+//   return result;
+// }
+// cancelledAt = null
+// Output: {"resolved": 2}
+// Explanation:
+// 4 promises are yielded. Two of those promises have their values added to the result. After 200ms, the generator finishes with a value of 2, and that value is resolved by the returned promise.
+// Example 5:
