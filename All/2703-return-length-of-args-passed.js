@@ -27,3 +27,13 @@
 // argsArr is a valid JSON array
 // 0 <= argsArr.length <= 100
 
+/**
+ * @return {number}
+ */
+var argumentsLength = function(...args) {
+    return args.length
+};
+
+/**
+ * argumentsLength(1, 2, 3); // 3
+ */
