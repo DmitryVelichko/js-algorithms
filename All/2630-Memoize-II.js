@@ -36,3 +36,20 @@
 // Merging two empty objects will always result in an empty object. It may seem like there should only be 1 call to fn() because of cache-hits, however none of those objects are === to each other.
 // Example 3:
 
+// Input: 
+// getInputs = () => { const o = {}; return [[o,o],[o,o],[o,o]]; }
+// fn = function (a, b) { return ({...a, ...b}); }
+// Output: [{"val":{},"calls":1},{"val":{},"calls":1},{"val":{},"calls":1}]
+// Explanation:
+// Merging two empty objects will always result in an empty object. The 2nd and 3rd third function calls result in a cache-hit. This is because every object passed in is identical.
+
+
+// Constraints:
+
+// 1 <= inputs.length <= 105
+// 0 <= inputs.flat().length <= 105
+// inputs[i][j] != NaN
+
+/**
+ * @param {Function} fn
+ */
