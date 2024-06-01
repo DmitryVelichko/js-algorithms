@@ -12,3 +12,39 @@
 
 // If a key only exists in one object, that single key-value pair should be included in the object.
 // If a key is included in both objects, the value in the object from arr2 should override the value from arr1.
+ 
+
+// Example 1:
+
+// Input: 
+// arr1 = [
+//     {"id": 1, "x": 1},
+//     {"id": 2, "x": 9}
+// ], 
+// arr2 = [
+//     {"id": 3, "x": 5}
+// ]
+// Output: 
+// [
+//     {"id": 1, "x": 1},
+//     {"id": 2, "x": 9},
+//     {"id": 3, "x": 5}
+// ]
+// Explanation: There are no duplicate ids so arr1 is simply concatenated with arr2.
+// Example 2:
+
+// Input: 
+// arr1 = [
+//     {"id": 1, "x": 2, "y": 3},
+//     {"id": 2, "x": 3, "y": 6}
+// ], 
+// arr2 = [
+//     {"id": 2, "x": 10, "y": 20},
+//     {"id": 3, "x": 0, "y": 0}
+// ]
+// Output: 
+// [
+//     {"id": 1, "x": 2, "y": 3},
+//     {"id": 2, "x": 10, "y": 20},
+//     {"id": 3, "x": 0, "y": 0}
+// ]
