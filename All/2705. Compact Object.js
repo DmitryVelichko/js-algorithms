@@ -51,4 +51,18 @@ var compactObject = function(obj) {
             return res
         }
 
-  
+        const res = {}
+        for(const key in obj) {
+            const subRes = dfs(obj[key])
+            if(subRes) res[key] = subRes
+        
+        }
+        return res
+
+    }
+
+    return dfs(obj)
+    
+};
+
+console.log(compactObject({"a": null, "b": [false, 1]})) //{"b": [1]}
