@@ -41,3 +41,14 @@ var compactObject = function(obj) {
 
         if(!obj) return false
         if(typeof obj !== 'object') return obj
+
+        if(Array.isArray(obj)) {
+            const res = []
+            for(let i=0; i<obj.length; i++) { 
+                subRes = dfs(obj[i])
+                if(subRes) res.push(subRes)
+            }
+            return res
+        }
+
+  
