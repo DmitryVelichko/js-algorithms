@@ -26,3 +26,18 @@
 // Output: [5, [], [16]]
 // Explanation: obj[0], obj[1], obj[3][0], and obj[4][0] were falsy and removed.
  
+
+// Constraints:
+
+// obj is a valid JSON object
+// 2 <= JSON.stringify(obj).length <= 106
+
+/**
+ * @param {Object|Array} obj
+ * @return {Object|Array}
+ */
+var compactObject = function(obj) {
+    function dfs(obj) {
+
+        if(!obj) return false
+        if(typeof obj !== 'object') return obj
