@@ -25,3 +25,37 @@
 // It can be shown that we cannot make the array empty in less than 4 operations.
 // Example 2:
 
+// Input: nums = [2,1,2,2,3,3]
+// Output: -1
+// Explanation: It is impossible to empty the array.
+ 
+
+// Constraints:
+
+// 2 <= nums.length <= 105
+// 1 <= nums[i] <= 106
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var minOperations = function(nums) {
+    let hash = {}
+    let count = 0
+
+      for(let i=0; i<nums.length; i++) {
+          hash[nums[i]] = (hash[nums[i]] || 0) + 1
+      }
+
+     for(key in hash) {
+         if(hash[key] === 1) return -1
+         count+= Math.floor(hash[key]/3)
+         if(hash[key] % 3 !== 0) count++
+       
+     }
+
+     return count
+
+};
+
+console.log(minOperations([2,3,3,2,2,4,2,3,4])) // 4
