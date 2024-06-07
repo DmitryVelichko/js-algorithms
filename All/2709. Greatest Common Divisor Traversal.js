@@ -31,3 +31,18 @@
 // Explanation: There are 6 possible pairs of indices to traverse between: (0, 1), (0, 2), (0, 3), (1, 2), (1, 3), and (2, 3). A valid sequence of traversals exists for each pair, so we return true.
  
 
+// Constraints:
+
+// 1 <= nums.length <= 105
+// 1 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var canTraverseAllPairs = function(nums) {
+    
+};/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
