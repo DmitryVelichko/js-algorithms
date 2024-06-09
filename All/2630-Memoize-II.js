@@ -10,3 +10,21 @@
 
 
 
+// Example 1:
+
+// Input: 
+// getInputs = () => [[2,2],[2,2],[1,2]]
+// fn = function (a, b) { return a + b; }
+// Output: [{"val":4,"calls":1},{"val":4,"calls":1},{"val":3,"calls":2}]
+// Explanation:
+// const inputs = getInputs();
+// const memoized = memoize(fn);
+// for (const arr of inputs) {
+//   memoized(...arr);
+// }
+
+// For the inputs of (2, 2): 2 + 2 = 4, and it required a call to fn().
+// For the inputs of (2, 2): 2 + 2 = 4, but those inputs were seen before so no call to fn() was required.
+// For the inputs of (1, 2): 1 + 2 = 3, and it required another call to fn() for a total of 2.
+// Example 2:
+
