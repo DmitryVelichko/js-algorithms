@@ -116,3 +116,14 @@ var cancellable = function(fn, args, t) {
  *     cancel()
  *  }, cancelT)
  *   
+ *  setTimeout(() => {
+ *    console.log(result)  // [
+ *                         //      {"time":0,"returned":8},
+ *                         //      {"time":35,"returned":8},
+ *                         //      {"time":70,"returned":8},           
+ *                         //      {"time":105,"returned":8},
+ *                         //      {"time":140,"returned":8},
+ *                         //      {"time":175,"returned":8}
+ *                         //  ]
+ *  }, cancelT + t + 15)    
+ */
