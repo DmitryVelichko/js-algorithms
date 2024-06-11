@@ -47,3 +47,33 @@
 // const cancel = cancellable((x1, x2) => (x1 * x2), [2, 5], 30); 
 // setTimeout(cancel, 165);
 
+// Every 30ms, fn(2, 5) is called. Until t=165ms, then it is cancelled.
+// 1st fn call is at 0ms 
+// 2nd fn call is at 30ms 
+// 3rd fn call is at 60ms 
+// 4th fn call is at 90ms 
+// 5th fn call is at 120ms 
+// 6th fn call is at 150ms
+// Cancelled at 165ms
+// Example 3:
+
+// Input: fn = (x1, x2, x3) => (x1 + x2 + x3), args = [5, 1, 3], t = 50, cancelT = 180
+// Output: 
+// [
+//    {"time": 0, "returned": 9},
+//    {"time": 50, "returned": 9},
+//    {"time": 100, "returned": 9},
+//    {"time": 150, "returned": 9}
+// ]
+// Explanation: 
+// const cancel = cancellable((x1, x2, x3) => (x1 + x2 + x3), [5, 1, 3], 50);
+// setTimeout(cancel, 180);
+
+// Every 50ms, fn(5, 1, 3) is called. Until t=180ms, then it is cancelled. 
+// 1st fn call is at 0ms
+// 2nd fn call is at 50ms
+// 3rd fn call is at 100ms
+// 4th fn call is at 150ms
+// Cancelled at 180ms
+ 
+
