@@ -28,3 +28,17 @@
 // Explanation: The row indexed 1 has the maximum count of ones (2). So the answer is [1,2].
  
 
+// Constraints:
+
+// m == mat.length 
+// n == mat[i].length 
+// 1 <= m, n <= 100 
+// mat[i][j] is either 0 or 1.
+
+/**
+ * @param {number[][]} mat
+ * @return {number[]}
+ */
+var rowAndMaximumOnes = function(mat) {
+    let maxRow = 0
+    let row = 0
