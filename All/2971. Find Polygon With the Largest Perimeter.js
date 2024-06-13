@@ -29,3 +29,18 @@
 // We cannot have a polygon with either 12 or 50 as the longest side because it is not possible to include 2 or more smaller sides that have a greater sum than either of them.
 // It can be shown that the largest possible perimeter is 12.
 // Example 3:
+
+// Input: nums = [5,5,50]
+// Output: -1
+// Explanation: There is no possible way to form a polygon from nums, as a polygon has at least 3 sides and 50 > 5 + 5.
+ 
+
+// Constraints:
+
+// 3 <= n <= 105
+// 1 <= nums[i] <= 109
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
