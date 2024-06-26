@@ -22,3 +22,29 @@
 // Input: nums = [9,6,4,2,3,5,7,0,1]
 // Output: 8
 // Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
+ 
+
+// Constraints:
+
+// n == nums.length
+// 1 <= n <= 104
+// 0 <= nums[i] <= n
+// All the numbers of nums are unique.
+ 
+
+// Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    let n = nums.length + 1;
+       let total = (n * (n-1)) / 2;
+       
+       for (let num of nums) {
+           total -= num;
+       }
+       
+       return total;
+};
