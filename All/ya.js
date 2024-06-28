@@ -44,3 +44,23 @@ function isThereAPairOfNumbers(arr, k) {
 }
 
 console.log(isThereAPairOfNumbers([10, 15, 3, 7], 17)) // [10, 7]
+
+{b: {c: 1}}function getValueByPath(obj, path) {
+    const keys = path.split('.');
+    let result = obj;
+
+    for (let key of keys) {
+        result = result[key];
+        if (result === undefined) {
+            return undefined;
+        }
+    }
+
+    return result;
+}
+
+// Пример использования
+const obj = {a: {b: {c: 1}}};
+const path = 'a.b.c';
+
+console.log(getValueByPath(obj, path)); // Вывод: 1
