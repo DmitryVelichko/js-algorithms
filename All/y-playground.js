@@ -1,11 +1,27 @@
-const arr = [-3, 2, 4]
+const arr = [-3, 2, 4];
 
-function fun(arr) {
-    const res = []
-    for(const num of arr) {
-        res.push(num * num)
+function sortedSquares(arr) {
+    const n = arr.length;
+    const result = new Array(n);
+    let left = 0;
+    let right = n - 1;
+    let position = n - 1;
+
+    while (left <= right) {
+        const leftSquare = arr[left] * arr[left];
+        const rightSquare = arr[right] * arr[right];
+
+        if (leftSquare > rightSquare) {
+            result[position] = leftSquare;
+            left++;
+        } else {
+            result[position] = rightSquare;
+            right--;
+        }
+        position--;
     }
-    return res.sort((a,b) => a - b)
+
+    return result;
 }
 
-console.log(fun(arr)) // [4, 9, 16]
+console.log(sortedSquares(arr)); // [4, 9, 16]
