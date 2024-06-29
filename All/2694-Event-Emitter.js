@@ -49,3 +49,26 @@
 // emitter.emit("firstEvent", [4, 5, 6]); // [], there are no subscriptions
 // Example 4:
 
+// Input: 
+// actions = ["EventEmitter", "subscribe", "subscribe", "unsubscribe", "emit"], 
+// values = [[], ["firstEvent", "x => x + 1"], ["firstEvent", "x => x + 2"], [0], ["firstEvent", [5]]]
+// Output: [[],["subscribed"],["emitted",["1,2,3"]],["unsubscribed",0],["emitted",[7]]]
+// Explanation:
+// const emitter = new EventEmitter();
+// const sub1 = emitter.subscribe("firstEvent", x => x + 1);
+// const sub2 = emitter.subscribe("firstEvent", x => x + 2);
+// sub1.unsubscribe(); // undefined
+// emitter.emit("firstEvent", [5]); // [7]
+ 
+
+// Constraints:
+
+// 1 <= actions.length <= 10
+// values.length === actions.length
+// All test cases are valid, e.g. you don't need to handle scenarios when unsubscribing from a non-existing subscription.
+// There are only 4 different actions: EventEmitter, emit, subscribe, and unsubscribe.
+// The EventEmitter action doesn't take any arguments.
+// The emit action takes between either 1 or 2 arguments. The first argument is the name of the event we want to emit, and the 2nd argument is passed to the callback functions.
+// The subscribe action takes 2 arguments, where the first one is the event name and the second is the callback function.
+// The unsubscribe action takes one argument, which is the 0-indexed order of the subscription made before.
+
