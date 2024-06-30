@@ -29,3 +29,10 @@
 // Explanation: gen.next() is never called so nothing is outputted
  
 
+// Constraints:
+
+// 0 <= callCount <= 50
+
+/**
+ * @return {Generator<number>}
+ */
