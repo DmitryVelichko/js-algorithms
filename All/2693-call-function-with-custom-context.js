@@ -18,3 +18,25 @@
  
 
 // Example 1:
+
+// Input:
+// fn = function add(b) {
+//   return this.a + b;
+// }
+// args = [{"a": 5}, 7]
+// Output: 12
+// Explanation:
+// fn.callPolyfill({"a": 5}, 7); // 12
+// callPolyfill sets the "this" context to {"a": 5}. 7 is passed as an argument.
+// Example 2:
+
+// Input: 
+// fn = function tax(price, taxRate) { 
+//  return `The cost of the ${this.item} is ${price * taxRate}`; 
+// }
+// args = [{"item": "burger"}, 10, 1.1]
+// Output: "The cost of the burger is 11"
+// Explanation: callPolyfill sets the "this" context to {"item": "burger"}. 10 and 1.1 are passed as additional arguments.
+ 
+
+// Constraints:
