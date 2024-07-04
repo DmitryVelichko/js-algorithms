@@ -40,3 +40,13 @@
  
 
 // Constraints:
+
+// typeof args[0] == 'object' and args[0] != null
+// 1 <= args.length <= 100
+// 2 <= JSON.stringify(args[0]).length <= 105
+
+/**
+ * @param {Object} context
+ * @param {any[]} args
+ * @return {any}
+ */
