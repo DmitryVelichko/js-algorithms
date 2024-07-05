@@ -1,4 +1,4 @@
-let s = ['h', 'e', 'l', 'l', 'o'];
+let s = ['h', 'e', 'l', 'l', 'o',]; 
 
 let reverseString = function (s) {
   let left = 0;
