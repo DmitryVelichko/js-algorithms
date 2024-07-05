@@ -22,3 +22,32 @@
 // The difference between any two elements in each array is less than or equal to 2.
 // Note that the order of elements is not important.
 // Example 2:
+
+// Input: nums = [1,3,3,2,7,3], k = 3
+// Output: []
+// Explanation: It is not possible to divide the array satisfying all the conditions.
+ 
+
+// Constraints:
+
+// n == nums.length
+// 1 <= n <= 105
+// n is a multiple of 3.
+// 1 <= nums[i] <= 105
+// 1 <= k <= 105
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[][]}
+ */
+var divideArray = function(nums, k) {
+    const res = []
+    nums.sort((a,b) => a - b)
+
+    for(let i=0; i<nums.length; i+=3) {
+        if((nums[i+2] - nums[i]) > k ) return []
+        res.push([nums[i], nums[i+1], nums[i+2]])
+    }
+    return res
+};
