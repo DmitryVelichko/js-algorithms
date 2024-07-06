@@ -26,3 +26,51 @@ hash = {
 
 
 // O(n*d)
+function digitPermutation(arr) {
+    const hash = {};
+    const res = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        // Преобразуем число в строку, удаляем нули и разбиваем на символы
+        let num = arr[i].toString().replace(/0/g, '');
+        
+        // Подсчитываем количество каждой цифры
+        let count = {};
+        for (let n of num) {
+            count[n] = (count[n] || 0) + 1;
+        }
+        console.log(count)
+        // Формируем ключ из подсчитанных цифр
+        let key = '';
+        for (let digit in count) {
+            key += digit + count[digit];
+        }
+
+        console.log(key)
+
+        // Добавляем число в соответствующий массив в hash
+        if (!hash[key]) {
+            hash[key] = [arr[i]];
+        } else {
+            hash[key].push(arr[i]);
+        }
+    }
+
+    // Создаем результат на основе значений из hash
+    for (let key in hash) {
+        res.push(hash[key]);
+    }
+
+    return res;
+}
+
+
+console.clear();
+console.log('start test')
+///                          
+console.log(digitPermutation([1230, 99, 23001, 123, 111, 300021, 101010, 90000009, 9]));
+// [[99, 90000009], [111, 101010], [1230, 23001, 123, 300021], [9]]
+//                                
+console.log(digitPermutation([11, 22])); // [[11], [22]]
+
+console.log('end test');
