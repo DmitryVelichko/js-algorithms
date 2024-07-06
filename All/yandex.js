@@ -28,7 +28,6 @@ hash = {
 // O(n*d)
 function digitPermutation(arr) {
     const hash = {};
-    const res = [];
 
     for (let i = 0; i < arr.length; i++) {
         // Преобразуем число в строку, удаляем нули и разбиваем на символы
@@ -55,11 +54,9 @@ function digitPermutation(arr) {
     }
 
     // Создаем результат на основе значений из hash
-    for (let key in hash) {
-        res.push(hash[key]);
-    }
+   
 
-    return res;
+    return Object.values(hash);
 }
 
 
