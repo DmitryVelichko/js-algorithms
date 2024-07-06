@@ -39,14 +39,12 @@ function digitPermutation(arr) {
         for (let n of num) {
             count[n] = (count[n] || 0) + 1;
         }
-        console.log(count)
+       
         // Формируем ключ из подсчитанных цифр
         let key = '';
         for (let digit in count) {
             key += digit + count[digit];
         }
-
-        console.log(key)
 
         // Добавляем число в соответствующий массив в hash
         if (!hash[key]) {
