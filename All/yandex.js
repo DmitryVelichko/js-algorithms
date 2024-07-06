@@ -4,3 +4,25 @@
 нули при этом игнорируем, т. к. нет числа 011.
 Решение должно быть максимально эффективно по памяти и времени.
 */
+
+/*
+[1230, 99, 23001, 123, 111, 300021, 101010, 90000009, 9]
+hash = {
+  '123': [300021, 1230...]
+}
+*/
+// O(n * d logd)
+// function digitPermutation(arr) {
+//     const hash = {}
+
+//     for(let num of arr) {
+//         let str = num.toString().replace(/0/g,'').split('').sort().join('')
+//         if(!hash[str]) hash[str] = [num]
+//         else hash[str].push(num)
+//     }
+
+//     return Object.values(hash)
+// }
+
+
+// O(n*d)
