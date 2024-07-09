@@ -44,15 +44,17 @@
 // Иначе - кладем в мапу индекс
 // 4. Возвращаем пустой массив, если false
 // Time: O(n), Space: O(n)
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 var twoSum = function(nums, target) {
-    let map = {}
-   
-    for(let i=0; i<nums.length; i++) {
-        if(map[target - nums[i]] !== undefined) {
-            return [map[target - nums[i]],i]
-        } else {
-            map[nums[i]] = i
-        }
-    }
-    return []
-   };
+    // O(n), O(n)
+  const hash = {}
+  for(let [index, num] of nums.entries()) {
+        let complement = target - num
+        if(hash[complement] === undefined) hash[num] = index
+        else return [hash[complement], index]
+  }
+};
