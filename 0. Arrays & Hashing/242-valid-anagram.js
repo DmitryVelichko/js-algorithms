@@ -35,20 +35,26 @@
 
 // Time O(n), Space O(1) так как 26 lower case letters в алфавите
 
-var isAnagram2 = function (s, t) {
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+ // O(n), O(1)/O(k) - 24 буквы в алфавите
+ var isAnagram = function (s, t) {
     if (s.length !== t.length) return false
-    const map = {}
+    const hash = {}
+
     for (let i = 0; i < s.length; i++) {
-        if (map[s[i]] === undefined) map[s[i]] = 0
-        if (map[t[i]] === undefined) map[t[i]] = 0
+        if (hash[s[i]] === undefined) hash[s[i]] = 0
+        if (hash[t[i]] === undefined) hash[t[i]] = 0
 
-        map[s[i]]++
-        map[t[i]]--
+        hash[s[i]]++
+        hash[t[i]]--
     }
 
-    for (let char in map) {
-        if (map[char] !== 0) return false
+    for (let key in hash) {
+        if (hash[key] !== 0) return false
     }
-
     return true
-}
+};
