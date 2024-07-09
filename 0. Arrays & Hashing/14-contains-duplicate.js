@@ -8,63 +8,12 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-// Задача на map
-// 1 создать мапу
-// 2 если мапа пустая, map[num] = 1
-// 3 если нет вернуть true
-let containsDuplicate = function (nums) {
-    let map = {}
-    for (let num of nums) {
-        if (map[num] !== undefined) {
-            return true
-        } else {
-            map[num] = num
-        }
+var containsDuplicate = function(nums) {
+    // O(n), O(n)
+    let hash = {}
+    for(let num of nums) {
+        if(hash[num] !== undefined) return true
+        hash[num] = num
     }
     return false
-}
-
-// var containsDuplicate = function (nums) {
-//   for (let i = 0; i < nums.length; i++) {
-//     let a = nums[i];
-//     for (let j = i + 1; j < nums.length; j++) {
-//       if (nums[j] === a) {
-//         return true;
-//       }
-//     }
-//   }
-//   return false;
-// };
-
-// console.log(containsDuplicate([2, 14, 18, 22, 22]) + ' TRUE');
-// console.log(containsDuplicate([1, 2, 3, 4, 5]) + ' FALSE');
-
-// function hashSolution(nums) {
-//   let testObj = {};
-//   for (var i = 0; i < nums.length; i++) {
-//     let aNum = nums[i];
-//     if (testObj[aNum]) {
-//       return true;
-//     } else {
-//       testObj[aNum] = true;
-//     }
-//   }
-
-//   return false;
-// }
-
-// function setSizeSolution(nums) {
-//   let testSet = new Set(nums);
-//   return testSet.size !== nums.length;
-// }
-// function setHasSolution(nums) {
-//   let set = new Set();
-//   for (i = 0; i < nums.length; i++) {
-//     if (set.has(nums[i])) {
-//       return true;
-//     }
-
-//     set.add(nums[i]);
-//   }
-//   return false;
-// }
+};
