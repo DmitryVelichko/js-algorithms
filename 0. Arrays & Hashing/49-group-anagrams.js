@@ -39,3 +39,29 @@
  */
 
  // O(n*k), O(n*k) т.к. hashmap массивов
+ var groupAnagrams = function(strs) {
+
+    const anagramGroups = {};
+
+    for (let str of strs) {
+        // [1,0,0,0,1,0,0,0,0,0,0,1]
+        const count = new Array(26).fill(0);
+        // 98 - 97 = ячейка в массиве
+        for (let char of str) {
+            count[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+        }
+
+        // Convert the count array to a string key
+        const key = count.join('#');
+        console.log(key)
+
+       
+        if (!anagramGroups[key]) {
+            anagramGroups[key] = [str];
+        } else {
+            anagramGroups[key].push(str);
+        }
+    }
+
+    return Object.values(anagramGroups);
+};
