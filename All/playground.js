@@ -39,3 +39,18 @@ const trigger = function (obj) {
   
   // example
   
+  const artObject = {
+    $redRose: 11101,
+    metroStations: ['Park Kultury', 'Delovoy Center'],
+    busStops: ['B', 'c910', '379'],
+    $city: 10101,
+    towers: ['Oko', 'Neva'],
+    $getTransports() {
+      const stations = this.$getter(this, 'metroStations');
+      const stops = this.$getter(this, 'busStops');
+      return [...stations, ...stops];
+    },
+    $trigger: null,  // This will be set below
+    $getter: getter,
+  };
+  
