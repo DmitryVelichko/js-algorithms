@@ -54,3 +54,16 @@ const trigger = function (obj) {
     $getter: getter,
   };
   
+  artObject.$trigger = trigger(artObject);
+  artObject.$trigger();
+  
+  // basic tests
+  
+  console.log(!artObject.hasOwnProperty('towers') && !artObject._hidden.has('towers')); // -> true (checks hidden and removed)
+  // Alternative check for complete removal (including hidden state)
+  console.log(typeof artObject.towers === 'undefined' && !artObject._hidden.has('towers')); // -> true
+  
+  console.log(artObject.$getter(artObject, 'towers')); // -> [ 'Oko', 'Neva' ] (accessible using getter)
+  console.log(artObject.$redRose); // -> 11101
+  console.log(artObject.$getTransports()); // -> [ 'Park Kultury', 'Delovoy Center', 'B', 'c910', '379' ]
+  
