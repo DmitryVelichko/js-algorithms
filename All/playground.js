@@ -19,3 +19,23 @@ const trigger = function (obj) {
             obj._hidden.add(prop);
             obj._hiddenValues[prop] = obj[prop];
             delete obj[prop];
+          }
+        }
+      }
+    };
+  };
+  
+  const getter = function (obj = {}, key) {
+    if (obj.hasOwnProperty(key)) {
+      return obj[key];
+    } else if (obj._hidden && obj._hidden.has(key)) {
+      return obj._hiddenValues[key];
+    } else {
+      return undefined;
+    }
+  };
+  
+  module.exports = { trigger, getter };
+  
+  // example
+  
