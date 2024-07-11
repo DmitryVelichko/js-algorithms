@@ -36,4 +36,12 @@
     const freq = Array.from({ length: nums.length + 1 }, () => []);
     console.log(freq)
 
+    for (let n of nums) {
+        count[n] = (count[n] || 0) + 1;
+    }
+
+    for (let n in count) {
+        freq[count[n]].push(Number(n));
+    }
+
 
