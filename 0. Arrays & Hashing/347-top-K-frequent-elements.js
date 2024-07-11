@@ -56,4 +56,23 @@
 }
 
 
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+// 0. Задача на map(Arrays and Hashing)
+// 1 Создаем мапу
+// 2. В цикле инициализируем значения мапы нулем
+// 3. Увеличиваем значение мапы на +1
+// 4. Возвращаем отсортированный и обрезанный массив ключей
+
+// var topKFrequent = function (nums, k) {
+//     let map = {}
+//     for (let num of nums) {
+//         if (!map[num]) map[num] = 0
+//         map[num]++
+//     }
+//     return [...Object.keys(map).sort((a, b) => map[b] - map[a]).slice(0, k)]
+// };
 
