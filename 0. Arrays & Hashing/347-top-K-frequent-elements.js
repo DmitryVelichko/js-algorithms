@@ -44,4 +44,16 @@
         freq[count[n]].push(Number(n));
     }
 
+    const res = [];
+    for (let i = freq.length - 1; i > 0; i--) {
+        for (let n of freq[i]) {
+            res.push(n);
+            if (res.length === k) {
+                return res;
+            }
+        }
+    }
+}
+
+
 
