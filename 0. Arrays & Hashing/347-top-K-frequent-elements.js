@@ -23,4 +23,17 @@
 // It is guaranteed that the answer is unique.
 
 
+// Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+ // O(n), O(n)
+ function topKFrequent(nums, k) {
+    const count = {};
+    const freq = Array.from({ length: nums.length + 1 }, () => []);
+    console.log(freq)
+
 
