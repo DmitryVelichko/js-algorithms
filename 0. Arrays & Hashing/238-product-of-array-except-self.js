@@ -34,3 +34,19 @@
 
 // Задача на Arrays and Hashing
 // T: O(n), S:O(1) result array не считается по условиям задачи
+var productExceptSelf2 = function (nums) {
+    const res = [];
+    let start = 1;
+    let start2 = 1
+
+    for (let i = 0; i < nums.length; i++) {
+        res.push(start)
+        start = start * nums[i]
+    }
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] = start2 * res[i]
+        start2 = start2 * nums[i]
+    }
+
+    return res;
+};
