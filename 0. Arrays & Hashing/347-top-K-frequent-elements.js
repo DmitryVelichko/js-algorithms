@@ -30,27 +30,26 @@
  * @param {number} k
  * @return {number[]}
  */
- // O(n), O(n)
- function topKFrequent(nums, k) {
-    const count = {};
-    const freq = Array.from({ length: nums.length + 1 }, () => []);
-    console.log(freq)
-
-    for (let n of nums) {
-        count[n] = (count[n] || 0) + 1;
-    }
-
-    for (let n in count) {
-        freq[count[n]].push(Number(n));
-    }
-
+// O(n), O(n)
+function topKFrequent(nums, k) {
+    const hash = {};
+    // Bucket sort [[], [], []]
+    const arr = Array.from({ length: nums.length + 1 }, () => []);
     const res = [];
-    for (let i = freq.length - 1; i > 0; i--) {
-        for (let n of freq[i]) {
-            res.push(n);
-            if (res.length === k) {
-                return res;
-            }
+
+    for (let num of nums) {
+        hash[num] = (hash[num] || 0) + 1;
+    }
+    // [0, 1, 2] индекс массива == частота числа
+    //   [[2][3]] число
+    for (let num in hash) {
+        arr[hash[num]].push(Number(num));
+    }
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        for (let num of arr[i]) {
+            res.push(num);
+            if (res.length === k) return res;
         }
     }
 }
