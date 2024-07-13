@@ -17,3 +17,17 @@
 // Output: 9
 
 
+// Constraints:
+
+// 0 <= nums.length <= 105
+// -109 <= nums[i] <= 109
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// Задача на arrays & hashing.
+// Создаем set
+// С помощью цилка for of ищем в сете минимальный элемент num-1
+// во вложенном цикле while пока в сете есть num+1 обновляем currMax и currNum
+// Вычисляем максимальный элемент (max, currMax) и возвращаем его
