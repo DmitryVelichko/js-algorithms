@@ -41,3 +41,11 @@ var longestConsecutive = function (nums) {
         let currNum = num
         let currMax = 1
         // проходимся по сету пока там есть currNum+1
+        while (set.has(currNum + 1)) {
+            currNum++
+            currMax++
+        }
+        max = Math.max(max, currMax)
+    }
+    return max
+}
