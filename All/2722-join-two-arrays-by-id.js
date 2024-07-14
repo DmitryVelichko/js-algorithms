@@ -61,3 +61,36 @@
 // Explanation: The two objects with id=1 are merged together. For the keys "b" and "v" the values from arr2 are used. Since the key "y" only exists in arr1, that value is taken form arr1.
  
 
+// Constraints:
+
+// arr1 and arr2 are valid JSON arrays
+// Each object in arr1 and arr2 has a unique integer id key
+// 2 <= JSON.stringify(arr1).length <= 106
+// 2 <= JSON.stringify(arr2).length <= 106
+// Accepted
+// 6.8K
+// Submissions
+// 12.8K
+// Acceptance Rate
+// 53.2%
+
+/**
+ * @param {Array} arr1
+ * @param {Array} arr2
+ * @return {Array}
+ */
+var join = function(arr1, arr2) {
+    const result = {};
+    for (let i = 0; i < arr1.length; i++) {
+        result[arr1[i].id] = arr1[i];
+    } 
+    for (let i = 0; i < arr2.length; i++) {
+        if (result[arr2[i].id]) {
+            for (const key in arr2[i]) result[arr2[i].id][key] = arr2[i][key];  
+        } else {
+            result[arr2[i].id] = arr2[i];
+        }
+    } 
+
+    return Object.values(result);
+};
