@@ -30,3 +30,20 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+// O(n), O(n) по условиям задачи O(1)
+var productExceptSelf = function (nums) {
+    const res = [];
+    let prefix = 1;
+    let postfix = 1;
+
+    for (let i = 0; i < nums.length; i++) {
+        res[i] = prefix;
+        prefix = prefix * nums[i];
+    }
+
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] = postfix * res[i];
+        postfix = postfix * nums[i];
+    }
+    return res;
+};
