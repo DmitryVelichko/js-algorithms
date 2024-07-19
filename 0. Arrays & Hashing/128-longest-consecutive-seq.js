@@ -22,3 +22,15 @@
 // 0 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// O(n), O(n)
+var longestConsecutive = function (nums) {
+    const set = new Set(nums);
+    let longestSeq = 0;
