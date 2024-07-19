@@ -34,3 +34,18 @@
 var longestConsecutive = function (nums) {
     const set = new Set(nums);
     let longestSeq = 0;
+
+    for (let num of set) {
+        // no left neighbour? it's a start of the seq
+        if (!set.has(num - 1)) {
+            let seqLen = 1;
+            while (set.has(num + seqLen)) {
+                seqLen += 1;
+            }
+            longestSeq = Math.max(longestSeq, seqLen);
+        }
+    }
+
+    return longestSeq;
+
+};
