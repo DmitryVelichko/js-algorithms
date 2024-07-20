@@ -43,3 +43,18 @@
 // Output: false
 // Explanation: Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 
+
+// Constraints:
+
+// board.length == 9
+// board[i].length == 9
+// board[i][j] is a digit 1-9 or '.'.
+
+/**
+ * @param {character[][]} board
+ * @return {boolean}
+ */
+ // O(9**2), O(9** = function (board) {
+    var isValidSudoku = function (board) {
+        const set = new Set()
+    
