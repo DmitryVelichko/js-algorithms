@@ -28,3 +28,19 @@
 // 1 <= s.length <= 2 * 105
 // s consists only of printable ASCII characters.
 
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ // O(n), O(1)
+ var isPalindrome = function (s) {
+
+    function isAlphaNumeric(char) {
+        const code = char.charCodeAt(0);
+        return (
+            (code >= 'A'.charCodeAt(0) && code <= 'Z'.charCodeAt(0)) ||
+            (code >= 'a'.charCodeAt(0) && code <= 'z'.charCodeAt(0)) ||
+            (code >= '0'.charCodeAt(0) && code <= '9'.charCodeAt(0))
+        );
+    }
+
