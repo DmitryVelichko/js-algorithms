@@ -8,7 +8,7 @@
 
 // You may assume the obj is the output of JSON.parse. In other words, it is valid JSON.
 
- 
+
 
 // Example 1:
 
@@ -25,7 +25,7 @@
 // Input: obj = [null, 0, 5, [0], [false, 16]]
 // Output: [5, [], [16]]
 // Explanation: obj[0], obj[1], obj[3][0], and obj[4][0] were falsy and removed.
- 
+
 
 // Constraints:
 
@@ -36,33 +36,33 @@
  * @param {Object|Array} obj
  * @return {Object|Array}
  */
-var compactObject = function(obj) {
+var compactObject = function (obj) {
     function dfs(obj) {
 
-        if(!obj) return false
-        if(typeof obj !== 'object') return obj
+        if (!obj) return false
+        if (typeof obj !== 'object') return obj
 
-        if(Array.isArray(obj)) {
+        if (Array.isArray(obj)) {
             const res = []
-            for(let i=0; i<obj.length; i++) { 
+            for (let i = 0; i < obj.length; i++) {
                 subRes = dfs(obj[i])
-                if(subRes) res.push(subRes)
+                if (subRes) res.push(subRes)
             }
             return res
         }
 
         const res = {}
-        for(const key in obj) {
+        for (const key in obj) {
             const subRes = dfs(obj[key])
-            if(subRes) res[key] = subRes
-        
+            if (subRes) res[key] = subRes
+
         }
         return res
 
     }
 
     return dfs(obj)
-    
+
 };
 
-console.log(compactObject({"a": null, "b": [false, 1]})) //{"b": [1]}
+console.log(compactObject({ "a": null, "b": [false, 1] })) //{"b": [1]}

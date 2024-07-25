@@ -5,7 +5,7 @@
 
 // After a delay of t, fn should be called with args passed as parameters unless cancelFn was invoked before the delay of t milliseconds elapses, specifically at cancelT ms. In that case, fn should never be called.
 
- 
+
 // Example 1:
 
 // Input: fn = (x) => x * 5, args = [2], t = 20, cancelT = 50
@@ -33,7 +33,7 @@
 // setTimeout(cancel, 100);
 
 // The cancellation was scheduled to occur after a delay of cancelT (100ms), which happened after the execution of fn(2,4) at 30ms.
- 
+
 
 // Constraints:
 
@@ -50,11 +50,11 @@
  * @param {number} t
  * @return {Function}
  */
-var cancellable = function(fn, args, t) {
+var cancellable = function (fn, args, t) {
     let timeout1 = setTimeout(() => fn(...args), t)
 
-    let cancelFn = () => {clearTimeout(timeout1)}
-    
+    let cancelFn = () => { clearTimeout(timeout1) }
+
     return cancelFn
 };
 

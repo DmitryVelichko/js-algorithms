@@ -12,7 +12,7 @@
 
 // If a key only exists in one object, that single key-value pair should be included in the object.
 // If a key is included in both objects, the value in the object from arr2 should override the value from arr1.
- 
+
 
 // Example 1:
 
@@ -62,7 +62,7 @@
 //     {"id": 1, "b": {"c": 84}, "v": [1, 3], "y": 48}
 // ]
 // Explanation: The two objects with id=1 are merged together. For the keys "b" and "v" the values from arr2 are used. Since the key "y" only exists in arr1, that value is taken form arr1.
- 
+
 
 // Constraints:
 
@@ -76,7 +76,7 @@
  * @param {Array} arr2
  * @return {Array}
  */
-var join = function(arr1, arr2) {
+var join = function (arr1, arr2) {
   const combinedArray = arr1.concat(arr2);
   const merged = {};
 
