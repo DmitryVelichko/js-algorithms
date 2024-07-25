@@ -15,7 +15,7 @@
 
 // Please solve this without using the built-in Function.call method.
 
- 
+
 
 // Example 1:
 
@@ -37,7 +37,7 @@
 // args = [{"item": "burger"}, 10, 1.1]
 // Output: "The cost of the burger is 11"
 // Explanation: callPolyfill sets the "this" context to {"item": "burger"}. 10 and 1.1 are passed as additional arguments.
- 
+
 
 // Constraints:
 
@@ -50,22 +50,22 @@
  * @param {any[]} args
  * @return {any}
  */
-Function.prototype.callPolyfill = function(context, ...args) {
-    const fn = this;
-  
-    Object.defineProperty(context, '__fn__', {
-      value: fn,
-      enumerable: false
-    });
-  
-    const result = context.__fn__(...args);
-  
-    delete context.__fn__;
-  
-    return typeof result !== 'undefined' ? result : undefined;
-  };
-  
-  /**
-   * function increment() { this.count++; return this.count; }
-   * increment.callPolyfill({count: 1}); // 2
-   */
+Function.prototype.callPolyfill = function (context, ...args) {
+  const fn = this;
+
+  Object.defineProperty(context, '__fn__', {
+    value: fn,
+    enumerable: false
+  });
+
+  const result = context.__fn__(...args);
+
+  delete context.__fn__;
+
+  return typeof result !== 'undefined' ? result : undefined;
+};
+
+/**
+ * function increment() { this.count++; return this.count; }
+ * increment.callPolyfill({count: 1}); // 2
+ */
