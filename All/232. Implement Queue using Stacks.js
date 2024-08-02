@@ -34,3 +34,23 @@
 // myQueue.pop(); // return 1, queue is [2]
 // myQueue.empty(); // return false
  
+
+// Constraints:
+
+// 1 <= x <= 9
+// At most 100 calls will be made to push, pop, peek, and empty.
+// All the calls to pop and peek are valid.
+ 
+
+/**
+ * Initialize your data structure here.
+ */
+var MyQueue = function() {
+    this.stack1 = [];
+    this.stack2 = [];
+};
+
+/** 
+ * @param {number} x
+ * @return {void}
+ */
