@@ -41,3 +41,16 @@
  * @return {number[][]}
  */
  // O(n^2), O(1)/ O(n) - зависит от ф-ции сортировки
+ var threeSum = function (nums) {
+    const res = [];
+    nums.sort((a, b) => a - b);
+
+    for (let i = 0; i < nums.length; i++) {
+        const a = nums[i];
+
+        // Skip duplicates
+        if (i > 0 && a === nums[i - 1]) continue;
+
+        let l = i + 1;
+        let r = nums.length - 1;
+
