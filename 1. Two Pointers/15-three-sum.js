@@ -31,3 +31,13 @@
 // Explanation: The only possible triplet sums up to 0.
 
 
+// Constraints:
+
+// 3 <= nums.length <= 3000
+// -105 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+ // O(n^2), O(1)/ O(n) - зависит от ф-ции сортировки
