@@ -31,3 +31,13 @@
 // n == height.length
 // 2 <= n <= 105
 // 0 <= height[i] <= 104
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+// O(n), O(1)
+var maxArea = function (height) {
+    let res = 0;
+    let l = 0;
+    let r = height.length - 1;
