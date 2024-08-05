@@ -19,3 +19,18 @@
 
 // 1 <= n <= 8
 
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+
+function generateParenthesis(n) {
+    const res = [];
+  
+    function backtrack(open_n, closed_n, str) {
+      // Valid if open === close === n
+      if (open_n === closed_n && closed_n === n) {
+        res.push(str);
+        return;
+      }
+  
