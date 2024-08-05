@@ -34,3 +34,21 @@ function generateParenthesis(n) {
         return;
       }
   
+      // Only add open parenthesis if open < n
+      if (open_n < n) {
+        backtrack(open_n + 1, closed_n, str + '(');
+      }
+  
+      // Only add closed parenthesis if close < open
+      if (closed_n < open_n) {
+        backtrack(open_n, closed_n + 1, str + ')');
+      }
+    }
+  
+    backtrack(0, 0, '');
+    return res;
+  }
+  
+  
+
+
