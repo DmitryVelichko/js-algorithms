@@ -15,3 +15,17 @@ function merge(left, right) {
         }
     }
     
+    // Concatenating the leftover elements
+    // (in case we didn't go through the entire left or right array)
+    return [ ...arr, ...left, ...right ]
+}
+
+function mergesort(arr) {
+    if (arr.length < 2) {
+      return arr
+    }
+    const mid = Math.floor(arr.length / 2)
+    const leftArr = arr.slice(0, mid)
+    const rightArr = arr.slice(mid)
+    return merge(mergesort(leftArr), mergesort(rightArr))
+  }
