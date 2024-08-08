@@ -39,3 +39,9 @@ function mergesort(arr) {
         sortedArr.push(rightArr.shift())
       }
     }
+    const resultArr = [...sortedArr, ...leftArr, ...rightArr]
+    return resultArr
+  }
+  
+  const arr = [8, 20, -2, 4, -6]
+  console.log(mergesort(arr)) // [-6, -2, 4, 8, 20]
