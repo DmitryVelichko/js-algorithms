@@ -32,3 +32,27 @@
 // minStack.pop();
 // minStack.top();    // return 0
 // minStack.getMin(); // return -2
+
+
+// Constraints:
+
+// -231 <= val <= 231 - 1
+// Methods pop, top and getMin operations will always be called on non-empty stacks.
+// At most 3 * 104 calls will be made to push, pop, top, and getMin.
+
+
+var MinStack = function () {
+    this.stack = [];
+    this.minStack = [];
+};
+
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function (val) {
+    this.stack.push(val);
+    const min = this.minStack.length > 0 ? Math.min(val, this.minStack[this.minStack.length - 1]) : val;
+    this.minStack.push(min);
+};
