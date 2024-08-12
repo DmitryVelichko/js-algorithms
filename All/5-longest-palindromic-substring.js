@@ -36,3 +36,13 @@ const longestPalindrome = function (str) {
         return str.slice(left - i, right + i + 1)
     }
 
+    for (let i = 0; i < str.length; i++) {
+        let oddPalindrome = expandFromCenter(str, i, i)
+        let evenPalindrome = expandFromCenter(str, i - 1, i)
+
+        if (oddPalindrome.length > longest.length) longest = oddPalindrome
+        if (evenPalindrome.length > longest.length) longest = evenPalindrome
+
+    }
+    return longest
+};
