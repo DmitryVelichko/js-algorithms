@@ -37,24 +37,23 @@
  * @param {number} target
  * @return {number[]}
  */
+ /**
+ Вернуть индексы двух чисел дающих в сумме target 
+ 
+ O(n), O(n)
 
-// 1. Задача на Arrays and hashing
-// 2. Создаем мапу
-// 3. Если map[target - nums[i]] есть, возвращаем массив индексов [map[target - nums[i]], i]
-// Иначе - кладем в мапу индекс
-// 4. Возвращаем пустой массив, если false
-// Time: O(n), Space: O(n)
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function(nums, target) {
+ hashmap
+ проходимся в for по массиву
+   находим complement pair
+   ее нет в hash? Кладем туда
+   Есть? возвращаем массив индексов
+  */
+   var twoSum = function (nums, target) {
     // O(n), O(n)
-  const hash = {}
-  for(let [index, num] of nums.entries()) {
+    const hash = {}
+    for (let [index, num] of nums.entries()) {
         let complement = target - num
-        if(hash[complement] === undefined) hash[num] = index
+        if (hash[complement] === undefined) hash[num] = index
         else return [hash[complement], index]
-  }
-};
+    }
+}
