@@ -30,18 +30,41 @@
  * @param {number} k
  * @return {number[]}
  */
+ /**
+    дан массив чисел, вернуть массив k чисел, которые
+    встречаются чаще всего 
+    
+    ( Bucket sort [[], [], []])
+
+    hashmap
+    массив результатов
+    const arr = Array.from({ length: nums.length + 1 }, () => []); // [_, _,_, [1]]
+
+    for по nums- считаем частотность чисел - {1:3}
+   
+    for по hash -добавляем в arr числа по частоте- [[ ], [2], [3]]
+
+    for в обратно направлении
+        for по массиву
+            пушим в результат
+            длина массива === k ? return res
+
+
+
+ */
 // O(n), O(n)
 function topKFrequent(nums, k) {
     const hash = {};
     // Bucket sort [[], [], []]
-    const arr = Array.from({ length: nums.length + 1 }, () => []);
+    const arr = Array.from({ length: nums.length + 1 }, () => []); // [_, _,_, [1]]
+
     const res = [];
 
     for (let num of nums) {
-        hash[num] = (hash[num] || 0) + 1;
+        hash[num] = (hash[num] || 0) + 1; //{1:3}
     }
-    // [0, 1, 2] индекс массива == частота числа
-    //   [[2][3]] число
+    //   0    1    2   индекс массива == частота числа
+    // [[ ], [2], [3]] число
     for (let num in hash) {
         arr[hash[num]].push(Number(num));
     }
@@ -53,25 +76,3 @@ function topKFrequent(nums, k) {
         }
     }
 }
-
-
-/**
- * @param {number[]} nums
- * @param {number} k
- * @return {number[]}
- */
-// 0. Задача на map(Arrays and Hashing)
-// 1 Создаем мапу
-// 2. В цикле инициализируем значения мапы нулем
-// 3. Увеличиваем значение мапы на +1
-// 4. Возвращаем отсортированный и обрезанный массив ключей
-
-// var topKFrequent = function (nums, k) {
-//     let map = {}
-//     for (let num of nums) {
-//         if (!map[num]) map[num] = 0
-//         map[num]++
-//     }
-//     return [...Object.keys(map).sort((a, b) => map[b] - map[a]).slice(0, k)]
-// };
-
