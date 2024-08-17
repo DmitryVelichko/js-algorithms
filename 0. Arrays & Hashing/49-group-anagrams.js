@@ -1,67 +1,47 @@
-// 49. Group Anagrams
-// Medium
-
-// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
-
-// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
-// Example 1:
-
-// Input: strs = ["eat","tea","tan","ate","nat","bat"]
-// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
-// Example 2:
-
-// Input: strs = [""]
-// Output: [[""]]
-// Example 3:
-
-// Input: strs = ["a"]
-// Output: [["a"]]
-
-
-// Constraints:
-
-// 1 <= strs.length <= 104
-// 0 <= strs[i].length <= 100
-// strs[i] consists of lowercase English letters.
-
 /**
  * @param {string[]} strs
  * @return {string[][]}
  */
-// Time O(N * K) | Space O(N * K)
-// Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
-
-
 /**
- * @param {string[]} strs
- * @return {string[][]}
- */
+Дан массив строк, вернуть массив сгруппированных анаграмм
 
- // O(n*k), O(n*k) т.к. hashmap массивов
- var groupAnagrams = function(strs) {
+Создаем hashmap
 
-    const anagramGroups = {};
+Проходим в цикле for по массиву строк
+   const arr = new Array(26).fill(0);
+   проходимся в цикле for по буквам в строке:
+         arr[char.charCodeAt(0) - 'a'.charCodeAt(0)]++; [1,0,0,1,0,1...]
+         const key = arr.join('#');
+         if (!hash[key]) {
+           hash[key] = [str];
+         } else {
+           hash[key].push(str);
+         }
+return Object.values(hash);    
+*/
+
+// O(n*k), O(n*k) т.к. hashmap массивов
+var groupAnagrams = function (strs) {
+
+    const hash = {};
 
     for (let str of strs) {
         // [1,0,0,0,1,0,0,0,0,0,0,1]
-        const count = new Array(26).fill(0);
+        const arr = new Array(26).fill(0);
         // 98 - 97 = ячейка в массиве
         for (let char of str) {
-            count[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+            arr[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
         }
 
         // Convert the count array to a string key
-        const key = count.join('#');
-        console.log(key)
+        const key = arr.join('#');
 
-       
-        if (!anagramGroups[key]) {
-            anagramGroups[key] = [str];
+        if (!hash[key]) {
+            hash[key] = [str];
         } else {
-            anagramGroups[key].push(str);
+            hash[key].push(str);
         }
     }
 
-    return Object.values(anagramGroups);
+    return Object.values(hash);
 };
