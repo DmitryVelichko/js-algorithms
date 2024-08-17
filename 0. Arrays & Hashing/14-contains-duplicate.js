@@ -17,3 +17,13 @@
  *   return false
  *
   */
+ var containsDuplicate = function(nums) {
+    // O(n), O(n)
+   
+   const hash = {}
+   for(let num of nums) {
+        if(hash[num] !== undefined) return true
+        hash[num] = num
+   }
+   return false
+};
