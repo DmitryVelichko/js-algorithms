@@ -7,3 +7,6 @@
 
 /**
  Is array sorted? return smallest val to the left
+
+compare middle val and save to result
+
