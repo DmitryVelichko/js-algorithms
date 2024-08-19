@@ -20,3 +20,9 @@ compare middle val and save to result
     let l = 0
     let r = nums.length - 1
 
+    while (l <= r) {
+        // is the arr sorted?
+        if (nums[l] < nums[r]) {
+            res = Math.min(res, nums[l]);
+            break;
+        }
