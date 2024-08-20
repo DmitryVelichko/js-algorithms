@@ -19,3 +19,10 @@
 
 // Input: temperatures = [30,60,90]
 // Output: [1,1,0]
+ 
+
+// Constraints:
+
+// 1 <= temperatures.length <= 105
+// 30 <= temperatures[i] <= 100
+
