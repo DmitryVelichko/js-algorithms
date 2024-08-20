@@ -26,3 +26,16 @@
 // 1 <= temperatures.length <= 105
 // 30 <= temperatures[i] <= 100
 
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+ /**
+ * Задача на стек
+stack
+arr [0,0,0...]
+проходимся по массиву for
+while стек полон и температура больше той что в стеке
+stack.pop(), кладем в массив i - index
+stack.push(i) на каждой итерации
+ */
