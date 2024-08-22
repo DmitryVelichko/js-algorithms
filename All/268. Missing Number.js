@@ -34,3 +34,17 @@
 
 // Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    let n = nums.length + 1;
+       let total = (n * (n-1)) / 2;
+       
+       for (let num of nums) {
+           total -= num;
+       }
+       
+       return total;
+};
