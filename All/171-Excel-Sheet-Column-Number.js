@@ -25,3 +25,14 @@
 // Output: 28
 // Example 3:
 
+// Input: columnTitle = "ZY"
+// Output: 701
+ 
+
+// Constraints:
+
+// 1 <= columnTitle.length <= 7
+// columnTitle consists only of uppercase English letters.
+// columnTitle is in the range ["A", "FXSHRXW"].
+
+
