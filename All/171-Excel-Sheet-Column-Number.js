@@ -13,3 +13,15 @@
 // AA -> 27
 // AB -> 28 
 // ...
+ 
+
+// Example 1:
+
+// Input: columnTitle = "A"
+// Output: 1
+// Example 2:
+
+// Input: columnTitle = "AB"
+// Output: 28
+// Example 3:
+
