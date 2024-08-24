@@ -26,21 +26,30 @@
  * @return {boolean}
  */
 
-// 0. Задача на map(Arrays and Hashing)
-// 1. Сравнить длину s и t
-// 2. Создать мапу
-// 3. инициализировать нулем, прибавлять и вычитать
-// 4. во втором цикле for in проверить, map[key] !== 0
-
-
-// Time O(n), Space O(1) так как 26 lower case letters в алфавите
-
 /**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
+    Если 2 строки s и t анаграммы возвращаем true, false если нет
+
+    // O(n), O(1)/O(k) - 24 буквы в алфавите
+
+    hash = {}
+
+    длина s и t разная? return false
+
+    for(i < s.length)
+        // если буквы из s нет в хэше инициализируем нулем
+        if (hash[t[i]] === undefined) hash[t[i]] = 0
+
+        хэш[буква из s]++
+        хэш[буква из t]--
+    
+    for(key in hash)
+        if (hash[key] !==0) return false
+
+    return true
+
  */
- // O(n), O(1)/O(k) - 24 буквы в алфавите
+
+ // O(n), O(1)/O(k) - 26 букв в алфавите
  var isAnagram = function (s, t) {
     if (s.length !== t.length) return false
     const hash = {}
