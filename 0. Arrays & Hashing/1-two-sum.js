@@ -34,52 +34,26 @@
 
 /**
  * @param {number[]} nums
- * @param {number} k
+ * @param {number} target
  * @return {number[]}
  */
  /**
-    дан массив чисел, вернуть массив k чисел, которые
-    встречаются чаще всего 
-    
-    ( Bucket sort [[], [], []])
+ Вернуть индексы двух чисел дающих в сумме target 
+ 
+ O(n), O(n)
 
-    hashmap
-    массив результатов
-    const arr = Array.from({ length: nums.length + 1 }, () => []); // [_, _,_, [1]]
-
-    for по nums- считаем частотность чисел - {1:3}
-   
-    for по hash -добавляем в arr числа по частоте- [[ ], [2], [3]]
-
-    for в обратно направлении
-        for по массиву
-            пушим в результат
-            длина массива === k ? return res
-
-
-
- */
-// O(n), O(n)
-function topKFrequent(nums, k) {
-    const hash = {};
-    // Bucket sort [[], [], []]
-    const arr = Array.from({ length: nums.length + 1 }, () => []); // [_, _,_, [1]]
-
-    const res = [];
-
-    for (let num of nums) {
-        hash[num] = (hash[num] || 0) + 1; //{1:3}
-    }
-    //   0    1    2   индекс массива == частота числа
-    // [[ ], [2], [3]] число
-    for (let num in hash) {
-        arr[hash[num]].push(Number(num));
-    }
-
-    for (let i = arr.length - 1; i > 0; i--) {
-        for (let num of arr[i]) {
-            res.push(num);
-            if (res.length === k) return res;
-        }
+ hashmap
+ проходимся в for по массиву
+   находим complement pair
+   ее нет в hash? Кладем туда
+   Есть? возвращаем массив индексов
+  */
+   var twoSum = function (nums, target) {
+    // O(n), O(n)
+    const hash = {}
+    for (let [index, num] of nums.entries()) {
+        let complement = target - num
+        if (hash[complement] === undefined) hash[num] = index
+        else return [hash[complement], index]
     }
 }
