@@ -1,45 +1,80 @@
+// 49. Group Anagrams
+// Solved
+// Medium
+// Topics
+// Companies
+// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+
+// Example 1:
+
+// Input: strs = ["eat","tea","tan","ate","nat","bat"]
+// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+// Example 2:
+
+// Input: strs = [""]
+// Output: [[""]]
+// Example 3:
+
+// Input: strs = ["a"]
+// Output: [["a"]]
+ 
+
+// Constraints:
+
+// 1 <= strs.length <= 104
+// 0 <= strs[i].length <= 100
+// strs[i] consists of lowercase English letters.
+
 /**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
+ * @param {string[]} strs
+ * @return {string[][]}
  */
-
 /**
-    Если 2 строки s и t анаграммы возвращаем true, false если нет
+Дан массив строк, вернуть массив сгруппированных анаграмм
 
-    Создаем hashmap
+// O(n*k), O(n*k) т.к. hashmap массивов
 
-    длина s и t разная? return false
+hash = {}
 
-    Проходимся в цикле for по длине s
-        если буквы из s нет в хэше инициализируем нулем
-        if (hash[t[i]] === undefined) hash[t[i]] = 0
+for(str of strs):
+   const arr = [26 нулей]
 
-        хэш[буква из s]++
-        хэш[буква из t]--
+   for(char of str): [1,0,0,1,0,1...] 
+
+   key = arr.join('#');
+   
+   hash пуст? hash[key] = [str];
+   hash[key].push(str);
     
-    Проходимся в цикле for по хэшу
-        if (hash[key] !==0) return false
+return Object.values(hash);    
+*/
 
-    return true
+// O(n*k), O(n*k) т.к. hashmap массивов
+var groupAnagrams = function (strs) {
 
- */
+    const hash = {};
 
-// O(n), O(1)/O(k) - 24 буквы в алфавите
-var isAnagram = function (s, t) {
-    if (s.length !== t.length) return false
-    const hash = {}
+    for (let str of strs) {
+        // [1,0,0,0,1,0,0,0,0,0,0,1]
+        const arr = new Array(26).fill(0);
+        // 98 - 97 = ячейка в массиве
+        for (let char of str) {
+            arr[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+        }
 
-    for (let i = 0; i < s.length; i++) {
-        if (hash[s[i]] === undefined) hash[s[i]] = 0
-        if (hash[t[i]] === undefined) hash[t[i]] = 0
+        // Convert the count array to a string key
+        const key = arr.join('#');
 
-        hash[s[i]]++
-        hash[t[i]]--
+        if (!hash[key]) {
+            hash[key] = [str];
+        } else {
+            hash[key].push(str);
+        }
     }
 
-    for (let key in hash) {
-        if (hash[key] !== 0) return false
-    }
-    return true
+    return Object.values(hash);
 };
