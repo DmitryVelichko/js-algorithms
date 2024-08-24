@@ -30,6 +30,24 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+ /**
+ 
+ // Вернуть массив перемноженных чисел, кроме текущего числа
+
+ // O(n), O(n) по условиям задачи O(1)
+
+ res = []
+ prefix = 1
+ postfix = 1
+
+for()
+    res[i] = prefix
+    prefix *= nums[i]
+
+for(в обратном порядке)
+    res[i] *= postfix;
+    postfix *= nums[i];
+ */
 // O(n), O(n) по условиям задачи O(1)
 var productExceptSelf = function (nums) {
     const res = [];
@@ -38,12 +56,12 @@ var productExceptSelf = function (nums) {
 
     for (let i = 0; i < nums.length; i++) {
         res[i] = prefix;
-        prefix = prefix * nums[i];
+        prefix *= nums[i];
     }
 
     for (let i = nums.length - 1; i >= 0; i--) {
-        res[i] = postfix * res[i];
-        postfix = postfix * nums[i];
+        res[i] *= postfix;
+        postfix *= nums[i];
     }
     return res;
 };
