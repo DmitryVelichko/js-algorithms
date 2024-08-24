@@ -1,80 +1,52 @@
-// 49. Group Anagrams
+// 217. Contains Duplicate
 // Solved
-// Medium
+// Easy
 // Topics
 // Companies
-// Given an array of strings strs, group the anagrams together. You can return the answer in any order.
-
-// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
  
 
 // Example 1:
 
-// Input: strs = ["eat","tea","tan","ate","nat","bat"]
-// Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+// Input: nums = [1,2,3,1]
+// Output: true
 // Example 2:
 
-// Input: strs = [""]
-// Output: [[""]]
+// Input: nums = [1,2,3,4]
+// Output: false
 // Example 3:
 
-// Input: strs = ["a"]
-// Output: [["a"]]
+// Input: nums = [1,1,1,3,3,4,3,2,4,2]
+// Output: true
  
 
 // Constraints:
 
-// 1 <= strs.length <= 104
-// 0 <= strs[i].length <= 100
-// strs[i] consists of lowercase English letters.
+// 1 <= nums.length <= 105
+// -109 <= nums[i] <= 109
 
 /**
- * @param {string[]} strs
- * @return {string[][]}
+ * @param {number[]} nums
+ * @return {boolean}
  */
-/**
-Дан массив строк, вернуть массив сгруппированных анаграмм
-
-// O(n*k), O(n*k) т.к. hashmap массивов
-
-hash = {}
-
-for(str of strs):
-   const arr = [26 нулей]
-
-   for(char of str): [1,0,0,1,0,1...] 
-
-   key = arr.join('#');
+ /**
+ * Вернуть true если в массиве есть дубликат числа
+ *
+ * hashmap
+ *   В цикле проходимся по массиву
+ *       Число есть в hash? Возвращаем true
+ *      Добавляем число в хэш
+ *   return false
+ *
+  */
+ var containsDuplicate = function(nums) {
+    // O(n), O(n)
    
-   hash пуст? hash[key] = [str];
-   hash[key].push(str);
-    
-return Object.values(hash);    
-*/
-
-// O(n*k), O(n*k) т.к. hashmap массивов
-var groupAnagrams = function (strs) {
-
-    const hash = {};
-
-    for (let str of strs) {
-        // [1,0,0,0,1,0,0,0,0,0,0,1]
-        const arr = new Array(26).fill(0);
-        // 98 - 97 = ячейка в массиве
-        for (let char of str) {
-            arr[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
-        }
-
-        // Convert the count array to a string key
-        const key = arr.join('#');
-
-        if (!hash[key]) {
-            hash[key] = [str];
-        } else {
-            hash[key].push(str);
-        }
-    }
-
-    return Object.values(hash);
+   const hash = {}
+   for(let num of nums) {
+        if(hash[num] !== undefined) return true
+        hash[num] = num
+   }
+   return false
 };
