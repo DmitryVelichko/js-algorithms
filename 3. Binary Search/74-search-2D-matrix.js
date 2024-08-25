@@ -44,3 +44,11 @@ var searchMatrix = function (matrix, target) {
         let mid = left + right
         let midVal = matrix[Math.floor(right / cols)][right % cols]
 
+        if (target === midVal) return true
+        else if (target < midVal) right = mid - 1
+        else left = mid + 1
+
+    }
+
+    return false
+};
