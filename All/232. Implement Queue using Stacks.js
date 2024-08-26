@@ -58,3 +58,27 @@ MyQueue.prototype.push = function(x) {
     this.stack1.push(x);
 };
 
+/**
+ * @return {number}
+ */
+MyQueue.prototype.pop = function() {
+    if (this.stack2.length === 0) {
+        while (this.stack1.length > 0) {
+            this.stack2.push(this.stack1.pop());
+        }
+    }
+    return this.stack2.pop();
+};
+
+/**
+ * @return {number}
+ */
+MyQueue.prototype.peek = function() {
+    if (this.stack2.length === 0) {
+        while (this.stack1.length > 0) {
+            this.stack2.push(this.stack1.pop());
+        }
+    }
+    return this.stack2[this.stack2.length - 1];
+};
+
