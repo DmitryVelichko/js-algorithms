@@ -42,3 +42,19 @@
 // All the calls to pop and peek are valid.
  
 
+/**
+ * Initialize your data structure here.
+ */
+var MyQueue = function() {
+    this.stack1 = [];
+    this.stack2 = [];
+};
+
+/** 
+ * @param {number} x
+ * @return {void}
+ */
+MyQueue.prototype.push = function(x) {
+    this.stack1.push(x);
+};
+
