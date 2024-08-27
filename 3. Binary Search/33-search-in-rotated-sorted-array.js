@@ -48,3 +48,30 @@ binary search
 // If mid element is less than the first element, pivot is on the left
 if (nums[mid] < nums[0]); return left;
 
+2 function binarySearch = (nums, target, left, right) 
+
+3 // Perform binary search in the appropriate part of the array
+(target >= nums[0]) ? binarySearch(nums, target, 0, pivot - 1)
+                    : binarySearch(nums, target, pivot, nums.length - 1)
+
+ */
+ // O(log n), O(1)
+var search = function (nums, target) {
+    // Step 1: Find the pivot index
+    const findPivot = (nums) => {
+        let left = 0;
+        let right = nums.length - 1;
+        
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            
+            // If mid element is less than the first element, pivot is on the left
+            if (nums[mid] < nums[0]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        
+        return left;
+    };
