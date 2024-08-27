@@ -44,3 +44,7 @@
  *
 binary search
 
+1 function findPivotIndex (binary search)
+// If mid element is less than the first element, pivot is on the left
+if (nums[mid] < nums[0]); return left;
+
