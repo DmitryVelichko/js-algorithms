@@ -75,3 +75,27 @@ var search = function (nums, target) {
         
         return left;
     };
+    
+    const binarySearch = (nums, target, left, right) => {
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            if (nums[mid] === target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
+    };
+    
+    const pivot = findPivot(nums);
+    
+    // Step 2: Perform binary search in the appropriate part of the array
+    if (target >= nums[0]) {
+        return binarySearch(nums, target, 0, pivot - 1);
+    } else {
+        return binarySearch(nums, target, pivot, nums.length - 1);
+    }
+};
