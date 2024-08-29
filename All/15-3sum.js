@@ -37,3 +37,11 @@
  * @param {number[]} nums
  * @return {number[][]}
  */
+var threeSum = function (nums) {
+    nums.sort((a, b) => a - b)
+    const results = []
+    for (let i = 0; i < nums.length; i++) {
+        if (i > 0 && nums[i] === nums[i - 1]) continue
+        const target = 0 - nums[i]
+        let left = i + 1;
+        let right = nums.length - 1
