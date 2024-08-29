@@ -23,3 +23,17 @@
 // Explanation: The only possible triplet does not sum up to 0.
 // Example 3:
 
+// Input: nums = [0,0,0]
+// Output: [[0,0,0]]
+// Explanation: The only possible triplet sums up to 0.
+
+
+// Constraints:
+
+// 3 <= nums.length <= 3000
+// -105 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
