@@ -45,3 +45,12 @@ var binaryTreePaths = function(root) {
             paths.push(cur + root.val);
             return;
         }
+        dfsTraversal(root.left, cur + root.val + "->");
+        dfsTraversal(root.right, cur + root.val + "->");
+    }
+    
+    dfsTraversal(root, "");
+    return paths;
+    // Time Complexity: O(N), we always visit all nodes
+    // Space Complexity: O(H) or O(N), height can be at most N (in case of a skewed tree)
+};
