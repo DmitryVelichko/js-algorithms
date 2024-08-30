@@ -31,3 +31,17 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {string[]}
+ */
+
+var binaryTreePaths = function(root) {
+    let paths = [];
+    
+    function dfsTraversal(root, cur) {
+        if (!root) return;
+        if (!root.left && !root.right) {
+            paths.push(cur + root.val);
+            return;
+        }
