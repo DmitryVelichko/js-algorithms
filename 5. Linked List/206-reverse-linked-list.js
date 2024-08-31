@@ -72,3 +72,22 @@ newHead = recursion(head.next)
 return newHead
  */
 
+// O(n), O(1)
+var reverseList = function(head) {
+   // Base case: If the list is empty or has only one node, return the head
+    if (head === null || head.next === null) {
+        return head;
+    }
+
+    // Recursively reverse the rest of the list
+    const newHead = reverseList(head.next);
+
+    // Make the current node (head) the next of the reversed list
+    head.next.next = head;
+    
+    // Set the next pointer of the current node to null to break the original link
+    head.next = null;
+
+    // Return the new head of the reversed list
+    return newHead;
+};
