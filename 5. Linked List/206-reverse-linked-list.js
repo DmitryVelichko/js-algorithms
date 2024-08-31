@@ -23,3 +23,27 @@
 // Output: []
  
 
+// Constraints:
+
+// The number of nodes in the list is the range [0, 5000].
+// -5000 <= Node.val <= 5000
+ 
+
+// Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+
+ /**
+ curr = head,
+ prev = null
+ while(curr)
+    next = curr.next // сохраняем ссылку на next
+    рвём связь
+    смещаем 2 указателя
+ return prev
+ */
