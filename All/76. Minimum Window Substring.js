@@ -48,3 +48,22 @@
 var minWindow = function(s, t) {
     if (s.length < t.length) return "";
 
+ const map = {}; // Словарь для подсчёта символов в t
+ // Заполнение словаря символами из t
+ for (let char of t) {
+   if (map[char] == null) map[char] = 1;
+   else map[char]++;
+ }
+
+ let start = 0, end = 0, minLen = Infinity, minStart = 0;
+ let counter = t.length; // Счётчик для отслеживания, когда найдено окно
+
+ // Перемещаем конечный указатель
+ while (end < s.length) {
+   const endChar = s[end];
+   // Если символ есть в t, уменьшаем счётчик
+   if (map[endChar] > 0) counter--;
+   // Уменьшаем количество символов в словаре и расширяем окно
+   if (map[endChar] != null) map[endChar]--;
+   end++;
+
