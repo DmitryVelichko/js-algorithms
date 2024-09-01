@@ -37,3 +37,14 @@
 // 1 <= m, n <= 105
 // s and t consist of uppercase and lowercase English letters.
  
+
+// Follow up: Could you find an algorithm that runs in O(m + n) time?
+
+  /**
+ * @param {string} s
+ * @param {string} t
+ * @return {string}
+ */
+var minWindow = function(s, t) {
+    if (s.length < t.length) return "";
+
