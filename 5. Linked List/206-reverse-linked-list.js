@@ -55,3 +55,28 @@
     смещаем 2 указателя
  return prev
  */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+ // O(n), O(1)
+ var reverseList = function(head) {
+    let curr = head
+    let prev = null
+    while(curr) {
+        let next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+    }
+    return prev
+};
+
+ /**
+base case: (head || head.next === null) return head
+newHead = recursion(head.next)
+5 -> 4
+4 -> null
+return newHead
+ */
+
