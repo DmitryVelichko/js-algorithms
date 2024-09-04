@@ -30,3 +30,30 @@
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
 
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var detectCycle = function (head) {
+    if (!head || !head.next) return null
+
+    let fast = head;
+    let slow = head;
+
+    let pointer = head;
+
+    while (fast && fast.next) {
+        fast = fast.next.next;
+        slow = slow.next;
+        if (fast === slow) break
+    }
+
+    if (fast !== slow) return null
+
+    while (pointer !== slow) {
+        pointer = pointer.next;
+        slow = slow.next;
+    }
+
+    return slow;
+};
