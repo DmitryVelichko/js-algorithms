@@ -52,3 +52,14 @@ var reorderList = function (head) {
         slow = slow.next
         fast = fast.next.next
     }
+    // reverse second half
+    let second = slow.next
+    let prev = null
+    slow.next = null
+    while (second) {
+        let tmp = second.next
+        second.next = prev
+        prev = second
+        second = tmp
+    }
+
