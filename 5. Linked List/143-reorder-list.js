@@ -63,3 +63,15 @@ var reorderList = function (head) {
         second = tmp
     }
 
+    // merge two halves 
+    let first = head
+    second = prev
+    while (second) {
+        tmp1 = first.next
+        tmp2 = second.next
+        first.next = second
+        second.next = tmp1
+        first = tmp1
+        second = tmp2
+    }
+};
