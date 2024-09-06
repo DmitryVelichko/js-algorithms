@@ -36,3 +36,19 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+/**
+ * @param {ListNode} head
+ * @return {void} Do not return anything, modify head in-place instead.
+ */
+
+/** Find middle of the LL (slow && fast), reverse the second half, merge nodes from both parts по очереди
+ */
+//O(n), O(1)
+var reorderList = function (head) {
+    // find middle
+    let slow = head
+    let fast = head.next
+    while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+    }
