@@ -23,3 +23,16 @@
 
 // Input: head = [1,2,3,4,5]
 // Output: [1,5,2,4,3]
+ 
+
+// Constraints:
+
+// The number of nodes in the list is in the range [1, 5 * 104].
+// 1 <= Node.val <= 1000
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
