@@ -35,3 +35,12 @@
 // 1 <= m, n <= 100
 // obstacleGrid[i][j] is 0 or 1.
 
+/**
+ * @param {number[][]} obstacleGrid
+ * @return {number}
+ */
+var uniquePathsWithObstacles = function(OG) {
+    if (OG[0][0]) return 0
+    let m = OG.length, n = OG[0].length
+    let dp = Array.from({length: m}, el => new Uint32Array(n))
+    dp[0][0] = 1
