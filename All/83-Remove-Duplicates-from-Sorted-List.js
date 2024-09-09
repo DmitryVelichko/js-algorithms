@@ -27,3 +27,12 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+
+var deleteDuplicates = function (head) {
+
+    let current = head;
+
