@@ -51,3 +51,19 @@ class Node {
     }
 }
 
+/**
+ * @param {number} capacity
+ */
+var LRUCache = function(capacity) {
+    this.cap = capacity;
+    this.cache = new Map();  // map key to node
+
+    // Initialize left (dummy head) and right (dummy tail) nodes
+    this.left = new Node(0, 0);
+    this.right = new Node(0, 0);
+
+    // Connect the left and right nodes
+    this.left.next = this.right;
+    this.right.prev = this.left;
+};
+
