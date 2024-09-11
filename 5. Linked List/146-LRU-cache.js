@@ -85,3 +85,17 @@ LRUCache.prototype.insert = function(node) {
     next.prev = node;
 };
 
+/** 
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function(key) {
+    if (this.cache.has(key)) {
+        let node = this.cache.get(key);
+        this.remove(node);
+        this.insert(node);
+        return node.val;
+    }
+    return -1;
+};
+
