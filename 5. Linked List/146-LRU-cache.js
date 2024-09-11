@@ -99,3 +99,30 @@ LRUCache.prototype.get = function(key) {
     return -1;
 };
 
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function(key, value) {
+    if (this.cache.has(key)) {
+        this.remove(this.cache.get(key));
+    }
+    let node = new Node(key, value);
+    this.cache.set(key, node);
+    this.insert(node);
+
+    if (this.cache.size > this.cap) {
+        // Remove from the list and delete the LRU from the map
+        let lru = this.left.next;
+        this.remove(lru);
+        this.cache.delete(lru.key);
+    }
+};
+
+/** 
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
