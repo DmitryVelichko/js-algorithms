@@ -67,3 +67,21 @@ var LRUCache = function(capacity) {
     this.right.prev = this.left;
 };
 
+// Remove node from the list
+LRUCache.prototype.remove = function(node) {
+    let prev = node.prev;
+    let next = node.next;
+    prev.next = next;
+    next.prev = prev;
+};
+
+// Insert node at the right (just before the dummy tail)
+LRUCache.prototype.insert = function(node) {
+    let prev = this.right.prev;
+    let next = this.right;
+    prev.next = node;
+    node.prev = prev;
+    node.next = next;
+    next.prev = node;
+};
+
