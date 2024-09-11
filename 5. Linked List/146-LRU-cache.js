@@ -35,3 +35,19 @@
 // lRUCache.get(4);    // return 4
  
 
+// Constraints:
+
+// 1 <= capacity <= 3000
+// 0 <= key <= 104
+// 0 <= value <= 105
+// At most 2 * 105 calls will be made to get and put.
+
+class Node {
+    constructor(key, val) {
+        this.key = key;
+        this.val = val;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
