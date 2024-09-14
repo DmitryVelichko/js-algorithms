@@ -31,3 +31,12 @@
 // 0 <= arr[i] <= 109
 // 1 <= k <= arr.length
 
+/**
+ * @param {number[]} arr
+ * @param {number} k
+ * @return {number}
+ */
+var maxSumAfterPartitioning = function(arr, k) {
+    let n = arr.length;
+    let dp = new Array(n + 1).fill(0);
+    
