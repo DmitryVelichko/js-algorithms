@@ -28,3 +28,15 @@
 // Output: 6
  
 
+// Constraints:
+
+// 1 <= startTime.length == endTime.length == profit.length <= 5 * 104
+// 1 <= startTime[i] < endTime[i] <= 109
+// 1 <= profit[i] <= 104
+
+/**
+ * @param {number[]} startTime - Массив, содержащий время начала каждой работы.
+ * @param {number[]} endTime - Массив, содержащий время окончания каждой работы.
+ * @param {number[]} profit - Массив, содержащий прибыль от каждой работы.
+ * @return {number} - Максимальная возможная прибыль от выполнения работ.
+ */
