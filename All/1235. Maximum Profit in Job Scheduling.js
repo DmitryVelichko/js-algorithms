@@ -53,3 +53,25 @@ var jobScheduling = function(startTime, endTime, profit) {
     jobs.sort((a, b) => a[0] - b[0]);
     const dp = new Array(numJobs + 1).fill(0);
 
+    // Проходим по каждой работе и определяем максимальную возможную прибыль для данной работы
+    for (let i = 0; i < numJobs; ++i) {
+        const [endTime, startTime, profit] = jobs[i];
+
+        // Находим индекс последней работы, завершившейся ранее, чем начинается текущая работа
+        const latestNonConflictJobIndex = upperBound(jobs, i, startTime);
+
+        // Выбираем максимум между прибылью от выполнения текущей работы и максимальной прибылью
+        // от работ, завершившихся ранее
+        dp[i + 1] = Math.max(dp[i], dp[latestNonConflictJobIndex] + profit);
+    }
+
+    // Возвращаем максимальную прибыль, которую можно получить от выполнения работ
+    return dp[numJobs];
+};
+
+/**
+ * @param {number[][]} jobs - Массив работ в формате [[время окончания, время начала, прибыль], ...]
+ * @param {number} endIndex - Индекс текущей работы
+ * @param {number} targetTime - Время начала текущей работы
+ * @return {number} - Индекс последней работы, завершившейся ранее, чем начинается текущая работа
+ */
