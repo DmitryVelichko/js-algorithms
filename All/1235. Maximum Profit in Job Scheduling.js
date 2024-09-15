@@ -75,3 +75,22 @@ var jobScheduling = function(startTime, endTime, profit) {
  * @param {number} targetTime - Время начала текущей работы
  * @return {number} - Индекс последней работы, завершившейся ранее, чем начинается текущая работа
  */
+function upperBound(jobs, endIndex, targetTime) {
+    let low = 0;
+    let high = endIndex;
+
+    // Бинарный поиск для нахождения индекса последней работы, завершившейся ранее
+    while (low < high) {
+        const mid = Math.floor((low + high) / 2);
+        if (jobs[mid][0] <= targetTime) {
+            low = mid + 1;
+        } else {
+            high = mid;
+        }
+    }
+
+    // Возвращаем индекс последней работы, завершившейся ранее, чем начинается текущая работа
+    return low;
+};
+
+console.log(jobScheduling([1,2,3,3], [3,4,5,6],[50,10,40,70])) // 120
