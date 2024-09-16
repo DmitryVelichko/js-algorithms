@@ -19,3 +19,17 @@
 // Output: [1,null,5,null,7]
  
 
+// Constraints:
+
+// The number of nodes in the given tree will be in the range [1, 100].
+// 0 <= Node.val <= 1000
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
