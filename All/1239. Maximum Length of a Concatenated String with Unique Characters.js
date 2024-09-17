@@ -36,3 +36,13 @@
 // Explanation: The only string in arr has all 26 characters.
 
 
+// Constraints:
+
+// 1 <= arr.length <= 16
+// 1 <= arr[i].length <= 26
+// arr[i] contains only lowercase English letters.
+
+/**
+ * @param {string[]} arr
+ * @return {number}
+ */
