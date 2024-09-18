@@ -42,3 +42,31 @@
 // 1 <= arr[i].length <= 26
 // arr[i] contains only lowercase English letters.
 
+/**
+ * @param {string[]} arr
+ * @return {number}
+ */
+var maxLength = function (arr) {
+
+    const isUnique = (str) => {
+        return new Set(str).size === str.length
+    }
+
+    const backtrack = (start, path) => {
+
+        if (isUnique(path)) {
+            maxLen = Math.max(maxLen, path.length)
+        }
+
+        for (let i = start; i < arr.length; i++) {
+            backtrack(i + 1, path + arr[i])
+        }
+    }
+
+    let maxLen = 0
+
+    backtrack(0, '')
+
+    return maxLen
+
+};
