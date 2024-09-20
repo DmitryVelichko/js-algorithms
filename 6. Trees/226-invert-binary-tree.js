@@ -38,3 +38,22 @@ var invertTree = function (root) {
         let node = stack.pop()
         if (node !== null) {
 
+            let hold = node.left
+            node.left = node.right
+            node.right = hold
+
+            stack.push(node.left)
+            stack.push(node.right)
+        }
+    }
+    return root
+};
+
+
+// Recursive Approach:
+// Time O(n), Space O(h), h-height of the tree, n - number of nodes 
+
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
