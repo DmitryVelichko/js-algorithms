@@ -23,3 +23,18 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+
+// Iterative Approach:
+// Time O(n), Space O(n)
+
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+
+    const stack = [root]
+    while (stack.length > 0) {
+        let node = stack.pop()
+        if (node !== null) {
+
