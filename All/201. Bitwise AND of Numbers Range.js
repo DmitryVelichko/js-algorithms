@@ -17,3 +17,16 @@
 // Output: 0
 // Example 3:
 
+// Input: left = 1, right = 2147483647
+// Output: 0
+ 
+
+// Constraints:
+
+// 0 <= left <= right <= 231 - 1
+
+/**
+ * @param {number} left
+ * @param {number} right
+ * @return {number}
+ */
