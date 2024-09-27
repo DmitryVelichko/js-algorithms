@@ -29,3 +29,15 @@
 // s consists of only uppercase English letters.
 // 0 <= k <= s.length
 
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+/**
+* 2 pointers: hashmap[char]++ = {a: 3, b: 7, ...}, left, right
+window size > k ? hash[char]--, l++;
+update result maximum
+*
+*/
+// O(26*n) or O(n)
