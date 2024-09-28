@@ -28,3 +28,23 @@ function maxDepth2(root) {
     while (stack.length > 0) {
         let [node, depth] = stack.pop(); // Destructure node and depth from stack
 
+        if (node) {
+            res = Math.max(res, depth); // Update the maximum depth
+            stack.push([node.left, depth + 1]); // Push left child with incremented depth
+            stack.push([node.right, depth + 1]); // Push right child with incremented depth
+        }
+    }
+    return res;
+}
+
+
+// BFS iterative
+
+const maxDepth3 = (root) => {
+    let q = []; // Use an array to emulate a queue
+    if (root) {
+        q.push(root); // Initialize queue with root node
+    }
+
+    let level = 0;
+
