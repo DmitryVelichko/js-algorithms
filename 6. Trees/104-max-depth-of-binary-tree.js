@@ -6,3 +6,10 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+// 3 ways: DFS(recursive/iterative) & BFS
+// O(n), O(h): which is O(n) in worst case of an unbalanced tree
+
