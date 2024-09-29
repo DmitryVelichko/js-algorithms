@@ -16,3 +16,9 @@
     if(root === null) return 0
     let max = 0;
 
+    //returns height
+    function dfs(node) {
+        if(node === null) return 0
+        
+        let left = dfs(node.left)
+        let right = dfs(node.right)
