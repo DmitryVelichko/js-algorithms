@@ -67,3 +67,20 @@ RandomizedSet.prototype.remove = function(val) {
    }
    return false
 };
+
+/**
+* @return {number}
+*/
+RandomizedSet.prototype.getRandom = function() {
+   let randomIndex = Math.floor(Math.random() * this.set.size)
+   let arr = [...this.set]
+   return arr[randomIndex]
+};
+
+/** 
+* Your RandomizedSet object will be instantiated and called as such:
+* var obj = new RandomizedSet()
+* var param_1 = obj.insert(val)
+* var param_2 = obj.remove(val)
+* var param_3 = obj.getRandom()
+*/
