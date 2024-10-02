@@ -23,3 +23,10 @@
 // Output: true
  
 
+// Constraints:
+
+// -231 <= n <= 231 - 1
+ 
+
+// Follow up: Could you solve it without loops/recursion?
+
