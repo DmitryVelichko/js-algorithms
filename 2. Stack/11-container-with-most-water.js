@@ -26,3 +26,18 @@
 // Output: 1
  
 
+// Constraints:
+
+// n == height.length
+// 2 <= n <= 105
+// 0 <= height[i] <= 104
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+ /**
+* 2 pointers at beginning and at the end
+calculate the area, update maximum area and move the shortest height forward/inward
+ */
+// O(n), O(1)
