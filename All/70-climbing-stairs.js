@@ -24,3 +24,13 @@
 // 3. 2 steps + 1 step
 
 
+// Constraints:
+
+// 1 <= n <= 45
+
+// O(n)
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
