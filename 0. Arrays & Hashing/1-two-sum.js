@@ -44,3 +44,13 @@
  * @return {number[]}
  */
  /**
+ Вернуть индексы двух чисел дающих в сумме target 
+ 
+ O(n), O(n)
+
+ hashmap
+ iterate through arr
+   find complement pair
+   complement not in hash? Add current number and index there 
+   complement is in hash? => [current i, complement i]
+  */
