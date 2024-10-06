@@ -16,3 +16,13 @@
 
 // Constraints:
 
+// 1 <= s.length, t.length <= 5 * 104
+// s and t consist of lowercase English letters.
+
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+
