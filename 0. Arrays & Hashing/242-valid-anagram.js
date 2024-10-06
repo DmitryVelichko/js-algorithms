@@ -20,31 +20,39 @@
 // s and t consist of lowercase English letters.
 
 
+// O(n), O(1)/O(k) - 26 букв в алфавите
 /**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
+* @param {string} s
+* @param {string} t
+* @return {boolean}
+*/
 
 /**
-    Если 2 строки s и t анаграммы возвращаем true, false если нет
+    hash, different length? => false
 
-    // O(n), O(1)/O(k) - 24 буквы в алфавите
-
-    hash = {}
-
-    длина s и t разная? return false
-
-    for(i < s.length)
-        // если буквы из s нет в хэше инициализируем нулем
-        if (hash[t[i]] === undefined) hash[t[i]] = 0
-
-        хэш[буква из s]++
-        хэш[буква из t]--
+    iterate across one of the strings: {a: 0, b: 0}; a++, b--
     
-    for(key in hash)
-        if (hash[key] !==0) return false
+    iterate across hash: value it not 0 ? return false
 
     return true
 
  */
+
+// O(n), O(1)/O(k) т.к. 24 буквы в алфавите
+var isAnagram = function (s, t) {
+    if (s.length !== t.length) return false
+
+    let hash = {}
+
+    for (let i = 0; i < s.length; i++) {
+
+        hash[s[i]] = (hash[s[i]] || 0) + 1
+        hash[t[i]] = (hash[t[i]] || 0) - 1
+    }
+
+    for (let key in hash) {
+        if (hash[key] !== 0) return false
+    }
+
+    return true
+};
