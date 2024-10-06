@@ -26,3 +26,25 @@
  * @return {boolean}
  */
 
+/**
+    Если 2 строки s и t анаграммы возвращаем true, false если нет
+
+    // O(n), O(1)/O(k) - 24 буквы в алфавите
+
+    hash = {}
+
+    длина s и t разная? return false
+
+    for(i < s.length)
+        // если буквы из s нет в хэше инициализируем нулем
+        if (hash[t[i]] === undefined) hash[t[i]] = 0
+
+        хэш[буква из s]++
+        хэш[буква из t]--
+    
+    for(key in hash)
+        if (hash[key] !==0) return false
+
+    return true
+
+ */
