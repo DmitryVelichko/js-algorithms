@@ -11,7 +11,7 @@
 
 // You can return the answer in any order.
 
- 
+
 
 // Example 1:
 
@@ -26,7 +26,7 @@
 
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
- 
+
 
 // Constraints:
 
@@ -34,7 +34,7 @@
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 // Only one valid answer exists.
- 
+
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
@@ -43,22 +43,22 @@
  * @param {number} target
  * @return {number[]}
  */
- /**
- Вернуть индексы двух чисел дающих в сумме target 
+/**
+Вернуть индексы двух чисел дающих в сумме target 
  
- O(n), O(n)
+O(n), O(n)
 
- hashmap
- iterate through arr
-   find complement pair
-   complement not in hash? Add current number and index there 
-   complement is in hash? => [current i, complement i]
-  */
-   var twoSum = function (nums, target) {
+hashmap
+iterate through arr
+  find complement pair
+  complement not in hash? Add current number and index there 
+  complement is in hash? => [current i, complement i]
+ */
+var twoSum = function (nums, target) {
     const hash = {}
-    for(let i=0; i<nums.length; i++) {
+    for (let i = 0; i < nums.length; i++) {
         let complement = target - nums[i]
-        if(hash[complement] === undefined) hash[nums[i]] = i
+        if (hash[complement] === undefined) hash[nums[i]] = i
         else return [i, hash[complement]]
     }
 }
