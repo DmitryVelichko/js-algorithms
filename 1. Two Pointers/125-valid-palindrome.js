@@ -23,3 +23,18 @@
 // Since an empty string reads the same forward and backward, it is a palindrome.
 
 
+// Constraints:
+
+// 1 <= s.length <= 2 * 105
+// s consists only of printable ASCII characters.
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+/**
+2 pointers,
+char is not alphaNumeric() ? l++ or r--
+left char !== right char ? => false
+=> true
+}
+*/
