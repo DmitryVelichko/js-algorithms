@@ -47,3 +47,20 @@ const maxDepth3 = (root) => {
     }
 
     let level = 0;
+
+    while (q.length > 0) {
+        const size = q.length;
+
+        for (let i = 0; i < size; i++) {
+            let node = q.shift(); // Dequeue the first element
+            if (node.left) {
+                q.push(node.left); // Enqueue left child
+            }
+            if (node.right) {
+                q.push(node.right); // Enqueue right child
+            }
+        }
+        level += 1; // Increase level after processing all nodes at the current level
+    }
+    return level;
+}
