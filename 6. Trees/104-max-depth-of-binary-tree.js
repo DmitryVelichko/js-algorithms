@@ -37,3 +37,13 @@ function maxDepth2(root) {
     return res;
 }
 
+
+// BFS iterative
+
+const maxDepth3 = (root) => {
+    let q = []; // Use an array to emulate a queue
+    if (root) {
+        q.push(root); // Initialize queue with root node
+    }
+
+    let level = 0;
