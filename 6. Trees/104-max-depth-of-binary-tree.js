@@ -6,3 +6,16 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+// 3 ways: DFS(recursive/iterative) & BFS
+// O(n), O(h): which is O(n) in worst case of an unbalanced tree
+
+// DFS recursive
+const maxDepth = (root) => {
+    if (root === null) return 0
+    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
+};
+
