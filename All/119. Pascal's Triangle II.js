@@ -17,3 +17,7 @@
 // Output: [1]
 // Example 3:
 
+// Input: rowIndex = 1
+// Output: [1,1]
+ 
+
