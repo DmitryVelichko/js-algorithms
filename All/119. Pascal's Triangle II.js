@@ -21,3 +21,24 @@
 // Output: [1,1]
  
 
+// Constraints:
+
+// 0 <= rowIndex <= 33
+ 
+
+// Follow up: Could you optimize your algorithm to use only O(rowIndex) extra space?
+
+/**
+ * @param {number} rowIndex
+ * @return {number[]}
+ */
+var getRow = function(rowIndex) {
+    let res = [1];
+    let prev = 1;
+    for(let k = 1; k <= rowIndex; k++) {
+        let next_val = prev * (rowIndex - k + 1) / k;
+        res.push(next_val);
+        prev = next_val;
+    }
+    return res;
+};
