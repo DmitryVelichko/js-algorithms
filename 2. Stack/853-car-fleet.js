@@ -49,3 +49,25 @@
 // Then, the fleet at 4 (speed 2) and the car at position 5 (speed 1) become one fleet, meeting each other at 6. The fleet moves at speed 1 until it reaches target.
 
 
+// Constraints:
+
+// n == position.length == speed.length
+// 1 <= n <= 105
+// 0 < target <= 106
+// 0 <= position[i] < target
+// All the values of position are unique.
+// 0 < speed[i] <= 106
+
+/**
+ * @param {number} target
+ * @param {number[]} position
+ * @param {number[]} speed
+ * @return {number}
+ */
+
+// O(n log n), O(n)
+function carFleet(target, position, speed) {
+    const pairs = position.map((pos, i) => [pos, speed[i]]);
+    let fleets = 0;
+    let curtime = 0; // a car's position is always < than target at the start, so it's fine to start curtime at 0 (no fleet will be at target at time 0)
+
