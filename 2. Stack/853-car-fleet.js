@@ -71,3 +71,16 @@ function carFleet(target, position, speed) {
     let fleets = 0;
     let curtime = 0; // a car's position is always < than target at the start, so it's fine to start curtime at 0 (no fleet will be at target at time 0)
 
+    // Sort pairs by position in descending order
+    pairs.sort((a, b) => b[0] - a[0]);
+
+    for (const [dist, speed] of pairs) {
+        const destinationTime = (target - dist) / speed;
+        if (curtime < destinationTime) {
+            fleets += 1;
+            curtime = destinationTime;
+        }
+    }
+
+    return fleets;
+}
