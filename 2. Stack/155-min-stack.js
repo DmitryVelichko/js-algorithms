@@ -47,3 +47,21 @@ var MinStack = function () {
 };
 
 
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function (val) {
+    this.stack.push(val);
+    const min = this.minStack.length > 0 ? Math.min(val, this.minStack[this.minStack.length - 1]) : val;
+    this.minStack.push(min);
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function () {
+    this.stack.pop();
+    this.minStack.pop();
+};
+
