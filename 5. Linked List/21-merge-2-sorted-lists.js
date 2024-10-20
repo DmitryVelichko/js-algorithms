@@ -38,3 +38,24 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+
+// создаем dummy node и tail,
+// l1 <= l2 ? tail -> l1, двигаем l1
+// else tail -> l2, двигаем l2
+// двигаем tail
+// l1 еще есть ? tail -> l1
+// l2 еще есть ? tail -> l2
+// возвращаем dummy.next
+
