@@ -23,3 +23,14 @@
 // Input: list1 = ["Shogun","Tapioca Express","Burger King","KFC"], list2 = ["KFC","Shogun","Burger King"]
 // Output: ["Shogun"]
 // Explanation: The common string with the least index sum is "Shogun" with index sum = (0 + 1) = 1.
+// Example 3:
+
+// Input: list1 = ["happy","sad","good"], list2 = ["sad","happy","good"]
+// Output: ["sad","happy"]
+// Explanation: There are three common strings:
+// "happy" with index sum = (0 + 1) = 1.
+// "sad" with index sum = (1 + 0) = 1.
+// "good" with index sum = (2 + 2) = 4.
+// The strings with the least index sum are "sad" and "happy".
+ 
+
