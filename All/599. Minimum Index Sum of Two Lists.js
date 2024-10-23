@@ -34,3 +34,17 @@
 // The strings with the least index sum are "sad" and "happy".
  
 
+// Constraints:
+
+// 1 <= list1.length, list2.length <= 1000
+// 1 <= list1[i].length, list2[i].length <= 30
+// list1[i] and list2[i] consist of spaces ' ' and English letters.
+// All the strings of list1 are unique.
+// All the strings of list2 are unique.
+// There is at least a common string between list1 and list2.
+
+/**
+ * @param {string[]} list1
+ * @param {string[]} list2
+ * @return {string[]}
+ */
