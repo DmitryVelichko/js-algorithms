@@ -48,3 +48,27 @@
  * @param {string[]} list2
  * @return {string[]}
  */
+const findRestaurant = function (list1, list2) {
+	const hashMap = {}
+    let res = []
+	let minSum = Infinity
+
+	for (let i = 0; i < list1.length; i++) {
+		hashMap[list1[i]] = i // {rest: i}
+	}
+
+	for (let i = 0; i < list2.length; i++) {
+		if (hashMap[list2[i]] !== undefined) {
+			const currentSum = hashMap[list2[i]] + i
+			if (currentSum < minSum) {
+				res = [list2[i]]
+				minSum = currentSum
+			}
+			else if (currentSum === minSum) {
+				res.push(list2[i])
+			}
+		}
+	}
+	// return the array of common interests
+	return res
+};
