@@ -33,3 +33,22 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isBalanced = function (root) {
+    let result = true;
+    function dfs(node) {
+        if (!node) return 0;
+
+        const left = dfs(node.left);
+        const right = dfs(node.right);
+
+        if (Math.abs(left - right) > 1) result = false;
+        return Math.max(left, right) + 1;
+    }
+
+    dfs(root);
+    return result;
+};
