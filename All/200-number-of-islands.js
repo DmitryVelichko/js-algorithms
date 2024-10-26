@@ -34,3 +34,19 @@
 // 1 <= m, n <= 300
 // grid[i][j] is '0' or '1'.
 
+/**
+ * @param {character[][]} grid
+ * @return {number}
+ */
+var numIslands = function (grid) {
+    let countIslands = 0;
+    for (let rowIndex in grid) {
+        for (let colIndex in grid[rowIndex]) {
+            if (grid[rowIndex][colIndex] === '1') {
+                countIslands++
+                teraform(parseInt(rowIndex), parseInt(colIndex), grid)
+            }
+        }
+    }
+    return countIslands
+};
