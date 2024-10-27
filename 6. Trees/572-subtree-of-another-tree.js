@@ -37,3 +37,17 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} subRoot
+ * @return {boolean}
+ */
+// T: O(n*m) n = tree nodes, m = subtree nodes, S:O(h + k), h - height of tree, k - height of subtree
+
+/**
+function isSameTree(),
+if root is null => false
+if subRoot is null => true
+if trees are the same => true
+=> isSubtree() for root.left || root.right
+ */
