@@ -51,3 +51,16 @@ if subRoot is null => true
 if trees are the same => true
 => isSubtree() for root.left || root.right
  */
+var isSubtree = function (root, subRoot) {
+    if (!root) return false
+    if (!subRoot) return true
+    if (isSameTree(root, subRoot)) return true
+
+    return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot)
+
+    function isSameTree(node1, node2) {
+        if (!node1 && !node2) return true
+        if (!node1 || !node2 || node1.val !== node2.val) return false
+        return isSameTree(node1.left, node2.left) && isSameTree(node1.right, node2.right)
+    }
+};
