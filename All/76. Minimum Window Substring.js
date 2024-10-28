@@ -66,3 +66,24 @@ var minWindow = function(s, t) {
    // Уменьшаем количество символов в словаре и расширяем окно
    if (map[endChar] != null) map[endChar]--;
    end++;
+
+   // Когда все символы найдены, пытаемся сузить окно
+   while (counter === 0) {
+     // Обновляем минимальное окно
+     if (end - start < minLen) {
+       minStart = start;
+       minLen = end - start;
+     }
+
+     const startChar = s[start];
+     // Если символ был частью t, увеличиваем счётчик
+     if (map[startChar] != null) map[startChar]++;
+     // Если символ выходит из окна и он необходим, увеличиваем счётчик
+     if (map[startChar] > 0) counter++;
+     start++;
+   }
+ }
+
+ // Возвращаем минимальное окно, если оно существует
+ return minLen === Infinity ? "" : s.substr(minStart, minLen);
+}
