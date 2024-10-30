@@ -19,3 +19,12 @@
 
 // Input: num = 0
 // Output: 0
+ 
+
+// Constraints:
+
+// 0 <= num <= 231 - 1
+ 
+
+// Follow up: Could you do it without any loop/recursion in O(1) runtime?
+
