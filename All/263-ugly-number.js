@@ -44,3 +44,14 @@
 // 2×5.
 // 14 — не является уродливым, потому что в нем присутствует множитель 7, который не входит в список "разрешённых" множителей (2, 3 и 5).
 
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isUgly = function (num) {
+    if (num <= 0) return false;
+    while (num % 2 == 0) num /= 2;
+    while (num % 3 == 0) num /= 3;
+    while (num % 5 == 0) num /= 5;
+    return num == 1;
+};
