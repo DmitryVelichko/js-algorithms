@@ -34,3 +34,10 @@
 
 // 1 <= n <= 231 - 1
 
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var canWinNim = function(n) {
+    return n % 4 !== 0
+  };
