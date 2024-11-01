@@ -22,3 +22,15 @@
 // In all outcomes, your friend wins.
 // Example 2:
 
+// Input: n = 1
+// Output: true
+// Example 3:
+
+// Input: n = 2
+// Output: true
+ 
+
+// Constraints:
+
+// 1 <= n <= 231 - 1
+
