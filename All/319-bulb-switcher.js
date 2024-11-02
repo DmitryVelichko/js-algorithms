@@ -20,3 +20,16 @@
 // After the third round, the three bulbs are [on, off, off]. 
 // So you should return 1 because there is only one bulb is on.
 // Example 2:
+
+// Input: n = 0
+// Output: 0
+// Example 3:
+
+// Input: n = 1
+// Output: 1
+ 
+
+// Constraints:
+
+// 0 <= n <= 109
+
