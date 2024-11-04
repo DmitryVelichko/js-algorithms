@@ -31,3 +31,21 @@
 // Output: 1
  
 
+// Constraints:
+
+// 1 <= stones.length <= 30
+// 1 <= stones[i] <= 1000
+
+
+/**
+ * 
+ * 
+ * @param {number[]} stones
+ * @return {number}
+ */
+/**
+ * getMaxHeap(): add all stones to maxHeap
+ shrink(): get the heaviest stone1 and stone2 from heap, add to heap the difference if it's > 0
+ if maxHeap is empty return 0 or top element: .front().element
+ */
+//Time O(N * log(N)) | Space O(N)
