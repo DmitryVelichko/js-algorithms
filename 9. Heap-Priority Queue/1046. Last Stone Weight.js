@@ -67,3 +67,12 @@ const getMaxHeap = (stones, maxHeap = new MaxPriorityQueue()) => {
     return maxHeap
 }
 
+const shrink = (maxHeap) => {
+    while (maxHeap.size() > 1) {
+        const [stoneMax1, stoneMax2] = [maxHeap.dequeue().element, maxHeap.dequeue().element]
+
+        const newStone = stoneMax1 - stoneMax2
+
+        if (newStone > 0) maxHeap.enqueue(newStone);
+    }
+}
