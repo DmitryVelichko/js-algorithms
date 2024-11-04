@@ -49,3 +49,21 @@
  if maxHeap is empty return 0 or top element: .front().element
  */
 //Time O(N * log(N)) | Space O(N)
+var lastStoneWeight = function (stones) {
+    const maxHeap = getMaxHeap(stones)
+
+    shrink(maxHeap)
+
+    if (maxHeap.isEmpty()) return 0
+    else return maxHeap.front().element
+
+};
+
+const getMaxHeap = (stones, maxHeap = new MaxPriorityQueue()) => {
+    for (const stone of stones) {
+        maxHeap.enqueue(stone)
+    }
+
+    return maxHeap
+}
+
