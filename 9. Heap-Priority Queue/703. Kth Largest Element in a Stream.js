@@ -47,3 +47,24 @@
 // kthLargest.add(9); // return 8
  
 
+// Constraints:
+
+// 0 <= nums.length <= 104
+// 1 <= k <= nums.length + 1
+// -104 <= nums[i] <= 104
+// -104 <= val <= 104
+// At most 104 calls will be made to add.
+
+/**
+ * @param {number} k
+ * @param {number[]} nums
+ */
+var KthLargest = function (k, nums) {
+    this.k = k;
+    this.minHeap = new MinPriorityQueue();
+    
+    // Initialize the heap with the k largest elements
+    for (let num of nums) {
+        this.add(num);  // use the add method to enforce the heap size
+    }
+};
