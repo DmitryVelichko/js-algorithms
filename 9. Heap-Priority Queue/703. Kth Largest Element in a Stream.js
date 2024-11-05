@@ -68,3 +68,18 @@ var KthLargest = function (k, nums) {
         this.add(num);  // use the add method to enforce the heap size
     }
 };
+
+/** 
+ * @param {number} val
+ * @return {number}
+ */
+KthLargest.prototype.add = function (val) {
+    if (this.minHeap.size() < this.k) {
+        this.minHeap.enqueue(val);
+    } else if (val > this.minHeap.front().element) {
+        this.minHeap.dequeue();
+        this.minHeap.enqueue(val);
+    }
+    
+    return this.minHeap.front().element;
+};
