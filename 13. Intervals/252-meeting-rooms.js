@@ -23,3 +23,18 @@
 // 0 <= intervals.length <= 500
 // 0 <= intervals[i].start < intervals[i].end <= 1,000,000
 
+/**
+ * Definition of Interval:
+ * class Interval {
+ *   constructor(start, end) {
+ *     this.start = start;
+ *     this.end = end;
+ *   }
+ * }
+ */
+
+class Solution {
+    /**
+     * @param {Interval[]} intervals
+     * @returns {boolean}
+     */
