@@ -33,6 +33,32 @@
  * }
  */
 
+/**
+ * Definition of Interval:
+ * class Interval {
+ *   constructor(start, end) {
+ *     this.start = start;
+ *     this.end = end;
+ *   }
+ * }
+ */
+// Sotring, O(n log n), space: O(1) or O(n) depending on the sorting algo
+class Solution {
+    /**
+     * @param {Interval[]} intervals
+     * @returns {boolean}
+     */
+    canAttendMeetings(intervals) {
+        intervals.sort((a, b) => a.start - b.start);
+        for (let i = 1; i < intervals.length; i++) {
+            if (intervals[i].start < intervals[i - 1].end) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+// brute force, O(n^2), O(1)
 class Solution {
     /**
      * @param {Interval[]} intervals
