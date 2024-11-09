@@ -15,3 +15,11 @@
 // Input: intervals = [(5,8),(9,15)]
 
 // Output: true
+// Note:
+
+// (0,8),(8,10) is not considered a conflict at 8
+// Constraints:
+
+// 0 <= intervals.length <= 500
+// 0 <= intervals[i].start < intervals[i].end <= 1,000,000
+
