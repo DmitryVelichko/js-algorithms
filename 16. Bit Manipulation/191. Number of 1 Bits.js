@@ -41,3 +41,11 @@
 
  
 
+// Constraints:
+
+// 1 <= n <= 231 - 1
+ 
+
+// Follow up: If this function is called many times, how would you optimize it?
+
+
