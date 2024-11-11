@@ -49,3 +49,16 @@
 // Follow up: If this function is called many times, how would you optimize it?
 
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var hammingWeight = function(n) {
+    let s = Number(n).toString(2)
+    let count = 0
+    for(let char of s) {
+        if(char === '1') count++
+        else continue
+    }
+ return count
+};
