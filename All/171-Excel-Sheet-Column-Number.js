@@ -29,3 +29,14 @@
 // Output: 701
  
 
+// Constraints:
+
+// 1 <= columnTitle.length <= 7
+// columnTitle consists only of uppercase English letters.
+// columnTitle is in the range ["A", "FXSHRXW"].
+
+
+/**
+ * @param {string} columnTitle
+ * @return {number}
+ */
