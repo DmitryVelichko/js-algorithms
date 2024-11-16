@@ -63,3 +63,20 @@
     }
     return res
 };
+
+// Follow up: Bitwise Trick (Brian Kernighan’s Algorithm)
+// Instead of iterating through all 32 bits, use an approach that only iterates over the set bits:
+// How it works: n &= (n - 1) clears the least significant set bit of n. This reduces the number of
+// iterations to the number of set bits.
+// Time complexity: O(number of set bits), which is faster on average than O(32).
+var hammingWeight = function(n) {
+    let res = 0;
+    while (n) {
+        n &= (n - 1); // Removes the least significant set bit
+        res++;
+    }
+    return res;
+};
+
+
+
