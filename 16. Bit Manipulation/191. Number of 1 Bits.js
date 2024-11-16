@@ -47,3 +47,19 @@
  
 
 // Follow up: If this function is called many times, how would you optimize it?
+
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+ // while n: add to result remainder of n % 2, shift n's bits to the right by 1
+ // O(32) - т.к. 32 бита в n, O(1)
+ var hammingWeight = function (n) {
+    let res = 0
+    while (n) {
+        res += n % 2
+        n = n >> 1
+    }
+    return res
+};
