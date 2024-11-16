@@ -19,3 +19,15 @@
 
 // The input binary string 1011 has a total of three set bits.
 
+// Example 2:
+
+// Input: n = 128
+
+// Output: 1
+
+// Explanation:
+
+// The input binary string 10000000 has a total of one set bit.
+
+// Example 3:
+
