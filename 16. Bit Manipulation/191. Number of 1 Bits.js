@@ -31,3 +31,19 @@
 
 // Example 3:
 
+// Input: n = 2147483645
+
+// Output: 30
+
+// Explanation:
+
+// The input binary string 1111111111111111111111111111101 has a total of thirty set bits.
+
+ 
+
+// Constraints:
+
+// 1 <= n <= 231 - 1
+ 
+
+// Follow up: If this function is called many times, how would you optimize it?
