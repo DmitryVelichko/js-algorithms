@@ -39,3 +39,23 @@
 // It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
 // Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
 
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+
+ // Brute force: O(n log n), O(n)
+ var countBits = function(n) {
+    const res = []
+    for(let i=0; i<=n; i++) {
+        let num = 0
+        let nn = i
+        while(nn) {
+            num += nn%2
+            nn = nn >> 1
+        }
+        res.push(num)
+    }
+    return res
+};
+
