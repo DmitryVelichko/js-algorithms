@@ -32,3 +32,10 @@
 // Constraints:
 
 // 0 <= n <= 105
+ 
+
+// Follow up:
+
+// It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
+// Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
+
