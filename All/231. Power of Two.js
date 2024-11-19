@@ -25,3 +25,20 @@
 // Output: false
  
 
+// Constraints:
+
+// -231 <= n <= 231 - 1
+ 
+
+// Follow up: Could you solve it without loops/recursion?
+
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function(n) {
+    for(let i=0; i<=10000; i++) {
+        if(2**i === n) return true
+    }
+    return false
+};
