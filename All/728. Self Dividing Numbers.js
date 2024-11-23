@@ -41,3 +41,27 @@
 // Hint 1
 // For each number in the range, check whether it is self dividing by converting that number to a character array (or string in Python), then checking that each digit is nonzero and divides the original number.
 
+// /**
+//  * @param {number} left
+//  * @param {number} right
+//  * @return {number[]}
+//  */
+// var selfDividingNumbers = function (left, right) {
+//     const res = []
+//     for (let i = left; i <= right; i++) {
+//         let num = i
+//         let flag = true
+
+//         while (num) {
+//             let digit = num % 10
+//             if (digit === 0 || i % digit !== 0) {
+//                 flag = false;
+//                 break;
+//             }
+//             num = Math.floor(num / 10)
+//         }
+//         if (flag) res.push(i)
+//     }
+//     return res
+// };
+
