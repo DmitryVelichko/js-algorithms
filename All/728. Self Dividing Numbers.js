@@ -65,3 +65,18 @@
 //     return res
 // };
 
+
+/**
+ * @param {number} left
+ * @param {number} right
+ * @return {number[]}
+ */
+function isDivisibleByChar(i) {
+    for (let char of i) {
+        if (Number(char) === 0 || i % Number(char) !== 0) {
+            return false
+        }
+    }
+    return true
+
+}
