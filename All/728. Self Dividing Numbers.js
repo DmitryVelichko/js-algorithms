@@ -80,3 +80,12 @@ function isDivisibleByChar(i) {
     return true
 
 }
+var selfDividingNumbers = function (left, right) {
+    const res = []
+    for (let i = left; i <= right; i++) {
+
+        if (isDivisibleByChar(String(i))) res.push(i)
+
+    }
+    return res
+};
