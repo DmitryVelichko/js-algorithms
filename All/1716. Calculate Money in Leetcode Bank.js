@@ -34,3 +34,20 @@
 // 1 <= n <= 1000
 
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var totalMoney = function (n) {
+    let res = 0
+    let monday = 1
+
+    while (n > 0) {
+        for (let day = 0; day < Math.min(n, 7); day++) {
+            res = res + monday + day
+        }
+        n = n - 7
+        monday++
+    }
+    return res
+};
