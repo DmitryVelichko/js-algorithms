@@ -8,7 +8,7 @@
 // A shift on s consists of moving the leftmost character of s to the rightmost position.
 
 // For example, if s = "abcde", then it will be "bcdea" after one shift.
- 
+
 
 // Example 1:
 
@@ -18,7 +18,7 @@
 
 // Input: s = "abcde", goal = "abced"
 // Output: false
- 
+
 
 // Constraints:
 
@@ -30,16 +30,22 @@
  * @param {string} goal
  * @return {boolean}
  */
- //O(n^2), O(n)
- var rotateString2 = function(s, goal) {
-    if(s.length !== goal.length) return false
+//O(n^2), O(n)
+var rotateString2 = function (s, goal) {
+    if (s.length !== goal.length) return false
     let str = goal
-    for(let i=0; i<goal.length; i++) {
-        if(s === str) return true
-       let arr = str.split('')
-       let popped = arr.pop()
-       arr.unshift(popped)
-       str = arr.join('')
+    for (let i = 0; i < goal.length; i++) {
+        if (s === str) return true
+        let arr = str.split('')
+        let popped = arr.pop()
+        arr.unshift(popped)
+        str = arr.join('')
     }
     return false
+};
+// O(n), O(n)
+var rotateString = function (s, goal) {
+    if (s.length !== goal.length) return false
+    let str = s + s
+    return str.includes(goal)
 };
