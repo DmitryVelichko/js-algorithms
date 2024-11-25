@@ -30,3 +30,16 @@
  * @param {string} goal
  * @return {boolean}
  */
+ //O(n^2), O(n)
+ var rotateString2 = function(s, goal) {
+    if(s.length !== goal.length) return false
+    let str = goal
+    for(let i=0; i<goal.length; i++) {
+        if(s === str) return true
+       let arr = str.split('')
+       let popped = arr.pop()
+       arr.unshift(popped)
+       str = arr.join('')
+    }
+    return false
+};
