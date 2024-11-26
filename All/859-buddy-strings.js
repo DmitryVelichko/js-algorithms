@@ -34,3 +34,19 @@
 var buddyStrings = function(s, goal) {
     if(s.length !== goal.length) return false
 
+    if(s === goal) {
+        let set = new Set()
+        for(let i=0; i<s.length; i++) {
+            set.add(s.charAt(i))
+        }
+        return set.size < s.length
+    }
+    let diff = []
+        for(let i=0; i<s.length; i++){
+        if(s.charAt(i) !== goal.charAt(i)) {
+            diff.push(i)
+        }
+    }
+
+    return diff.length === 2 && s.charAt(diff[0]) === goal.charAt(diff[1]) && s.charAt(diff[1]) === goal.charAt(diff[0])
+};
