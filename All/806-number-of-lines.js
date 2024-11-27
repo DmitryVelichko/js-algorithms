@@ -38,3 +38,14 @@
 // 1 <= s.length <= 1000
 // s contains only lowercase English letters.
 
+/**
+ * @param {number[]} widths
+ * @param {string} s
+ * @return {number[]}
+ */
+// O(n), O(1)
+var numberOfLines = function (widths, s) {
+    let abc = 'abcdefghijklmnopqrstuvwxyz'
+    let hash = {}
+    let lines = 1
+
