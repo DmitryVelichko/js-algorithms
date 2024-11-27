@@ -49,3 +49,19 @@ var numberOfLines = function (widths, s) {
     let hash = {}
     let lines = 1
 
+    for (let i = 0; i < abc.length; i++) {
+        hash[abc[i]] = widths[i]
+    }
+
+    let hund = 0
+    for (let i = 0; i < s.length; i++) {
+        let width = hash[s[i]]
+
+        if (hund + width > 100) {
+            ++lines;
+            hund = width
+        } else hund += width
+
+    }
+    return [lines, hund]
+}
