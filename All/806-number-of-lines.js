@@ -23,3 +23,18 @@
 // There are a total of 3 lines, and the last line is 60 pixels wide.
 // Example 2:
 
+// Input: widths = [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], s = "bbbcccdddaaa"
+// Output: [2,4]
+// Explanation: You can write s as follows:
+// bbbcccdddaa  // 98 pixels wide
+// a            // 4 pixels wide
+// There are a total of 2 lines, and the last line is 4 pixels wide.
+ 
+
+// Constraints:
+
+// widths.length == 26
+// 2 <= widths[i] <= 10
+// 1 <= s.length <= 1000
+// s contains only lowercase English letters.
+
