@@ -12,3 +12,14 @@
 // result[1] is the width of the last line in pixels.
  
 
+// Example 1:
+
+// Input: widths = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10], s = "abcdefghijklmnopqrstuvwxyz"
+// Output: [3,60]
+// Explanation: You can write s as follows:
+// abcdefghij  // 100 pixels wide
+// klmnopqrst  // 100 pixels wide
+// uvwxyz      // 60 pixels wide
+// There are a total of 3 lines, and the last line is 60 pixels wide.
+// Example 2:
+
