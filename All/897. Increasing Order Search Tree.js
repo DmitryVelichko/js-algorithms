@@ -33,3 +33,19 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var increasingBST = function(root) {
+    // Initialize two pointers, newRoot and newTree, to null.
+    let newRoot = null, newTree = null;
+
+    // Define a recursive helper function that will traverse the tree in-order.
+    const helper = (node) => {
+        // If the current node is null, return.
+        if(!node) return;
+
+        // Traverse the left subtree first.
+        helper(node.left);
+
