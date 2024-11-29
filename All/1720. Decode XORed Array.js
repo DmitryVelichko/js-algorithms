@@ -25,3 +25,10 @@
 // Output: [4,2,0,7,4]
  
 
+// Constraints:
+
+// 2 <= n <= 104
+// encoded.length == n - 1
+// 0 <= encoded[i] <= 105
+// 0 <= first <= 105
+
