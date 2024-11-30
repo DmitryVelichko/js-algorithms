@@ -44,3 +44,26 @@
 
  
 
+// Constraints:
+
+// 1 <= nums.length <= 100
+// 1 <= nums[i] <= 99
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+// O(n), O(n)
+var canAliceWin1 = function (nums) {
+    let single = []
+    let double = []
+    for (let num of nums) {
+        if (num >= 10) double.push(num)
+        else single.push(num)
+    }
+
+    const sin = single.reduce((acc, curr) => acc + curr, 0)
+    const doub = double.reduce((acc, curr) => acc + curr, 0)
+
+    if (sin > doub || doub > sin) return true
+    else return false
+};
