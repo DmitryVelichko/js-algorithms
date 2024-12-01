@@ -11,3 +11,20 @@
 // You are given an integer n representing the size of the grid and an array of strings commands where each command[i] is either "UP", "RIGHT", "DOWN", and "LEFT". It's guaranteed that the snake will remain within the grid boundaries throughout its movement.
 
 // Return the position of the final cell where the snake ends up after executing commands.
+
+
+
+// Example 1:
+
+// Input: n = 2, commands = ["RIGHT","DOWN"]
+
+// Output: 3
+
+// Explanation:
+
+// 0	1
+// 2	3
+// 0	1
+// 2	3
+// 0	1
+// 2	3
