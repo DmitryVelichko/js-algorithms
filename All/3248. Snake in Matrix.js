@@ -63,3 +63,14 @@
  * @return {number}
  */
 // O(k), where k is number of commands in array, O(1)
+var finalPositionOfSnake = function (n, commands) {
+    let row = 0
+    let col = 0
+    for (let command of commands) {
+        if (command === "LEFT") col--
+        else if (command === "RIGHT") col++
+        else if (command === "UP") row--
+        else if (command === "DOWN") row++
+    }
+    return (row * n) + col
+};
