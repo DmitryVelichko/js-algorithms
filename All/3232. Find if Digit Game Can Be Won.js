@@ -12,3 +12,13 @@
 
  
 
+// Example 1:
+
+// Input: nums = [1,2,3,4,10]
+
+// Output: false
+
+// Explanation:
+
+// Alice cannot win by choosing either single-digit or double-digit numbers.
+
