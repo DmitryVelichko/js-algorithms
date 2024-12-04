@@ -61,3 +61,9 @@ var canAliceWin1 = function (nums) {
         else single.push(num)
     }
 
+    const sin = single.reduce((acc, curr) => acc + curr, 0)
+    const doub = double.reduce((acc, curr) => acc + curr, 0)
+
+    if (sin > doub || doub > sin) return true
+    else return false
+};
