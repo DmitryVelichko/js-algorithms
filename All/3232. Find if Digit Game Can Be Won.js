@@ -40,3 +40,24 @@
 
 // Explanation:
 
+// Alice can win by choosing double-digit numbers which have a sum equal to 25.
+
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 100
+// 1 <= nums[i] <= 99
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+// O(n), O(n)
+var canAliceWin1 = function (nums) {
+    let single = []
+    let double = []
+    for (let num of nums) {
+        if (num >= 10) double.push(num)
+        else single.push(num)
+    }
+
