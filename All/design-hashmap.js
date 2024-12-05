@@ -12,3 +12,17 @@
 var MyHashMap = function() {
     this.hashMap = new Array(1000001)
 };
+
+/** 
+ * @param {number} key 
+ * @param {number} value
+ * @return {void}
+ */
+MyHashMap.prototype.put = function(key, value) {
+    this.hashMap[key] = value
+};
+
+/** 
+ * @param {number} key
+ * @return {number}
+ */
