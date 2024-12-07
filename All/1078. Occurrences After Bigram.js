@@ -29,3 +29,10 @@
 // first and second consist of lowercase English letters.
 // text will not have any leading or trailing spaces.
 
+/**
+ * @param {string} text
+ * @param {string} first
+ * @param {string} second
+ * @return {string[]}
+ */
+// O(n), O(n)
