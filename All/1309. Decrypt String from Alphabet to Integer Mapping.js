@@ -24,3 +24,14 @@
 // Output: "acz"
 
 
+// Constraints:
+
+// 1 <= s.length <= 1000
+// s consists of digits and the '#' letter.
+// s will be a valid string such that mapping is always possible.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(n), O(n)
