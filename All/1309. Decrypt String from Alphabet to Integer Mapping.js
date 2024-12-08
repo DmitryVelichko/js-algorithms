@@ -12,3 +12,15 @@
 // The test cases are generated so that a unique mapping will always exist.
 
 
+
+// Example 1:
+
+// Input: s = "10#11#12"
+// Output: "jkab"
+// Explanation: "j" -> "10#" , "k" -> "11#" , "a" -> "1" , "b" -> "2".
+// Example 2:
+
+// Input: s = "1326#"
+// Output: "acz"
+
+
