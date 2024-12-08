@@ -35,3 +35,17 @@
  * @return {string}
  */
 // O(n), O(n)
+var freqAlphabets = function (s) {
+    let result = [];
+    for (let i = s.length - 1; i >= 0; i--) {
+        if (s[i] === '#') {
+            let num = parseInt(s.slice(i - 2, i)); // Get two digits before #
+            result.push(String.fromCharCode(96 + num));
+            i -= 2; // Skip the processed digits
+        } else {
+            let num = parseInt(s[i]); // Single digit
+            result.push(String.fromCharCode(96 + num));
+        }
+    }
+    return result.reverse().join(''); // Reverse the result to correct the order
+}
