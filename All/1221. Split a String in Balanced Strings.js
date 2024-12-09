@@ -59,3 +59,16 @@ var balancedStringSplit = function (s) {
     return res
 };
 
+var balancedStringSplit = function (s) {
+    let balance = 0;
+    let res = 0;
+
+    for (let char of s) {
+        balance += char === "L" ? 1 : -1;
+        if (balance === 0) {
+            ++res;
+        }
+    }
+    return res;
+};
+
