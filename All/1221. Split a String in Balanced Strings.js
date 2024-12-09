@@ -41,3 +41,9 @@
  * @param {string} s
  * @return {number}
  */
+// O(n), O(1)
+var balancedStringSplit = function (s) {
+    let l = 0
+    let r = 0
+    let res = 0
+
