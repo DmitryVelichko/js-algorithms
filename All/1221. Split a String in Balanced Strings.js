@@ -47,3 +47,15 @@ var balancedStringSplit = function (s) {
     let r = 0
     let res = 0
 
+    for (let char of s) {
+        if (char === "L") ++l
+        if (char === 'R') ++r
+        if (l === r) {
+            ++res;
+            l = 0;
+            r = 0;
+        }
+    }
+    return res
+};
+
