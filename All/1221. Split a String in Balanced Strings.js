@@ -26,3 +26,18 @@
 // Note that s cannot be split into "RL", "RR", "RL", "LR", "LL", because the 2nd and 5th substrings are not balanced.
 // Example 3:
 
+// Input: s = "LLLLRRRR"
+// Output: 1
+// Explanation: s can be split into "LLLLRRRR".
+
+
+// Constraints:
+
+// 2 <= s.length <= 1000
+// s[i] is either 'L' or 'R'.
+// s is a balanced string.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
