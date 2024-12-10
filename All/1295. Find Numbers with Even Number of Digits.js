@@ -51,3 +51,22 @@ var findNumbers = function (nums) {
     return res; // Return the result
 };
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+//  O(n) or O(n*d), d is the number of digits, 5 digits is constraint for task, O(1)
+var findNumbers = function (nums) {
+    let res = 0;
+    for (let num of nums) {
+        let digitCount = 0;
+        while (num > 0) {
+            num = Math.floor(num / 10);
+            digitCount++;
+        }
+        if (digitCount % 2 === 0) {
+            res++;
+        }
+    }
+    return res;
+};
