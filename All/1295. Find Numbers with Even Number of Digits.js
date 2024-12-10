@@ -27,4 +27,17 @@
 // Only 1771 contains an even number of digits.
 
 
-/
+// Constraints:
+
+// 1 <= nums.length <= 500
+// 1 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// O(n*d) => O(n) ignoring the temporary space for the string conversion which is negligible for constant d, space: O(1)
