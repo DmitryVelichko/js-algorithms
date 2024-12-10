@@ -41,3 +41,13 @@
  * @return {number}
  */
 // O(n*d) => O(n) ignoring the temporary space for the string conversion which is negligible for constant d, space: O(1)
+var findNumbers = function (nums) {
+    let res = 0; // Initialize the result counter
+    for (let num of nums) {
+        if (String(num).length % 2 === 0) { // Check if the length is even
+            ++res;
+        }
+    }
+    return res; // Return the result
+};
+
