@@ -23,5 +23,16 @@
 // Explanation: "pro" is prefix of "problem" which is the 2nd and the 6th word in the sentence, but we return 2 as it's the minimal index.
 // Example 3:
 
+// Input: sentence = "i am tired", searchWord = "you"
+// Output: -1
+// Explanation: "you" is not a prefix of any word in the sentence.
+
+
+// Constraints:
+
+// 1 <= sentence.length <= 100
+// 1 <= searchWord.length <= 10
+// sentence consists of lowercase English letters and spaces.
+// searchWord consists of lowercase English letters.
 
 
