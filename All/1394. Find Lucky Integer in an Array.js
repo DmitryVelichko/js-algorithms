@@ -58,3 +58,18 @@ var findLucky = function (arr) {
 
     return res;
 };
+
+
+// O(n), O(n)
+var findLucky = function (arr) {
+    let hash = {}
+    let res = -1
+    for (let num of arr) {
+        hash[num] = (hash[num] || 0) + 1
+    }
+
+    for (let num of arr) {
+        if (num === hash[num]) res = Math.max(res, num)
+    }
+    return res
+};
