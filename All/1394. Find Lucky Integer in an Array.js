@@ -26,3 +26,35 @@
 // Output: -1
 // Explanation: There are no lucky numbers in the array.
 
+
+// Constraints:
+
+// 1 <= arr.length <= 500
+// 1 <= arr[i] <= 500
+
+/**
+ * @param {number[]} arr
+ * @return {number}
+ */
+
+// O(n), O(1)
+/**
+* @param {number[]} arr
+* @return {number}
+*/
+var findLucky = function (arr) {
+    const freq = new Array(501).fill(0); // Fixed-size array for frequencies
+
+    for (let num of arr) {
+        freq[num]++; // Count frequencies
+    }
+
+    let res = -1;
+    for (let i = 1; i <= 500; i++) {
+        if (freq[i] === i) {
+            res = i; // Update the result with the largest lucky number
+        }
+    }
+
+    return res;
+};
