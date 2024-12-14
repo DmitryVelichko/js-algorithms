@@ -23,3 +23,14 @@
 // Output: ""
 // Explanation: "leetcode" has only characters so we cannot separate them by digits.
 // Example 3:
+
+// Input: s = "1229857369"
+// Output: ""
+// Explanation: "1229857369" has only digits so we cannot separate them by characters.
+
+
+// Constraints:
+
+// 1 <= s.length <= 500
+// s consists of only lowercase English letters and/or digits.
+
