@@ -12,3 +12,14 @@
 
 
 
+// Example 1:
+
+// Input: s = "a0b1c2"
+// Output: "0a1b2c"
+// Explanation: No two adjacent characters have the same type in "0a1b2c". "a0b1c2", "0a1b2c", "0c2a1b" are also valid permutations.
+// Example 2:
+
+// Input: s = "leetcode"
+// Output: ""
+// Explanation: "leetcode" has only characters so we cannot separate them by digits.
+// Example 3:
