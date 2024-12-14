@@ -51,3 +51,14 @@ var reformat = function (s) {
     if (Math.abs(num.length - str.length) > 1) {
         return res
     }
+    // if str[] is longer, then it should be popped() first
+    if (str.length > num.length) {
+        [num, str] = [str, num];
+    }
+
+    while (num.length || str.length) {
+        if (num.length) res += num.pop()
+        if (str.length) res += str.pop()
+    }
+    return res
+};
