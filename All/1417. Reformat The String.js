@@ -34,3 +34,20 @@
 // 1 <= s.length <= 500
 // s consists of only lowercase English letters and/or digits.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(n), O(n)
+var reformat = function (s) {
+    let res = ''
+    let num = []
+    let str = []
+
+    for (let char of s) {
+        if (isNaN(char)) str.push(char)
+        else num.push(char)
+    }
+    if (Math.abs(num.length - str.length) > 1) {
+        return res
+    }
