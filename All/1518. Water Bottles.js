@@ -39,3 +39,15 @@
  */
 // Time Complexity: O(log numExchange ​(numBottles)).
 // Space: O(1)
+var numWaterBottles = function (numBottles, numExchange) {
+    let totalDrunk = numBottles;
+    let emptyBottles = numBottles;
+
+    while (emptyBottles >= numExchange) {
+        const newBottles = Math.floor(emptyBottles / numExchange);
+        totalDrunk += newBottles;
+        emptyBottles = emptyBottles % numExchange + newBottles;
+    }
+
+    return totalDrunk;
+};
