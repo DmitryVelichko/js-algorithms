@@ -18,3 +18,24 @@
 // Explanation: [5,7,23] are three consecutive odds.
  
 
+// Constraints:
+
+// 1 <= arr.length <= 1000
+// 1 <= arr[i] <= 1000
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var threeConsecutiveOdds = function(arr) {
+    let count = 0
+    for(let num of arr) {
+        if(!(num % 2 === 0)) {
+            count++
+        } else {
+            count = 0
+        }
+        if (count === 3) return true
+    }
+    return false
+};
