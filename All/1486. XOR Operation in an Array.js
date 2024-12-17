@@ -31,8 +31,18 @@
 // 0 <= start <= 1000
 // n == nums.length
 
+
 /**
- * @param {number} n
- * @param {number} start
- * @return {number}
- */
+* @param {number} n
+* @param {number} start
+* @return {number}
+*/
+// O(n), O(1)
+var xorOperation = function (n, start) {
+    let res = 0;
+    for (let i = 0; i < n; i++) {
+        res = res ^ (start + 2 * i); // Compute XOR directly
+    }
+    return res;
+};
+
