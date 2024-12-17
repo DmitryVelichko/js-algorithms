@@ -46,3 +46,16 @@ var xorOperation = function (n, start) {
     return res;
 };
 
+// O(n), O(n)
+var xorOperation = function (n, start) {
+    const nums = new Array(n)
+    for (let i = 0; i < nums.length; i++) {
+        nums[i] = start + 2 * i
+    }
+
+    let res = 0
+    for (let num of nums) {
+        res = res ^ num
+    }
+    return res
+};
