@@ -34,3 +34,12 @@
 // s consists of only English letters and spaces ' '.
 // There will be at least one word in s.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// O(n), O(n)
+var lengthOfLastWord = function (s) {
+    const str = s.trim().split(' ')
+    return (str[str.length - 1].length)
+};
