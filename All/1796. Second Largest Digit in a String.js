@@ -51,3 +51,23 @@ var secondHighest = function (s) {
     return second;
 };
 
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+
+// Time: O(n + k log k/ O(1)since 10 digits) => O(n)
+// Space: O(1), since set stores 10 unique digits
+var secondHighest = function (s) {
+    let res = -1
+    let set = new Set()
+    for (let char of s) {
+        if (!isNaN(char)) set.add(Number(char))
+    }
+    let arr = [...set]
+    arr.sort((a, b) => a - b)
+
+    if (arr.length >= 2) res = arr[arr.length - 2]
+    return res
+};
