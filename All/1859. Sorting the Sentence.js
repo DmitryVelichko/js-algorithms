@@ -55,3 +55,12 @@ var sortSentence = function (s) {
     // Create an array to store the sorted words
     let result = new Array(arr.length);
 
+    // Place each word in its correct position
+    for (let word of arr) {
+        let position = word[word.length - 1] - 1; // Convert char to 0-based index
+        result[position] = word.slice(0, -1); // Remove the digit and assign the word
+    }
+
+    // Join the sorted words into a sentence
+    return result.join(' ');
+};
