@@ -25,3 +25,11 @@
 // Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I4", then remove the numbers.
 
 
+// Constraints:
+
+// 2 <= s.length <= 200
+// s consists of lowercase and uppercase English letters, spaces, and digits from 1 to 9.
+// The number of words in s is between 1 and 9.
+// The words in s are separated by a single space.
+// s contains no leading or trailing spaces.
+
