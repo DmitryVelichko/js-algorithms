@@ -33,3 +33,18 @@
 // The words in s are separated by a single space.
 // s contains no leading or trailing spaces.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// k is the number of words and is a constant, from 1 to 9
+//time O(n * k logk) => O(n),space O(k) => O(1)
+var sortSentence = function (s) {
+
+    let arr = s.split(' ')
+
+    arr.sort((word1, word2) => word1[word1.length - 1] - word2[word2.length - 1])
+
+    return arr.map((word) => word.slice(0, word.length - 1)).join(' ')
+};
+
