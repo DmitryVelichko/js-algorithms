@@ -48,3 +48,10 @@ var sortSentence = function (s) {
     return arr.map((word) => word.slice(0, word.length - 1)).join(' ')
 };
 
+var sortSentence = function (s) {
+    // Split the string into words
+    let arr = s.split(' ');
+
+    // Create an array to store the sorted words
+    let result = new Array(arr.length);
+
