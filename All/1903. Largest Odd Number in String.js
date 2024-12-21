@@ -22,3 +22,13 @@
 // Explanation: There are no odd numbers in "4206".
 // Example 3:
 
+// Input: num = "35427"
+// Output: "35427"
+// Explanation: "35427" is already an odd number.
+
+
+// Constraints:
+
+// 1 <= num.length <= 105
+// num only consists of digits and does not contain any leading zeros.
+
