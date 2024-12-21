@@ -32,3 +32,8 @@
 // 1 <= num.length <= 105
 // num only consists of digits and does not contain any leading zeros.
 
+/**
+ * @param {string} num
+ * @return {string}
+ */
+// O(n), O(1)
