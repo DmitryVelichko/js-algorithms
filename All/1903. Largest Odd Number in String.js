@@ -37,3 +37,14 @@
  * @return {string}
  */
 // O(n), O(1)
+var largestOddNumber = function (num) {
+    // Traverse the string from the end to find the first odd digit
+    for (let i = num.length - 1; i >= 0; i--) {
+        if (Number(num[i]) % 2 !== 0) {
+            // Return the substring from the start to this index
+            return num.slice(0, i + 1);
+        }
+    }
+    // If no odd digit is found, return an empty string
+    return "";
+};
