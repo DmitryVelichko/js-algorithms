@@ -16,3 +16,13 @@
 // Output: false
 // Explantion: 2 has only two divisors: 1 and 2.
 // Example 2:
+
+// Input: n = 4
+// Output: true
+// Explantion: 4 has three divisors: 1, 2, and 4.
+
+
+// Constraints:
+
+// 1 <= n <= 104
+
