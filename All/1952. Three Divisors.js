@@ -10,3 +10,9 @@
 
 
 
+// Example 1:
+
+// Input: n = 2
+// Output: false
+// Explantion: 2 has only two divisors: 1 and 2.
+// Example 2:
