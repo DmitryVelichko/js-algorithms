@@ -43,3 +43,14 @@ var getConcatenation = function (nums) {
     return [...nums, ...nums]
 };
 
+// 1 pass
+// O(n), O(n)
+var getConcatenation = function (nums) {
+    const n = nums.length;
+    const ans = new Array(2 * n);
+    for (let i = 0; i < n; i++) {
+        ans[i] = nums[i];       // Fill the first half
+        ans[i + n] = nums[i];   // Fill the second half
+    }
+    return ans;
+};
