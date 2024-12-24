@@ -24,3 +24,14 @@
 // The earlier year between them is 1960.
 
 
+// Constraints:
+
+// 1 <= logs.length <= 100
+// 1950 <= birthi < deathi <= 2050
+
+/**
+ * @param {number[][]} logs
+ * @return {number}
+ */
+//  Time Complexity: O(n+y), where n is the number of logs and y is the range of years (constant 101). Updating yearChanges takes O(n). Iterating through yearChanges takes O(y), which is effectively constant.
+// Space Complexity: O(y), for the yearChanges array of size 101.
