@@ -27,3 +27,10 @@
 // [2,3,1] is the result of removing the element at index 3.
 // No resulting array is strictly increasing, so return false.
 // Example 3:
+
+// Input: nums = [1,1,1]
+// Output: false
+// Explanation: The result of removing any element is [1,1].
+// [1,1] is not strictly increasing, so return false.
+
+
