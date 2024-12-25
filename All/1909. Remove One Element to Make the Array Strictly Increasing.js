@@ -10,3 +10,20 @@
 
 
 
+// Example 1:
+
+// Input: nums = [1,2,10,5,7]
+// Output: true
+// Explanation: By removing 10 at index 2 from nums, it becomes [1,2,5,7].
+// [1,2,5,7] is strictly increasing, so return true.
+// Example 2:
+
+// Input: nums = [2,3,1,2]
+// Output: false
+// Explanation:
+// [3,1,2] is the result of removing the element at index 0.
+// [2,1,2] is the result of removing the element at index 1.
+// [2,3,2] is the result of removing the element at index 2.
+// [2,3,1] is the result of removing the element at index 3.
+// No resulting array is strictly increasing, so return false.
+// Example 3:
