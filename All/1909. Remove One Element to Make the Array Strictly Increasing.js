@@ -34,3 +34,21 @@
 // [1,1] is not strictly increasing, so return false.
 
 
+// Constraints:
+
+// 2 <= nums.length <= 1000
+// 1 <= nums[i] <= 1000
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var canBeIncreasing = function (nums) {
+    const isStrictlyIncreasing = (arr) => {
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] <= arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    };
