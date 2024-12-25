@@ -52,3 +52,11 @@ var canBeIncreasing = function (nums) {
         }
         return true;
     };
+    for (let i = 0; i < nums.length; i++) {
+        const arr = nums.slice(0, i).concat(nums.slice(i + 1));
+
+        if (isStrictlyIncreasing(arr)) return true
+
+    }
+    return false
+};
