@@ -36,3 +36,11 @@
 
 
 // Follow-up: Can you solve it without using an extra space (i.e., O(1) memory)?
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var buildArray = function (nums) {
+    return nums.map(a => nums[a]);
+};
