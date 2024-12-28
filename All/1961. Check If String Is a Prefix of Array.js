@@ -24,3 +24,24 @@
 // It is impossible to make s using a prefix of arr.
 
 
+// Constraints:
+
+// 1 <= words.length <= 100
+// 1 <= words[i].length <= 20
+// 1 <= s.length <= 1000
+// words[i] and s consist of only lowercase English letters.
+
+/**
+ * @param {string} s
+ * @param {string[]} words
+ * @return {boolean}
+ */
+var isPrefixString = function (s, words) {
+
+    let res = ''
+    for (let word of words) {
+        res += word
+        if (res === s) return true
+    }
+    return false
+};
