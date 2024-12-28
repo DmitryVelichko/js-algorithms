@@ -17,3 +17,10 @@
 // Explanation:
 // s can be made by concatenating "i", "love", and "leetcode" together.
 // Example 2:
+
+// Input: s = "iloveleetcode", words = ["apples","i","love","leetcode"]
+// Output: false
+// Explanation:
+// It is impossible to make s using a prefix of arr.
+
+
