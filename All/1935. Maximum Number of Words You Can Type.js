@@ -42,3 +42,20 @@
  * @return {number}
  */
 
+// O(n+b), O(n+b), n is the number of chars in text, b is the number of chars in brokenLetters
+var canBeTypedWords = function (text, brokenLetters) {
+    const arr = text.split(' ')
+    const brokenSet = new Set(brokenLetters);
+    let count = 0
+    for (let word of arr) {
+        let canType = true
+        for (let char of word) {
+            if (brokenSet.has(char)) {
+                canType = false;
+                break;
+            }
+        }
+        if (canType) count++
+    }
+    return count
+};
