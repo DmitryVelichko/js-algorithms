@@ -47,3 +47,19 @@
 
 // 1 <= n <= 1000
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+// O(b*k), O(b)
+var smallestNumber = function (n) {
+    let i = n;
+    while (true) {
+        let binary = i.toString(2);
+        if (!binary.includes('0')) {
+            return i;
+        }
+        i++;
+    }
+};
+
