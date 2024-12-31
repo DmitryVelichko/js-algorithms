@@ -63,3 +63,29 @@ var smallestNumber = function (n) {
     }
 };
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+// O(log n), O(1)
+var smallestNumber = function (n) {
+    let k = 0; // Number of bits in n
+    let temp = n;
+
+    // Count the number of bits in the binary representation of n
+    while (temp > 0) {
+        k++;
+        temp >>= 1; // Right-shift to count bits
+    }
+
+    // Compute the smallest number with all bits set (2^k - 1)
+    let result = (1 << k) - 1;
+
+    // If result is smaller than n, increase k to get the next all-bits-set number
+    if (result < n) {
+        k++;
+        result = (1 << k) - 1;
+    }
+
+    return result;
+};
