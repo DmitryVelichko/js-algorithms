@@ -46,3 +46,28 @@
 // 1 <= nums.length <= 100
 // -100 <= nums[i] <= 100
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
+// O(n), O(n)
+var constructTransformedArray = function (nums) {
+    const result = [];
+    const n = nums.length; // Store length of the array
+    for (let i = 0; i < n; i++) {
+        if (nums[i] > 0) {
+            // Move nums[i] steps to the right
+            const newIndex = (i + nums[i] % n) % n; // Modulo to handle large steps
+            result[i] = nums[newIndex];
+        } else if (nums[i] < 0) {
+            // Move abs(nums[i]) steps to the left
+            const newIndex = (i + (nums[i] % n) + n) % n; // Modulo to handle negative index
+            result[i] = nums[newIndex];
+        } else {
+            // If nums[i] == 0, just copy nums[i]
+            result[i] = nums[i];
+        }
+    }
+    return result;
+};
