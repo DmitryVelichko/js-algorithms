@@ -42,3 +42,26 @@
 // n == grid[i].length
 // 1 <= m, n <= 50
 // 0 <= grid[i][j] < 2500
+
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+// O(rows*cols), O(1)
+var minimumOperations = function (grid) {
+    let operations = 0;
+
+    for (let j = 0; j < grid[0].length; j++) {
+        for (let i = 1; i < grid.length; i++) {
+            if (grid[i][j] <= grid[i - 1][j]) {
+                // Calculate the required increment
+                let increment = grid[i - 1][j] + 1 - grid[i][j];
+                grid[i][j] += increment; // Apply the increment
+                operations += increment; // Count the operations
+            }
+        }
+    }
+
+    return operations;
+};
+
