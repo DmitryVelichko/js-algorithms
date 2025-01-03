@@ -37,3 +37,17 @@
 // 2 <= s.length <= 100
 // s consists only of lowercase English letters.
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// O(n), O(1)
+var scoreOfString = function (s) {
+    let res = 0
+
+    for (let i = 1; i < s.length; i++) {
+        res += Math.abs(s[i].charCodeAt() - s[i - 1].charCodeAt())
+    }
+    return res
+
+};
