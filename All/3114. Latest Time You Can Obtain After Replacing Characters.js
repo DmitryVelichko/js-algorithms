@@ -29,3 +29,13 @@
 // Output: "09:59"
 
 // Explanation: The latest 12-hour format time we can achieve by replacing "?" characters is "09:59".
+
+
+
+// Constraints:
+
+// s.length == 5
+// s[2] is equal to the character ":".
+// All characters except s[2] are digits or "?" characters.
+// The input is generated such that there is at least one time between "00:00" and "11:59" that you can obtain after replacing the "?" characters.
+
