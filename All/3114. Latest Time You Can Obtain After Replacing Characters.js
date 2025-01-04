@@ -39,3 +39,17 @@
 // All characters except s[2] are digits or "?" characters.
 // The input is generated such that there is at least one time between "00:00" and "11:59" that you can obtain after replacing the "?" characters.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(1), O(1)
+var findLatestTime = function (s) {
+    const arr = s.split('')
+    if (arr[0] === '?') arr[0] = (arr[1] === '?' || arr[1] < '2') ? '1' : '0';
+    if (arr[1] === '?') arr[1] = (arr[0] === '1') ? '1' : '9';
+    if (arr[3] === '?') arr[3] = '5';
+    if (arr[4] === '?') arr[4] = '9';
+
+    return arr.join('')
+}
