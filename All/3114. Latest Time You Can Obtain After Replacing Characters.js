@@ -11,3 +11,21 @@
 // You have to replace all the "?" characters in s with digits such that the time we obtain by the resulting string is a valid 12-hour format time and is the latest possible.
 
 // Return the resulting string.
+
+
+
+// Example 1:
+
+// Input: s = "1?:?4"
+
+// Output: "11:54"
+
+// Explanation: The latest 12-hour format time we can achieve by replacing "?" characters is "11:54".
+
+// Example 2:
+
+// Input: s = "0?:5?"
+
+// Output: "09:59"
+
+// Explanation: The latest 12-hour format time we can achieve by replacing "?" characters is "09:59".
