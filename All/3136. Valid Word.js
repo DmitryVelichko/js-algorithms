@@ -39,3 +39,16 @@
 // Explanation:
 
 // The length of this word is fewer than 3, and does not have a vowel.
+
+// Example 3:
+
+// Input: word = "a3$e"
+
+// Output: false
+
+// Explanation:
+
+// This word contains a '$' character and does not have a consonant.
+
+
+
