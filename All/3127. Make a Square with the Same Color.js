@@ -35,3 +35,22 @@
 
 // It cannot be done by changing at most one cell.
 
+// Example 3:
+
+
+// Input: grid = [["B","W","B"],["B","W","W"],["B","W","W"]]
+
+// Output: true
+
+// Explanation:
+
+// The grid already contains a 2 x 2 square of the same color.
+
+
+
+// Constraints:
+
+// grid.length == 3
+// grid[i].length == 3
+// grid[i][j] is either 'W' or 'B'.
+
