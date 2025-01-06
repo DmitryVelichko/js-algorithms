@@ -24,3 +24,14 @@
 
 // It can be done by changing the color of the grid[0][2].
 
+// Example 2:
+
+
+// Input: grid = [["B","W","B"],["W","B","W"],["B","W","B"]]
+
+// Output: false
+
+// Explanation:
+
+// It cannot be done by changing at most one cell.
+
