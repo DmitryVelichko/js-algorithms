@@ -11,3 +11,16 @@
 // Return true if it is possible to create a 2 x 2 square of the same color, otherwise, return false.
 
 
+
+// Example 1:
+
+
+
+// Input: grid = [["B","W","B"],["B","W","W"],["B","W","B"]]
+
+// Output: true
+
+// Explanation:
+
+// It can be done by changing the color of the grid[0][2].
+
