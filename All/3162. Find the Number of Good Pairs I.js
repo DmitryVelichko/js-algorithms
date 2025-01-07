@@ -23,3 +23,12 @@
 // The 5 good pairs are (0, 0), (1, 0), (1, 1), (2, 0), and (2, 2).
 // Example 2:
 
+// Input: nums1 = [1,2,4,12], nums2 = [2,4], k = 3
+
+// Output: 2
+
+// Explanation:
+
+// The 2 good pairs are (3, 0) and (3, 1).
+
+
