@@ -45,3 +45,13 @@
  * @param {number} k
  * @return {number}
  */
+// O(n*m), O(1)
+var numberOfPairs = function (nums1, nums2, k) {
+    let res = 0
+    for (let num1 of nums1) {
+        for (let num2 of nums2) {
+            if (num1 % (num2 * k) === 0) res++
+        }
+    }
+    return res
+};
