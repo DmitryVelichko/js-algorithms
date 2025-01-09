@@ -53,3 +53,22 @@
 // The test cases are generated in a way that there is an integer x such that nums1 can become equal to nums2 by adding x to each element of nums1.
 
 
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+// O(n), O(1)
+var addedInteger = function (nums1, nums2) {
+    function findMin(arr) {
+        let min = arr[0]
+        for (let num of arr) {
+            if (min > num) min = num
+        }
+        return min
+    }
+
+    return findMin(nums2) - findMin(nums1)
+
+};
+
