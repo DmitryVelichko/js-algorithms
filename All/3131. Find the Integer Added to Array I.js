@@ -72,3 +72,17 @@ var addedInteger = function (nums1, nums2) {
 
 };
 
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+// O(n log n), O(1)
+var addedInteger2 = function (nums1, nums2) {
+    nums1.sort((a, b) => a - b)
+    nums2.sort((a, b) => a - b)
+
+    let res = nums2[0] - nums1[0]
+    return res
+};
+
