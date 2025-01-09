@@ -24,3 +24,13 @@
 
 // The integer added to each element of nums1 is 3.
 
+// Example 2:
+
+// Input: nums1 = [10], nums2 = [5]
+
+// Output: -5
+
+// Explanation:
+
+// The integer added to each element of nums1 is -5.
+
