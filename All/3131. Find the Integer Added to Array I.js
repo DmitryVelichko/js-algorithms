@@ -34,3 +34,15 @@
 
 // The integer added to each element of nums1 is -5.
 
+// Example 3:
+
+// Input: nums1 = [1,1,1,1], nums2 = [1,1,1,1]
+
+// Output: 0
+
+// Explanation:
+
+// The integer added to each element of nums1 is 0.
+
+
+
