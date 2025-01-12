@@ -51,3 +51,19 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+// O(n), O(1)
+var removeElement = function (nums, val) {
+    let k = 0; // Pointer for placing elements not equal to val
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[k] = nums[i]; // Move the element to the `k` position
+            k++;
+        }
+    }
+    return k;
+};
