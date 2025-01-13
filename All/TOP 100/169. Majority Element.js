@@ -18,3 +18,12 @@
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
 
+
+// Constraints:
+
+// n == nums.length
+// 1 <= n <= 5 * 104
+// -109 <= nums[i] <= 109
+
+
+// Follow-up: Could you solve the problem in linear time and in O(1) space?
