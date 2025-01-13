@@ -47,3 +47,19 @@ var majorityElement = function (nums) {
     return candidate
 }
 
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// O(n), O(n)
+var majorityElement2 = function (nums) {
+    const hash = {}
+    for (let num of nums) {
+        hash[num] = (hash[num] || 0) + 1
+    }
+
+    for (let num in hash) {
+        if (hash[num] > Math.floor(nums.length / 2)) return Number(num)
+    }
+};
