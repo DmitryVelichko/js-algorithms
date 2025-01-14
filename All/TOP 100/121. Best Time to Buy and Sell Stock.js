@@ -39,3 +39,14 @@ minPrice = arr[0], maxProfit = 0,
 сравниваем текущую цену с минимальной, 
 сравниваем текущий профит с разницей между minPrice и текущей ценой
 */
+// O(n), O(1)
+var maxProfit = function (prices) {
+    let minPrice = prices[0]
+    let maxProfit = 0
+    for (let price of prices) {
+        minPrice = Math.min(minPrice, price)
+        maxProfit = Math.max(maxProfit, price - minPrice)
+    }
+
+    return maxProfit
+};
