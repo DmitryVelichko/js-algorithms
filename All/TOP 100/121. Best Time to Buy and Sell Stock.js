@@ -22,3 +22,20 @@
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
+
+
+// Constraints:
+
+// 1 <= prices.length <= 105
+// 0 <= prices[i] <= 104
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+/** 
+minPrice = arr[0], maxProfit = 0, 
+проходимся по массиву - 
+сравниваем текущую цену с минимальной, 
+сравниваем текущий профит с разницей между minPrice и текущей ценой
+*/
