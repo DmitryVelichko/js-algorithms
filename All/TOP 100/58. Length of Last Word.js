@@ -57,3 +57,14 @@ var lengthOfLastWord = function (s) {
 
     return length;
 };
+
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// O(n), O(n)
+var lengthOfLastWord = function (s) {
+    const arr = s.trim().split(' ')
+    return arr[arr.length - 1].length
+};
