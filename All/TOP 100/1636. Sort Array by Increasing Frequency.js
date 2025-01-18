@@ -35,3 +35,16 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+// O(n log n), O(unique elements)
+var frequencySort = function (nums) {
+    const hash = {}
+
+    for (let num of nums) {
+        hash[num] = (hash[num] || 0) + 1 // { 3:1 times, 1:2 times, 3:1 time}
+    }
+
+    return nums.sort((a, b) => {
+        if (hash[a] !== hash[b]) return hash[a] - hash[b]
+        else return b - a
+    })
+};
