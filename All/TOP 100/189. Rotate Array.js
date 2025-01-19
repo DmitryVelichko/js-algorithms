@@ -37,3 +37,22 @@
 // Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
 // Could you do it in-place with O(1) extra space?
 
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+// O(n), O(1)
+var rotate = function (nums, k) {
+    const n = nums.length;
+
+    k = k % n; // Handle cases where k is greater than the array length
+
+    function reverse(start, end) {
+        while (start < end) {
+            [nums[start], nums[end]] = [nums[end], nums[start]];
+            start++;
+            end--;
+        }
+    }
+
