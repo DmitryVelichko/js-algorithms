@@ -23,3 +23,14 @@
 // Output: "practice   makes   perfect "
 // Explanation: There are a total of 7 spaces and 3 words. 7 / (3-1) = 3 spaces plus 1 extra space. We place this extra space at the end of the string.
 
+
+// Constraints:
+
+// 1 <= text.length <= 100
+// text consists of lowercase English letters and ' '.
+// text contains at least one word.
+
+/**
+ * @param {string} text
+ * @return {string}
+ */
