@@ -34,3 +34,16 @@
  * @param {string} text
  * @return {string}
  */
+// O(n), O(n)
+var reorderSpaces = function (text) {
+
+    // Count total spaces and split words
+    let totalSpaces = text.split('').filter(char => char === ' ').length;
+    let words = text.trim().split(/\s+/);
+    let numWords = words.length;
+
+    // If there's only one word, return it followed by all spaces
+    if (numWords === 1) {
+        return words[0] + ' '.repeat(totalSpaces);
+    }
+
