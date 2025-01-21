@@ -47,3 +47,12 @@ var reorderSpaces = function (text) {
         return words[0] + ' '.repeat(totalSpaces);
     }
 
+    // Calculate spaces between words and extra spaces
+    let spacesBetween = Math.floor(totalSpaces / (numWords - 1));
+    let extraSpaces = totalSpaces % (numWords - 1);
+
+    // Join words with calculated spaces and add extra spaces at the end
+    let result = words.join(' '.repeat(spacesBetween)) + ' '.repeat(extraSpaces);
+
+    return result;
+}
