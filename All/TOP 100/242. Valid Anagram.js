@@ -47,3 +47,21 @@
 
 */
 
+// O(n), O(1)/O(k) - 24 буквы в алфавите
+var isAnagram = function (s, t) {
+    let hash = {}
+    if (s.length !== t.length) return false
+    for (let i = 0; i < s.length; i++) {
+        if (!hash[s[i]]) hash[s[i]] = 0
+        if (!hash[t[i]]) hash[t[i]] = 0
+
+        hash[s[i]]++
+        hash[t[i]]--
+
+    }
+
+    for (let key in hash) {
+        if (hash[key] !== 0) return false
+    }
+    return true
+};
