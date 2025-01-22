@@ -31,3 +31,19 @@
 
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+/**
+   hashmap; different length? => false;
+
+   iterate across one of the strings: {a: 0, b: 0}; a++, b--
+   
+   iterate across hash: value is not 0 ? return false
+
+   return true
+
+*/
+
