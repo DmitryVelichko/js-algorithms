@@ -55,3 +55,15 @@ closing bracket !== bracket on stack top ? => false
 
 => stack.len === 0
  */
+// O(n), O(n)
+var isValid = function (s) {
+    const stack = []
+
+    for (let char of s) {
+        if (char === '(') stack.push(')')
+        else if (char === '[') stack.push(']')
+        else if (char === '{') stack.push('}')
+        else if (stack.pop() !== char) return false
+    }
+    return stack.length === 0
+};
