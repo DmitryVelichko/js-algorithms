@@ -49,3 +49,9 @@
  * @return {boolean}
  */
 /**
+stack 
+iterate through string, for each opening braket push closing braket to stack,
+closing bracket !== bracket on stack top ? => false
+
+=> stack.len === 0
+ */
