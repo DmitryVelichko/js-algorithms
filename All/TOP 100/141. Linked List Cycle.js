@@ -49,3 +49,19 @@
  */
 // slow, fast. В цикле смещаем их на 1, 2 шага, затем проверяем: Если равны, то true
 
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+// O(n), O(1)
+var hasCycle = function (head) {
+    let slow = head
+    let fast = head
+
+    while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+        if (fast === slow) return true
+    }
+    return false
+};
