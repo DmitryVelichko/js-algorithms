@@ -33,3 +33,22 @@
 // Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
 
 
+var groupAnagrams = function (strs) {
+    let map = {};
+    for (let str of strs) {
+        let arr = new Array(26).fill(0);
+        for (let char of str) arr[char.charCodeAt() - 'a'.charCodeAt()]++;
+
+
+        let key = arr.join(' ');
+        map[key] ? map[key].push(str) : map[key] = [str];
+
+    }
+    let arr2 = [];
+    for (let key in map) {
+        arr2.push(map[key]);
+    }
+    return arr2;
+};
+
+
