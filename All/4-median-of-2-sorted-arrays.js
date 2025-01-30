@@ -28,3 +28,14 @@
 // 1 <= m + n <= 2000
 // -106 <= nums1[i], nums2[i] <= 106
 
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+
+var findMedianSortedArrays = function(nums1, nums2) {
+    if(nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1)
+    let x = nums1.length
+    let y = nums2.length
+    let low = 0, high = x
