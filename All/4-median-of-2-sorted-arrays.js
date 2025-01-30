@@ -49,3 +49,15 @@ var findMedianSortedArrays = function(nums1, nums2) {
         const minX = partitionX == nums1.length ? Number.POSITIVE_INFINITY : nums1[partitionX]
         const minY = partitionY == nums2.length ? Number.POSITIVE_INFINITY : nums2[partitionY ]
         
+        if(maxX <= minY && maxY <= minX) {
+            const lowMax = Math.max(maxX, maxY)
+            if( (x + y) % 2 == 1)
+                return lowMax
+            return (lowMax + Math.min(minX, minY)) / 2
+        } else if(maxX < minY) {
+            low = partitionX + 1
+        } else 
+            high = partitionX - 1
+    }
+    
+};
