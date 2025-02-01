@@ -47,3 +47,16 @@ var reverseWords = function (s) {
     let res = ''
     let str = s.trim()
     let resStr = ''
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== ' ') res += str[i]
+
+        if (str[i] === " " && str[i + 1] === " ") continue
+        else if (str[i] === " ") res += " "
+    }
+    const arr = res.split(" ")
+    for (let i = arr.length - 1; i >= 0; i--) {
+        resStr += arr[i]
+        if (i !== 0) resStr += " "
+    }
+    return resStr
+};
