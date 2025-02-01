@@ -38,3 +38,12 @@
 
 // Follow-up: If the string data type is mutable in your language, can you solve it in-place with O(1) extra space?
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(n), O(n)
+var reverseWords = function (s) {
+    let res = ''
+    let str = s.trim()
+    let resStr = ''
