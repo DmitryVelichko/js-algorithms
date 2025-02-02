@@ -71,3 +71,15 @@ var sumOddLengthSubarrays = function (arr) {
     return sum;
 };
 
+// O(n^3), O(n)
+var sumOddLengthSubarrays = function (arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        let arr2 = []
+        for (let j = i; j < arr.length; j++) {
+            arr2.push(arr[j])
+            if (arr2.length % 2 !== 0) sum += arr2.reduce((acc, curr) => acc + curr, 0)
+        }
+    }
+    return sum
+};
