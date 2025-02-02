@@ -48,3 +48,26 @@
 
 
 
+/**
+* @param {number[]} arr
+* @return {number}
+*/
+
+// O(n), O(1)
+var sumOddLengthSubarrays = function (arr) {
+    let sum = 0;
+    let n = arr.length;
+
+    for (let i = 0; i < n; i++) {
+        let leftCount = i + 1;  // Ways to choose left boundary
+        let rightCount = n - i; // Ways to choose right boundary
+
+        let totalSubarrays = leftCount * rightCount;
+        let oddSubarrays = Math.ceil(totalSubarrays / 2);
+
+        sum += arr[i] * oddSubarrays;
+    }
+
+    return sum;
+};
+
