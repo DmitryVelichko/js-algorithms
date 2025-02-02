@@ -36,3 +36,15 @@
 // Output: 66
 
 
+// Constraints:
+
+// 1 <= arr.length <= 100
+// 1 <= arr[i] <= 1000
+
+
+// Follow up:
+
+// Could you solve this problem in O(n) time complexity?
+
+
+
