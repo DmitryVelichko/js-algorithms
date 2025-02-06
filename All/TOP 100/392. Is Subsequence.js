@@ -46,3 +46,20 @@ var isSubsequence = function (s, t) {
 
     return i === s.length; // If `i` reached the end of `s`, it's a subsequence
 };
+
+//follow up:
+// O(m log n), O(n)
+var createIndexMap = function (t) {
+    const indexMap = new Map();
+
+    for (let i = 0; i < t.length; i++) {
+        if (!indexMap.has(t[i])) indexMap.set(t[i], []);
+        indexMap.get(t[i]).push(i);
+    }
+
+    return indexMap;
+};
+
+
+
+
