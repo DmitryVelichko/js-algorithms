@@ -76,6 +76,24 @@ var isSubsequence = function (s, tIndexMap) {
     return true;
 };
 
+// Binary search to find the next valid position
+var binarySearch = function (arr, prevIndex) {
+    let left = 0, right = arr.length;
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+        if (arr[mid] > prevIndex) right = mid;
+        else left = mid + 1;
+    }
+    return left;
+};
 
+// Precompute index map for `t` (one-time cost)
+const t = "ahbgdc";
+const tIndexMap = createIndexMap(t);
+
+// Query multiple `s` values efficiently
+console.log(isSubsequence("abc", tIndexMap)); // true
+console.log(isSubsequence("axc", tIndexMap)); // false
+console.log(isSubsequence("bcd", tIndexMap)); // true
 
 
