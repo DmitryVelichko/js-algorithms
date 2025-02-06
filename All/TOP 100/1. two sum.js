@@ -37,3 +37,13 @@
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+/**
+Вернуть индексы двух чисел дающих в сумме target 
+ 
+O(n), O(n)
+
