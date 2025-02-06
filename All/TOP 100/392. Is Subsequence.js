@@ -60,6 +60,22 @@ var createIndexMap = function (t) {
     return indexMap;
 };
 
+var isSubsequence = function (s, tIndexMap) {
+    let prevIndex = -1; // Last matched character index in `t`
+
+    for (let char of s) {
+        if (!tIndexMap.has(char)) return false; // Character not in `t`
+
+        let indices = tIndexMap.get(char);
+        let pos = binarySearch(indices, prevIndex);
+
+        if (pos === indices.length) return false; // No valid next index found
+        prevIndex = indices[pos]; // Move to the next index
+    }
+
+    return true;
+};
+
 
 
 
