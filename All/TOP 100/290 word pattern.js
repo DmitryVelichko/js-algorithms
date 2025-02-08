@@ -47,3 +47,29 @@
 // s does not contain any leading or trailing spaces.
 // All the words in s are separated by a single space.
 
+/**
+ * @param {string} pattern
+ * @param {string} s
+ * @return {boolean}
+ */
+// O(n), O(n)
+var wordPattern = function (pattern, s) {
+    const arrS = s.split(' ')
+
+    if (arrS.length !== pattern.length) return false
+
+    const charToWord = new Map() // a -> dog, b -> cat,
+    const wordToChar = new Map() // dog -> a, cat -> b,
+
+    for (let i = 0; i < arrS.length; i++) {
+        const char = pattern[i] // b
+        const word = arrS[i] // cat
+
+        if (charToWord.has(char) && charToWord.get(char) !== word) return false
+        if (wordToChar.has(word) && wordToChar.get(word) !== char) return false
+
+        charToWord.set(char, word)
+        wordToChar.set(word, char)
+    }
+    return true
+};
