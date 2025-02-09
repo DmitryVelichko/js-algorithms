@@ -28,3 +28,28 @@
 // 1 <= ransomNote.length, magazine.length <= 105
 // ransomNote and magazine consist of lowercase English letters.
 
+/**
+ * @param {string} ransomNote
+ * @param {string} magazine
+ * @return {boolean}
+ */
+// O(n+m), O(1) + optimized ealry exit
+var canConstruct = function (ransomNote, magazine) {
+    const hash = {}
+
+    for (let char of ransomNote) {
+        hash[char] = (hash[char] || 0) + 1
+    }
+
+    for (let char of magazine) {
+        if (char in hash) {
+            hash[char] = hash[char] - 1
+
+            if (hash[char] === 0) delete hash[char]
+        }
+        if (Object.keys(hash).length === 0) return true
+    }
+
+
+    return Object.keys(hash).length === 0
+}
