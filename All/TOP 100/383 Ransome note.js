@@ -53,3 +53,25 @@ var canConstruct = function (ransomNote, magazine) {
 
     return Object.keys(hash).length === 0
 }
+
+//O(n+m), O(1) - Less optimized without early exit
+
+
+/**
+ * @param {string} ransomNote
+ * @param {string} magazine
+ * @return {boolean}
+ */
+var canConstruct = function (ransomNote, magazine) {
+    let hash = {}
+
+    for (let letter of magazine) {
+        if (hash[letter] === undefined) hash[letter] = 1
+        else (hash[letter]++)
+    }
+    for (let letter of ransomNote) {
+        if (letter in hash && hash[letter] !== 0) hash[letter] -= 1
+        else return false
+    }
+    return true
+};
