@@ -33,3 +33,11 @@
 
 // The strings s and t can not be made identical as 'o' needs to be mapped to both 'a' and 'r'.
 
+// Example 3:
+
+// Input: s = "paper", t = "title"
+
+// Output: true
+
+
+
