@@ -40,3 +40,13 @@ String.prototype.substrHelper = function (start, end) {
     return result;
 }
 
+var strStr = function (haystack, needle) {
+
+
+    for (let i = 0; i <= haystack.length - needle.length; i++) {
+        if (haystack.substrHelper(i, needle.length + i) === needle) return i
+    }
+
+    return -1
+
+};
