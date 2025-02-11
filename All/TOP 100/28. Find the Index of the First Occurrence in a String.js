@@ -20,3 +20,23 @@
 // Explanation: "leeto" did not occur in "leetcode", so we return -1.
 
 
+// Constraints:
+
+// 1 <= haystack.length, needle.length <= 104
+// haystack and needle consist of only lowercase English characters.
+
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+// O(n * m), O(1)
+String.prototype.substrHelper = function (start, end) {
+    let result = "";
+    for (let i = start; i < end; i++) {
+        result += this[i];
+    }
+
+    return result;
+}
+
