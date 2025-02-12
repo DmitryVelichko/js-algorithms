@@ -15,4 +15,12 @@
 // Output: [[""]]
 // Example 3:
 
+// Input: strs = ["a"]
+// Output: [["a"]]
+
+
+// Constraints:
+
+// 1 <= strs.length <= 104
+// 0 <= strs[i].length <= 100
 
