@@ -35,3 +35,29 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+
+//O(n), O(n)
+var getMinimumDifference = function (root) {
+    let minVal = Infinity
+    let prev = null
+
+    function traversal(node) {
+        if (!node) return
+        traversal(node.left)
+
+        if (prev !== null) {
+            minVal = Math.min(minVal, node.val - prev)
+        }
+        prev = node.val
+
+        traversal(node.right)
+
+    }
+
+    traversal(root)
+    return minVal
+};
