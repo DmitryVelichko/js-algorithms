@@ -28,3 +28,21 @@
 
 // Follow up: Could you do it without any loop/recursion in O(1) runtime?
 
+/**
+ * @param {number} num
+ * @return {number}
+ */
+/**
+The digital root of a number can be computed with the formula:
+
+If num is 0, the result is 0.
+If num is divisible by 9, the result is 9.
+Otherwise, the result is num % 9. */
+
+var addDigits = function (num) {
+    if (num === 0) return 0;
+    return num % 9 === 0 ? 9 : num % 9;
+};
+
+
+
