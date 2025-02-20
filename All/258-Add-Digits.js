@@ -46,3 +46,14 @@ var addDigits = function (num) {
 
 
 
+function addDigits(num) {
+    while (num >= 10) {  // Continue until num is a single digit
+        let sumDigits = 0;
+        while (num > 0) {
+            sumDigits += num % 10;  // Add the last digit of num to sumDigits
+            num = Math.floor(num / 10);  // Remove the last digit from num
+        }
+        num = sumDigits;  // Update num to the sum of its digits
+    }
+    return num;
+}
