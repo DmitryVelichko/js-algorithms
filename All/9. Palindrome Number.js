@@ -50,3 +50,14 @@ var isPalindrome = function (x) {
 // reverse half of the number and compare it with the other half:
 // O(log10(N)) → Because we're reducing x by a factor of 10 in each iteration.
 // O(1) Space Complexity → Only a few integer variables are used.
+var isPalindrome = function (x) {
+    if (x < 0 || (x % 10 === 0 && x !== 0)) return false; // Negative & numbers ending with 0 (except 0 itself) are not palindromes
+
+    let reversedHalf = 0;
+    while (x > reversedHalf) {
+        reversedHalf = reversedHalf * 10 + x % 10;
+        x = Math.floor(x / 10);
+    }
+
+    return x === reversedHalf || x === Math.floor(reversedHalf / 10); // Handles odd and even length numbers
+};
