@@ -46,3 +46,7 @@ var isPalindrome = function (x) {
     }
     return xStr === reversed
 };
+
+// reverse half of the number and compare it with the other half:
+// O(log10(N)) → Because we're reducing x by a factor of 10 in each iteration.
+// O(1) Space Complexity → Only a few integer variables are used.
