@@ -27,3 +27,34 @@
 // Output: 6
 // Explanation: The last word is "joyboy" with length 6.
 
+
+// Constraints:
+
+// 1 <= s.length <= 104
+// s consists of only English letters and spaces ' '.
+// There will be at least one word in s.
+
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// O(n), O(1)
+var lengthOfLastWord = function (s) {
+    let length = 0;
+    let i = s.length - 1;
+
+    // Skip trailing spaces
+    while (i >= 0 && s[i] === ' ') {
+        i--;
+    }
+
+    // Count the characters of the last word
+    while (i >= 0 && s[i] !== ' ') {
+        length++;
+        i--;
+    }
+
+    return length;
+};
+
