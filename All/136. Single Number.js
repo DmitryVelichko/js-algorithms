@@ -40,3 +40,12 @@
  * @param {number[]} nums
  * @return {number}
  */
+// O(n), O(1)
+var singleNumber = function (nums) {
+    let res = 0
+    for (let num of nums) {
+        res = res ^ num
+
+    }
+    return res
+};
