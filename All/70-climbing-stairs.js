@@ -23,3 +23,22 @@
 // 2. 1 step + 2 steps
 // 3. 2 steps + 1 step
 
+
+// Constraints:
+
+// 1 <= n <= 45
+
+// O(n), O(1)
+var climbStairs = function (n) {
+    if (n <= 2) return n;
+
+    let prev1 = 1, prev2 = 2;
+
+    for (let i = 3; i <= n; i++) {
+        let curr = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = curr;
+    }
+
+    return prev2;
+};
