@@ -38,3 +38,22 @@
 // It does not matter what you leave beyond the returned k (hence they are underscores).
  
 
+// Constraints:
+
+// 1 <= nums.length <= 3 * 104
+// -100 <= nums[i] <= 100
+// nums is sorted in non-decreasing order.
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+var removeDuplicates = function(nums) {
+    let i = 0;
+    for (let j = 0; j < nums.length; j++) {
+        if (nums[j] != nums[i]) 
+            nums[++i] = nums[j];
+    }
+    return ++i;
+};
