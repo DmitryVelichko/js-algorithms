@@ -58,3 +58,28 @@ var buddyStrings = function (s, goal) {
 };
 
 
+/**
+ * @param {string} s
+ * @param {string} goal
+ * @return {boolean}
+ */
+// O(n^2), O(n)
+
+var buddyStrings1 = function (s, goal) {
+    if (s.length !== goal.length) return false;
+
+    for (let i = 0; i < s.length; i++) {
+        for (let j = i + 1; j < s.length; j++) {
+            let arr = s.split('');
+
+            //  [arr[i], arr[j]] = [arr[j], arr[i]];
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            if (arr.join('') === goal) return true;
+        }
+    }
+    return false;
+};
+
