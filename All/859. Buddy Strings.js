@@ -21,3 +21,14 @@
 // Output: false
 // Explanation: The only letters you can swap are s[0] = 'a' and s[1] = 'b', which results in "ba" != goal.
 // Example 3:
+
+// Input: s = "aa", goal = "aa"
+// Output: true
+// Explanation: You can swap s[0] = 'a' and s[1] = 'a' to get "aa", which is equal to goal.
+
+
+// Constraints:
+
+// 1 <= s.length, goal.length <= 2 * 104
+// s and goal consist of lowercase letters.
+
