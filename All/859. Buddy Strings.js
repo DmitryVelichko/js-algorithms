@@ -32,3 +32,16 @@
 // 1 <= s.length, goal.length <= 2 * 104
 // s and goal consist of lowercase letters.
 
+/**
+ * @param {string} s
+ * @param {string} goal
+ * @return {boolean}
+ */
+// O(n), O(1)
+var buddyStrings = function (s, goal) {
+    if (s.length !== goal.length) return false;
+
+    if (s === goal) {
+        let charSet = new Set(s);
+        return charSet.size < s.length; // Check if there's at least one duplicate character
+    }
