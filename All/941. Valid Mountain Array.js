@@ -15,3 +15,21 @@
 
  
 
+// Example 1:
+
+// Input: arr = [2,1]
+// Output: false
+// Example 2:
+
+// Input: arr = [3,5,5]
+// Output: false
+// Example 3:
+
+// Input: arr = [0,3,2,1]
+// Output: true
+ 
+
+// Constraints:
+
+// 1 <= arr.length <= 104
+// 0 <= arr[i] <= 104
