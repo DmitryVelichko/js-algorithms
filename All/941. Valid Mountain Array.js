@@ -13,7 +13,7 @@
 // arr[0] < arr[1] < ... < arr[i - 1] < arr[i] 
 // arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 
- 
+
 
 // Example 1:
 
@@ -27,7 +27,7 @@
 
 // Input: arr = [0,3,2,1]
 // Output: true
- 
+
 
 // Constraints:
 
@@ -45,3 +45,18 @@ var validMountainArray = function (arr) {
     let i = 0;
     let n = arr.length;
 
+    // Climb up
+    while (i + 1 < n && arr[i] < arr[i + 1]) {
+        i++;
+    }
+
+    // Peak can't be first or last
+    if (i === 0 || i === n - 1) return false;
+
+    // Climb down
+    while (i + 1 < n && arr[i] > arr[i + 1]) {
+        i++;
+    }
+
+    return i === n - 1;
+};
