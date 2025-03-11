@@ -33,3 +33,15 @@
 
 // 1 <= arr.length <= 104
 // 0 <= arr[i] <= 104
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+// O(n), O(1)
+var validMountainArray = function (arr) {
+    if (arr.length < 3) return false;
+
+    let i = 0;
+    let n = arr.length;
+
