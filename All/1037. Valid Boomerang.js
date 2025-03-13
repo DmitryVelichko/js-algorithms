@@ -18,3 +18,16 @@
 
 // Input: points = [[1, 1], [2, 2], [3, 3]]
 // Output: false
+
+
+// Constraints:
+
+// points.length == 3
+// points[i].length == 2
+// 0 <= xi, yi <= 100
+
+/**
+ * @param {number[][]} points
+ * @return {boolean}
+ */
+// O(1), O(1)
