@@ -37,3 +37,14 @@
 // After removing outer parentheses of each part, this is "" + "" = "".
 
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s[i] is either '(' or ')'.
+// s is a valid parentheses string.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(n), O(n)
