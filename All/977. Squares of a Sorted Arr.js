@@ -26,3 +26,12 @@
  
 
 // Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+// O(n log n), O(1) or O(n)
+// (for example, JavaScript's sort() often uses quicksort or mergesort,
+// which can take up to O(n) space in worst case
+// O(1) (if sorting is in-place) or O(n) (if extra space is required)
