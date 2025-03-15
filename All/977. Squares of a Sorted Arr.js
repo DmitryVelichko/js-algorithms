@@ -35,3 +35,14 @@
 // (for example, JavaScript's sort() often uses quicksort or mergesort,
 // which can take up to O(n) space in worst case
 // O(1) (if sorting is in-place) or O(n) (if extra space is required)
+
+var sortedSquaresBrute = function (nums) {
+    for (let i = 0; i < nums.length; i++) {
+        nums[i] = nums[i] * nums[i]
+    }
+    return nums.sort((a, b) => a - b)
+};
+
+//2 pointers: заполняем новый массив большИм квадратом с конца массива, сравнивая квадраты чисел
+// O(n), O(n)
+
