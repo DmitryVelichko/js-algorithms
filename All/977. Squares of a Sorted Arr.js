@@ -46,3 +46,25 @@ var sortedSquaresBrute = function (nums) {
 //2 pointers: заполняем новый массив большИм квадратом с конца массива, сравнивая квадраты чисел
 // O(n), O(n)
 
+var sortedSquares = function (nums) {
+    const res = []
+    let l = 0
+    let r = nums.length - 1
+    let index = nums.length - 1
+
+    while (l <= r) {
+        let leftSqr = nums[l] * nums[l]
+        let rightSqr = nums[r] * nums[r]
+
+        if (leftSqr > rightSqr) {
+            res[index] = leftSqr
+            l++
+        } else {
+            res[index] = rightSqr
+            r--
+        }
+        index--
+    }
+
+    return res
+}
