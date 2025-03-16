@@ -49,3 +49,25 @@
  if maxHeap is empty return 0 or top element: .front().element
  */
 //Time O(N * log(N)) | Space O(N)
+var lastStoneWeight = function (stones) {
+    const maxHeap = new MaxPriorityQueue(); // Max-Heap using priority queue
+
+    // Insert all stones into the heap
+    for (let stone of stones) {
+        maxHeap.enqueue(stone);
+    }
+
+    // Process stones
+    while (maxHeap.size() > 1) {
+        let stone1 = maxHeap.dequeue().element; // Largest stone
+        let stone2 = maxHeap.dequeue().element; // Second largest stone
+
+        if (stone1 !== stone2) {
+            maxHeap.enqueue(stone1 - stone2);
+        }
+    }
+
+    return maxHeap.size() ? maxHeap.front().element : 0;
+};
+
+
