@@ -71,3 +71,21 @@ var lastStoneWeight = function (stones) {
 };
 
 
+// Brute force inefficient: O(n^2 log n)
+
+var lastStoneWeight = function (stones) {
+    stones.sort((a, b) => a - b); // Sort stones in ascending order
+
+    while (stones.length > 1) {
+        let stone1 = stones.pop(); // Remove the heaviest stone
+        let stone2 = stones.pop(); // Remove the second heaviest stone
+
+        if (stone1 !== stone2) {
+            let newStone = stone1 - stone2;
+            stones.push(newStone); // Add the remaining weight back
+            stones.sort((a, b) => a - b); // Re-sort array
+        }
+    }
+
+    return stones.length ? stones[0] : 0;
+};
