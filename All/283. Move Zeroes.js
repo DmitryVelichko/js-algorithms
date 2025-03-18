@@ -28,3 +28,8 @@
 
 // Follow up: Could you minimize the total number of operations done?
 
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+// O(n), O(1)
