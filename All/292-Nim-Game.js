@@ -20,3 +20,17 @@
 // 2. You remove 2 stones. Your friend removes 2 stones, including the last stone. Your friend wins.
 // 3. You remove 3 stones. Your friend removes the last stone. Your friend wins.
 // In all outcomes, your friend wins.
+// Example 2:
+
+// Input: n = 1
+// Output: true
+// Example 3:
+
+// Input: n = 2
+// Output: true
+ 
+
+// Constraints:
+
+// 1 <= n <= 231 - 1
+
