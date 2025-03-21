@@ -23,3 +23,20 @@
 // Output: [48,55,66,77]
  
 
+// Constraints:
+
+// 1 <= left <= right <= 104
+// Seen this question in a real interview before?
+// 1/5
+// Yes
+// No
+// Accepted
+// 262.8K
+// Submissions
+// 332.1K
+// Acceptance Rate
+// 79.1%
+// Topics
+// Companies
+// Hint 1
+// For each number in the range, check whether it is self dividing by converting that number to a character array (or string in Python), then checking that each digit is nonzero and divides the original number.
