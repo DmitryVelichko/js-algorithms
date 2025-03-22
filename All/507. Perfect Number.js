@@ -25,3 +25,25 @@
 
 // 1 <= num <= 108
 
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+// O(sqrt(n)), O(1)
+var checkPerfectNumber = function (num) {
+    if (num <= 1) return false; // Perfect numbers are greater than 1
+
+    let sum = 1; // Start with 1 (since 1 is always a divisor)
+    let sqrt = Math.sqrt(num); // Find square root of num
+
+    for (let i = 2; i <= sqrt; i++) {
+        if (num % i === 0) { // If i is a divisor
+            sum += i; // Add divisor
+            if (i !== num / i) { // Add the pair divisor if it's not the same
+                sum += num / i;
+            }
+        }
+    }
+
+    return sum === num; // If sum of divisors equals num, it's perfect
+};
