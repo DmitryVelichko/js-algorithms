@@ -18,3 +18,26 @@
 // Output: false
  
 
+// Constraints:
+
+// 1 <= word.length <= 100
+// word consists of lowercase and uppercase English letters.
+
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+var detectCapitalUse = function(word) {
+    let upper = word.toUpperCase();
+    let lower = word.toLowerCase();
+
+    if (word === upper || word === lower) {
+        return true;
+    }
+
+    if (word[0] === upper[0] && word.slice(1) === lower.slice(1)) {
+        return true;
+    }
+
+    return false;
+};
