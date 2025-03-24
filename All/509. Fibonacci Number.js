@@ -67,3 +67,8 @@ var fib = function (n) {
     }
     return b;
 };
+// Binet formula: O(1), O(1) but Less precise for large values of n due to floating-point errors.
+var fib = function (n) {
+    let phi = (1 + Math.sqrt(5)) / 2;
+    return Math.round((Math.pow(phi, n) - Math.pow(-phi, -n)) / Math.sqrt(5));
+};
