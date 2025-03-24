@@ -54,3 +54,16 @@ var fib = function (n, memo = {}) {
     memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
     return memo[n];
 };
+// O(n), O(1) - Iterative approach
+var fib = function (n) {
+    if (n <= 1) return n;
+    let a = 0, b = 1;
+    for (let i = 2; i <= n; i++) {
+        // let temp = a + b;
+        // a = b;
+        // b = temp;
+
+        [a, b] = [b, a + b]
+    }
+    return b;
+};
