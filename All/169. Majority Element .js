@@ -65,15 +65,19 @@ var majorityElement = function (nums) {
     return candidate
 }
 
-// O(n), O(n)
-var majorityElement = function (nums) {
-    let countMap = {};
 
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// O(n), O(n)
+var majorityElement2 = function (nums) {
+    const hash = {}
     for (let num of nums) {
-        countMap[num] = (countMap[num] || 0) + 1;
-        if (countMap[num] > Math.floor(nums.length / 2)) {
-            return num;
-        }
+        hash[num] = (hash[num] || 0) + 1
+    }
+
+    for (let num in hash) {
+        if (hash[num] > Math.floor(nums.length / 2)) return Number(num)
     }
 };
-
