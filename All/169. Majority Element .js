@@ -65,3 +65,15 @@ var majorityElement = function (nums) {
     return candidate
 }
 
+// O(n), O(n)
+var majorityElement = function (nums) {
+    let countMap = {};
+
+    for (let num of nums) {
+        countMap[num] = (countMap[num] || 0) + 1;
+        if (countMap[num] > Math.floor(nums.length / 2)) {
+            return num;
+        }
+    }
+};
+
