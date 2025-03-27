@@ -15,7 +15,7 @@
 // There will not be any division by zero.
 // The input represents a valid arithmetic expression in a reverse polish notation.
 // The answer and all the intermediate calculations can be represented in a 32-bit integer.
- 
+
 
 // Example 1:
 
@@ -38,9 +38,42 @@
 // = (0 + 17) + 5
 // = 17 + 5
 // = 22
- 
+
 
 // Constraints:
 
 // 1 <= tokens.length <= 104
 // tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
+
+/**
+ * @param {string[]} tokens
+ * @return {number}
+ */
+var evalRPN = function (tokens) {
+    let stack = [];
+    const operators = new Set(["+", "-", "*", "/"]);
+
+    for (let token of tokens) {
+        if (operators.has(token)) {
+            let a = stack.pop();
+            let b = stack.pop();
+            switch (token) {
+                case "+":
+                    stack.push(b + a);
+                    break;
+                case "-":
+                    stack.push(b - a);
+                    break;
+                case "*":
+                    stack.push(b * a);
+                    break;
+                case "/":
+                    stack.push(Math.trunc(b / a));
+                    break;
+            }
+        } else {
+            stack.push(parseInt(token));
+        }
+    }
+    return stack[0];
+};
