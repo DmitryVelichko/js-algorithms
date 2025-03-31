@@ -10,7 +10,7 @@
 let singleNumber2 = function (nums) {
     let ht = {}
     for (const num of nums) {
-        ht[num] = ht[num] + 1 || 1;
+        ht[num] = (ht[num] || 0) + 1;
     }
 
     for (const key in ht) {
