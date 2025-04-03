@@ -13,3 +13,18 @@
 // If a fruit type cannot be placed in any basket, it remains unplaced.
 // Return the number of fruit types that remain unplaced after all possible allocations are made.
 
+ 
+
+// Example 1:
+
+// Input: fruits = [4,2,5], baskets = [3,5,4]
+
+// Output: 1
+
+// Explanation:
+
+// fruits[0] = 4 is placed in baskets[1] = 5.
+// fruits[1] = 2 is placed in baskets[0] = 3.
+// fruits[2] = 5 cannot be placed in baskets[2] = 4.
+// Since one fruit type remains unplaced, we return 1.
+
