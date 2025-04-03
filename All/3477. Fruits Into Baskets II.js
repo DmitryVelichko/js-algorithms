@@ -43,3 +43,10 @@
 
  
 
+// Constraints:
+
+// n == fruits.length == baskets.length
+// 1 <= n <= 100
+// 1 <= fruits[i], baskets[i] <= 1000
+
+// O(n^2), O(1)
