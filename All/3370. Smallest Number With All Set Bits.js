@@ -21,3 +21,13 @@
 
 // The binary representation of 7 is "111".
 
+// Example 2:
+
+// Input: n = 10
+
+// Output: 15
+
+// Explanation:
+
+// The binary representation of 15 is "1111".
+
