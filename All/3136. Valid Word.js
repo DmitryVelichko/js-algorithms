@@ -20,3 +20,13 @@
 // A consonant is an English letter that is not a vowel.
 
 
+// Example 1:
+
+// Input: word = "234Adas"
+
+// Output: true
+
+// Explanation:
+
+// This word satisfies the conditions.
+
