@@ -34,3 +34,20 @@
 
 // Output: [-1,-1,4]
 
+// Explanation:
+
+// For nums[0] that is equal to -1, If we move 1 step to left, we reach nums[2]. So result[0] should be -1.
+// For nums[1] that is equal to 4, If we move 4 steps to right, we reach nums[2]. So result[1] should be -1.
+// For nums[2] that is equal to -1, If we move 1 step to left, we reach nums[1]. So result[2] should be 4.
+
+
+// Constraints:
+
+// 1 <= nums.length <= 100
+// -100 <= nums[i] <= 100
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
