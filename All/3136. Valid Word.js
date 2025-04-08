@@ -68,3 +68,24 @@ var isValid = function (word) {
     return /[aeiouAEIOU]/.test(word) && /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(word)
 };
 
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+// O(n), O(1)
+var isValid2 = function (word) {
+    if (word.length < 3) return false
+    const set = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+    let consonant = false
+    let vowel = false
+    function isDigit(char) {
+        return (char >= '0' && char <= '9')
+    }
+
+    for (let char of word) {
+        if (set.has(char)) vowel = true
+        else if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) consonant = true
+        else if (!isDigit(char)) return false
+    }
+    return vowel && consonant
+};
