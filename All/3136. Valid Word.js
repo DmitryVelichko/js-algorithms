@@ -52,3 +52,19 @@
 
 
 
+// Constraints:
+
+// 1 <= word.length <= 20
+// word consists of English uppercase and lowercase letters, digits, '@', '#', and '$'.
+
+/**
+ * @param {string} word
+ * @return {boolean}
+ */
+// O(n), O(1)
+var isValid = function (word) {
+    if (word.length < 3) return false
+    if (/[^a-zA-Z0-9]/.test(word)) return false
+    return /[aeiouAEIOU]/.test(word) && /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(word)
+};
+
