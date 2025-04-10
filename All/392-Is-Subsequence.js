@@ -22,3 +22,12 @@
 // 0 <= t.length <= 104
 // s and t consist only of lowercase English letters.
 
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isSubsequence = function(s, t) {
+    let p1 = 0
+    let p2 = 0
+
