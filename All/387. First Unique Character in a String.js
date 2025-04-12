@@ -31,3 +31,24 @@
 
 
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s consists of only lowercase English letters.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+// O(n), O(1)
+var firstUniqChar = function (s) {
+    const hash = {}
+    for (let char of s) {
+        hash[char] = (hash[char] || 0) + 1
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        if (hash[s[i]] === 1) return i
+    }
+    return -1
+};
