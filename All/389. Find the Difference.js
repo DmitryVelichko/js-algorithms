@@ -17,3 +17,51 @@
 // Output: "e"
 // Explanation: 'e' is the letter that was added.
 // Example 2:
+
+// Input: s = "", t = "y"
+// Output: "y"
+
+
+// Constraints:
+
+// 0 <= s.length <= 1000
+// t.length == s.length + 1
+// s and t consist of lowercase English letters.
+
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {character}
+ */
+// O(n), O(1)
+var findTheDifference = function (s, t) {
+    const hash = {}
+    for (let char of t) {
+        hash[char] = (hash[char] || 0) + 1
+    }
+
+    for (let char of s) {
+        if (char in hash) {
+            hash[char] = --hash[char]
+            if (hash[char] === 0) delete hash[char]
+        }
+    }
+    for (let char of Object.keys(hash)) {
+        return char
+    }
+};
+// O(n), O(1) - XOR solution
+var findTheDifference = function (s, t) {
+    let result = 0;
+
+    for (let char of s) {
+        result ^= char.charCodeAt(0);
+    }
+
+    for (let char of t) {
+        result ^= char.charCodeAt(0);
+    }
+
+    return String.fromCharCode(result);
+};
