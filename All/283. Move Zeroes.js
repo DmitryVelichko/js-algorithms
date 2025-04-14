@@ -42,3 +42,21 @@ var moveZeroes = function (nums) {
         }
     }
 };
+// Follow up: minimize total number of swaps
+function moveZeroes(nums) {
+    let insertPos = 0;
+
+    // First pass: move non-zeroes forward
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[insertPos] = nums[i];
+            insertPos++;
+        }
+    }
+    // [1,3,12,3,12]
+
+    // Second pass: fill the rest with zeroes
+    for (let i = insertPos; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+}
