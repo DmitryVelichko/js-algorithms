@@ -25,3 +25,26 @@
 // Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I4", then remove the numbers.
 
 
+// Constraints:
+
+// 2 <= s.length <= 200
+// s consists of lowercase and uppercase English letters, spaces, and digits from 1 to 9.
+// The number of words in s is between 1 and 9.
+// The words in s are separated by a single space.
+// s contains no leading or trailing spaces.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+// O(n), O(n)
+var sortSentence = function (s) {
+    const words = s.split(' ')
+    const res = new Array(words.length)
+
+    for (const word of words) {
+        const pos = parseInt(word[word.length - 1]) - 1
+        res[pos] = word.slice(0, -1)
+    }
+    return res.join(' ')
+};
