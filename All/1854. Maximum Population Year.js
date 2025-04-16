@@ -23,3 +23,13 @@
 // The maximum population is 2, and it had happened in years 1960 and 1970.
 // The earlier year between them is 1960.
 
+
+// Constraints:
+
+// 1 <= logs.length <= 100
+// 1950 <= birthi < deathi <= 2050
+
+/**
+ * @param {number[][]} logs
+ * @return {number}
+ */
