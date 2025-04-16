@@ -33,3 +33,18 @@
  * @param {number[][]} logs
  * @return {number}
  */
+//  Time Complexity: O(n+y), where n is the number of logs and y is the range of years (constant 101). Updating yearChanges takes O(n). Iterating through yearChanges takes O(y), which is effectively constant.
+// Space Complexity: O(y), for the yearChanges array of size 101.
+var maximumPopulation = function (logs) {
+    const yearChanges = new Array(101).fill(0); // Array to track changes in population (1950-2050)
+
+    // Increment and decrement for each log
+    for (const [birth, death] of logs) {
+        yearChanges[birth - 1950]++; // Population increases in the birth year
+        yearChanges[death - 1950]--; // Population decreases in the death year
+    }
+
+    let maxPopulation = 0;
+    let currentPopulation = 0;
+    let earliestYear = 1950;
+
