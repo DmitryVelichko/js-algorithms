@@ -48,3 +48,14 @@ var maximumPopulation = function (logs) {
     let currentPopulation = 0;
     let earliestYear = 1950;
 
+    // Calculate population for each year and track the maximum
+    for (let year = 0; year < 101; year++) {
+        currentPopulation += yearChanges[year];
+        if (currentPopulation > maxPopulation) {
+            maxPopulation = currentPopulation;
+            earliestYear = 1950 + year; // Convert back to the actual year
+        }
+    }
+
+    return earliestYear;
+};
