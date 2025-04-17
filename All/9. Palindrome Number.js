@@ -32,3 +32,18 @@
 
 // Follow up: Could you solve it without converting the integer to a string?
 
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+// O(n), O(n)
+var isPalindrome = function (x) {
+    let xStr = x.toString()
+    let reversed = ''
+
+    for (let num of xStr) {
+        reversed = num + reversed;
+    }
+    return xStr === reversed
+};
+
