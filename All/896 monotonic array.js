@@ -34,3 +34,15 @@
  * @param {number[]} nums
  * @return {boolean}
  */
+// O(n), O(1)
+var isMonotonic = function (nums) {
+    let dec = true
+    let inc = true
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] > nums[i - 1]) dec = false
+        if (nums[i] < nums[i - 1]) inc = false
+
+    }
+    return dec || inc
+
+};
