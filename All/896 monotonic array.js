@@ -25,3 +25,12 @@
 // Output: false
 
 
+// Constraints:
+
+// 1 <= nums.length <= 105
+// -105 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
