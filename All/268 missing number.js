@@ -33,3 +33,18 @@
 
 
 // Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+// O(n log n), O(1)
+var missingNumber = function (nums) {
+    nums.sort((a, b) => a - b)
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== i) {
+            return i
+        }
+    }
+    return nums.length
+};
+
