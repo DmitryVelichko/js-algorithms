@@ -44,3 +44,26 @@
  * @param {number[]} nums
  * @return {number}
  */
+// O(n), O(k) where k is the number of unique elements
+var thirdMax = function (nums) {
+    const set = new Set(nums)
+    const arr = [...set]
+    let max1 = -Infinity
+    let max2 = -Infinity
+    let max3 = -Infinity
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max1) {
+            max3 = max2
+            max2 = max1
+            max1 = arr[i]
+
+        } else if (arr[i] > max2) {
+            max3 = max2
+            max2 = arr[i]
+        } else if (arr[i] > max3) {
+            max3 = arr[i]
+        }
+    }
+    return (max3 === -Infinity) ? max1 : max3
+};
+
