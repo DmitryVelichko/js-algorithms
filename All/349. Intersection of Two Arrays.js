@@ -27,3 +27,13 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
+// O(n+m), O(k1+k2), k is the number of unique elements in set
+var intersection = function (nums1, nums2) {
+    const set = new Set(nums1)
+    const res = []
+    for (let num of new Set(nums2)) {
+        if (set.has(num)) res.push(num)
+    }
+    return res
+};
+
