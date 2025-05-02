@@ -40,3 +40,10 @@ var decodeString = function (s) {
     let repeatStr = []
     let solution = ''
 
+    for (let char of s) {
+        if (!isNaN(char)) {
+            tempMult = `${tempMult}${char}`
+        } else if (char === '[') {
+            multiply.push(tempMult)
+            tempMult = ''
+
