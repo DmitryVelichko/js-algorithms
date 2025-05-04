@@ -34,3 +34,20 @@
  * @param {string} t
  * @return {character}
  */
+// O(n), O(1)
+var findTheDifference = function (s, t) {
+    const hash = {}
+    for (let char of t) {
+        hash[char] = (hash[char] || 0) + 1
+    }
+
+    for (let char of s) {
+        if (char in hash) {
+            hash[char] = --hash[char]
+            if (hash[char] === 0) delete hash[char]
+        }
+    }
+    for (let char of Object.keys(hash)) {
+        return char
+    }
+};
