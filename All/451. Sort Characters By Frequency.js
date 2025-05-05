@@ -22,3 +22,19 @@
 // Explanation: Both 'c' and 'a' appear three times, so both "cccaaa" and "aaaccc" are valid answers.
 // Note that "cacaca" is incorrect, as the same characters must be together.
 // Example 3:
+
+// Input: s = "Aabb"
+// Output: "bbAa"
+// Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
+// Note that 'A' and 'a' are treated as two different characters.
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 5 * 105
+// s consists of uppercase and lowercase English letters and digits.
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
