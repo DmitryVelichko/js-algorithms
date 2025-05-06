@@ -26,3 +26,12 @@
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lowercase English letters if it is non-empty.
 
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+//n = number of strings in the array
+// m = length of the first string (prefix starts as this)
+// O(n*m), O(m)
+
+//Or O(n), O(1)
