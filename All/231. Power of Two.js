@@ -32,3 +32,13 @@
 
 // Follow up: Could you solve it without loops/recursion?
 
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isPowerOfTwo = function(n) {
+    for(let i=0; i<=10000; i++) {
+        if(2**i === n) return true
+    }
+    return false
+};
