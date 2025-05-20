@@ -25,3 +25,37 @@
 // numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
  
 
+// Constraints:
+
+// 1 <= nums.length <= 104
+// -105 <= nums[i] <= 105
+// 0 <= left <= right < nums.length
+// At most 104 calls will be made to sumRange.
+
+/**
+ * @param {number[]} nums
+ */
+var NumArray = function(nums) {
+    this.obj = {
+        nums,
+    }
+};
+
+/** 
+ * @param {number} left 
+ * @param {number} right
+ * @return {number}
+ */
+NumArray.prototype.sumRange = function(left, right) {
+    let total = 0
+    for(let i=left; i<=right; i++) {
+        total = total + this.obj.nums[i]
+    }
+    return total
+};
+
+/** 
+ * Your NumArray object will be instantiated and called as such:
+ * var obj = new NumArray(nums)
+ * var param_1 = obj.sumRange(left,right)
+ */
