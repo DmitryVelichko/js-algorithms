@@ -20,3 +20,25 @@
 // Output: ["h","a","n","n","a","H"]
 
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s[i] is a printable ascii character.
+
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+
+//O(n), O(1)
+var reverseString = function (s) {
+    let l = 0
+    let r = s.length - 1
+    while (l < r) {
+        let temp = s[r]
+        s[r] = s[l]
+        s[l] = temp
+        l++
+        r--
+    }
+};
