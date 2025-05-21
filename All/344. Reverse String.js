@@ -42,3 +42,15 @@ var reverseString = function (s) {
         r--
     }
 };
+
+//O(n), O(1)
+var reverseString = function (s) {
+    let l = 0; // Start from index 0
+    let r = s.length - 1; // Start from last index
+
+    while (l < r) {
+        [s[l], s[r]] = [s[r], s[l]]; // Swap characters
+        l++;
+        r--;
+    }
+};
