@@ -20,3 +20,24 @@
 // Output: [0]
 
 
+// Constraints:
+
+// 1 <= nums.length <= 104
+// -231 <= nums[i] <= 231 - 1
+
+
+// Follow up: Could you minimize the total number of operations done?
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+// O(n), O(1)
+var moveZeroes = function (nums) {
+    let left = 0
+    for (let right = 0; right < nums.length; right++) {
+        if (nums[right] !== 0) {
+            [nums[left], nums[right]] = [nums[right], nums[left]]
+            left++
+        }
+    }
