@@ -34,3 +34,15 @@
 
 // It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
 // Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
+
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+function countBits(num) {
+    let bits = [];
+    for (let i = 0; i <= num; i++)
+        // remove 0 from bits
+        bits.push(Number(i).toString(2).replace(/0/g, '').length);
+    return bits;
+}
