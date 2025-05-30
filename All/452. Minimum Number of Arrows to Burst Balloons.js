@@ -31,3 +31,31 @@
 // - Shoot an arrow at x = 2, bursting the balloons [1,2] and [2,3].
 // - Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].
  
+
+// Constraints:
+
+// 1 <= points.length <= 105
+// points[i].length == 2
+// -231 <= xstart < xend <= 231 - 1
+
+/**
+ * @param {number[][]} points
+ * @return {number}
+ */
+var findMinArrowShots = function(points) {
+    points.sort((a, b) => a[0] - b[0]);
+
+    let arrows = 1;
+    let end = points[0][1];
+
+    for (let i = 1; i < points.length; i++) {
+        if (points[i][0] > end) {
+            arrows++;
+            end = points[i][1];
+        } else {
+            end = Math.min(end, points[i][1]);
+        }
+    }
+
+    return arrows;
+};
