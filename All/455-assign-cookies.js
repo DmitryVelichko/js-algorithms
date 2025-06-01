@@ -17,3 +17,15 @@
 // Example 2:
 
 // Input: g = [1,2], s = [1,2,3]
+// Output: 2
+// Explanation: You have 2 children and 3 cookies. The greed factors of 2 children are 1, 2. 
+// You have 3 cookies and their sizes are big enough to gratify all of the children, 
+// You need to output 2.
+ 
+
+// Constraints:
+
+// 1 <= g.length <= 3 * 104
+// 0 <= s.length <= 3 * 104
+// 1 <= g[i], s[j] <= 231 - 1
+
