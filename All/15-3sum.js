@@ -44,7 +44,7 @@
   скипаем дубликаты
 
 */
-// O(n^2), O(1)/ O(n) - зависит от ф-ции сортировки
+// Time: O(n^2), Space: O(1) auxiliary + O(k) for output, where k is the number of triplets in the result.
 var threeSum = function (nums) {
     const res = [];
     nums.sort((a, b) => a - b);
