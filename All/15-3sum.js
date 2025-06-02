@@ -18,3 +18,13 @@
 // Notice that the order of the output and the order of the triplets does not matter.
 // Example 2:
 
+// Input: nums = [0,1,1]
+// Output: []
+// Explanation: The only possible triplet does not sum up to 0.
+// Example 3:
+
+// Input: nums = [0,0,0]
+// Output: [[0,0,0]]
+// Explanation: The only possible triplet sums up to 0.
+
+
