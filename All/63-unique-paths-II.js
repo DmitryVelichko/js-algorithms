@@ -6,3 +6,18 @@
 
 // An obstacle and space are marked as 1 or 0 respectively in grid. A path that the robot takes cannot include any square that is an obstacle.
 
+// Return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+
+// The testcases are generated so that the answer will be less than or equal to 2 * 109.
+
+ 
+
+// Example 1:
+
+
+// Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+// Output: 2
+// Explanation: There is one obstacle in the middle of the 3x3 grid above.
+// There are two ways to reach the bottom-right corner:
+// 1. Right -> Right -> Down -> Down
+// 2. Down -> Down -> Right -> Right
