@@ -62,3 +62,10 @@ var rotate = function (nums, k) {
     reverse(k, nums.length - 1);
 };
 
+// O(n*k), O(1)
+var rotate2 = function (nums, k) {
+    for (let i = 0; i < k; i++) {
+        nums.unshift(nums.pop())
+    }
+
+};
