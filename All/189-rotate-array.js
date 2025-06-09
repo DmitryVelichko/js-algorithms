@@ -43,3 +43,22 @@
  * @param {number} k
  * @return {void} Do not return anything, modify nums in-place instead.
  */
+// O(n), O(1)
+var rotate = function (nums, k) {
+    k = k % nums.length; // Handle cases where k is greater than the array length
+
+    function reverse(start, end) {
+        while (start < end) {
+            [nums[start], nums[end]] = [nums[end], nums[start]];
+            start++;
+            end--;
+        }
+    }
+    // Step 1: Reverse the entire array
+    reverse(0, nums.length - 1);
+    // Step 2: Reverse the first k elements
+    reverse(0, k - 1);
+    // Step 3: Reverse the remaining elements
+    reverse(k, nums.length - 1);
+};
+
