@@ -50,3 +50,31 @@
        for по массиву
            пушим в результат
            длина массива === k ? return res
+
+
+
+*/
+// O(n), O(n)
+function topKFrequent(nums, k) {
+    const res = [];
+    const hash = {};
+
+    // Bucket sort [[], [], []]
+    const arr = Array.from({ length: nums.length + 1 }, () => []);
+
+    for (let num of nums) {
+        hash[num] = (hash[num] || 0) + 1; //{1:3}
+    }
+    //   0    1    2    3   индекс массива == частота числа
+    // [[ ], [3], [2], [1]] число
+    for (let num in hash) {
+        arr[hash[num]].push(Number(num));
+    }
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        for (let num of arr[i]) {
+            res.push(num);
+            if (res.length === k) return res;
+        }
+    }
+}
