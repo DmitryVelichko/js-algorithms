@@ -18,3 +18,22 @@
 // Explanation: [4,9] is also accepted.
 
 
+// Constraints:
+
+// 1 <= nums1.length, nums2.length <= 1000
+// 0 <= nums1[i], nums2[i] <= 1000
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+// O(n+m), O(k1+k2), k is the number of unique elements in set
+var intersection = function (nums1, nums2) {
+    const set = new Set(nums1)
+    const res = []
+    for (let num of new Set(nums2)) {
+        if (set.has(num)) res.push(num)
+    }
+    return res
+};
+
