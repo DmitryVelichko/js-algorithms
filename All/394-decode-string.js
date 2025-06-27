@@ -23,3 +23,37 @@
 // Input: s = "2[abc]3[cd]ef"
 // Output: "abcabccdcdcdef"
 
+// Constraints:
+
+// 1 <= s.length <= 30
+// s consists of lowercase English letters, digits, and square brackets '[]'.
+// s is guaranteed to be a valid input.
+// All the integers in s are in the range [1, 300].
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var decodeString = function (s) {
+    let multiply = []
+    let tempMult = ''
+    let repeatStr = []
+    let solution = ''
+
+    for (let char of s) {
+        if (!isNaN(char)) {
+            tempMult = `${tempMult}${char}`
+        } else if (char === '[') {
+            multiply.push(tempMult)
+            tempMult = ''
+
+            repeatStr.push(solution)
+            solution = ''
+        } else if (char === ']') {
+            solution = repeatStr.pop() + solution.repeat(multiply.pop())
+        } else {
+            solution += char
+        }
+    }
+    return solution
+};
