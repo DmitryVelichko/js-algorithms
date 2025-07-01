@@ -34,3 +34,21 @@
 // All the integers of nums1 also appear in nums2.
  
 
+// Follow up: Could you find an O(nums1.length + nums2.length) solution?
+
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var nextGreaterElement = function(findNums, nums) {
+    return findNums.map(n => {
+        let found = nums.indexOf(n);
+            // find the next greater element's index
+            while (nums[found+=1] < n);
+            // -1 if not found
+            if (found >= nums.length) found = -1;
+            else found = nums[found];
+        return found;
+    });
+};
