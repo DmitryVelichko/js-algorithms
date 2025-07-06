@@ -34,3 +34,24 @@
 // 1 <= s.length <= 5 * 105
 // s consists of uppercase and lowercase English letters and digits.
 
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var frequencySort = function(s) {
+    const map = new Map()
+    let res = ''
+    
+    for(const char of s) {
+        map.set(char, (map.get(char) || 0) + 1)
+    }
+
+    const obj = Array.from(map.entries())
+    obj.sort((a,b)=>b[1]-a[1])
+
+    for(const [char, num] of obj) {
+        res+=char.repeat(num)
+    }
+
+    return res
+};
