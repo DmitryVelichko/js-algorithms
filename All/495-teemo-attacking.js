@@ -27,3 +27,22 @@
 // Ashe is poisoned for seconds 1, 2, and 3, which is 3 seconds in total.
  
 
+// Constraints:
+
+// 1 <= timeSeries.length <= 104
+// 0 <= timeSeries[i], duration <= 107
+// timeSeries is sorted in non-decreasing order.
+
+/**
+ * @param {number[]} timeSeries
+ * @param {number} duration
+ * @return {number}
+ */
+var findPoisonedDuration = function(timeSeries, duration) {
+    if (timeSeries.length === 0 ) return 0; 
+    let res = duration;
+    for (let i = 1; i < timeSeries.length; i++) {
+            res += Math.min(timeSeries[i] - timeSeries[i - 1], duration);
+    }
+    return res; 
+}
