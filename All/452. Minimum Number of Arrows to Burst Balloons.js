@@ -32,3 +32,13 @@
 // - Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].
  
 
+// Constraints:
+
+// 1 <= points.length <= 105
+// points[i].length == 2
+// -231 <= xstart < xend <= 231 - 1
+
+/**
+ * @param {number[][]} points
+ * @return {number}
+ */
