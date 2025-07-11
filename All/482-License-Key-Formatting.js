@@ -22,3 +22,24 @@
 // Explanation: The string s has been split into three parts, each part has 2 characters except the first part as it could be shorter as mentioned above.
 
 
+// Constraints:
+
+// 1 <= s.length <= 105
+// s consists of English letters, digits, and dashes '-'.
+// 1 <= k <= 104
+
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var licenseKeyFormatting = function (s, k) {
+
+    let str = s.replace(/-/g, "").toUpperCase()
+    let arr = str.split('')
+
+    for (let i = arr.length - 1 - k; i >= 0; i -= k) {
+        arr[i] = arr[i] + '-';
+    }
+    return arr.join('')
+};
