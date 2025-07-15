@@ -12,3 +12,40 @@
 // Return an array answer of size n where answer[i] is the rank of the ith athlete.
 
  
+
+// Example 1:
+
+// Input: score = [5,4,3,2,1]
+// Output: ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+// Explanation: The placements are [1st, 2nd, 3rd, 4th, 5th].
+// Example 2:
+
+// Input: score = [10,3,8,9,4]
+// Output: ["Gold Medal","5","Bronze Medal","Silver Medal","4"]
+// Explanation: The placements are [1st, 5th, 3rd, 2nd, 4th].
+
+ 
+
+// Constraints:
+
+// n == score.length
+// 1 <= n <= 104
+// 0 <= score[i] <= 106
+// All the values in score are unique.
+
+/**
+ * @param {number[]} score
+ * @return {string[]}
+ */
+var findRelativeRanks = function(nums) {
+    // create ranks array in descending order
+    let ranks = nums.slice(0).sort((a, b) => b - a);
+    
+    // map places in ranks if no medal
+    return nums.map((num) => {
+       if (num === ranks[0]) return 'Gold Medal';
+       else if (num === ranks[1]) return 'Silver Medal';
+       else if (num === ranks[2]) return 'Bronze Medal';
+       else return (ranks.indexOf(num) + 1).toString();
+    });
+}
