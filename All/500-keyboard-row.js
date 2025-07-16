@@ -31,3 +31,27 @@
 // 1 <= words[i].length <= 100
 // words[i] consists of English letters (both lowercase and uppercase).
 
+/**
+ * @param {string[]} words
+ * @return {string[]}
+ */
+var findWords = function (words) {
+    let row1 = new Set('qwertyuiop')
+    let row2 = new Set('asdfghjkl')
+    let row3 = new Set('zxcvbnm')
+
+    function helper(word, row) {
+        for (let char of word) {
+            if (!row.has(char.toLowerCase())) return false
+        }
+        return true
+    }
+
+    let res = []
+    for (let word of words) {
+        if (helper(word, row1) || helper(word, row2) || helper(word, row3)) {
+            res.push(word)
+        }
+    }
+    return res
+}
