@@ -26,4 +26,18 @@
  * @return {string[]}
  */
 // time O(n^2) space O(n)
-x
+var commonChars = function (words) {
+    const result = []
+    const firstWordArr = [...words[0]]
+
+    for (const letter of firstWordArr) {
+        if (words.every(word => word.includes(letter))) {
+            result.push(letter)
+            // Take the example where the input is ["cool", "lock", "cook"]. Two 'o's in the first and third word, but not the second. But because 'o' is in all words at least once, 'o' gets added to the results array for each time in the firstWordArr.
+            words = words.map(word => word.replace(letter, ''))
+
+        }
+    }
+
+    return result
+};
