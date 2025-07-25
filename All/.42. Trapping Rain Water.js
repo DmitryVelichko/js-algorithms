@@ -20,3 +20,14 @@
 // Output: 9
 
 
+// Constraints:
+
+// n == height.length
+// 1 <= n <= 2 * 104
+// 0 <= height[i] <= 105
+
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+//O(n), O(1)
