@@ -7,3 +7,23 @@
 // Input: nums = [2,2,1]
 // Output: 1
 
+let singleNumber2 = function (nums) {
+    let ht = {}
+    for (const num of nums) {
+        ht[num] = (ht[num] || 0) + 1;
+    }
+
+    for (const key in ht) {
+        if (ht[key] === 1) {
+            return key;
+        }
+    }
+};
+// O(n), O(1)
+var singleNumber = function (nums) {
+    let result = 0;
+    for (let num of nums) {
+        result ^= num; // XOR each number
+    }
+    return result;
+};
