@@ -21,3 +21,21 @@
 // Output: 0
  
 
+// Constraints:
+
+// 0 <= num <= 231 - 1
+ 
+
+// Follow up: Could you do it without any loop/recursion in O(1) runtime?
+
+/**
+ * @param {number} num
+ * @return {number}
+ */
+/**
+The digital root of a number can be computed with the formula:
+
+If num is 0, the result is 0.
+If num is divisible by 9, the result is 9.
+Otherwise, the result is num % 9. */
+
