@@ -28,3 +28,16 @@
 // Input: n = 1
 // Output: 1
  
+
+// Constraints:
+
+// 0 <= n <= 109
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var bulbSwitch = function(n) {
+    
+    return Math.floor(Math.sqrt(n))
+};
