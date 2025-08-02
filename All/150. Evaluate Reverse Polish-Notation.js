@@ -44,3 +44,23 @@
 
 // 1 <= tokens.length <= 104
 // tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
+/**
+ * @param {string[]} tokens
+ * @return {number}
+ */
+// O(n), O(n)
+var evalRPN = function (tokens) {
+    const stack = []
+    for (let token of tokens) {
+        if (token !== "+" && token !== '-' && token !== '*' && token !== '/') stack.push(Number(token))
+        else {
+            let b = stack.pop()
+            let a = stack.pop()
+            if (token === '+') stack.push(a + b)
+            else if (token === '-') stack.push(a - b)
+            else if (token === '*') stack.push(a * b)
+            else if (token === '/') stack.push(Math.trunc(a / b))
+        }
+    }
+    return stack.pop()
+};
