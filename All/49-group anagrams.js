@@ -19,3 +19,17 @@
 // Output: [["a"]]
 
 
+// Constraints:
+
+// 1 <= strs.length <= 104
+// 0 <= strs[i].length <= 100
+// strs[i] consists of lowercase English letters.
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+// Time O(N * K) | Space O(N * K)
+// Time Complexity: O(n*k) where n is the size of input array and k is the maximum length of string in input array
+
+
