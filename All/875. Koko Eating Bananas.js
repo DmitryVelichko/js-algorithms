@@ -27,3 +27,17 @@
 // Input: piles = [30,11,23,4,20], h = 6
 // Output: 23
 
+
+// Constraints:
+
+// 1 <= piles.length <= 104
+// piles.length <= h <= 109
+// 1 <= piles[i] <= 109
+
+/**
+ * @param {number[]} piles
+ * @param {number} h
+ * @return {number}
+ */
+
+// O(piles.length * log(Math.max(piles))) === O(n * log(MaxPile)), O(1)
