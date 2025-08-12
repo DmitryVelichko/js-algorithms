@@ -34,3 +34,16 @@
  * @return {number[]}
  */
 
+var separateDigits = function(nums) {
+    let str = nums.toString()
+
+    let arr = []
+    for (num of str) {
+        if( num === ',') continue
+        arr.push(num)
+        
+    }
+    arr.join('')
+    console.log(arr)
+    return arr;
+};
