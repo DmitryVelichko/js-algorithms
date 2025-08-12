@@ -24,3 +24,13 @@
 // answer = [7,1,3,9].
  
 
+// Constraints:
+
+// 1 <= nums.length <= 1000
+// 1 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+
