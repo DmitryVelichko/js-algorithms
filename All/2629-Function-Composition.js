@@ -40,3 +40,30 @@
 // The composition of zero functions is the identity function
 
 
+// Constraints:
+
+// -1000 <= x <= 1000
+// 0 <= functions.length <= 1000
+// all functions accept and return a single integer
+
+/**
+ * @param {Function[]} functions
+ * @return {Function}
+ */
+var compose = function (functions) {
+    if (functions.length === 0) {
+        return function (x) { return x }
+    }
+    return function (x) {
+        let result = x
+        for (let i = functions.length - 1; i >= 0; i--) {
+            result = functions[i](result)
+        }
+        return result
+    }
+};
+
+/**
+ * const fn = compose([x => x + 1, x => 2 * x])
+ * fn(4) // 9
+ */
