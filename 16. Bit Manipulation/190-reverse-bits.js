@@ -23,3 +23,25 @@
 // Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
  
 
+// Constraints:
+
+// The input must be a binary string of length 32
+ 
+
+// Follow up: If this function is called many times, how would you optimize it?
+/**
+ * @param {number} n - a positive integer
+ * @return {number} - a positive integer
+ */
+var reverseBits = function (n) {
+
+    let res = 0;
+
+    for (let i = 0; i < 32; i++) {
+        res = res << 1; // Shift result left
+        res += n & 1;   // Add the last bit of n to result
+        n = n >>> 1;    // Unsigned right shift n
+    }
+
+    return res >>> 0; // Convert to unsigned 32-bit integer
+};
