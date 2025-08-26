@@ -34,3 +34,32 @@
 
 // Output: 1
 
+// Explanation:
+
+// 0	1	2
+// 3	4	5
+// 6	7	8
+// 0	1	2
+// 3	4	5
+// 6	7	8
+// 0	1	2
+// 3	4	5
+// 6	7	8
+// 0	1	2
+// 3	4	5
+// 6	7	8
+
+
+// Constraints:
+
+// 2 <= n <= 10
+// 1 <= commands.length <= 100
+// commands consists only of "UP", "RIGHT", "DOWN", and "LEFT".
+// The input is generated such the snake will not move outside of the boundaries.
+
+/**
+ * @param {number} n
+ * @param {string[]} commands
+ * @return {number}
+ */
+// O(k), where k is number of commands in array, O(1)
