@@ -13,3 +13,24 @@
 // Return the position of the final cell where the snake ends up after executing commands.
 
 
+
+// Example 1:
+
+// Input: n = 2, commands = ["RIGHT","DOWN"]
+
+// Output: 3
+
+// Explanation:
+
+// 0	1
+// 2	3
+// 0	1
+// 2	3
+// 0	1
+// 2	3
+// Example 2:
+
+// Input: n = 3, commands = ["DOWN","RIGHT","UP"]
+
+// Output: 1
+
