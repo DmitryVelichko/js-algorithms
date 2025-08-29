@@ -31,3 +31,30 @@
 
 // 0 <= s.length <= 5 * 104
 // s consists of English letters, digits, symbols and spaces.
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+/**
+Sliding window: 2 pointers: set, l, max.
+for loop across the whole string (r = 0): while right char exists in set ? delete left char from set, l++;
+add right char to set, update max string size
+*/
+// O(n), O(n)
+
+var lengthOfLongestSubstring = function (s) {
+    const set = new Set();
+    let l = 0;
+    let max = 0;
+
+    for (let r = 0; r < s.length; r++) {
+        while (set.has(s[r])) {
+            set.delete(s[l]);
+            l++;
+        }
+        set.add(s[r]);
+        max = Math.max(max, set.size);
+    }
+    return max;
+};
