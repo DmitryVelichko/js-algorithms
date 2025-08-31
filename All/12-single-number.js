@@ -19,3 +19,11 @@ let singleNumber2 = function (nums) {
         }
     }
 };
+// O(n), O(1)
+var singleNumber = function (nums) {
+    let result = 0;
+    for (let num of nums) {
+        result ^= num; // XOR each number
+    }
+    return result;
+};
