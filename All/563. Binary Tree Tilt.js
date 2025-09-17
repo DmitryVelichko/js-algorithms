@@ -29,3 +29,37 @@
 // Tilt of node 4 : |(3+5+2)-(9+7)| = |10-16| = 6 (left subtree values are 3, 5, and 2, which sums to 10; right subtree values are 9 and 7, which sums to 16)
 // Sum of every tilt : 0 + 0 + 0 + 2 + 7 + 6 = 15
 // Example 3:
+
+// Input: root = [21,7,14,1,1,2,2,3,3]
+// Output: 9
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 104].
+// -1000 <= Node.val <= 1000
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var findTilt = function (root) {
+  let tilt = { val: 0 };
+  dfs(root, tilt);
+  return tilt.val;
+
+  function dfs(root, tilt) {
+    if (!root) return 0;
+    let left = dfs(root.left, tilt);
+    let right = dfs(root.right, tilt);
+    tilt.val += Math.abs(left - right);
+    return root.val + left + right;
+  }
+};
