@@ -57,3 +57,30 @@
 // Cancelled at 165ms
 // Example 3:
 
+// Input: fn = (x1, x2, x3) => (x1 + x2 + x3), args = [5, 1, 3], t = 50, cancelT = 180
+// Output: 
+// [
+//    {"time": 0, "returned": 9},
+//    {"time": 50, "returned": 9},
+//    {"time": 100, "returned": 9},
+//    {"time": 150, "returned": 9}
+// ]
+// Explanation: 
+// const cancel = cancellable((x1, x2, x3) => (x1 + x2 + x3), [5, 1, 3], 50);
+// setTimeout(cancel, 180);
+
+// Every 50ms, fn(5, 1, 3) is called. Until t=180ms, then it is cancelled. 
+// 1st fn call is at 0ms
+// 2nd fn call is at 50ms
+// 3rd fn call is at 100ms
+// 4th fn call is at 150ms
+// Cancelled at 180ms
+ 
+
+// Constraints:
+
+// fn is a function
+// args is a valid JSON array
+// 1 <= args.length <= 10
+// 30 <= t <= 100
+// 10 <= cancelT <= 500
