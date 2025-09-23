@@ -25,3 +25,17 @@
 
 // 2 <= arr.length <= 500
 // -103 <= arr[i] <= 103
+
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+// O(n), O(n)
+var checkIfExist = function (arr) {
+  const set = new Set();
+  for (num of arr) {
+    if (set.has(num * 2) || set.has(num / 2)) return true;
+    set.add(num);
+  }
+  return false;
+};
