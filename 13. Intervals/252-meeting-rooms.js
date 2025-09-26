@@ -43,3 +43,38 @@
  * }
  */
 // Sotring, O(n log n), space: O(1) or O(n) depending on the sorting algo
+class Solution {
+  /**
+   * @param {Interval[]} intervals
+   * @returns {boolean}
+   */
+  canAttendMeetings(intervals) {
+    intervals.sort((a, b) => a.start - b.start);
+    for (let i = 1; i < intervals.length; i++) {
+      if (intervals[i].start < intervals[i - 1].end) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+// brute force, O(n^2), O(1)
+class Solution {
+  /**
+   * @param {Interval[]} intervals
+   * @returns {boolean}
+   */
+  canAttendMeetings(intervals) {
+    const n = intervals.length;
+    for (let i = 0; i < n; i++) {
+      const A = intervals[i];
+      for (let j = i + 1; j < n; j++) {
+        const B = intervals[j];
+        if (Math.min(A.end, B.end) > Math.max(A.start, B.start)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+}
