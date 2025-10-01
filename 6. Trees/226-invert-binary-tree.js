@@ -57,3 +57,22 @@ var invertTree = function (root) {
 };
 
 
+// DFS iterative
+var invertTree2 = function (root) {
+    if (root === null) return null;
+
+    const stack = [root];
+
+    while (stack.length > 0) {
+        const node = stack.pop();
+
+        [node.left, node.right] = [node.right, node.left];
+
+        if (node.left) stack.push(node.left);
+        if (node.right) stack.push(node.right);
+    }
+
+    return root;
+};
+
+
