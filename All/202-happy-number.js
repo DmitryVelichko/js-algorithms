@@ -29,12 +29,32 @@
  * @param {number} n
  * @return {boolean}
  */
-var isHappy = function(n) {
-    const checked = [];
-    while (n !== 1) {
-        if (checked.includes(n)) return false;
-        checked.push(n);
-        n = n.toString().split('').map(i => i**2).reduce((sum, i) => sum + i, 0);
+/**
+   function square() {
+    digit = n % 10 // (19 -> 9)
+    n / 10 // (19 -> 1)
     }
-    return true;
+   slow, fast to find cycle
+ */
+//The number of digits in a number \U0001d45b n in base 10 is approximately log 10 ​ (n). For example, a number like 9876 has 4 digits, and you can find this by taking log ⁡ 10 ( 9876 ) ≈ 3.99 log 10 ​ (9876)≈3.99.
+//O(log n) base 10 or 2 doesn't matter, in big O it's abstracted away, Space: O(1)
+function sumOfSquares(n) {
+    let sum = 0;
+    while (n) {
+        let digit = n % 10;
+        sum += digit * digit;
+        n = Math.floor(n / 10);
+    }
+    return sum;
+}
+var isHappy = function (n) {
+
+    let slow = n;
+    let fast = n;
+
+    do {
+        slow = sumOfSquares(slow);
+        fast = sumOfSquares(sumOfSquares(fast));
+    } while (slow !== fast)
+    return slow === 1;
 };
