@@ -8,7 +8,7 @@
 // An empty array contains no elements.
 // You may assume the object or array is the output of JSON.parse.
 
- 
+
 
 // Example 1:
 
@@ -16,3 +16,29 @@
 // Output: false
 // Explanation: The object has 2 key-value pairs so it is not empty.
 // Example 2:
+
+// Input: obj = {}
+// Output: true
+// Explanation: The object doesn't have any key-value pairs so it is empty.
+// Example 3:
+
+// Input: obj = [null, false, 0]
+// Output: false
+// Explanation: The array has 3 elements so it is not empty.
+
+
+// Constraints:
+
+// obj is a valid JSON object or array
+// 2 <= JSON.stringify(obj).length <= 105
+
+
+// Can you solve it in O(1) time?
+
+/**
+ * @param {Object|Array} obj
+ * @return {boolean}
+ */
+var isEmpty = function (obj) {
+    return Object.keys(obj).length === 0
+}
