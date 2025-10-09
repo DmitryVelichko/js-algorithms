@@ -39,6 +39,22 @@
  * @param {Object|Array} obj
  * @return {boolean}
  */
+// Object.keys(obj) iterates all keys internally, so technically it’s O(n), not O(1).
 var isEmpty = function (obj) {
     return Object.keys(obj).length === 0
 }
+// O(1)
+var isEmpty = function (obj) {
+    if (Array.isArray(obj)) {
+        // For arrays, check length directly (O(1))
+        return obj.length === 0;
+    } else {
+        // For objects, check if any key exists
+        for (let key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                return false; // Found a key, not empty
+            }
+        }
+        return true; // No keys found
+    }
+};
