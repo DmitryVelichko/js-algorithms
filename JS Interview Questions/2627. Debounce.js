@@ -15,7 +15,7 @@
 
 // Please solve it without using lodash's _.debounce() function.
 
- 
+
 
 // Example 1:
 
@@ -63,7 +63,7 @@
 // The 1st call is delayed by 150ms and ran at 200ms. The inputs were (1, 2).
 // The 2nd call is cancelled by the 3rd call
 // The 3rd call is delayed by 150ms and ran at 450ms. The inputs were (5, 6).
- 
+
 
 // Constraints:
 
@@ -72,3 +72,23 @@
 // 0 <= calls[i].t <= 1000
 // 0 <= calls[i].inputs.length <= 10
 
+/**
+ * @param {Function} fn
+ * @param {number} t milliseconds
+ * @return {Function}
+ */
+var debounce = function (fn, t) {
+  let timer
+
+  return function (...args) {
+    clearTimeout(timer)
+    timer = setTimeout(() => fn(...args), t)
+  }
+};
+
+/**
+ * const log = debounce(console.log, 100);
+ * log('Hello'); // cancelled
+ * log('Hello'); // cancelled
+ * log('Hello'); // Logged at t=100ms
+ */
