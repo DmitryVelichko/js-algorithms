@@ -1,19 +1,19 @@
 // сумма элементов массива
 
-// const array = [1,2,3,4,5,6,7,8,9,10]
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// function sumArr(arr) {
-//     return arr.reduce((acc,val) => acc + val, 0)
-// }
+function sumArr(arr) {
+  return arr.reduce((acc, val) => acc + val, 0)
+}
 
-// function sumArr(arr) {
-//     let sum = 0
-//     for(let i=0; i<arr.length; i++) {
-//         sum += arr[i]
-//     }
-//     return sum
-// }
-// console.log(sumArr(array))
+function sumArr(arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+  }
+  return sum
+}
+console.log(sumArr(array))
 // ----------------------------------------------------------------------------------------------------------------------
 
 
@@ -44,12 +44,12 @@
 
 // function findMin(arr) {
 //     return arr.reduce((acc, next) => Math.min(acc, next))
-  
+
 // }
 
 // function findMax(arr) {
 //     return Math.max(...arr)
-  
+
 // }
 
 // console.log(findMax(array))
@@ -75,10 +75,10 @@
 //       city: 'Berlin'
 //     },
 //   ]
-  
+
 //   const groupByCity = (array) => {
 //     let res = {}
-    
+
 //     for(let obj of array) {
 //         let {name, city} = obj
 
@@ -88,7 +88,7 @@
 //     }
 //     return res
 //   }
-  
+
 //   // Данные на выход
 //   /*
 //   {
@@ -103,12 +103,12 @@
 
 const anagram = (strA, strB) => {
   let hash = {}
-  for(let i=0; i<strA.length;i++) {
+  for (let i = 0; i < strA.length; i++) {
     hash[strA[i].toLowerCase()] = true
   }
 
-  for(let i=0; i<strB.length;i++) {
-    if(hash[strB[i].toLowerCase()]) continue
+  for (let i = 0; i < strB.length; i++) {
+    if (hash[strB[i].toLowerCase()]) continue
     else return false
   }
   return true
