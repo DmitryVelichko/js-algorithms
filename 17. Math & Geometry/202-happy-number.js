@@ -12,7 +12,7 @@
 // Those numbers for which this process ends in 1 are happy.
 // Return true if n is a happy number, and false if not.
 
- 
+
 
 // Example 1:
 
@@ -27,9 +27,27 @@
 
 // Input: n = 2
 // Output: false
- 
+
 
 // Constraints:
 
 // 1 <= n <= 231 - 1
 
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+/**
+   slow, fast to find cycle, separate function for squaring(digit = n % 10 (19 -> 9), n / 10 (19 -> 1))
+ */
+//The number of digits in a number \U0001d45b n in base 10 is approximately log ⁡ 10 ( \U0001d45b ) log 10 ​ (n). For example, a number like 9876 has 4 digits, and you can find this by taking log ⁡ 10 ( 9876 ) ≈ 3.99 log 10 ​ (9876)≈3.99.
+//O(log n) base 10 or 2 doesn't matter, in big O it's abstracted away, Space: O(1)
+function sumOfSquares(n) {
+    let sum = 0;
+    while (n) {
+        let digit = n % 10;
+        sum += digit * digit;
+        n = Math.floor(n / 10);
+    }
+    return sum;
+}
