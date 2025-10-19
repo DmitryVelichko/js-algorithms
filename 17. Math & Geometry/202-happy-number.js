@@ -51,3 +51,14 @@ function sumOfSquares(n) {
     }
     return sum;
 }
+var isHappy = function (n) {
+
+    let slow = n;
+    let fast = n;
+
+    do {
+        slow = sumOfSquares(slow); // один шаг вперед
+        fast = sumOfSquares(sumOfSquares(fast)); // два шага вперед
+    } while (slow !== fast)
+    return slow === 1;
+};
