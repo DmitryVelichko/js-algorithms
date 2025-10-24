@@ -51,7 +51,7 @@ function twoSum(nums, target) {
 };
 
 // Hash Map
-// time complexity: O(n)
+// time complexity: O(n) 
 // space complexity: O(n)
 
 function twoSum2(nums, target) {
