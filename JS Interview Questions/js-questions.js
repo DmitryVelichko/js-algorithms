@@ -117,3 +117,10 @@ const anagram = (strA, strB) => {
 console.log(anagram('finder', 'Friend')) // true
 console.log(anagram('hello', 'bye')) // false
 
+// 4. How Remove the first element from an array in JavaScript ?
+
+// Initialize an array
+let arr = [5, 6, 7];
+arr = arr.slice(1);
+// Create a new array without the first element
+console.log(arr);
