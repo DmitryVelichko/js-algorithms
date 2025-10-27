@@ -124,3 +124,11 @@ let arr = [5, 6, 7];
 arr = arr.slice(1);
 // Create a new array without the first element
 console.log(arr);
+
+// 1. Write a Program to reverse a string in JavaScript.
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("GeeksForGeeks"));
