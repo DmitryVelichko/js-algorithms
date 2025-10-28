@@ -166,3 +166,7 @@ greet('Geek', message => console.log(message));
 const obj = { name: 'Riya' };
 obj.age = 21;
 console.log(obj);
+
+const obj = { name: 'Riya', age: 21 };
+delete obj.age;
+console.log(obj);
