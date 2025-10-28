@@ -155,3 +155,10 @@ function findLargest(arr) {
 }
 
 console.log(findLargest([99, 5, 3, 100, 1]));
+
+// 5. Write a Program to use a callback function?
+
+function greet(name, callback) {
+  callback(`Hello, ${name}!`);
+}
+greet('Geek', message => console.log(message));
