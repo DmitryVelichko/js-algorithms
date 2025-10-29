@@ -183,6 +183,7 @@ function sumArray(arr) {
 console.log(sumArray([15, 6, 10, 2]));
 
 // 16. Write a Program to check if a number is prime or not ?
+// A prime number is a whole number greater than 1 that has only two factors: 1 and itself. 
 function isPrime(num) {
   if (num <= 1)
     return false;
