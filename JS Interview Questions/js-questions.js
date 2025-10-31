@@ -249,3 +249,11 @@ function arrayIntersection(arr1, arr2) {
 }
 
 console.log(arrayIntersection([5, 6, 7], [6, 7, 8]));
+
+// Calculate the Power of a Number 
+
+function power(base, exponent) {
+  return base ** exponent;
+}
+
+console.log(power(3, 4));
