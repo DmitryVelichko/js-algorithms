@@ -282,3 +282,9 @@ function countChar(str, char) {
 
 console.log(countChar('GeeksForGeeks', 'G'));
 
+//O(n), O(1)
+function countChar(str, char) {
+  let count = 0;
+  for (const c of str) if (c === char) count++;
+  return count;
+}
