@@ -259,6 +259,7 @@ function power(base, exponent) {
 console.log(power(3, 4));
 
 //  frequency of elements in an array
+//O(n), O(n)
 function frequency(arr) {
   const freq = {};
   for (let i = 0; i < arr.length; i++) {
@@ -272,3 +273,12 @@ function frequency(arr) {
 }
 
 console.log(frequency([1, 1, 2, 3, 3, 4]));
+
+// count the occurrences of a character in a string
+//O(n), O(1)
+function countChar(str, char) {
+  return str.split(char).length - 1;
+}
+
+console.log(countChar('GeeksForGeeks', 'G'));
+
