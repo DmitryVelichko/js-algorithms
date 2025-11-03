@@ -331,4 +331,18 @@ function countVowels(str) {
   return count;
 }
 
-console.log(countVowels("hello geek")); 
+console.log(countVowels("hello geek"));
+
+// Get Unique Characters from a String
+
+function uniqueCharacters(str) {
+  const uniqueChars = [];
+  for (let i = 0; i < str.length; i++) {
+    if (!uniqueChars.includes(str[i])) {
+      uniqueChars.push(str[i]);
+    }
+  }
+  return uniqueChars.join('');
+}
+
+console.log(uniqueCharacters("geeksforgeeks"));
