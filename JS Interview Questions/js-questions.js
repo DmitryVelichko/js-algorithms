@@ -420,3 +420,16 @@ console.log(removeDuplicates([5, 2, 5, 6, 6, 7]));
 // // "getCallCount" - total call count: 1
  
 
+// Constraints:
+
+// 0 <= a, b <= 105
+// 1 <= n <= 10
+// 0 <= actions.length <= 105
+// actions.length === values.length
+// actions[i] is one of "call" and "getCallCount"
+// fnName is one of "sum", "factorial" and "fib"
+
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
