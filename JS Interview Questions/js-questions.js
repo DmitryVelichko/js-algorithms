@@ -375,7 +375,7 @@ console.log(removeDuplicates([5, 2, 5, 6, 6, 7]));
 // sum accepts two integers a and b and returns a + b.
 // fib accepts a single integer n and returns 1 if n <= 1 or fib(n - 1) + fib(n - 2) otherwise.
 // factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1) * n otherwise.
- 
+
 
 // Example 1:
 
@@ -418,7 +418,7 @@ console.log(removeDuplicates([5, 2, 5, 6, 6, 7]));
 // Explanation:
 // fib(5) = 8 // "call"
 // // "getCallCount" - total call count: 1
- 
+
 
 // Constraints:
 
@@ -433,3 +433,16 @@ console.log(removeDuplicates([5, 2, 5, 6, 6, 7]));
  * @param {Function} fn
  * @return {Function}
  */
+function memoize(fn) {
+  const cache = {}
+  return function (...args) {
+    const key = JSON.stringify(args)
+
+    if (key in cache) return cache[key]
+    const result = fn(...args)
+    cache[key] = result
+    return result
+  }
+}
+
+
