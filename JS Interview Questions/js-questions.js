@@ -468,3 +468,11 @@ function reverseArray(arr) {
 }
 
 console.log(reverseArray([5, 6, 7, 8]));
+
+// Get the last element of an array 
+
+function lastElement(arr) {
+  return arr[arr.length - 1];
+}
+
+console.log(lastElement([6, 2, 9, 5]));
