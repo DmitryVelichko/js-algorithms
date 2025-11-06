@@ -446,7 +446,7 @@ function memoize(fn) {
 }
 
 
-/** 
+/**
  * let callCount = 0;
  * const memoizedFn = memoize(function (a, b) {
  *	 callCount += 1;
@@ -454,5 +454,17 @@ function memoize(fn) {
  * })
  * memoizedFn(2, 3) // 5
  * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1 
+ * console.log(callCount) // 1
  */
+
+//  reverse an array
+
+function reverseArray(arr) {
+  const reversed = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    reversed.push(arr[i]);
+  }
+  return reversed;
+}
+
+console.log(reverseArray([5, 6, 7, 8]));
