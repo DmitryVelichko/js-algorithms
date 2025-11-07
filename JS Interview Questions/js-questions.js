@@ -476,3 +476,13 @@ function lastElement(arr) {
 }
 
 console.log(lastElement([6, 2, 9, 5]));
+
+// Find the Union of Two Arrays 
+
+function arrayUnion(arr1, arr2) {
+  // merges two arrays then removes duplicates
+  // and returns the output as a new array.
+  return [...new Set([...arr1, ...arr2])];
+}
+
+console.log(arrayUnion([1, 2, 3], [2, 3, 4]));
