@@ -486,3 +486,13 @@ function arrayUnion(arr1, arr2) {
 }
 
 console.log(arrayUnion([1, 2, 3], [2, 3, 4]));
+
+// intersection of two arrays
+
+function intersection(arr1, arr2) {
+  const set = new Set(arr2);
+  return [...new Set(arr1)].filter(x => set.has(x));
+}
+
+console.log(intersection([1, 2, 3, 4], [3, 4, 5, 6]));
+// Output: [3, 4]
