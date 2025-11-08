@@ -496,3 +496,25 @@ function intersection(arr1, arr2) {
 
 console.log(intersection([1, 2, 3, 4], [3, 4, 5, 6]));
 // Output: [3, 4]
+
+// Find the First Non-Repeated Character
+
+function fun(str) {
+  const charCount = {};
+
+  // count the occurrences of each character
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // find the first non-repeated character
+  for (let char of str) {
+    if (charCount[char] === 1) {
+      return char;
+    }
+  }
+
+  return null;
+}
+
+console.log(fun('GeeksForGeeks'));
