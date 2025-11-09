@@ -29,3 +29,9 @@ function findMinMax(arr) {
     return { min, max };
 }
 
+
+const numbers = [5, 1, 3, 412, 12, 512];
+const result = findMinMax(numbers);
+
+console.log(`Минимальное значение: ${result.min}`);
+console.log(`Максимальное значение: ${result.max}`);
