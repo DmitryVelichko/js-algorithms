@@ -35,3 +35,26 @@ const result = findMinMax(numbers);
 
 console.log(`Минимальное значение: ${result.min}`);
 console.log(`Максимальное значение: ${result.max}`);
+
+// Необходимо обработать массив таким образом, чтобы распределить людей по группам городов
+
+// Данные на вход
+const people = [
+    {
+        name: 'Alex',
+        city: 'Moscow',
+    },
+    {
+        name: 'Ivan',
+        city: 'Moscow',
+    },
+    {
+        name: 'Joe',
+        city: 'New York'
+    },
+    {
+        name: 'Johan',
+        city: 'Berlin'
+    },
+]
+
