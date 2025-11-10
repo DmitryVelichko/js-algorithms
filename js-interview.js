@@ -58,3 +58,13 @@ const people = [
     },
 ]
 
+const groupByCity = (array) => { }
+
+// Данные на выход
+/*
+{
+  'Moscow': [ 'Alex', 'Ivan' ],
+  'New York': 'Joe',
+  'Berlin': 'Johan'
+}
+*/
