@@ -93,7 +93,7 @@ class Solution {
 // sum accepts two integers a and b and returns a + b.
 // fib accepts a single integer n and returns 1 if n <= 1 or fib(n - 1) + fib(n - 2) otherwise.
 // factorial accepts a single integer n and returns 1 if n <= 1 or factorial(n - 1) * n otherwise.
- 
+
 
 // Example 1:
 
@@ -136,7 +136,7 @@ class Solution {
 // Explanation:
 // fib(5) = 8 // "call"
 // // "getCallCount" - total call count: 1
- 
+
 
 // Constraints:
 
@@ -146,3 +146,21 @@ class Solution {
 // actions.length === values.length
 // actions[i] is one of "call" and "getCallCount"
 // fnName is one of "sum", "factorial" and "fib"
+
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+function memoize(fn) {
+    const cache = {}
+    return function (...args) {
+        const key = JSON.stringify(args)
+
+        if (key in cache) return cache[key]
+        const result = fn(...args)
+        cache[key] = result
+        return result
+    }
+}
+
+
