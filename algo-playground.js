@@ -164,7 +164,7 @@ function memoize(fn) {
 }
 
 
-/**
+/** 
  * let callCount = 0;
  * const memoizedFn = memoize(function (a, b) {
  *	 callCount += 1;
@@ -172,7 +172,7 @@ function memoize(fn) {
  * })
  * memoizedFn(2, 3) // 5
  * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1
+ * console.log(callCount) // 1 
  */
 
 // 344. Reverse String
@@ -196,4 +196,27 @@ function memoize(fn) {
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
 
+
+// Constraints:
+
+// 1 <= s.length <= 105
+// s[i] is a printable ascii character.
+
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+
+//O(n), O(1)
+var reverseString = function (s) {
+    let l = 0
+    let r = s.length - 1
+    while (l < r) {
+        let temp = s[r]
+        s[r] = s[l]
+        s[l] = temp
+        l++
+        r--
+    }
+};
 
