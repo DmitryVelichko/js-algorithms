@@ -164,7 +164,7 @@ function memoize(fn) {
 }
 
 
-/** 
+/**
  * let callCount = 0;
  * const memoizedFn = memoize(function (a, b) {
  *	 callCount += 1;
@@ -172,5 +172,16 @@ function memoize(fn) {
  * })
  * memoizedFn(2, 3) // 5
  * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1 
+ * console.log(callCount) // 1
  */
+
+// 344. Reverse String
+// Solved
+// Easy
+// Topics
+// Companies
+// Hint
+// Write a function that reverses a string. The input string is given as an array of characters s.
+
+// You must do this by modifying the input array in-place with O(1) extra memory.
+
