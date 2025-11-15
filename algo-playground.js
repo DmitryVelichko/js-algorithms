@@ -243,3 +243,19 @@ function maxElement() {
 
 // console.log(maxElement(nums))
 
+function findMinMax(arr) {
+    let min = arr[0];
+    let max = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        const item = arr[i]
+
+        if (item < min) {
+            min = item;
+        } else if (item > max) {
+            max = item;
+        }
+    }
+
+    return { min, max };
+}
