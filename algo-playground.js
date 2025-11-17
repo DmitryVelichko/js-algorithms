@@ -355,3 +355,12 @@ function memoize(fn) {
  * memoizedFn(2, 3) // 5
  * console.log(callCount) // 1 
  */
+
+ // 190. Reverse Bits
+// Solved
+// Easy
+// Topics
+// Companies
+// Reverse bits of a given 32 bits unsigned integer.
+
+/
