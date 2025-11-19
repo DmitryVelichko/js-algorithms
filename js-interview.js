@@ -149,4 +149,21 @@ console.log(merge(array1));
 console.log(merge(array2));
 console.log(merge(array3));
 
+// Преобразовать строку в объект, разделяя свойства по точке.
+
+// RESULT
+/*
+{
+  one: {
+    two: {
+      three: {
+        four: {
+          five: }
+        }
+      }
+    }
+  }
+}
+*/
+
 
