@@ -166,4 +166,10 @@ console.log(merge(array3));
 }
 */
 
+function strToObject(str) {
+    return str.split('.').reduceRight((acc, key) => ({ [key]: acc }), {});
+}
+
+const str = 'one.two.three.four.five';
+console.log(strToObject(str));
 
