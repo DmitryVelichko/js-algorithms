@@ -184,5 +184,8 @@ console.log(strToObject(str));
 // Написать функцию sleep, которая останавливает выполнение кода на определенное время.
 
 console.log('Начало');
+function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+}
 await sleep(2000); // Приостанавливаем выполнение на 2 секунды
 console.log('Прошло 2 секунды');
