@@ -576,3 +576,29 @@ var hammingWeight = function (n) {
     return res
 };
 
+// Follow up: Bitwise Trick (Brian Kernighan’s Algorithm)
+// Instead of iterating through all 32 bits, use an approach that only iterates over the set bits:
+// How it works: n &= (n - 1) clears the least significant set bit of n. This reduces the number of
+// iterations to the number of set bits.
+// Time complexity: O(number of set bits), which is faster on average than O(32).
+var hammingWeight = function (n) {
+    let res = 0;
+    while (n) {
+        n &= (n - 1); // Removes the least significant set bit
+        res++;
+    }
+    return res;
+};
+
+
+// Precomputed Lookup Table
+// If you need to call the function many times, precompute the Hamming weights for all 8-bit numbers (0–255) and use them for lookup:
+
+// Explanation:
+// Store the Hamming weights of all 8-bit numbers in hammingWeightLookup.
+// For a 32-bit number, break it into four 8-bit chunks and sum their Hamming weights using the lookup table.
+// Space complexity: 
+// O(256) for the lookup table.
+// Time complexity: 
+// O(4)=O(1) per call, as the input is processed in four steps.
+
