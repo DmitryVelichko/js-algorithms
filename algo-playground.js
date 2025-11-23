@@ -602,3 +602,17 @@ var hammingWeight = function (n) {
 // Time complexity: 
 // O(4)=O(1) per call, as the input is processed in four steps.
 
+// Precompute the Hamming weight for all 8-bit numbers
+const hammingWeightLookup = new Array(256).fill(0).map((_, i) =>
+    i.toString(2).split('1').length - 1
+);
+
+var hammingWeight = function (n) {
+    let res = 0;
+    for (let i = 0; i < 4; i++) {
+        res += hammingWeightLookup[n & 0xff]; // Extract last 8 bits and lookup
+        n >>= 8; // Shift right by 8 bits
+    }
+    return res;
+};
+
