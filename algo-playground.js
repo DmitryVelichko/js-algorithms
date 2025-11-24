@@ -519,7 +519,7 @@ console.log(binarySearch(arr, 11));
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -536,7 +536,7 @@ console.log(binarySearch(arr, 11));
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -568,6 +568,15 @@ console.log(binarySearch(arr, 11));
 // ! && ! true
 // ! || ! || !== false
 // => (l,l) && (r,r)
+
+// O(p + q), O(h)
+var isSameTree = function (p, q) {
+
+    if (!p && !q) return true
+    if ((!p || !q) || (p.val !== q.val)) return false
+
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+};
 
 
 
