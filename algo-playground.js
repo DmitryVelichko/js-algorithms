@@ -606,3 +606,44 @@ var isSameTree = function (p, q) {
 // The number of nodes in both lists is in the range [0, 50].
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+
+// создаем dummy node и tail,
+// l1 <= l2 ? tail -> l1, двигаем l1
+// else tail -> l2, двигаем l2
+// двигаем tail
+// l1 еще есть ? tail -> l1
+// l2 еще есть ? tail -> l2
+// возвращаем dummy.next
+
+// O(n), O(1)
+var mergeTwoLists = function (l1, l2) {
+    let dummy = new ListNode(-Infinity)
+    let tail = dummy
+
+    while (l1 && l2) {
+        if (l1.val <= l2.val) {
+            tail.next = l1
+            l1 = l1.next
+        } else {
+            tail.next = l2
+            l2 = l2.next
+        }
+        tail = tail.next
+    }
+    if (l1) tail.next = l1
+    else if (l2) tail.next = l2
+    return dummy.next
+}
