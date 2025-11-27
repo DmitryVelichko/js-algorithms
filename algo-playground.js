@@ -716,4 +716,21 @@ function maxDepth2(root) {
 
 
 
+// BFS iterative
+
+const maxDepth3 = (root) => {
+    if (!root) return null
+
+    let queue = [root];
+    let level = 0;
+
+    while (queue.length > 0) {
+        for (let i = 0; i < queue.length; i++) {
+            let node = queue.shift();
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+        level += 1;
+    }
+    return level;
 }
