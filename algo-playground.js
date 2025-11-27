@@ -647,3 +647,14 @@ var mergeTwoLists = function (l1, l2) {
     else if (l2) tail.next = l2
     return dummy.next
 }
+
+// 104. Maximum Depth of Binary Tree
+// Solved
+// Easy
+// Topics
+// premium lock icon
+// Companies
+// Given the root of a binary tree, return its maximum depth.
+
+// A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
