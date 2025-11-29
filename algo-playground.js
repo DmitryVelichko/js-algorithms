@@ -798,3 +798,11 @@ var twoSum = function (nums, target) {
         else return [i, hash[complement]]
     }
 }
+// 20. Valid Parentheses
+// Solved
+// Easy
+// Topics
+// premium lock icon
+// Companies
+// Hint
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
