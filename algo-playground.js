@@ -976,7 +976,7 @@ var reverseList = function (head) {
 
 // Return true if there is a cycle in the linked list. Otherwise, return false.
 
- 
+
 
 // Example 1:
 
@@ -996,13 +996,39 @@ var reverseList = function (head) {
 // Input: head = [1], pos = -1
 // Output: false
 // Explanation: There is no cycle in the linked list.
- 
+
 
 // Constraints:
 
 // The number of the nodes in the list is in the range [0, 104].
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
- 
+
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+// slow, fast. В цикле смещаем их на 1, 2 шага, затем проверяем: Если равны, то true
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+// O(n), O(1)
+var hasCycle = function (head) {
+    let slow = head
+    let fast = head
+
+    while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+        if (fast === slow) return true
+    }
+    return false
+};
