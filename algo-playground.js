@@ -1143,7 +1143,7 @@ function maxDepth3(root) {
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -1160,9 +1160,34 @@ function maxDepth3(root) {
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
 // The number of nodes in both trees is in the range [0, 100].
 // -104 <= Node.val <= 104
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {boolean}
+ */
+// if both nodes are null => true
+// if one of the nodes in null || values are different => false
+// => (l,l) && (r,r)
+// Time: O(p + q), space: O(h) (h can be n in unbalanced tree like linked list and log n in balanced tree)
+var isSameTree = function (p, q) {
+
+    if (!p && !q) return true
+    if ((!p || !q) || (p.val !== q.val)) return false
+
+    return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+};
