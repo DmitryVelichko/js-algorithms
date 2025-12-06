@@ -1274,7 +1274,7 @@ var mergeTwoLists = function (l1, l2) {
 
 // Notice that the solution set must not contain duplicate triplets.
 
- 
+
 
 // Example 1:
 
@@ -1296,9 +1296,45 @@ var mergeTwoLists = function (l1, l2) {
 // Input: nums = [0,0,0]
 // Output: [[0,0,0]]
 // Explanation: The only possible triplet sums up to 0.
- 
+
 
 // Constraints:
 
 // 3 <= nums.length <= 3000
 // -105 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+/**
+* res = []
+ сортируем массив
+ скипаем дубликаты
+ 2 pointers for 2 numbers + первое число
+ скипаем дубликаты
+*/
+// Time: O(n^2), Space: O(n^2)
+var threeSum = function (nums) {
+    const res = []
+    nums.sort((a, b) => a - b)
+    for (let i = 0; i < nums.length; i++) {
+        // skip duplicates
+        if (i > 0 && nums[i - 1] === nums[i]) continue
+
+        let l = i + 1
+        let r = nums.length - 1
+        while (l < r) {
+            let threeSum = nums[i] + nums[l] + nums[r]
+            if (threeSum > 0) r--
+            else if (threeSum < 0) l++
+            else {
+                res.push([nums[i], nums[l], nums[r]])
+                l++
+                r--
+                while (l < r && nums[l] === nums[l - 1]) l++
+            }
+        }
+    }
+    return res
+};
