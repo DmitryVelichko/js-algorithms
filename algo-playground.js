@@ -1262,3 +1262,16 @@ var mergeTwoLists = function (l1, l2) {
     else if (l2) tail.next = l2
     return dummy.next
 }
+
+// 15. 3Sum
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Hint
+// Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+// Notice that the solution set must not contain duplicate triplets.
+
+
