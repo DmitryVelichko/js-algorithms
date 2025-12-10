@@ -1527,3 +1527,20 @@ var isValid = function (s) {
 
 // 1 <= temperatures.length <= 105
 // 30 <= temperatures[i] <= 100
+
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+ /**
+Задача на стек
+
+stack = []
+res = [0,0,0...]
+for(temps.length - 1)
+    while стек полон и температура больше той что в стеке
+        stack.pop()
+        res[index] = i - index
+    stack.push(i) на каждой итерации
+return res
+ */
