@@ -1507,7 +1507,7 @@ var isValid = function (s) {
 // Hint
 // Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
 
- 
+
 
 // Example 1:
 
@@ -1521,7 +1521,7 @@ var isValid = function (s) {
 
 // Input: temperatures = [30,60,90]
 // Output: [1,1,0]
- 
+
 
 // Constraints:
 
@@ -1532,15 +1532,29 @@ var isValid = function (s) {
  * @param {number[]} temperatures
  * @return {number[]}
  */
- /**
+/**
 Задача на стек
 
 stack = []
 res = [0,0,0...]
 for(temps.length - 1)
-    while стек полон и температура больше той что в стеке
-        stack.pop()
-        res[index] = i - index
-    stack.push(i) на каждой итерации
+   while стек полон и температура больше той что в стеке
+       stack.pop()
+       res[index] = i - index
+   stack.push(i) на каждой итерации
 return res
- */
+*/
+
+//  Time O(N) | Space O(N)
+var dailyTemperatures = function (temperatures) {
+    let stack = [];
+    let result = new Array(temperatures.length).fill(0);
+    for (let i = 0; i < temperatures.length; i++) {
+        while (stack.length && temperatures[i] > temperatures[stack[stack.length - 1]]) {
+            let index = stack.pop();
+            result[index] = i - index;
+        }
+        stack.push(i)
+    }
+    return result;
+};
