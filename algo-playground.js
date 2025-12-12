@@ -1696,3 +1696,28 @@ function maxDepth3(root) {
 // 2 <= n <= 105
 // 0 <= height[i] <= 104
 
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+/**
+* 2 pointers at beginning and at the end
+calculate the area, update maximum area and move the shortest height forward/inward
+*/
+// O(n), O(1)
+var maxArea = function (height) {
+    let res = 0;
+    let l = 0;
+    let r = height.length - 1;
+    while (l < r) {
+        let area = (r - l) * Math.min(height[l], height[r]);
+        res = Math.max(res, area)
+        if (height[l] < height[r]) {
+            l++;
+        } else {
+            r--
+        }
+    }
+
+    return res;
+};
