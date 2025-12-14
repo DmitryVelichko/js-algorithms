@@ -129,3 +129,11 @@ var lastStoneWeight = function (stones) {
 
 };
 
+const getMaxHeap = (stones, maxHeap = new MaxPriorityQueue()) => {
+    for (const stone of stones) {
+        maxHeap.enqueue(stone)
+    }
+
+    return maxHeap
+}
+
