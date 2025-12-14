@@ -107,6 +107,7 @@ function maxDepth2(root) {
 // 1 <= stones[i] <= 1000
 
 
+
 /**
  * 
  * 
@@ -120,29 +121,20 @@ function maxDepth2(root) {
  */
 //Time O(N * log(N)) | Space O(N)
 var lastStoneWeight = function (stones) {
-    const maxHeap = getMaxHeap(stones)
+    const maxPQ = new MaxPriorityQueue();
 
-    shrink(maxHeap)
-
-    if (maxHeap.isEmpty()) return 0
-    else return maxHeap.front().element
-
-};
-
-const getMaxHeap = (stones, maxHeap = new MaxPriorityQueue()) => {
     for (const stone of stones) {
-        maxHeap.enqueue(stone)
+        maxPQ.enqueue(stone);
     }
 
-    return maxHeap
-}
+    while (maxPQ.size() > 1) {
+        const stone1 = maxPQ.dequeue();
+        const stone2 = maxPQ.dequeue();
 
-const shrink = (maxHeap) => {
-    while (maxHeap.size() > 1) {
-        const [stoneMax1, stoneMax2] = [maxHeap.dequeue().element, maxHeap.dequeue().element]
-
-        const newStone = stoneMax1 - stoneMax2
-
-        if (newStone > 0) maxHeap.enqueue(newStone);
+        if (stone1 !== stone2) {
+            maxPQ.enqueue(stone1 - stone2);
+        }
     }
+
+    return maxPQ.size() === 1 ? maxPQ.dequeue() : 0;
 }
