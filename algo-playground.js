@@ -187,3 +187,32 @@ var lastStoneWeight = function (stones) {
  *     this.next = (next===undefined ? null : next)
  * }
  */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+// dummy node, left -> dummy, right -> head
+// смещаем right на n узлов вперед
+// смещаем left и right на 1 пока right не станет null
+// удаляем узел: l -> l.next.next
+// O(n), O(1)
+var removeNthFromEnd = function (head, n) {
+    let dummy = new ListNode(-Infinity, head)
+
+    let l = dummy
+    let r = head
+
+    while (n > 0 && r !== null) {
+        r = r.next
+        --n
+    }
+
+    while (r) {
+        r = r.next
+        l = l.next
+    }
+
+    l.next = l.next.next // delete the nth node
+    return dummy.next
+};
