@@ -6,7 +6,7 @@
 // Hint
 // Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
- 
+
 
 // Example 1:
 
@@ -21,7 +21,7 @@
 
 // Input: head = [1,2], n = 1
 // Output: [1]
- 
+
 
 // Constraints:
 
@@ -29,9 +29,16 @@
 // 1 <= sz <= 30
 // 0 <= Node.val <= 100
 // 1 <= n <= sz
- 
+
 
 // Follow up: Could you do this in one pass?
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -48,14 +55,14 @@
 // смещаем right на n узлов вперед
 // смещаем left и right на 1 пока right не станет null
 // удаляем узел: l -> l.next.next
-// O(n)
+// O(n), O(1)
 var removeNthFromEnd = function (head, n) {
     let dummy = new ListNode(-Infinity, head)
 
     let l = dummy
     let r = head
 
-    while (r && n > 0) {
+    while (n > 0 && r !== null) {
         r = r.next
         --n
     }
@@ -64,6 +71,7 @@ var removeNthFromEnd = function (head, n) {
         r = r.next
         l = l.next
     }
-    l.next = l.next.next
+
+    l.next = l.next.next // delete the nth node
     return dummy.next
 };
