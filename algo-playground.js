@@ -319,3 +319,18 @@ var dailyTemperatures = function (temperatures) {
 // pos is -1 or a valid index in the linked-list.
 
 
+// Follow up: Can you solve it using O(1)(i.e.constant) memory ?
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+// slow, fast. В цикле смещаем их на 1, 2 шага, затем проверяем: Если равны, то true
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
