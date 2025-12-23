@@ -37,3 +37,29 @@
  *     this.right = (right===undefined ? null : right)
  * }
  */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+// let maxDiameter, dfs(), update maxDiameter (l + r), return the height of the tree
+// T: O(n), S: O(h): h = height of the tree (O(log n) - for balanced tree, O(n) for unbalanced)
+var diameterOfBinaryTree = function (root) {
+    if (root === null) return 0
+    let maxD = 0;
+
+    //function returns the height, not diameter
+    function dfs(node) {
+        if (node === null) return 0
+
+        let left = dfs(node.left) // height of left subtree
+        let right = dfs(node.right)
+
+        // update maxDiameter
+        maxD = Math.max(maxD, left + right) // left + right = diameter of a tree
+
+        return Math.max(left, right) + 1
+    }
+
+    dfs(root)
+    return maxD
+};
