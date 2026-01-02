@@ -234,17 +234,17 @@ var threeSum = function (nums) {
 // 2. вернуть массив, туда расспредить рекурсивно функцию с root.left, значение root.val функцию с root.right
 
 
-var inorderTraversal = function(root) {
-    
-    if(root === null) return []
+var inorderTraversal = function (root) {
+
+    if (root === null) return []
     return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)]
-    
+
 };
 
 // function inorderTraversal(root) {
 //     const stack = [];
 //     const res = [];
-  
+
 //     while (root || stack.length) {
 //       if (root) {
 //         stack.push(root);
@@ -255,6 +255,30 @@ var inorderTraversal = function(root) {
 //         root = root.right;
 //       }
 //     }
-  
+
 //     return res;
 //   }
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+/**
+Sliding window: 2 pointers: set, l, max.
+for loop across the whole string (r = 0): while right char exists in set ? delete left char from set, l++;
+add right char to set, update max string size
+*/
+// O(n), O(n)
+
+// 3. Longest Substring Without Repeating Characters
+// Solved
+// Medium
+// Topics
+// premium lock icon
+// Companies
+// Hint
+// Given a string s, find the length of the longest substring without duplicate characters.
+
+
+
+
