@@ -9,7 +9,7 @@
 
 // Return the max sliding window.
 
- 
+
 
 // Example 1:
 
@@ -28,12 +28,31 @@
 
 // Input: nums = [1], k = 1
 // Output: [1]
- 
+
 
 // Constraints:
 
 // 1 <= nums.length <= 105
 // -104 <= nums[i] <= 104
 // 1 <= k <= nums.length
- 
 
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+// Time: O(k*(n-k)) or ~O(n^2), space: O(n)
+var maxSlidingWindowBruteForce = function (nums, k) {
+    let l = 0;
+    let max = []
+    for (let r = k - 1; r < nums.length; r++) {
+        let maxNum = -Infinity
+        for (let i = l; i <= r; i++) {
+            maxNum = Math.max(maxNum, nums[i])
+        }
+        max.push(maxNum)
+        l++
+    }
+    return max
+};
