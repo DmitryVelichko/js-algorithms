@@ -97,3 +97,51 @@ var lengthOfLongestSubstring = function (s) {
 // -104 <= nums[i] <= 104
 // 1 <= k <= nums.length
 
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+// Time: O(k*(n-k)) or ~O(n^2), space: O(n)
+var maxSlidingWindowBruteForce = function (nums, k) {
+    let l = 0;
+    let max = []
+    for (let r = k - 1; r < nums.length; r++) {
+        let maxNum = -Infinity
+        for (let i = l; i <= r; i++) {
+            maxNum = Math.max(maxNum, nums[i])
+        }
+        max.push(maxNum)
+        l++
+    }
+    return max
+};
+
+// O(n), O(n)
+function maxSlidingWindow(nums, k) {
+    const res = []
+    const deque = new Deque();
+    let l = 0
+    let r = 0
+
+    while (r < nums.length) {
+        // pop smaller numbers from deque
+        while (deque.size() && nums[deque.back()] < nums[r]) {
+            deque.popBack();
+        }
+        deque.pushBack(r);
+
+        // remove left number from window
+        if (l > deque.front()) {
+            deque.popFront();
+        }
+
+        if (r + 1 >= k) {
+            res[l] = nums[deque.front()];
+            l++;
+        }
+        r++;
+    }
+
+    return res;
+}
