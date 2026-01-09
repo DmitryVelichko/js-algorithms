@@ -244,7 +244,7 @@ var reverseList = function (head) {
 
 // Return true if there is a cycle in the linked list. Otherwise, return false.
 
- 
+
 
 // Example 1:
 
@@ -264,14 +264,14 @@ var reverseList = function (head) {
 // Input: head = [1], pos = -1
 // Output: false
 // Explanation: There is no cycle in the linked list.
- 
+
 
 // Constraints:
 
 // The number of the nodes in the list is in the range [0, 104].
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
- 
+
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
@@ -283,3 +283,25 @@ var reverseList = function (head) {
  * }
  */
 
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+// Задача на slow и fast
+// 1. Инициализируем slow и fast
+// 2. while(fast && fast.next): slow+, fast++
+// 3. если slow === fast, возвращаем true
+
+// T: O(n), S: O(1)
+var hasCycle2 = function (head) {
+    let slow = head
+    let fast = head
+
+    while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+
+        if (slow === fast) return true
+    }
+    return false
+};
