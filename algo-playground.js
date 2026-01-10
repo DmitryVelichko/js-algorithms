@@ -346,7 +346,7 @@ window size > k ? hash[char]--, l++;
 update result maximum
 *
 */
-// T: O(26*n), S: O(n) Where n is the length of the string and m is the total number of unique characters in the string.
+// T: O(26*n), S: O(m) Where n is the length of the string and m is the total number of unique characters in the string.
 var characterReplacement = function (s, k) {
     const hash = {}
     let res = 0
@@ -363,7 +363,7 @@ var characterReplacement = function (s, k) {
     return res
 };
 
-// T: O(n), S: O(n) Where n is the length of the string and m is the total number of unique characters in the string.
+// T: O(n), S: O(m) Where n is the length of the string and m is the total number of unique characters in the string.
 var characterReplacementOptimized = function (s, k) {
     const hash = {}
     let res = 0
