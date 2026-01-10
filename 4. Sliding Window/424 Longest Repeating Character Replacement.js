@@ -40,19 +40,3 @@ window size > k ? hash[char]--, l++;
 update result maximum
 *
 */
-// O(26*n) or O(n)
-var characterReplacement = function (s, k) {
-    const hash = {}
-    let res = 0
-    let l = 0
-    for (let r = 0; r < s.length; r++) {
-        hash[s[r]] = (hash[s[r]] || 0) + 1
-        while ((r - l + 1) - Math.max(...Object.values(hash)) > k) {
-            hash[s[l]] -= 1
-            l += 1
-
-        }
-        res = Math.max(res, r - l + 1)
-    }
-    return res
-};
