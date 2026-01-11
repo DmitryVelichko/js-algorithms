@@ -391,7 +391,7 @@ var characterReplacementOptimized = function (s, k) {
 
 // Increment the large integer by one and return the resulting array of digits.
 
- 
+
 
 // Example 1:
 
@@ -414,4 +414,28 @@ var characterReplacementOptimized = function (s, k) {
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
- 
+
+
+// Constraints:
+
+// 1 <= digits.length <= 100
+// 0 <= digits[i] <= 9
+// digits does not contain any leading 0's.
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+// O(n), O(1)
+let plusOne = function (digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] < 9) {
+            digits[i] += 1;
+            return digits;
+        } else {
+            digits[i] = 0;
+        }
+    }
+    digits.unshift(1)
+    return digits;
+};
