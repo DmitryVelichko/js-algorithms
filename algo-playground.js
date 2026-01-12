@@ -452,7 +452,7 @@ let plusOne = function (digits) {
 
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
- 
+
 
 // Example 1:
 
@@ -465,9 +465,31 @@ let plusOne = function (digits) {
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: In this case, no transactions are done and the max profit = 0.
- 
+
 
 // Constraints:
 
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
+
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+/** 
+minPrice = arr[0], maxProfit = 0, 
+проходимся по массиву - 
+сравниваем текущую цену с минимальной, 
+сравниваем текущий профит с разницей между minPrice и текущей ценой
+*/
+// O(n), O(1)
+var maxProfit = function (prices) {
+    let minPrice = prices[0]
+    let maxProfit = 0
+    for (let price of prices) {
+        minPrice = Math.min(minPrice, price)
+        maxProfit = Math.max(maxProfit, price - minPrice)
+    }
+
+    return maxProfit
+};
