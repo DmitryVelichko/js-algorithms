@@ -644,3 +644,34 @@ var checkInclusion = function (s1, s2) {
     return matches === 26;
 }
 
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+
+/**
+curr = head,
+prev = null
+while(curr)
+   next 
+   prev <- curr
+   смещаем 2 указателя
+return prev
+*/
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+// O(n), O(1)
+var reverseList = function (head) {
+    let curr = head
+    let prev = null
+    while (curr) {
+        let next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+    }
