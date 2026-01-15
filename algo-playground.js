@@ -675,3 +675,26 @@ var reverseList = function (head) {
         prev = curr
         curr = next
     }
+    return prev
+};
+
+/**
+base case: (head || head.next === null) return head
+newHead = recursion(head.next)
+5 -> 4
+4 -> null
+return newHead
+*/
+
+// O(n), O(n)
+var reverseList = function (head) {
+
+    if (head === null || head.next === null) return head;
+
+    const newHead = reverseList(head.next);
+
+    head.next.next = head;
+    head.next = null;
+
+    return newHead;
+};
