@@ -709,7 +709,7 @@ var reverseList = function (head) {
 
 // The solution set must not contain duplicate subsets. Return the solution in any order.
 
- 
+
 
 // Example 1:
 
@@ -719,10 +719,38 @@ var reverseList = function (head) {
 
 // Input: nums = [0]
 // Output: [[],[0]]
- 
+
 
 // Constraints:
 
 // 1 <= nums.length <= 10
 // -10 <= nums[i] <= 10
 // All the numbers of nums are unique.
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+// Time: O(n * 2^n)
+// Space: O(n * 2^n) /O(n) extra space; O(2^n) for the output list/
+function subsets(nums) {
+    const res = [];
+    const subset = [];
+
+    function dfs(i) {
+        if (i === nums.length) {
+            res.push([...subset]); // copy current subset
+            return;
+        }
+
+        // include nums[i]
+        subset.push(nums[i]);
+        dfs(i + 1);
+
+        // exclude nums[i]
+        subset.pop();
+        dfs(i + 1);
+    }
+    dfs(0);
+    return res;
+}
