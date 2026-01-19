@@ -776,4 +776,25 @@ function strToObject(str) {
     return str.split('.').reduceRight((acc, key) => ({ [key]: acc }), {});
 }
 
+const str = 'one.two.three.four.five';
+console.log(strToObject(str));
+
+// const str = 'one.two.three.four.five';
+// const arrStr = str.split('.')
+// const result = arrStr.reduceRight((acc, val) => {
+//     return { [val]: acc }
+// }, {});
+
+// console.log(result);
+
+// Написать функцию sleep, которая останавливает выполнение кода на определенное время.
+
+console.log('Начало');
+function sleep(time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+}
+await sleep(2000); // Приостанавливаем выполнение на 2 секунды
+console.log('Прошло 2 секунды');
+
+
 
