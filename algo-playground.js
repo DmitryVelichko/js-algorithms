@@ -754,3 +754,26 @@ function subsets(nums) {
     dfs(0);
     return res;
 }
+
+/ Преобразовать строку в объект, разделяя свойства по точке.
+
+// RESULT
+/*
+{
+  one: {
+    two: {
+      three: {
+        four: {
+          five: }
+        }
+      }
+    }
+  }
+}
+*/
+
+function strToObject(str) {
+    return str.split('.').reduceRight((acc, key) => ({ [key]: acc }), {});
+}
+
+
