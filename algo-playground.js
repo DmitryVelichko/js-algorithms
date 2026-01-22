@@ -847,3 +847,23 @@ const maxDepth = (root) => {
     if (root === null) return 0
     return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
 };
+
+// DFS iterative pre-order: O(n), O(h)
+//Best when tree is deep, avoids recursion limit
+
+function maxDepth2(root) {
+    let stack = [[root, 1]]; // Stack to store nodes and their corresponding depth
+    let maxDepth = 0;
+
+    while (stack.length > 0) {
+        let [node, depth] = stack.pop();
+
+        if (node) {
+            maxDepth = Math.max(maxDepth, depth); // Update the maximum depth
+            stack.push([node.left, depth + 1]);
+            stack.push([node.right, depth + 1]);
+        }
+    }
+    return maxDepth;
+}
+
