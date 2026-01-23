@@ -901,3 +901,21 @@ function maxDepth3(root) {
 
     return maxDepth;
 }
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+// Задача на рекурсию - inorder traversal Это left, root, right, вывод по порядку 1,2,3
+// 1. Базовый случай - если root === null вернуть пустой массив
+// 2. вернуть массив, туда расспредить рекурсивно функцию с root.left, значение root.val функцию с root.right
+
+
