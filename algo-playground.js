@@ -919,17 +919,17 @@ function maxDepth3(root) {
 // 2. вернуть массив, туда расспредить рекурсивно функцию с root.left, значение root.val функцию с root.right
 
 
-var inorderTraversal = function(root) {
-    
-    if(root === null) return []
+var inorderTraversal = function (root) {
+
+    if (root === null) return []
     return [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)]
-    
+
 };
 
 // function inorderTraversal(root) {
 //     const stack = [];
 //     const res = [];
-  
+
 //     while (root || stack.length) {
 //       if (root) {
 //         stack.push(root);
@@ -940,6 +940,44 @@ var inorderTraversal = function(root) {
 //         root = root.right;
 //       }
 //     }
-  
+
 //     return res;
 //   }
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+// DFS recursive pre-order: O(n), Space: O(h) h = height of the tree (for 2 nodes h = 2, for 1 node h = 0).
+// Space O(h), for a skewed tree: O(n) linked list, for a balanced binary tree: O(log n)
+var invertTree = function (root) {
+
+    if (!root) return null
+
+    let temp = root.left
+    root.left = root.right
+    root.right = temp
+
+    invertTree(root.left)
+    invertTree(root.right)
+
+    return root
+};
+
+// 226. Invert Binary Tree
+// Solved
+// Easy
+// Topics
+// premium lock icon
+// Companies
+// Given the root of a binary tree, invert the tree, and return its root.
+
