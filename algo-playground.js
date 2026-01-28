@@ -1093,7 +1093,7 @@ var isSameTree = function (p, q) {
 
 // The length of a path between two nodes is represented by the number of edges between them.
 
- 
+
 
 // Example 1:
 
@@ -1105,10 +1105,44 @@ var isSameTree = function (p, q) {
 
 // Input: root = [1,2]
 // Output: 1
- 
+
 
 // Constraints:
 
 // The number of nodes in the tree is in the range [1, 104].
 // -100 <= Node.val <= 100
- 
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+// let maxDiameter, dfs(), update maxDiameter (l + r), return the height of the tree
+// T: O(n), S: O(h): h = height of the tree (O(log n) - for balanced tree, O(n) for unbalanced)
+var diameterOfBinaryTree = function (root) {
+    if (root === null) return 0
+    let maxD = 0;
+
+    //function returns the height, not diameter
+    function dfs(node) {
+        if (node === null) return 0
+
+        let left = dfs(node.left) // height of left subtree
+        let right = dfs(node.right)
+
+        // update maxDiameter
+        maxD = Math.max(maxD, left + right) // left + right = diameter of a tree
+
+        return Math.max(left, right) + 1
+    }
+
+    dfs(root)
+    return maxD
+};
