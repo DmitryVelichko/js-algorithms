@@ -445,3 +445,23 @@ var reverseList = function (head) {
 // -104 < nums[i], target < 104
 // All the integers in nums are unique.
 // nums is sorted in ascending order.
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+
+// l, r, while (l<=r), m inside the cycle, update l or r
+// O(log n), O(1)
+var search = function (nums, target) {
+    let l = 0
+    let r = nums.length - 1
+    while (l <= r) {
+        let m = Math.floor((l + r) / 2)
+        if (nums[m] === target) return m
+        else if (nums[m] < target) l = m + 1
+        else r = m - 1
+    }
+    return -1
+};
