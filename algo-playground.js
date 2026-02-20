@@ -7,7 +7,7 @@
 // Companies
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
- 
+
 
 // Example 1:
 
@@ -23,13 +23,13 @@
 
 // Input: head = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the list is the range [0, 5000].
 // -5000 <= Node.val <= 5000
- 
+
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
@@ -98,7 +98,7 @@ var reverseList = function (head) {
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -115,7 +115,7 @@ var reverseList = function (head) {
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -161,7 +161,7 @@ var isSameTree = function (p, q) {
 
 // "a->b" if a != b
 // "a" if a == b
- 
+
 
 // Example 1:
 
@@ -180,7 +180,7 @@ var isSameTree = function (p, q) {
 // [2,4] --> "2->4"
 // [6,6] --> "6"
 // [8,9] --> "8->9"
- 
+
 
 // Constraints:
 
@@ -195,28 +195,28 @@ var isSameTree = function (p, q) {
  */
 // Time Complexity : O(N)
 // Space Complexity : O(1)
-var summaryRanges = function(nums) {
+var summaryRanges = function (nums) {
     // Create a list of string to store the output result...
     const output = [];
     // Start traversing the array from idx = 0 till idx < sizeofarray in a while loop.
     let idx = 0;
-    while(idx < nums.length) {
+    while (idx < nums.length) {
         // Initialize beg and last index for identifying the continuous element in the array...
         let beg, last;
         // Mark the number at current index as beginning element of the range...
         beg = nums[idx];
         // Traverse the array beggining from current index & find the last element whose difference from previous element is exactly 1, i.e. nums[idx + 1] == nums[idx] + 1...
-        while(idx+1 < nums.length && nums[idx+1] == nums[idx] + 1) 
-        idx++;
+        while (idx + 1 < nums.length && nums[idx + 1] == nums[idx] + 1)
+            idx++;
         // Set this element as last element of the range...
         last = nums[idx];
         // If continuous element isn't present...
-        if(beg == last)
+        if (beg == last)
             output.push(beg + "");
         // If present...
         else
-            output.push( beg + "->" + last );
-        idx++;          
+            output.push(beg + "->" + last);
+        idx++;
     }
     return output;      // Return the output result list...
 };
@@ -231,7 +231,7 @@ var summaryRanges = function(nums) {
 
 // A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
- 
+
 
 // Example 1:
 
@@ -242,7 +242,7 @@ var summaryRanges = function(nums) {
 
 // Input: root = [1,null,2]
 // Output: 2
- 
+
 
 // Constraints:
 
@@ -333,7 +333,7 @@ function maxDepth3(root) {
 // Companies
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
- 
+
 
 // Example 1:
 
@@ -349,23 +349,23 @@ function maxDepth3(root) {
 
 // Input: head = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the list is the range [0, 5000].
 // -5000 <= Node.val <= 5000
- 
+
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
- /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
+/**
+* Definition for singly-linked list.
+* function ListNode(val, next) {
+*     this.val = (val===undefined ? 0 : val)
+*     this.next = (next===undefined ? null : next)
+* }
+*/
 
 /**
 curr = head,
@@ -425,7 +425,7 @@ var reverseList = function (head) {
 
 // You must write an algorithm with O(log n) runtime complexity.
 
- 
+
 
 // Example 1:
 
@@ -437,7 +437,7 @@ var reverseList = function (head) {
 // Input: nums = [-1,0,3,5,9,12], target = 2
 // Output: -1
 // Explanation: 2 does not exist in nums so return -1
- 
+
 
 // Constraints:
 
@@ -477,7 +477,7 @@ var search = function (nums, target) {
 
 // Notice that the solution set must not contain duplicate triplets.
 
- 
+
 
 // Example 1:
 
@@ -499,10 +499,74 @@ var search = function (nums, target) {
 // Input: nums = [0,0,0]
 // Output: [[0,0,0]]
 // Explanation: The only possible triplet sums up to 0.
- 
+
 
 // Constraints:
 
 // 3 <= nums.length <= 3000
 // -105 <= nums[i] <= 105
- 
+
+
+
+// Example 1:
+
+// Input: nums = [-1,0,1,2,-1,-4]
+// Output: [[-1,-1,2],[-1,0,1]]
+// Explanation: 
+// nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+// nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+// nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+// The distinct triplets are [-1,0,1] and [-1,-1,2].
+// Notice that the order of the output and the order of the triplets does not matter.
+// Example 2:
+
+// Input: nums = [0,1,1]
+// Output: []
+// Explanation: The only possible triplet does not sum up to 0.
+// Example 3:
+
+// Input: nums = [0,0,0]
+// Output: [[0,0,0]]
+// Explanation: The only possible triplet sums up to 0.
+
+
+// Constraints:
+
+// 3 <= nums.length <= 3000
+// -105 <= nums[i] <= 105
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+/**
+* res = []
+ сортируем массив
+ скипаем дубликаты
+ 2 pointers for 2 numbers + первое число
+ скипаем дубликаты
+*/
+// Time: O(n^2), Space: O(n^2)
+var threeSum = function (nums) {
+    const res = []
+    nums.sort((a, b) => a - b)
+    for (let i = 0; i < nums.length; i++) {
+        // skip duplicates
+        if (i > 0 && nums[i - 1] === nums[i]) continue
+
+        let l = i + 1
+        let r = nums.length - 1
+        while (l < r) {
+            let threeSum = nums[i] + nums[l] + nums[r]
+            if (threeSum > 0) r--
+            else if (threeSum < 0) l++
+            else {
+                res.push([nums[i], nums[l], nums[r]])
+                l++
+                r--
+                while (l < r && nums[l] === nums[l - 1]) l++
+            }
+        }
+    }
+    return res
+};
