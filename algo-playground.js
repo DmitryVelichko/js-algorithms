@@ -256,3 +256,27 @@ var search = function (nums, target) {
 
 // 1 <= s.length <= 104
 // s consists of parentheses only '()[]{}'.
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+/**
+stack 
+iterate through string, for each opening braket push closing braket to stack,
+closing bracket !== bracket on stack top ? => false
+
+=> stack.len === 0
+ */
+// O(n), O(n)
+var isValid = function (s) {
+    const stack = []
+
+    for (let char of s) {
+        if (char === '(') stack.push(')')
+        else if (char === '[') stack.push(']')
+        else if (char === '{') stack.push('}')
+        else if (char !== stack.pop()) return false
+    }
+    return stack.length === 0
+};
