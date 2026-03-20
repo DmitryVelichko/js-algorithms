@@ -7,7 +7,7 @@
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -24,7 +24,7 @@
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -103,7 +103,7 @@ var findDisappearedNumbers = function (nums) {
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -120,7 +120,7 @@ var findDisappearedNumbers = function (nums) {
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -163,7 +163,7 @@ var isSameTree = function (p, q) {
 
 // You must write an algorithm with O(log n) runtime complexity.
 
- 
+
 
 // Example 1:
 
@@ -175,7 +175,7 @@ var isSameTree = function (p, q) {
 // Input: nums = [-1,0,3,5,9,12], target = 2
 // Output: -1
 // Explanation: 2 does not exist in nums so return -1
- 
+
 
 // Constraints:
 
@@ -218,7 +218,7 @@ var search = function (nums, target) {
 // Open brackets must be closed by the same type of brackets.
 // Open brackets must be closed in the correct order.
 // Every close bracket has a corresponding open bracket of the same type.
- 
+
 
 // Example 1:
 
@@ -250,7 +250,7 @@ var search = function (nums, target) {
 
 // Output: false
 
- 
+
 
 // Constraints:
 
@@ -290,7 +290,7 @@ var isValid = function (s) {
 // Hint
 // Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
 
- 
+
 
 // Example 1:
 
@@ -304,7 +304,7 @@ var isValid = function (s) {
 
 // Input: temperatures = [30,60,90]
 // Output: [1,1,0]
- 
+
 
 // Constraints:
 
@@ -315,27 +315,27 @@ var isValid = function (s) {
  * @param {number[]} temperatures
  * @return {number[]}
  */
- /**
+/**
 Задача на стек
 
 stack = []
 res = [0,0,0...]
 for(temps.length - 1)
-    while стек полон и температура больше той что в стеке
-        stack.pop()
-        res[index] = i - index
-    stack.push(i) на каждой итерации
+   while стек полон и температура больше той что в стеке
+       stack.pop()
+       res[index] = i - index
+   stack.push(i) на каждой итерации
 return res
- */
+*/
 
 //  Time O(N) | Space O(N)
-var dailyTemperatures = function(temperatures) {
-   let stack = [];
-   let result = new Array(temperatures.length).fill(0);
-    for(let i=0; i < temperatures.length; i++){
-        while(stack.length && temperatures[i] > temperatures[stack[stack.length-1]]){
+var dailyTemperatures = function (temperatures) {
+    let stack = [];
+    let result = new Array(temperatures.length).fill(0);
+    for (let i = 0; i < temperatures.length; i++) {
+        while (stack.length && temperatures[i] > temperatures[stack[stack.length - 1]]) {
             let index = stack.pop();
-            result[index] = i-index;   
+            result[index] = i - index;
         }
         stack.push(i)
     }
@@ -383,12 +383,12 @@ var invertTree = function (root) {
 // DFS iterative
 // Time: O(n), space: O(h) (best - O(log n) for BST, O(n) for linked list)
 var invertTree2 = function (root) {
-    if (root === null) return null; 
+    if (root === null) return null;
 
-    const stack = [root]; 
+    const stack = [root];
 
     while (stack.length > 0) {
-        const node = stack.pop(); 
+        const node = stack.pop();
 
         [node.left, node.right] = [node.right, node.left];
 
@@ -396,7 +396,7 @@ var invertTree2 = function (root) {
         if (node.right) stack.push(node.right);
     }
 
-    return root; 
+    return root;
 };
 
 // 100. Same Tree
@@ -409,7 +409,7 @@ var invertTree2 = function (root) {
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -426,7 +426,7 @@ var invertTree2 = function (root) {
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -466,7 +466,7 @@ var isSameTree = function (p, q) {
 // Companies
 // Given the root of a binary tree, invert the tree, and return its root.
 
- 
+
 
 // Example 1:
 
@@ -482,7 +482,7 @@ var isSameTree = function (p, q) {
 
 // Input: root = []
 // Output: []
- 
+
 
 // Constraints:
 
@@ -522,12 +522,12 @@ var invertTree = function (root) {
 // DFS iterative
 // Time: O(n), space: O(h) (best - O(log n) for BST, O(n) for linked list)
 var invertTree2 = function (root) {
-    if (root === null) return null; 
+    if (root === null) return null;
 
-    const stack = [root]; 
+    const stack = [root];
 
     while (stack.length > 0) {
-        const node = stack.pop(); 
+        const node = stack.pop();
 
         [node.left, node.right] = [node.right, node.left];
 
@@ -535,7 +535,7 @@ var invertTree2 = function (root) {
         if (node.right) stack.push(node.right);
     }
 
-    return root; 
+    return root;
 };
 
 // 104. Maximum Depth of Binary Tree
@@ -548,7 +548,7 @@ var invertTree2 = function (root) {
 
 // A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
- 
+
 
 // Example 1:
 
@@ -559,7 +559,7 @@ var invertTree2 = function (root) {
 
 // Input: root = [1,null,2]
 // Output: 2
- 
+
 
 // Constraints:
 
@@ -650,7 +650,7 @@ function maxDepth3(root) {
 // Companies
 // Given the root of a binary tree, invert the tree, and return its root.
 
- 
+
 
 // Example 1:
 
@@ -666,9 +666,58 @@ function maxDepth3(root) {
 
 // Input: root = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the tree is in the range [0, 100].
 // -100 <= Node.val <= 100
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+// DFS recursive pre-order: O(n), Space: O(h) h = height of the tree (for 2 nodes h = 2, for 1 node h = 0).
+// Space O(h), for a skewed tree: O(n) linked list, for a balanced binary tree: O(log n)
+var invertTree = function (root) {
+
+    if (!root) return null
+
+    let temp = root.left
+    root.left = root.right
+    root.right = temp
+
+    invertTree(root.left)
+    invertTree(root.right)
+
+    return root
+};
+
+
+// DFS iterative
+// Time: O(n), space: O(h) (best - O(log n) for BST, O(n) for linked list)
+var invertTree2 = function (root) {
+    if (root === null) return null;
+
+    const stack = [root];
+
+    while (stack.length > 0) {
+        const node = stack.pop();
+
+        [node.left, node.right] = [node.right, node.left];
+
+        if (node.left) stack.push(node.left);
+        if (node.right) stack.push(node.right);
+    }
+
+    return root;
+};
