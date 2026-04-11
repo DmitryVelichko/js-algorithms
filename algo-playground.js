@@ -86,3 +86,18 @@ var reverseList = function (head) {
 
     return newHead;
 };
+
+// /**
+//  * @param {number[]} nums
+//  */
+// var Solution = function(nums) {
+//     this.nums = nums;
+// };
+
+// /**
+//  * @return {number[]}
+//  */
+// Solution.prototype.reset = function() {
+//     return this.nums
+// };
+
