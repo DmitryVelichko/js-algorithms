@@ -172,3 +172,27 @@ let isPalindrome1 = function (s) {
 // n == mat.length == mat[i].length
 // 1 <= n <= 100
 // 1 <= mat[i][j] <= 100
+
+/**
+ * @param {number[][]} mat
+ * @return {number}
+ */
+const diagonalSum = (mat) => {
+    let sum = 0
+    let j = mat[0].length - 1
+
+    for (let i = 0; i < mat.length; i++, j--) {
+        if (i !== j) {
+            sum += mat[i][j]
+        }
+        sum += mat[i][i]
+    }
+
+    return sum
+}
+
+console.log(diagonalSum([
+[1, 1, 1, 1],
+[1, 1, 1, 1],
+[1, 1, 1, 1],
+[1, 1, 1, 1]])) // 8
