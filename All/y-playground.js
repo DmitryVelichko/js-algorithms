@@ -93,3 +93,9 @@ var findDisappearedNumbers = function (nums) {
     }
     return arr;
 };
+
+//  Palindrome Number
+
+// Given an integer x, return true if x is a 
+// palindrome
+// , and false otherwise.
