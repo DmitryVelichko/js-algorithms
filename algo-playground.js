@@ -108,3 +108,28 @@ var reverseList = function (head) {
 // Solution(int[] nums) Initializes the object with the integer array nums.
 // int[] reset() Resets the array to its original configuration and returns it.
 // int[] shuffle() Returns a random shuffling of the array.
+
+/**
+ * @return {number[]}
+ */
+Solution.prototype.shuffle = function() {
+    // Implementing Fisher-Yates Algo
+    
+    const shuffled = this.nums.slice()
+    const n = shuffled.length
+    for(let i=shuffled.length-1; i>0; i--){
+        const j = Math.floor(Math.random() * (i + 1))
+        const temp = shuffled[i]
+        shuffled[i] = shuffled[j]
+        shuffled[j] = temp
+    }
+    
+    return shuffled
+};
+
+/** 
+ * Your Solution object will be instantiated and called as such:
+ * var obj = new Solution(nums)
+ * var param_1 = obj.reset()
+ * var param_2 = obj.shuffle()
+ */
