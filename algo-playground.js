@@ -580,3 +580,19 @@ function maxDepth2(root) {
     return maxDepth;
 }
 
+// BFS iterative, O(n), O(n)
+//Where w = max width of the tree (max nodes in any level).
+// Worst-case scenarios:
+
+// Balanced tree: width ≈ n/2 → O(n)
+
+// Skewed tree: width = 1 → O(1)
+
+// So:
+
+// Balanced tree: O(n) (because one full level can be half the nodes)
+
+// Worst case (skewed tree but narrow): O(1)
+
+//Can use more memory in wide trees
+
