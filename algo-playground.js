@@ -6,7 +6,7 @@
 // Companies
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
- 
+
 
 // Example 1:
 
@@ -22,13 +22,13 @@
 
 // Input: head = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the list is the range [0, 5000].
 // -5000 <= Node.val <= 5000
- 
+
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
@@ -112,18 +112,18 @@ var reverseList = function (head) {
 /**
  * @return {number[]}
  */
-Solution.prototype.shuffle = function() {
+Solution.prototype.shuffle = function () {
     // Implementing Fisher-Yates Algo
-    
+
     const shuffled = this.nums.slice()
     const n = shuffled.length
-    for(let i=shuffled.length-1; i>0; i--){
+    for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1))
         const temp = shuffled[i]
         shuffled[i] = shuffled[j]
         shuffled[j] = temp
     }
-    
+
     return shuffled
 };
 
@@ -142,7 +142,7 @@ Solution.prototype.shuffle = function() {
 // Companies
 // Given the root of a binary tree, invert the tree, and return its root.
 
- 
+
 
 // Example 1:
 
@@ -158,13 +158,13 @@ Solution.prototype.shuffle = function() {
 
 // Input: root = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the tree is in the range [0, 100].
 // -100 <= Node.val <= 100
- 
+
 
 /**
  * Definition for a binary tree node.
@@ -198,12 +198,12 @@ var invertTree = function (root) {
 // DFS iterative
 // Time: O(n), space: O(h) (best - O(log n) for BST, O(n) for linked list)
 var invertTree2 = function (root) {
-    if (root === null) return null; 
+    if (root === null) return null;
 
-    const stack = [root]; 
+    const stack = [root];
 
     while (stack.length > 0) {
-        const node = stack.pop(); 
+        const node = stack.pop();
 
         [node.left, node.right] = [node.right, node.left];
 
@@ -211,7 +211,7 @@ var invertTree2 = function (root) {
         if (node.right) stack.push(node.right);
     }
 
-    return root; 
+    return root;
 };
 
 // https://www.youtube.com/watch?v=_aKd8xsOa30&ab_channel=shirinsetayesh
@@ -228,8 +228,8 @@ var invertTree2 = function (root) {
 // You must implement a solution with O(1) time complexity for each function
 
 
-var MinStack = function() {
-   
+var MinStack = function () {
+
     this.stack = []
     this.min = []
 };
@@ -238,21 +238,21 @@ var MinStack = function() {
  * @param {number} val
  * @return {void}
  */
-MinStack.prototype.push = function(val) {
-    if(this.stack.length === 0) {
+MinStack.prototype.push = function (val) {
+    if (this.stack.length === 0) {
         this.min.push(val)
     } else {
         let minimum = Math.min(val, this.min[this.min.length - 1])
         this.min.push(minimum)
     }
-    
+
     this.stack.push(val)
 };
 
 /**
  * @return {void}
  */
-MinStack.prototype.pop = function() {
+MinStack.prototype.pop = function () {
     this.stack.pop()
     this.min.pop()
 };
@@ -260,14 +260,14 @@ MinStack.prototype.pop = function() {
 /**
  * @return {number}
  */
-MinStack.prototype.top = function() {
+MinStack.prototype.top = function () {
     return this.stack[this.stack.length - 1]
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.getMin = function() {
+MinStack.prototype.getMin = function () {
     return this.min[this.min.length - 1]
 };
 
@@ -290,7 +290,7 @@ MinStack.prototype.getMin = function() {
 
 // A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
- 
+
 
 // Example 1:
 
@@ -301,7 +301,7 @@ MinStack.prototype.getMin = function() {
 
 // Input: root = [1,null,2]
 // Output: 2
- 
+
 
 // Constraints:
 
@@ -395,7 +395,7 @@ function maxDepth3(root) {
 
 // Return true if there is a cycle in the linked list. Otherwise, return false.
 
- 
+
 
 // Example 1:
 
@@ -415,14 +415,14 @@ function maxDepth3(root) {
 // Input: head = [1], pos = -1
 // Output: false
 // Explanation: There is no cycle in the linked list.
- 
+
 
 // Constraints:
 
 // The number of the nodes in the list is in the range [0, 104].
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
- 
+
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
@@ -462,7 +462,7 @@ var hasCycle = function (head) {
 
 // Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
- 
+
 
 // Example 1:
 
@@ -479,7 +479,7 @@ var hasCycle = function (head) {
 
 // Input: p = [1,2,1], q = [1,1,2]
 // Output: false
- 
+
 
 // Constraints:
 
@@ -521,7 +521,7 @@ var isSameTree = function (p, q) {
 
 // A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
- 
+
 
 // Example 1:
 
@@ -532,7 +532,7 @@ var isSameTree = function (p, q) {
 
 // Input: root = [1,null,2]
 // Output: 2
- 
+
 
 // Constraints:
 
@@ -622,7 +622,7 @@ function maxDepth3(root) {
 // Companies
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
- 
+
 
 // Example 1:
 
@@ -638,13 +638,13 @@ function maxDepth3(root) {
 
 // Input: head = []
 // Output: []
- 
+
 
 // Constraints:
 
 // The number of nodes in the list is the range [0, 5000].
 // -5000 <= Node.val <= 5000
- 
+
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
@@ -715,7 +715,7 @@ var reverseList = function (head) {
 
 // Return true if there is a cycle in the linked list. Otherwise, return false.
 
- 
+
 
 // Example 1:
 
@@ -735,13 +735,38 @@ var reverseList = function (head) {
 // Input: head = [1], pos = -1
 // Output: false
 // Explanation: There is no cycle in the linked list.
- 
+
 
 // Constraints:
 
 // The number of the nodes in the list is in the range [0, 104].
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
- 
+
 
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+// slow, fast. В цикле смещаем их на 1, 2 шага, затем проверяем: Если равны, то true
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+// O(n), O(1)
+var hasCycle = function (head) {
+    let slow = head
+    let fast = head
+
+    while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+        if (fast === slow) return true
+    }
+    return false
+};
