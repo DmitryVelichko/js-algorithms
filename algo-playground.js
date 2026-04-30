@@ -1060,3 +1060,31 @@ var isHappy = function (n) {
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
+ 
+
+// Constraints:
+
+// 1 <= digits.length <= 100
+// 0 <= digits[i] <= 9
+// digits does not contain any leading 0's.
+
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+ // loop from the end of array,
+ // digit < 9 ? add 1 and return array
+ // else digit = 0; add 1 to the beginning of the array
+ // O(n), O(1)
+ var plusOne = function (digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] < 9) {
+            digits[i]++;
+            return digits;
+        } else {
+            digits[i] = 0
+        }
+    }
+    digits.unshift(1)
+    return digits
+};
