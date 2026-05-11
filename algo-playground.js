@@ -393,3 +393,28 @@ var threeSum = function (nums) {
  
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+ /**
+ Вернуть индексы двух чисел дающих в сумме target 
+ 
+ O(n), O(n)
+
+ hashmap
+ iterate through arr
+   find complement pair
+   complement not in hash? Add current number and index there 
+   complement is in hash? => [current i, complement i]
+  */
+var twoSum = function (nums, target) {
+    const hash = {}
+    for(let i=0; i<nums.length; i++) {
+        let complement = target - nums[i]
+        if(hash[complement] === undefined) hash[nums[i]] = i
+        else return [i, hash[complement]]
+    }
+}
