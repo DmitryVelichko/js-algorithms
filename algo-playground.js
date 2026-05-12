@@ -461,3 +461,30 @@ var twoSum = function (nums, target) {
 
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+ /**
+ * Вернуть true если в массиве есть дубликат числа
+
+ // O(n), O(n)
+ *
+ * hashmap
+ *   iterate across arr:
+ *      num in hash? => true
+ *      Add num to hash
+ *   => false
+ *
+  */
+var containsDuplicate = function(nums) {
+    // O(n), O(n)
+   
+   const hash = {}
+   for(let num of nums) {
+        if(hash[num] !== undefined) return true
+        hash[num] = num
+   }
+   return false
+};
