@@ -418,3 +418,11 @@ var twoSum = function (nums, target) {
         else return [i, hash[complement]]
     }
 }
+
+// 217. Contains Duplicate
+// Solved
+// Easy
+// Topics
+// premium lock icon
+// Companies
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
