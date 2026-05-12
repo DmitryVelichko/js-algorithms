@@ -457,3 +457,7 @@ var twoSum = function (nums, target) {
 
  
 
+// Constraints:
+
+// 1 <= nums.length <= 105
+// -109 <= nums[i] <= 109
