@@ -59,3 +59,20 @@ var lastStoneWeight = function (stones) {
 
 };
 
+const getMaxHeap = (stones, maxHeap = new MaxPriorityQueue()) => {
+    for (const stone of stones) {
+        maxHeap.enqueue(stone)
+    }
+
+    return maxHeap
+}
+
+const shrink = (maxHeap) => {
+    while (maxHeap.size() > 1) {
+        const [stoneMax1, stoneMax2] = [maxHeap.dequeue().element, maxHeap.dequeue().element]
+
+        const newStone = stoneMax1 - stoneMax2
+
+        if (newStone > 0) maxHeap.enqueue(newStone);
+    }
+}
