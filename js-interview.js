@@ -368,3 +368,29 @@ var hasCycle = function (head) {
 
 // The number of nodes in the tree is in the range [0, 104].
 // -100 <= Node.val <= 100
+
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+// 3 ways: DFS(recursive/iterative) & BFS
+// O(n), O(h): which is O(n) in worst case of an unbalanced tree
+
+// DFS recursive
+const maxDepth = (root) => {
+    if (root === null) return 0
+    return 1 + Math.max(maxDepth(root.left), maxDepth(root.right))
+};
+
+// DFS iterative pre-order: O(n), O(h)
+//Best when tree is deep, avoids recursion limit
+
