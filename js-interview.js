@@ -537,3 +537,43 @@ var isSameTree = function (p, q) {
  
 
 // Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+ /**
+ 
+ // Вернуть массив перемноженных чисел, кроме текущего числа
+
+ // O(n), O(n) по условиям задачи O(1)
+
+ res = []
+ prefix = 1
+ postfix = 1
+
+for()
+    res[i] = prefix
+    prefix *= nums[i]
+
+for(в обратном порядке)
+    res[i] *= postfix;
+    postfix *= nums[i];
+ */
+// O(n), O(n) по условиям задачи O(1)
+var productExceptSelf = function (nums) {
+    const res = [];
+    let prefix = 1;
+    let postfix = 1;
+
+    for (let i = 0; i < nums.length; i++) {
+        res[i] = prefix;
+        prefix *= nums[i];
+    }
+
+    for (let i = nums.length - 1; i >= 0; i--) {
+        res[i] *= postfix;
+        postfix *= nums[i];
+    }
+    return res;
+};
