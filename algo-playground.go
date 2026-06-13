@@ -1,4 +1,5 @@
-// package jsalgorithms
+package main
+
 // 226. Invert Binary Tree
 // Solved
 // Easy
@@ -24,3 +25,29 @@
 
 // The number of nodes in the tree is in the range [0, 100].
 // -100 <= Node.val <= 100
+
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
+func invertTree(root *TreeNode) *TreeNode {
+	if root != nil {
+		root.Left, root.Right = invertTree(root.Right), invertTree(root.Left)
+	}
+	return root
+}
+
+func main() {
+	invertTree(())
+}
